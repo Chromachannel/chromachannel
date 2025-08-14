@@ -538,3 +538,52 @@ p.copyright + p.copyright {
     border-radius: 6px;
     display: inline-block; /* 背景色の幅をテキストに合わせる */
 }
+/* =================================== */
+/* ===== AI博士 フローティングボタン ===== */
+/* =================================== */
+.floating-ai-button {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(135deg, var(--primary-color-start), var(--primary-color-end));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.floating-ai-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.floating-ai-button i {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+/* スマートフォン用の調整 */
+@media (max-width: 768px) {
+    .floating-ai-button {
+        width: 80px;
+        height: 80px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 0.75rem;
+    }
+    .floating-ai-button i {
+        font-size: 1.8rem;
+    }
+}
