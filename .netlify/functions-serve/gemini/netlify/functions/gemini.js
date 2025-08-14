@@ -28,7 +28,8 @@ var require_lib = __commonJS({
       const moduloVal = typeOpts.moduloBitLength ? Math.pow(2, typeOpts.moduloBitLength) : Math.pow(2, bitLength);
       const moduloBound = typeOpts.moduloBitLength ? Math.pow(2, typeOpts.moduloBitLength - 1) : Math.pow(2, bitLength - 1);
       return function(V, opts) {
-        if (!opts) opts = {};
+        if (!opts)
+          opts = {};
         let x = +V;
         if (opts.enforceRange) {
           if (!Number.isFinite(x)) {
@@ -42,8 +43,10 @@ var require_lib = __commonJS({
         }
         if (!isNaN(x) && opts.clamp) {
           x = evenRound(x);
-          if (x < lowerBound) x = lowerBound;
-          if (x > upperBound) x = upperBound;
+          if (x < lowerBound)
+            x = lowerBound;
+          if (x > upperBound)
+            x = upperBound;
           return x;
         }
         if (!Number.isFinite(x) || x === 0) {
@@ -94,7 +97,8 @@ var require_lib = __commonJS({
     conversions["float"] = conversions["double"];
     conversions["unrestricted float"] = conversions["unrestricted double"];
     conversions["DOMString"] = function(V, opts) {
-      if (!opts) opts = {};
+      if (!opts)
+        opts = {};
       if (opts.treatNullAsEmptyString && V === null) {
         return "";
       }
@@ -331,7 +335,8 @@ var require_tr46 = __commonJS({
           }
         }
       }
-      if (result.error) return null;
+      if (result.error)
+        return null;
       return labels.join(".");
     };
     module2.exports.toUnicode = function(domain_name, useSTD3) {
@@ -1742,7 +1747,8 @@ var require_URL = __commonJS({
         return obj;
       },
       setup(obj, constructorArgs, privateData) {
-        if (!privateData) privateData = {};
+        if (!privateData)
+          privateData = {};
         privateData.wrapper = obj;
         obj[impl] = new Impl.implementation(constructorArgs, privateData);
         obj[impl][utils.wrapperSymbol] = obj;
@@ -1915,13 +1921,16 @@ var require_lib2 = __commonJS({
         body = null;
       } else if (isURLSearchParams(body)) {
         body = Buffer.from(body.toString());
-      } else if (isBlob(body)) ;
-      else if (Buffer.isBuffer(body)) ;
+      } else if (isBlob(body))
+        ;
+      else if (Buffer.isBuffer(body))
+        ;
       else if (Object.prototype.toString.call(body) === "[object ArrayBuffer]") {
         body = Buffer.from(body);
       } else if (ArrayBuffer.isView(body)) {
         body = Buffer.from(body.buffer, body.byteOffset, body.byteLength);
-      } else if (body instanceof Stream) ;
+      } else if (body instanceof Stream)
+        ;
       else {
         body = Buffer.from(String(body));
       }
@@ -2264,7 +2273,8 @@ var require_lib2 = __commonJS({
           }
           return;
         }
-        if (init == null) ;
+        if (init == null)
+          ;
         else if (typeof init === "object") {
           const method = init[Symbol.iterator];
           if (method != null) {
@@ -2646,7 +2656,8 @@ var require_lib2 = __commonJS({
           }
         }
         let signal = isRequest(input) ? input.signal : null;
-        if ("signal" in init) signal = init.signal;
+        if ("signal" in init)
+          signal = init.signal;
         if (signal != null && !isAbortSignal(signal)) {
           throw new TypeError("Expected signal to be an instanceof AbortSignal");
         }
@@ -2783,7 +2794,8 @@ var require_lib2 = __commonJS({
           if (request.body && request.body instanceof Stream.Readable) {
             destroyStream(request.body, error);
           }
-          if (!response || !response.body) return;
+          if (!response || !response.body)
+            return;
           response.body.emit("error", error);
         };
         if (signal && signal.aborted) {
@@ -2801,7 +2813,8 @@ var require_lib2 = __commonJS({
         }
         function finalize() {
           req.abort();
-          if (signal) signal.removeEventListener("abort", abortAndFinalize);
+          if (signal)
+            signal.removeEventListener("abort", abortAndFinalize);
           clearTimeout(reqTimeout);
         }
         if (request.timeout) {
@@ -2910,7 +2923,8 @@ var require_lib2 = __commonJS({
             }
           }
           res.once("end", function() {
-            if (signal) signal.removeEventListener("abort", abortAndFinalize);
+            if (signal)
+              signal.removeEventListener("abort", abortAndFinalize);
           });
           let body = res.pipe(new PassThrough$1());
           const response_options = {
