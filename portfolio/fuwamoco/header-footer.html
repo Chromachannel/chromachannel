@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ホームページ</title>
+        <link rel="icon" href="img/favicon.jpg">
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="stylesheet" href="CSS/header-footer-tyle.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        <!-- Font Awesome追加 (ハンバーガーメニューのアイコン用) -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+    <body>
+        <header>
+            <div class="inner">
+                <div class="header-container">
+                    <!-- PC表示時用のロゴ -->
+                    <a href="index.html" class="pc-only"><img src="img/logo.webp" alt="ロゴ" class="logo"></a>
+                    <!-- タブレット・スマホ表示時用のロゴ -->
+                    <a href="index.html" class="sp-tablet-only"><img src="img/logo.webp" alt="ロゴ" class="logo"></a>
+                    <!-- PCメニュー用のグローバルナビ -->
+                    <nav class="gnavi pc-only">
+                        <div class="gnavi__wrap">
+                            <ul class="gnavi__lists">
+                                <li class="gnavi__list"><a href="index.html">トップページ</a></li>
+                                <li class="gnavi__list"><a href="company-info.html">私たちについて</a></li>
+                                <li class="gnavi__list"><a href="company.html">会社概要</a></li>
+                                <li class="gnavi__list">
+                                    <a href="rabit.html">うさぎについて</a>
+                                    <ul class="dropdown__lists">
+                                        <li class="dropdown__list"><a href="rabbit.html#breeds">種類</a></li>
+                                        <li class="dropdown__list"><a href="rabbit.html#charm">魅力</a></li>
+                                        <li class="dropdown__list"><a href="rabbit.html#merit">うさぎの良い点</a></li>
+                                    </ul>
+                                </li>
+                                <li class="gnavi__list"><a href="cafe-info.html">カフェ紹介</a></li>
+                                <li class="gnavi__list"><a href="contact.html">お問い合わせ</a></li>
+                                <li class="gnavi__list">
+                                    <a href="questionnaire.html">アンケート</a>
+                                    <ul class="dropdown__lists">
+                                        <li class="dropdown__list"><a href="questionnaire1.html">来店者用</a></li>
+                                        <li class="dropdown__list"><a href="questionnaire2.html">来店予定者用</a></li>
+                                    </ul>
+                                </li>
+                                <li class="gnavi__list">
+                                    <a href="games.html">ゲーム</a>
+                                    <ul class="dropdown__lists">
+                                        <li class="dropdown__list"><a href="puzzle.html">３マッチパズル</a></li>
+                                        <li class="dropdown__list"><a href="othello.html">オセロ</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <!-- スマホ・タブレット用のハンバーガーメニュー -->
+                    <div class="hamburger-menu sp-tablet-only">
+                        <button class="hamburger">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <nav class="header-nav">
+                            <div class="close-btn">
+                                <button class="close-button">✕</button>
+                            </div>
+                            <ul>
+                                <li><a href="index.html">トップページ</a></li>
+                                <li><a href="company-info.html">私たちについて</a></li>
+                                <li><a href="company.html">会社概要</a></li>
+                                <li><a href="cafe-info.html">カフェ紹介</a></li>
+                                <li><a href="contact.html">お問い合わせ</a></li>
+                                <!-- アコーディオンメニュー：うさぎについて -->
+                                <li>
+                                    <div class="accordion-menu" data-accordion="rabbit">
+                                        うさぎについて <span class="arrow">▲</span>
+                                    </div>
+                                    <ul class="accordion-content" id="rabbit-accordion">
+                                        <li><a href="rabbit.html#breeds">種類</a></li>
+                                        <li><a href="rabbit.html#charm">魅力</a></li>
+                                        <li><a href="rabbit.html#merit">うさぎの良い点</a></li>
+                                    </ul>
+                                </li>
+                                <!-- アコーディオンメニュー：アンケート -->
+                                <li>
+                                    <div class="accordion-menu" data-accordion="questionnaire">
+                                        アンケート <span class="arrow">▲</span>
+                                    </div>
+                                    <ul class="accordion-content" id="questionnaire-accordion">
+                                        <li><a href="questionnaire1.html">来店者用</a></li>
+                                        <li><a href="questionnaire2.html">来店予定者用</a></li>
+                                    </ul>
+                                </li>
+                                <!-- アコーディオンメニュー：ゲーム -->
+                                <li>
+                                    <div class="accordion-menu" data-accordion="games">
+                                        ゲーム <span class="arrow">▲</span>
+                                    </div>
+                                    <ul class="accordion-content" id="games-accordion">
+                                        <li><a href="puzzle.html">３マッチパズル</a></li>
+                                        <li><a href="othello.html">オセロ</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+
+        </main>
+        <div class="footer">
+            <div class="footer-wrapper">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <a href="index.html"><img src="img/logo.webp" alt="ロゴ"></a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://x.com/" aria-label="x"><i class="fab fa-x"></i>
+                        </a>
+                        <a href="https://www.facebook.com/?locale=ja_JP" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.youtube.com/results?search_query=%E3%81%86%E3%81%95%E3%81%8E" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2025 Fuwamoco PROJECT All Rights Reserved.</p>
+        <script src="JavaScript/script.js" defer></script>
+    </body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ===== ▼▼▼ SEO設定 START ▼▼▼ ===== -->
+    <title>【AI体験アプリ】AIと友達になろう！｜クリックで学ぶ初心者向け講座</title>
+    <meta name="description" content="福祉×AIクリエイター制作の無料AI体験アプリ。AIって難しそう？クリックだけでAIとおしゃべり、お絵かき、作曲が楽しめるインタラクティブなスライドで、PC初心者の方でもAIの面白さを安心して学べます。">
+    <link rel="canonical" href="https://chromachannel.online/Portfolio/Demo/demo.html" />
+    <link rel="icon" href="../../Img/favicon.webp" type="image/webp">
+
+    <!-- OGPタグ -->
+    <meta property="og:title" content="【AI体験アプリ】AIと友達になろう！｜クリックで学ぶ初心者向け講座">
+    <meta property="og:description" content="AIの正体や得意なことを、クイズや楽しい例え話でインタラクティブに学びます。AIマスターへの第一歩を、ここから始めましょう！">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chromachannel.online/Portfolio/Demo/demo.html">
+    <meta property="og:image" content="https://chromachannel.online/Img/Portfolio/lesson_demo.webp">
+    <meta property="og:site_name" content="Chromachannel">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LearningResource",
+      "name": "インタラクティブ学習デモ「AIってなんだろう？」",
+      "description": "福祉×AIクリエイター 山本倫久が制作した、AIの基本的な概念を音声やクイズを通じてインタラクティブに学べる初心者向けのWebアプリケーションです。",
+      "learningResourceType": "Interactive lesson",
+      "author": {
+        "@type": "Person",
+        "name": "山本 倫久",
+        "url": "https://chromachannel.online/"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "山本 倫久",
+        "url": "https://chromachannel.online/"
+      },
+      "educationalUse": "Instruction",
+      "isAccessibleForFree": "true"
+    }
+    </script>
+<!-- ===== ▲▲▲ SEO設定 END ▲▲▲ ===== -->
+    <!-- CSS / ライブラリ -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="../../CSS/style.css"> <!-- ★サイト共通CSS -->
+    <link rel="stylesheet" href="CSS/demo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body class="app-body">
+
+    <!-- ===== サイト共通ヘッダー ===== -->
+    <header class="site-header">
+        <nav class="container">
+            <a href="../../index.html" class="logo"><img src="../../Img/chroma_logo.webp" alt="Chroma Channel ロゴ"></a>
+            <ul class="nav-links">
+                <li><a href="../../index.html#about">自己紹介</a></li>
+                <li><a href="../../index.html#skills">スキル</a></li>
+                <li><a href="../../prompt.html">プロンプト</a></li>
+                <li><a href="../../learn.html">学習</a></li>
+                <li><a href="../../blog.html">ブログ</a></li>
+                <li><a href="../../portfolio.html" class="nav-active">制作実績</a></li>
+                <li><a href="../../novels.html">小説</a></li>
+                <li><a href="../../index.html#contact">連絡先</a></li>
+            </ul>
+            <button class="mobile-nav-toggle" aria-label="メニューを開く"><i class="fas fa-bars"></i><i class="fas fa-times"></i></button>
+        </nav>
+    </header>
+
+    <main class="app-main">
+        <div class="guide-container">
+            <div class="slides-viewport">
+                <div class="slides-wrapper">
+                    
+                    <div class="slide cover active">
+                        <div class="content-wrapper">
+                            <h1 class="title">レッスン1</h1>
+                            <p class="subtitle">AIってなんだろう？<br>～AIの正体を知る～</p>
+                            <div class="audio-player" onclick="playAudio('audio1_1', event)"><i class="fas fa-volume-up"></i></div>
+                            <audio id="audio1_1" src="Sounds/slide1/レッスン1...AIの正体を知る.mp3" preload="none"></audio>
+                            <div class="characters"><div class="character ai">🤖</div></div>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="content-wrapper">
+                            <h2 class="section-title"><span class="section-icon">🤔</span>「AI」って何の略？</h2>
+                            <div class="section-content">
+                                <p>レッスン1へようこそ！ まずはウォーミングアップです。<br>街でよく見るこの「AI」って言葉、何の略か知っていますか？
+                                    <span class="audio-player" onclick="playAudio('audio2_1', event)"><i class="fas fa-volume-up"></i></span>
+                                    <audio id="audio2_1" src="Sounds/slide2/「AI」って何の略？...街でよく見るこの「AI」って言葉、何の略か知っていますか？.mp3" preload="none"></audio>
+                                </p>
+                                <div class="point-box"><h4>💡 ポイント</h4><p><strong>A</strong>rtificial <strong>I</strong>ntelligence、日本語にすると「人工知能」です。<br>人間みたいに「考える」ことができるように、人工的に作られたプログラムのことなんですよ。
+                                    <span class="audio-player" onclick="playAudio('audio2_2', event)"><i class="fas fa-volume-up"></i></span>
+                                    <audio id="audio2_2" src="Sounds/slide2/ポイント...人間みたいに「考える」ことができるように、人工的に作られたプログラムのことなんですよ。.mp3" preload="none"></audio>
+                                </p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="content-wrapper">
+                            <h2 class="section-title"><span class="section-icon">📱</span>【探してみよう】あなたのスマホにもAIがいる！</h2>
+                            <div class="section-content">
+                                <p>「人工知能」と聞くと難しそうですが、実はもう、あなたのスマートフォンの中にもAIはたくさん隠れています。</p>
+                                <ul>
+                                    <li><strong>カメラの顔認識：</strong>人を撮ると顔にワクが出ますよね。</li>
+                                    <li><strong>文字入力の予測変換：</strong>「ありがとう」と打つと「ございます」と候補が出ます。</li>
+                                    <li><strong>通販サイトのおすすめ：</strong>あなたの好みに合った商品が表示されます。</li>
+                                </ul>
+                                <span class="audio-player" onclick="playAudio('audio3_1', event)"><i class="fas fa-volume-up"></i></span>
+                                <audio id="audio3_1" src="Sounds/slide3/【探してみよう】あなたのスマホにもAIがいる！...通販サイトのおすすめ：あなたの好みに合った商品が表示されます。.mp3" preload="none"></audio>
+                                <div class="point-box"><h4>💡 ポイント</h4><p>AIは、私たちの生活をこっそり便利にしてくれる、縁の下の力持ちのような存在なんです。
+                                    <span class="audio-player" onclick="playAudio('audio3_2', event)"><i class="fas fa-volume-up"></i></span>
+                                    <audio id="audio3_2" src="Sounds/slide3/ポイント...AIは、私たちの生活をこっそり便利にしてくれる、縁の下の力持ちのような存在なんです。.mp3" preload="none"></audio>
+                                </p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="content-wrapper">
+                            <h2 class="section-title"><span class="section-icon">💡</span>AIは「賢い自動販売機」？</h2>
+                            <div class="section-content">
+                                <p>AIの得意なことと苦手なことを、自動販売機で例えてみましょう。</p>
+                                <p><strong>【普通の自販機】</strong><br>「100円を入れたらAのジュースを出す」という、教えられたルール通りにしか動けません。</p>
+                                <p><strong>【AI搭載の自販機】</strong><br>過去の売上という大量のデータから、「暑い日は炭酸が人気だな」と、自分でルールを見つけ出します。だから「今のおすすめはこれ！」と教えてくれるかもしれません。
+                                    <span class="audio-player" onclick="playAudio('audio4_1', event)"><i class="fas fa-volume-up"></i></span>
+                                    <audio id="audio4_1" src="Sounds/slide4/AIは「賢い自動販売機」？...だから「今のおすすめはこれ！」と教えてくれるかもしれません。.mp3" preload="none"></audio>
+                                </p>
+                                <div class="point-box"><h4>💡 ポイント</h4><p>AIが得意なのは、大量のデータからルールやパターンを見つけ出すこと。<br>逆に、データにない全く新しいものをゼロから生み出すのは苦手です。
+                                    <span class="audio-player" onclick="playAudio('audio4_2', event)"><i class="fas fa-volume-up"></i></span>
+                                    <audio id="audio4_2" src="Sounds/slide4/ポイント...逆に、データにない全く新しいものをゼロから生み出すのは苦手です。.mp3" preload="none"></audio>
+                                </p></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slide">
+                        <div class="content-wrapper">
+                            <h2 class="section-title"><span class="section-icon">🌟</span>【まとめ】AIって、つまり…</h2>
+                            <div class="section-content">
+                                <p style="font-size:1.5em;text-align:center;font-weight:700;margin:40px 0">「大量のデータから、<br>あるルールを見つけ出すのが得意な、<br>賢いプログラム」のこと！</p>
+                                <p>レッスン1の学習パートはこれでおしまいです！<br>最後に、簡単なクイズで復習してみましょう。全問正解できたら、次のレッスンに進めますよ。
+                                    <span class="audio-player" onclick="playAudio('audio5_1', event)"><i class="fas fa-volume-up"></i></span>
+                                    <audio id="audio5_1" src="Sounds/slide5/【まとめ】AIって、つまり…...全問正解できたら、次のレッスンに進めますよ。.mp3" preload="none"></audio>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slide quiz-slide" id="quiz1">
+                        <div class="content-wrapper">
+                            <h2 class="section-title"><span class="section-icon">❓</span>理解度チェック！ (1/5)</h2>
+                            <div class="section-content">
+                                <p><strong>【問題】</strong>AIの説明として、最も近いものは次のうちどれ？
+                                    <span class="audio-player" onclick="playAudio('audio6_1', event)"><i class="fas fa-volume-up"></i></span>
+                                    <audio id="audio6_1" src="Sounds/slide6/理解度チェック！ (1)...【問題】AIの説明として、最も近いものは次のうちどれ？.mp3" preload="none"></audio>
+                                </p>
+                                <div class="quiz-options">
+                                    <div class="quiz-option" data-correct="false" onclick="checkAnswer(this)">
+                                        人間の代わりに単純作業をするロボット
+                                        <span class="audio-player" onclick="playAudio('audio6_2', event)"><i class="fas fa-volume-up"></i></span>
+                                        <audio id="audio6_2" src="Sounds/slide6/人間の代わりに単純….mp3" preload="none"></audio>
+                                    </div>
+                                    <div class="quiz-option" data-correct="true" onclick="checkAnswer(this)">
+                                        データからルールを見つけ出すのが得意なプログラム
+                                        <span class="audio-player" onclick="playAudio('audio6_3', event)"><i class="fas fa-volume-up"></i></span>
+                                        <audio id="audio6_3" src="Sounds/slide6/データからルールを….mp3" preload="none"></audio>
+                                    </div>
+                                    <div class="quiz-option" data-correct="false" onclick="checkAnswer(this)">
+                                        インターネットのこと
+                                        <span class="audio-player" onclick="playAudio('audio6_4', event)"><i class="fas fa-volume-up"></i></span>
+                                        <audio id="audio6_4" src="Sounds/slide6/インターネットのこと.mp3" preload="none"></audio>
+                                    </div>
+                                </div>
+                                <div class="quiz-feedback" style="display:none"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide quiz-slide" id="quiz2">
+                        <div class="content-wrapper">
+                            <h2 class="section-title"><span class="section-icon">❓</span>理解度チェック！ (2/5)</h2>
+                            <div class="section-content">
+                                <p><strong>【問題】</strong>私たちの身の回りで、AIが使われている例として「正しくない」ものはどれ？
+                                    <span class="audio-player" onclick="playAudio('audio7_1', event)"><i class="fas fa-volume-up"></i></span>
+                                    <audio id="audio7_1" src="Sounds/slide7/理解度チェック！ (2)...【問題】私たちの身の回りで、AIが使われている例として「正しくない」ものはどれ？.mp3" preload="none"></audio>
+                                </p>
+                                <div class="quiz-options">
+                                    <div class="quiz-option" data-correct="false" onclick="checkAnswer(this)">
+                                        スマートフォンのカメラの顔認識
+                                        <span class="audio-player" onclick="playAudio('audio7_2', event)"><i class="fas fa-volume-up"></i></span>
+                                        <audio id="audio7_2" src="Sounds/slide7/スマートフォンのカ….mp3" preload="none"></audio>
+                                    </div>
+                                    <div class="quiz-option" data-correct="true" onclick="checkAnswer(this)">
+                                        テレビのリモコンの電源ボタン
+                                        <span class="audio-player" onclick="playAudio('audio7_3', event)"><i class="fas fa-volume-up"></i></span>
+                                        <audio id="audio7_3" src="Sounds/slide7/テレビのリモコンの….mp3" preload="none"></audio>
+                                    </div>
+                                    <div class="quiz-option" data-correct="false" onclick="checkAnswer(this)">
+                                        通販サイトのおすすめ機能
+                                        <span class="audio-player" onclick="playAudio('audio7_4', event)"><i class="fas fa-volume-up"></i></span>
+                                        <audio id="audio7_4" src="Sounds/slide7/通販サイトのおすす….mp3" preload="none"></audio>
+                                    </div>
+                                </div>
+                                <div class="quiz-feedback" style="display:none"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide quiz-slide" id="quiz3">
+                        <div class="content-wrapper">
+                            <h2 class="section-title"><span class="section-icon">❓</span>理解度チェック！ (3/5)</h2>
+                            <div class="section-content">
+                                <p><strong>【問題】</strong>AIが「得意」なことは、次のうちどれ？
+                                    <span class="audio-player" onclick="playAudio('audio8_1', event)"><i class="fas fa-volume-up"></i></span>
+                                    <audio id="audio8_1" src="Sounds/slide8/理解度チェック！ (3)...【問題】AIが「得意」なことは、次のうちどれ？.mp3" preload="none"></audio>
+                                </p>
+                                <div class="quiz-options">
+                                    <div class="quiz-option" data-correct="false" onclick="checkAnswer(this)">
+                                        データにない、全く新しいアイデアをゼロからひらめくこと
+                                        <span class="audio-player" onclick="playAudio('audio8_2', event)"><i class="fas fa-volume-up"></i></span>
+                                        <audio id="audio8_2" src="Sounds/slide8/データにない、全く….mp3" preload="none"></audio>
+                                    </div>
+                                    <div class="quiz-option" data-correct="true" onclick="checkAnswer(this)">
+                                        大量の写真の中から、「猫が写っている写真だけ」を正確に選び出すこと
+                                        <span class="audio-player" onclick="playAudio('audio8_3', event)"><i class="fas fa-volume-up"></i></span>
+                                        <audio id="audio8_3" src="Sounds/slide8/大量の写真の中から….mp3" preload="none"></audio>
+                                    </div>
+                                    <div class="quiz-option" data-correct="false" onclick="checkAnswer(this)">
+                                        人間のようにお腹がすいたり、疲れたりすること
+                                        <span class="audio-player" onclick="playAudio('audio8_4', event)"><i class="fas fa-volume-up"></i></span>
+                                        <audio id="audio8_4" src="Sounds/slide8/人間のようにお腹が….mp3" preload="none"></audio>
+                                    </div>
+                                </div>
+                                <div class="quiz-feedback" style="display:none"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide quiz-slide" id="quiz4">
+                        <div class="content-wrapper">
+                            <h2 class="section-title"><span class="section-icon">❓</span>理解度チェック！ (4/5)</h2>
+                            <div class="section-content">
+                                <p><strong>【問題】</strong>スライドに出てきた「AI搭載の賢い自動販売機」ができることは何でしたか？
+                                    <span class="audio-player" onclick="playAudio('audio9_1', event)"><i class="fas fa-volume-up"></i></span>
+                                    <audio id="audio9_1" src="Sounds/slide9/理解度チェック！ (4)...【問題】スライドに出てきた「AI搭載の賢い自動販売機」ができることは何でしたか？.mp3" preload="none"></audio>
+                                </p>    
+                                <div class="quiz-options">
+                                    <div class="quiz-option" data-correct="false" onclick="checkAnswer(this)">
+                                        どんなお金を入れても、必ずおつりを間違えずに計算すること
+                                        <span class="audio-player" onclick="playAudio('audio9_2', event)"><i class="fas fa-volume-up"></i></span>
+                                        <audio id="audio9_2" src="Sounds/slide9/どんなお金を入れて….mp3" preload="none"></audio>
+                                    </div>
+                                    <div class="quiz-option" data-correct="true" onclick="checkAnswer(this)">
+                                        過去の売上データから、今の時間帯におすすめの飲み物を提案すること
+                                        <span class="audio-player" onclick="playAudio('audio9_3', event)"><i class="fas fa-volume-up"></i></span>
+                                        <audio id="audio9_3" src="Sounds/slide9/過去の売上データか….mp3" preload="none"></audio>
+                                    </div>
+                                    <div class="quiz-option" data-correct="false" onclick="checkAnswer(this)">
+                                        自分で新しいジュースの味を開発して、新商品として追加すること
+                                        <span class="audio-player" onclick="playAudio('audio9_4', event)"><i class="fas fa-volume-up"></i></span>
+                                        <audio id="audio9_4" src="Sounds/slide9/自分で新しいジュー….mp3" preload="none"></audio>
+                                    </div>
+                                </div>
+                                <div class="quiz-feedback" style="display:none"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide quiz-slide" id="quiz5">
+                        <div class="content-wrapper">
+                            <h2 class="section-title"><span class="section-icon">❓</span>理解度チェック！ (5/5)</h2>
+                            <div class="section-content">
+                                <p><strong>【問題】</strong>レッスン1のまとめです。AIとは、ひとことで言うと何でしたか？
+                                    <span class="audio-player" onclick="playAudio('audio10_1', event)"><i class="fas fa-volume-up"></i></span>
+                                    <audio id="audio10_1" src="Sounds/slide10/理解度チェック！ (5)...AIとは、ひとことで言うと何でしたか？.mp3" preload="none"></audio>
+                                </p>
+                                <div class="quiz-options">
+                                    <div class="quiz-option" data-correct="false" onclick="checkAnswer(this)">
+                                        人間と全く同じように感情を持つ、心を持ったコンピュータ
+                                        <span class="audio-player" onclick="playAudio('audio10_2', event)"><i class="fas fa-volume-up"></i></span>
+                                        <audio id="audio10_2" src="Sounds/slide10/人間と全く同じよう….mp3" preload="none"></audio>
+                                    </div>
+                                    <div class="quiz-option" data-correct="true" onclick="checkAnswer(this)">
+                                        大量のデータから、あるルールを見つけ出すのが得意なプログラム
+                                        <span class="audio-player" onclick="playAudio('audio10_3', event)"><i class="fas fa-volume-up"></i></span>
+                                        <audio id="audio10_3" src="Sounds/slide10/大量のデータから、….mp3" preload="none"></audio>
+                                    </div>
+                                    <div class="quiz-option" data-correct="false" onclick="checkAnswer(this)">
+                                        インターネットを使って、世界中の情報を検索するシステム
+                                        <span class="audio-player" onclick="playAudio('audio10_4', event)"><i class="fas fa-volume-up"></i></span>
+                                        <audio id="audio10_4" src="Sounds/slide10/インターネットを使….mp3" preload="none"></audio>
+                                    </div>
+                                </div>
+                                <div class="quiz-feedback" style="display:none"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="content-wrapper">
+                            <h2 class="section-title">
+                                <span class="section-icon">🎉</span>
+                                レッスン1 クリア！
+                                <span class="audio-player" onclick="playAudio('audio_clear_all', event)"><i class="fas fa-volume-up"></i></span>
+                            </h2>
+                            <div class="section-content">
+                                <p style="font-size:1.5em;text-align:center;font-weight:700;margin:40px 0">全問正解、おめでとうございます！</p>
+                                <p>あなたはもう、AIマスターへの第一歩を踏み出しました。<br>次のレッスンでは、いよいよ実際にAIとおしゃべりしてみます。きっとその賢さに驚くはずです。準備はいいですか？</p>
+                                <a href="#" class="quiz-nav-button">【レッスン2】へ進む！</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide-nav">
+                <button class="nav-button" id="prevBtn">＜ 前へ</button>
+                <div class="slide-counter" id="slideCounter"></div>
+                <button class="nav-button" id="nextBtn">次へ ＞</button>
+            </div>
+        </div>
+        <audio id="explanation_quiz1" src="Sounds/explanations/explanation_quiz1.mp3" preload="none"></audio>
+        <audio id="explanation_quiz2" src="Sounds/explanations/explanation_quiz2.mp3" preload="none"></audio>
+        <audio id="explanation_quiz3" src="Sounds/explanations/explanation_quiz3.mp3" preload="none"></audio>
+        <audio id="explanation_quiz4" src="Sounds/explanations/explanation_quiz4.mp3" preload="none"></audio>
+        <audio id="explanation_quiz5" src="Sounds/explanations/explanation_quiz5.mp3" preload="none"></audio>
+        <audio id="feedback_incorrect" src="Sounds/explanations/feedback_incorrect.mp3" preload="none"></audio>
+        <audio id="audio_clear_all" src="Sounds/slide11/レッスン1 クリア！...【レッスン2】へ進みましょう！.mp3" preload="none"></audio>
+    </main>
+
+    <!-- ===== サイト共通フッター ===== -->
+    <footer id="site-footer">
+            <div class="container">
+                <div class="footer-social-links">
+                    <a href="https://www.youtube.com/@chroma0224" target="_blank" rel="noopener noreferrer" title="ChromaのPC学習部屋"><i class="fab fa-youtube"></i> ChromaのPC学習部屋</a>
+                    <a href="https://www.youtube.com/@chroma1975" target="_blank" rel="noopener noreferrer" title="Chromaの自由部屋"><i class="fab fa-youtube"></i> Chromaの自由部屋</a>
+                    <a href="https://github.com/motty1975/chromachannel" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://x.com/Chroma0224" target="_blank" rel="noopener noreferrer" title="X (旧Twitter)"><i class="fab fa-twitter"></i> X (旧Twitter)</a>
+                </div>
+                <div class="footer-links">
+                    <a href="/privacy.html">プライバシーポリシー & 免責事項</a>
+                </div>
+                <div class="footer-credit">
+                    <p>当サイトおよび関連コンテンツの制作には、以下の素材を使用しています。</p>
+                    <p>音声: VOICEVOX (ずんだもん, 四国めたん, 春日部つむぎ, 中国うさぎ, 冥鳴ひまり) / 立ち絵: 坂本アヒル様, とらっかぁ様</p>
+                </div>
+                <p class="copyright">運営者: 山本 倫久 (Chromachannel)</p>
+                <p class="copyright">© 2025 Chromachannel. All rights reserved.</p>
+            </div>
+        </footer>
+    
+    <script src="../../JavaScript/script.js" defer></script> 
+    <script src="JavaScript/demo.js" defer></script> 
+</body>
+</html>

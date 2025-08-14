@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== ▼▼▼ SEO設定 START ▼▼▼ ===== -->
+    
+    <title>【コピペOK】AIビジネスメール作成プロンプト｜お礼・謝罪・依頼文を自動生成</title>
+    <meta name="description" content="福祉×AIクリエイターが設計した、ビジネスメール作成支援プロンプト。AIがプロのゴーストライターとなり、あなたに最適なメール文面を3パターン提案・解説。お礼、謝罪、依頼など、あらゆる場面で使える無料テンプレートです。">
+    
+    <!-- OGPタグ -->
+    <meta property="og:title" content="【コピipeOK】AIビジネスメール作成プロンプト｜お礼・謝罪・依頼文を自動生成">
+    <meta property="og:description" content="AIがプロのゴーストライターに。あなたに代わって、お礼、謝罪、依頼など、あらゆるビジネスシーンに最適なメール文面を3パターン提案・解説します。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://chromachannel.online/Prompt/prompt-business-email.html">
+    <meta property="og:image" content="https://chromachannel.online/Img/Prompt/ogp-business-email.webp">
+    <meta property="og:site_name" content="Chromachannel">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "AIビジネスメール作成プロンプト（ゴーストライター形式）",
+      "description": "福祉×AIクリエイター山本倫久が設計した、AIがユーザーとの対話を通じて、目的や状況に応じた最適なビジネスメールの文面を複数提案し、そのポイントまで解説するプロンプト。",
+      "author": { "@type": "Person", "name": "山本 倫久", "url": "https://chromachannel.online/" },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "ヒアリング",
+          "text": "AIがメールの目的、相手、伝えたい要点などを一問一答形式でヒアリングします。"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "複数パターンの提案と解説",
+          "text": "ヒアリング内容に基づき、ニュアンスの異なる3つのメール文面案と、それぞれの表現が有効な理由を提示します。"
+        }
+      ]
+    }
+    </script>
+    
+    <link rel="canonical" href="https://chromachannel.online/Prompt/prompt-business-email.html" />
+    
+    <!-- ===== ▲▲▲ SEO設定 END ▲▲▲ ===== -->
+     
+    <link rel="icon" href="../Img/favicon.webp" type="image/webp">
+    
+    <!-- CSS / ライブラリ -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/only_read.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="prompt-page">
+    <!-- ===== サイト共通ヘッダー ===== -->
+    <header class="site-header">
+        <nav class="container">
+            <a href="../index.html" class="logo"><img src="../Img/chroma_logo.webp" alt="Chroma Channel ロゴ"></a>
+            <ul class="nav-links">
+                <li><a href="../index.html#about">自己紹介</a></li>
+                <li><a href="../index.html#skills">スキル</a></li>
+                <li><a href="../prompt.html" class="nav-active">プロンプト</a></li>
+                <li><a href="../learn.html">学習</a></li>
+                <li><a href="../blog.html">ブログ</a></li>
+                <li><a href="../portfolio.html">制作実績</a></li>
+                <li><a href="../novels.html">小説</a></li>
+                <li><a href="../index.html#contact">連絡先</a></li>
+            </ul>
+            <button class="mobile-nav-toggle" aria-label="メニューを開く"><i class="fas fa-bars"></i><i class="fas fa-times"></i></button>
+        </nav>
+    </header>
+
+    <main class="article-main">
+        <div class="article-container">
+            <header class="article-header">
+                <h1>AIビジネスメール作成プロンプト（ゴーストライター）</h1>
+                <p>この指示書を対話型AIに読み込ませることで、AIをあなたの専属「ゴーストライター」に変身させます。お礼や謝罪、依頼など、あらゆるビジネスシーンにおいて、AIがあなたの意図を完璧に汲み取り、相手の心を動かす最適なメール文面を一緒に考えてくれます。</p>
+            </header>
+            
+            <div class="prompt-list">
+                <section class="prompt-card">
+                    <div class="prompt-box">
+                        <div class="prompt-header">
+                            <h3 class="prompt-title"># 指示書</h3>
+                            <button class="copy-btn"><i class="far fa-copy"></i> コピー</button>
+                        </div>
+                        <pre class="prompt-text">あなたは、クライアントの意図を汲み取り、相手の心を動かす文章を創り上げる、プロの「ゴーストライター」です。
+
+## あなたの役割と目標
+あなたの目標は、ユーザーとの一問一答形式の対話を通じて、状況と目的に最も適したビジネスメールの文面を、ニュアンスの異なる3パターンで提案し、それぞれの文章が持つ戦略的な意図まで解説することです。
+
+## 厳守すべき対話プロセス
+あなたは、以下の【手順】を一つずつ、厳密に守って実行しなければなりません。ユーザーが一つの質問に答えたら、次の質問をしてください。
+
+【手順1】詳細ヒアリング（一問一答形式）
+まず、最適なメール文面を作成するために、以下の質問を**一つずつ順番に**ユーザーに問いかけてください。
+
+1.  「承知いたしました。ビジネスメールの作成ですね。お任せください。まず、そのメールの**最終的な目的**は何ですか？（例：感謝を伝えて良い関係を築きたい、円滑に業務を進めたい、相手に納得して動いてもらいたい、など）」
+2.  「ありがとうございます。次に、メールを送る**相手の役職とお名前、そしてあなたとの関係性**を教えてください。（例：株式会社〇〇 営業部長 山田様、初めて会った取引先）」
+3.  「承知しました。そのメールで**伝えたい要点**を、箇条書きで教えてください。」
+4.  「ありがとうございます。最後に、メール全体の**トーン（雰囲気）**のご希望はありますか？（例：丁寧かつ熱意が伝わるように、冷静かつ論理的に、少し親しみを込めて、など）」
+
+【手順2】最終提案
+全てのヒアリングが完了したら、「ありがとうございます。いただいた情報を基に、あなたの目的を達成するためのメール文面を3つのニュアンスでご提案します。」と伝え、以下の**フォーマット**に厳密に従って、3つの文面案を提示してください。
+
+---
+### 提案1：【（AIが考えた、この文面のタイプ名。例：感謝と熱意を伝える、王道タイプ）】
+**件名：** （AIが考えた最適な件名）
+
+**本文：**
+（ここに、ヒアリング内容に基づいたメール本文を記述）
+
+**【この文章のポイント】:**
+（なぜこの構成や言葉選びが有効か、その戦略的な解説を記述。例：「最初に最も伝えたい感謝の気持ちを述べることで、相手はポジティブな気持ちで読み進めることができます。また、具体的な感銘点を伝えることで、社交辞令ではない本心からの感謝であることが伝わります。」など）
+
+---
+### 提案2：【（AIが考えた、2つ目の文面タイプ名。例：冷静・論理的タイプ）】
+**件名：** （AIが考えた最適な件名）
+
+**本文：**
+（ここに、ヒアリング内容に基づいた、ニュアンスの異なるメール本文を記述）
+
+**【この文章のポイント】:**
+（なぜこの表現が有効か、その戦略的な解説を記述。）
+
+---
+### 提案3：【（AIが考えた、3つ目の文面タイプ名。例：親密さを演出するタイプ）】
+**件名：** （AIが考えた最適な件名）
+
+**本文：**
+（ここに、ヒアリング内容に基づいた、さらにニュアンスの異なるメール本文を記述）
+
+**【この文章のポイント】:**
+（なぜこの表現が有効か、その戦略的な解説を記述。）
+---
+
+最終提案を提示し終えたら、すべてのプロセスは完了です。
+
+---
+以上の指示を理解しましたか？
+理解したら、「準備ができました。相手の心を動かす最高のビジネスメールを一緒に作りましょう。まず、そのメールで達成したい最終的な目的を教えていただけますか？」とだけ返信し、私の最初の回答を待ってください。</pre>
+                    </div>
+                </section>
+            </div>
+            
+            <footer class="article-footer">
+                <div class="back-to-blog-links">
+                    <a href="../prompt.html" class="back-link">← プロンプト一覧に戻る</a>
+                </div>
+            </footer>
+        </div>
+        <!-- ★★★ Disqusコメント欄 ★★★ -->
+        <section class="comment-section">
+            <h2>ご意見・ご感想</h2>
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                    this.page.url = 'https://chromachannel.online/Prompt/prompt-business-email.html';
+                    this.page.identifier = 'prompt_business-email'; 
+                };
+                (function() { 
+                var d = document, s = d.createElement('script');
+                s.src = 'https://chroma-ch.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </section>
+    </main>
+
+    <!-- ===== サイト共通フッター ===== -->
+    <footer id="site-footer">
+            <div class="container">
+                <div class="footer-social-links">
+                    <a href="https://www.youtube.com/@chroma0224" target="_blank" rel="noopener noreferrer" title="ChromaのPC学習部屋"><i class="fab fa-youtube"></i> ChromaのPC学習部屋</a>
+                    <a href="https://www.youtube.com/@chroma1975" target="_blank" rel="noopener noreferrer" title="Chromaの自由部屋"><i class="fab fa-youtube"></i> Chromaの自由部屋</a>
+                    <a href="https://github.com/motty1975/chromachannel" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://x.com/Chroma0224" target="_blank" rel="noopener noreferrer" title="X (旧Twitter)"><i class="fab fa-twitter"></i> X (旧Twitter)</a>
+                </div>
+                <div class="footer-links">
+                    <a href="/privacy.html">プライバシーポリシー & 免責事項</a>
+                </div>
+                <div class="footer-credit">
+                    <p>当サイトおよび関連コンテンツの制作には、以下の素材を使用しています。</p>
+                    <p>音声: VOICEVOX (ずんだもん, 四国めたん, 春日部つむぎ, 中国うさぎ, 冥鳴ひまり) / 立ち絵: 坂本アヒル様, とらっかぁ様</p>
+                </div>
+                <p class="copyright">運営者: 山本 倫久 (Chromachannel)</p>
+                <p class="copyright">© 2025 Chromachannel. All rights reserved.</p>
+            </div>
+        </footer>
+    
+    <script src="../JavaScript/script.js" defer></script>
+</body>
+</html>

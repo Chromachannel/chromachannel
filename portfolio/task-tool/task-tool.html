@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ===== ▼▼▼ SEO設定 START ▼▼▼ ===== -->
+
+<title>【制作実績】利用者向けタスク管理ツール｜福祉現場の「できた！」を支援</title>
+<meta name="description" content="福祉×AIクリエイター山本倫久がJavaScriptで制作した、福祉現場向けのシンプルなタスク管理ツール。難易度設定や進捗の可視化で、利用者のモチベーション維持と「できた！」という達成感をサポートするWebアプリケーションです。">
+<link rel="canonical" href="https://chromachannel.online/Portfolio/Task-Tool/task-tool.html" />
+<link rel="icon" href="../../Img/favicon.webp" type="image/webp">
+
+<!-- OGPタグ -->
+<meta property="og:title" content="【制作実績】利用者向けタスク管理ツール｜福祉現場の「できた！」を支援">
+<meta property="og:description" content="福祉×AIクリエイター制作。タスクの難易度設定や進捗の可視化ができる、シンプルなToDoリストツール。利用者のモチベーション維持をサポート。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://chromachannel.online/Portfolio/Task-Tool/task-tool.html">
+<meta property="og:image" content="https://chromachannel.online/Img/ogp_task_tool.webp">
+<meta property="og:site_name" content="Chromachannel">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- 構造化データ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "利用者向けタスク管理ツール",
+  "applicationCategory": "ProductivityApplication",
+  "operatingSystem": "Web-based",
+  "description": "福祉×AIクリエイター山本倫久が制作。自分のペースやタスクの難易度に合わせて管理できる、福祉現場向けのシンプルなWebベースのToDoリストツールです。進捗バーで達成度を可視化し、モチベーション維持をサポートします。",
+  "author": {
+    "@type": "Person",
+    "name": "山本 倫久",
+    "url": "https://chromachannel.online/"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "山本 倫久",
+    "url": "https://chromachannel.online/"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "JPY"
+  }
+}
+</script>
+
+<!-- ===== ▲▲▲ SEO設定 END ▲▲▲ ===== -->
+    
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="../../CSS/style.css">
+    <link rel="stylesheet" href="CSS/task-tool.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body class="app-body">
+    <!-- ===== サイト共通ヘッダー ===== -->
+    <header class="site-header">
+        <nav class="container">
+            <a href="../../index.html" class="logo"><img src="../../Img/chroma_logo.webp" alt="Chroma Channel ロゴ"></a>
+            <ul class="nav-links">
+                <li><a href="../../index.html#about">自己紹介</a></li>
+                <li><a href="../../index.html#skills">スキル</a></li>
+                <li><a href="../../prompt.html">プロンプト</a></li>
+                <li><a href="../../learn.html">学習</a></li>
+                <li><a href="../../blog.html">ブログ</a></li>
+                <li><a href="../../portfolio.html" class="nav-active">制作実績</a></li>
+                <li><a href="../../novels.html">小説</a></li>
+                <li><a href="../../index.html#contact">連絡先</a></li>
+            </ul>
+            <button class="mobile-nav-toggle" aria-label="メニューを開く"><i class="fas fa-bars"></i><i class="fas fa-times"></i></button>
+        </nav>
+    </header>
+
+    <main class="app-main">
+        <div class="container task-app-container">
+            <header>
+                <h1>タスク管理ツール</h1>
+                <p>自分のペースに合わせてタスクを管理しよう！</p>
+            </header>
+            <section class="task-input-section">
+                <h2>新しいタスクを追加</h2>
+                <form id="task-form">
+                    <input type="text" id="task-input" placeholder="タスクの内容を入力" required>
+                    <select id="difficulty-select">
+                        <option value="easy">かんたん</option>
+                        <option value="normal" selected>ふつう</option>
+                        <option value="hard">むずかしい</option>
+                    </select>
+                    <button type="submit">追加</button>
+                </form>
+            </section>
+            <section class="task-display-section">
+                <h2>タスクリスト</h2>
+                <div class="filter-controls">
+                    <label><input type="radio" name="filter" value="all" checked> すべて</label>
+                    <label><input type="radio" name="filter" value="active"> 未完了</label>
+                    <label><input type="radio" name="filter" value="completed"> 完了</label>
+                </div>
+                <div class="progress-container">
+                    <span>進捗：</span>
+                    <progress id="progress-bar" value="0" max="100"></progress>
+                    <span id="progress-text">0%</span>
+                </div>
+                <ul id="task-list"></ul>
+                <div id="feedback-message" class="feedback-message"></div>
+            </section>
+        </div>
+    </main>
+    
+    <!-- ===== サイト共通フッター ===== -->
+    <footer id="site-footer">
+            <div class="container">
+                <div class="footer-social-links">
+                    <a href="https://www.youtube.com/@chroma0224" target="_blank" rel="noopener noreferrer" title="ChromaのPC学習部屋"><i class="fab fa-youtube"></i> ChromaのPC学習部屋</a>
+                    <a href="https://www.youtube.com/@chroma1975" target="_blank" rel="noopener noreferrer" title="Chromaの自由部屋"><i class="fab fa-youtube"></i> Chromaの自由部屋</a>
+                    <a href="https://github.com/motty1975/chromachannel" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://x.com/Chroma0224" target="_blank" rel="noopener noreferrer" title="X (旧Twitter)"><i class="fab fa-twitter"></i> X (旧Twitter)</a>
+                </div>
+                <div class="footer-links">
+                    <a href="/privacy.html">プライバシーポリシー & 免責事項</a>
+                </div>
+                <div class="footer-credit">
+                    <p>当サイトおよび関連コンテンツの制作には、以下の素材を使用しています。</p>
+                    <p>音声: VOICEVOX (ずんだもん, 四国めたん, 春日部つむぎ, 中国うさぎ, 冥鳴ひまり) / 立ち絵: 坂本アヒル様, とらっかぁ様</p>
+                </div>
+                <p class="copyright">運営者: 山本 倫久 (Chromachannel)</p>
+                <p class="copyright">© 2025 Chromachannel. All rights reserved.</p>
+            </div>
+        </footer>
+    
+    <script src="../../JavaScript/script.js" defer></script>
+    <script src="JavaScript/task-tool.js" defer></script>
+</body>
+</html>

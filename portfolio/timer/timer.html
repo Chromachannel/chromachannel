@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<!-- ===== ▼▼▼ SEO設定 START ▼▼▼ ===== -->
+    <title>【制作実績】多機能オンライン時計｜福祉×AIクリエイターのJavaScript開発事例</title>
+    <meta name="description" content="福祉×AIクリエイター山本倫久がJavaScriptで制作した、多機能オンライン時計・タイマー・カレンダー。時間管理やスケジュール調整をサポートするWebアプリケーションの開発実績です。">
+    <link rel="canonical" href="https://chromachannel.online/Portfolio/Timer/timer.html" />
+    <link rel="icon" href="../../Img/favicon.webp" type="image/webp">
+
+    <!-- OGPタグ -->
+    <meta property="og:title" content="【制作実績】多機能オンライン時計｜福祉×AIクリエイターのJavaScript開発事例">
+    <meta property="og:description" content="福祉×AIクリエイター山本倫久が制作。現在時刻、カレンダー、タイマーを一つにまとめた便利なWebツール。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chromachannel.online/Portfolio/Timer/timer.html">
+    <meta property="og:image" content="https://chromachannel.online/Img/ogp_timer_tool.webp">
+    <meta property="og:site_name" content="Chromachannel">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "多機能オンライン時計",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web-based",
+      "description": "福祉×AIクリエイター山本倫久が制作した、現在時刻、日付、予定を書き込めるカレンダー、そしてカウントアップ・カウントダウン両対応の多機能タイマーを一つにまとめたWebツールです。",
+      "author": {
+        "@type": "Person",
+        "name": "山本 倫久",
+        "url": "https://chromachannel.online/"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "山本 倫久",
+        "url": "https://chromachannel.online/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "JPY"
+      }
+    }
+    </script>
+<!-- ===== ▲▲▲ SEO設定 END ▲▲▲ ===== -->
+    
+    <!-- CSS / ライブラリ -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="../../CSS/style.css">
+    <link rel="stylesheet" href="CSS/timer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body class="app-body">
+
+    <!-- ===== サイト共通ヘッダー ===== -->
+    <header class="site-header">
+        <nav class="container">
+            <a href="../../index.html" class="logo"><img src="../../Img/chroma_logo.webp" alt="Chroma Channel ロゴ"></a>
+            <ul class="nav-links">
+                <li><a href="../../index.html#about">自己紹介</a></li>
+                <li><a href="../../index.html#skills">スキル</a></li>
+                <li><a href="../../prompt.html">プロンプト</a></li>
+                <li><a href="../../learn.html">学習</a></li>
+                <li><a href="../../blog.html">ブログ</a></li>
+                <li><a href="../../portfolio.html" class="nav-active">制作実績</a></li>
+                <li><a href="../../novels.html">小説</a></li>
+                <li><a href="../../index.html#contact">連絡先</a></li>
+            </ul>
+            <button class="mobile-nav-toggle" aria-label="メニューを開く"><i class="fas fa-bars"></i><i class="fas fa-times"></i></button>
+        </nav>
+    </header>
+
+    <main class="app-main">
+        <div class="container app-container">
+            <h2>（o_ _)ｏ））現在、開発中です（o_ _)ｏ））</h2>
+            <div class="section datetime">
+                <div>現在の時間と日付</div>
+                <div class="time" id="current-time">00:00:00</div>
+                <div class="date" id="current-date">2025年7月27日（日）</div>
+            </div>
+
+            <div class="section calendar">
+                <div class="calendar-header">
+                    <button id="prev-month"></button>
+                    <div class="month-year" id="month-year">2025年7月</div>
+                    <button id="next-month"></button>
+                </div>
+                <div class="calendar-grid" id="calendar-grid"></div>
+            </div>
+
+            <div class="section">
+                <h3>タイマー</h3>
+                <div class="timer-mode">
+                    <label><input type="radio" name="timer-mode" value="up" checked> カウントアップ</label>
+                    <label><input type="radio" name="timer-mode" value="down"> カウントダウン</label>
+                </div>
+                <div class="timer-display" id="timer-display">00:00:00</div>
+                <div class="timer-controls">
+                    <button id="start-timer">スタート</button>
+                    <button id="pause-timer" disabled>一時停止</button>
+                    <button id="reset-timer">リセット</button>
+                </div>
+                <div class="timer-setup">
+                    <input type="number" id="hours" min="0" max="99" value="0"><span>時間</span>
+                    <input type="number" id="minutes" min="0" max="59" value="0"><span>分</span>
+                    <input type="number" id="seconds" min="0" max="59" value="0"><span>秒</span>
+                    <button id="set-timer">設定</button>
+                </div>
+                <div class="sound-setup">
+                    <label for="timer-sound">タイマー終了時の通知音：</label>
+                    <input type="file" id="timer-sound" accept="audio/*">
+                    <div class="sound-controls">
+                        <button id="test-sound" disabled>音をテスト</button>
+                        <button id="stop-sound" disabled>音を停止</button>
+                        <button id="remove-sound" disabled>音を削除</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="event-modal">
+            <div class="modal-content">
+                <h3 class="modal-title" id="modal-date"></h3>
+                <div class="form-group">
+                    <label for="event-title">タイトル：</label>
+                    <input type="text" id="event-title" maxlength="20">
+                </div>
+                <div class="form-group">
+                    <label for="event-details">詳細：</label>
+                    <textarea id="event-details" rows="3"></textarea>
+                </div>
+                <div class="form-buttons">
+                    <button class="cancel-btn" id="cancel-event">キャンセル</button>
+                    <button class="save-btn" id="save-event">保存</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ===== サイト共通フッター ===== -->
+    <footer id="site-footer">
+            <div class="container">
+                <div class="footer-social-links">
+                    <a href="https://www.youtube.com/@chroma0224" target="_blank" rel="noopener noreferrer" title="ChromaのPC学習部屋"><i class="fab fa-youtube"></i> ChromaのPC学習部屋</a>
+                    <a href="https://www.youtube.com/@chroma1975" target="_blank" rel="noopener noreferrer" title="Chromaの自由部屋"><i class="fab fa-youtube"></i> Chromaの自由部屋</a>
+                    <a href="https://github.com/motty1975/chromachannel" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://x.com/Chroma0224" target="_blank" rel="noopener noreferrer" title="X (旧Twitter)"><i class="fab fa-twitter"></i> X (旧Twitter)</a>
+                </div>
+                <div class="footer-links">
+                    <a href="/privacy.html">プライバシーポリシー & 免責事項</a>
+                </div>
+                <div class="footer-credit">
+                    <p>当サイトおよび関連コンテンツの制作には、以下の素材を使用しています。</p>
+                    <p>音声: VOICEVOX (ずんだもん, 四国めたん, 春日部つむぎ, 中国うさぎ, 冥鳴ひまり) / 立ち絵: 坂本アヒル様, とらっかぁ様</p>
+                </div>
+                <p class="copyright">運営者: 山本 倫久 (Chromachannel)</p>
+                <p class="copyright">© 2025 Chromachannel. All rights reserved.</p>
+            </div>
+        </footer>
+    
+    <script src="../../JavaScript/script.js" defer></script>
+    <script src="JavaScript/timer.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<!-- ===== ▼▼▼ SEO設定 START ▼▼▼ ===== -->
+    <title>【制作実績】HTML/CSS リアルタイムプレビューエディタ｜JavaScript開発事例</title>
+    <meta name="description" content="福祉×AIクリエイター山本倫久がJavaScriptで制作した、ブラウザで使えるHTML/CSSのリアルタイムプレビューエディタ。コードを書きながら瞬時に結果を確認でき、Web制作の学習や試作に最適です。">
+    <link rel="canonical" href="https://chromachannel.online/Portfolio/Real-time-preview/real-time-preview.html" />
+    <link rel="icon" href="../../Img/favicon.webp" type="image/webp">
+
+    <!-- OGPタグ -->
+    <meta property="og:title" content="【制作実績】HTML/CSS リアルタイムプレビューエディタ｜JavaScript開発事例">
+    <meta property="og:description" content="福祉×AIクリエイター山本倫久が制作した、ブラウザだけで使えるHTML/CSSリアルタイムプレビューツール。Web制作の学習や試作に最適です。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chromachannel.online/Portfolio/Real-time-preview/real-time-preview.html">
+    <meta property="og:image" content="https://chromachannel.online/Img/ogp_realtime_editor.webp">
+    <meta property="og:site_name" content="Chromachannel">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "HTML/CSS リアルタイムプレビューエディタ",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web-based",
+      "description": "福祉×AIクリエイター山本倫久が制作した、ブラウザ上でHTMLとCSSを記述し、リアルタイムでプレビューを確認できるオンラインコードエディタです。",
+      "author": {
+        "@type": "Person",
+        "name": "山本 倫久",
+        "url": "https://chromachannel.online/"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "山本 倫久",
+        "url": "https://chromachannel.online/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "JPY"
+      }
+    }
+    </script>
+<!-- ===== ▲▲▲ SEO設定 END ▲▲▲ ===== -->
+    
+    <!-- CSS / ライブラリ -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="../../CSS/style.css">
+    <link rel="stylesheet" href="CSS/real-time-preview.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body class="app-body">
+
+    <!-- ===== サイト共通ヘッダー ===== -->
+    <header class="site-header">
+        <nav class="container">
+            <a href="../../index.html" class="logo"><img src="../../Img/chroma_logo.webp" alt="Chroma Channel ロゴ"></a>
+            <ul class="nav-links">
+                <li><a href="../../index.html#about">自己紹介</a></li>
+                <li><a href="../../index.html#skills">スキル</a></li>
+                <li><a href="../../prompt.html">プロンプト</a></li>
+                <li><a href="../../learn.html">学習</a></li>
+                <li><a href="../../blog.html">ブログ</a></li>
+                <li><a href="../../portfolio.html" class="nav-active">制作実績</a></li>
+                <li><a href="../../novels.html">小説</a></li>
+                <li><a href="../../index.html#contact">連絡先</a></li>
+            </ul>
+            <button class="mobile-nav-toggle" aria-label="メニューを開く"><i class="fas fa-bars"></i><i class="fas fa-times"></i></button>
+        </nav>
+    </header>
+
+    <main class="app-main">
+        <div class="container full-width-container">
+            <h1>HTML/CSSリアルタイムプレビュー</h1>
+            <h2>（o_ _)ｏ））現在、開発中です（o_ _)ｏ））</h2>    
+            <div class="editor-main-container">
+                <div class="editor-column">
+                    <div class="editor-section">
+                        <div class="editor-header">
+                            <div class="editor-label">HTML</div>
+                            <div class="tool-bar">
+                                <button id="html-load-btn" class="tool-button">📂 ロード</button>
+                                <button id="html-save-btn" class="tool-button">💾 保存</button>
+                                <button id="html-color-picker-btn" class="tool-button">🎨 カラー</button>
+                            </div>
+                        </div>
+                        <textarea id="html-editor" spellcheck="false"><div class="box"><h1>こんにちは♪</h1><p>下部にコードを記入してください♪</p></div></textarea>
+                        <div id="html-color-picker" class="color-picker-container">
+                            <div class="color-picker-header">
+                                <div class="color-picker-title">カラーピッカー (HTML)</div>
+                                <button class="close-button">×</button>
+                            </div>
+                            <div class="color-preview"></div>
+                            <div class="color-input-group">
+                                <div class="color-input"><input type="color" id="html-color-input" value="#3366cc"></div>
+                                <input type="text" id="html-hex-input" class="hex-input" value="#3366cc">
+                            </div>
+                            <div class="color-presets">
+                                <div class="color-preset" style="background-color: #f44336" data-color="#f44336"></div>
+                                <div class="color-preset" style="background-color: #e91e63" data-color="#e91e63"></div>
+                                <div class="color-preset" style="background-color: #9c27b0" data-color="#9c27b0"></div>
+                                <div class="color-preset" style="background-color: #673ab7" data-color="#673ab7"></div>
+                                <div class="color-preset" style="background-color: #3f51b5" data-color="#3f51b5"></div>
+                                <div class="color-preset" style="background-color: #2196f3" data-color="#2196f3"></div>
+                                <div class="color-preset" style="background-color: #03a9f4" data-color="#03a9f4"></div>
+                                <div class="color-preset" style="background-color: #00bcd4" data-color="#00bcd4"></div>
+                                <div class="color-preset" style="background-color: #009688" data-color="#009688"></div>
+                                <div class="color-preset" style="background-color: #4caf50" data-color="#4caf50"></div>
+                                <div class="color-preset" style="background-color: #8bc34a" data-color="#8bc34a"></div>
+                                <div class="color-preset" style="background-color: #cddc39" data-color="#cddc39"></div>
+                                <div class="color-preset" style="background-color: #ffeb3b" data-color="#ffeb3b"></div>
+                                <div class="color-preset" style="background-color: #ffc107" data-color="#ffc107"></div>
+                                <div class="color-preset" style="background-color: #ff9800" data-color="#ff9800"></div>
+                                <div class="color-preset" style="background-color: #ff5722" data-color="#ff5722"></div>
+                                <div class="color-preset" style="background-color: #795548" data-color="#795548"></div>
+                                <div class="color-preset" style="background-color: #9e9e9e" data-color="#9e9e9e"></div>
+                                <div class="color-preset" style="background-color: #607d8b" data-color="#607d8b"></div>
+                                <div class="color-preset" style="background-color: #000000" data-color="#000000"></div>
+                                <div class="color-preset" style="background-color: #ffffff" data-color="#ffffff"></div>
+                                <div class="color-preset" style="background-color: #f5f5f5" data-color="#f5f5f5"></div>
+                                <div class="color-preset" style="background-color: #eeeeee" data-color="#eeeeee"></div>
+                                <div class="color-preset" style="background-color: #e0e0e0" data-color="#e0e0e0"></div>
+                            </div>
+                            <div class="button-group"><button class="apply-button">適用</button></div>
+                        </div>
+                    </div>
+                    <div class="editor-section">
+                        <div class="editor-header">
+                            <div class="editor-label">CSS</div>
+                            <div class="tool-bar">
+                                <button id="css-load-btn" class="tool-button">📂 ロード</button>
+                                <button id="css-save-btn" class="tool-button">💾 保存</button>
+                                <button id="css-color-picker-btn" class="tool-button">🎨 カラー</button>
+                            </div>
+                        </div>
+                        <textarea id="css-editor" spellcheck="false">.box { background-color: #f0f0f0; padding: 20px; border-radius: 8px; text-align: center; } h1 { color: #3366cc; } p { color: #666; }</textarea>
+                        <div id="css-color-picker" class="color-picker-container">
+                             <div class="color-picker-header">
+                                <div class="color-picker-title">カラーピッカー (CSS)</div>
+                                <button class="close-button">×</button>
+                            </div>
+                            <div class="color-preview"></div>
+                            <div class="color-input-group">
+                                <div class="color-input"><input type="color" id="css-color-input" value="#3366cc"></div>
+                                <input type="text" id="css-hex-input" class="hex-input" value="#3366cc">
+                            </div>
+                            <div class="color-presets">
+                                <div class="color-preset" style="background-color: #f44336" data-color="#f44336"></div>
+                                <div class="color-preset" style="background-color: #e91e63" data-color="#e91e63"></div>
+                                <div class="color-preset" style="background-color: #9c27b0" data-color="#9c27b0"></div>
+                                <div class="color-preset" style="background-color: #673ab7" data-color="#673ab7"></div>
+                                <div class="color-preset" style="background-color: #3f51b5" data-color="#3f51b5"></div>
+                                <div class="color-preset" style="background-color: #2196f3" data-color="#2196f3"></div>
+                                <div class="color-preset" style="background-color: #03a9f4" data-color="#03a9f4"></div>
+                                <div class="color-preset" style="background-color: #00bcd4" data-color="#00bcd4"></div>
+                                <div class="color-preset" style="background-color: #009688" data-color="#009688"></div>
+                                <div class="color-preset" style="background-color: #4caf50" data-color="#4caf50"></div>
+                                <div class="color-preset" style="background-color: #8bc34a" data-color="#8bc34a"></div>
+                                <div class="color-preset" style="background-color: #cddc39" data-color="#cddc39"></div>
+                                <div class="color-preset" style="background-color: #ffeb3b" data-color="#ffeb3b"></div>
+                                <div class="color-preset" style="background-color: #ffc107" data-color="#ffc107"></div>
+                                <div class="color-preset" style="background-color: #ff9800" data-color="#ff9800"></div>
+                                <div class="color-preset" style="background-color: #ff5722" data-color="#ff5722"></div>
+                                <div class="color-preset" style="background-color: #795548" data-color="#795548"></div>
+                                <div class="color-preset" style="background-color: #9e9e9e" data-color="#9e9e9e"></div>
+                                <div class="color-preset" style="background-color: #607d8b" data-color="#607d8b"></div>
+                                <div class="color-preset" style="background-color: #000000" data-color="#000000"></div>
+                                <div class="color-preset" style="background-color: #ffffff" data-color="#ffffff"></div>
+                                <div class="color-preset" style="background-color: #f5f5f5" data-color="#f5f5f5"></div>
+                                <div class="color-preset" style="background-color: #eeeeee" data-color="#eeeeee"></div>
+                                <div class="color-preset" style="background-color: #e0e0e0" data-color="#e0e0e0"></div>
+                            </div>
+                            <div class="button-group"><button class="apply-button">適用</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="preview-column">
+                    <div class="preview-label">プレビュー</div>
+                    <div class="preview-area">
+                        <iframe id="preview-frame"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ===== サイト共通フッター ===== -->
+    <footer id="site-footer">
+            <div class="container">
+                <div class="footer-social-links">
+                    <a href="https://www.youtube.com/@chroma0224" target="_blank" rel="noopener noreferrer" title="ChromaのPC学習部屋"><i class="fab fa-youtube"></i> ChromaのPC学習部屋</a>
+                    <a href="https://www.youtube.com/@chroma1975" target="_blank" rel="noopener noreferrer" title="Chromaの自由部屋"><i class="fab fa-youtube"></i> Chromaの自由部屋</a>
+                    <a href="https://github.com/motty1975/chromachannel" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://x.com/Chroma0224" target="_blank" rel="noopener noreferrer" title="X (旧Twitter)"><i class="fab fa-twitter"></i> X (旧Twitter)</a>
+                </div>
+                <div class="footer-links">
+                    <a href="/privacy.html">プライバシーポリシー & 免責事項</a>
+                </div>
+                <div class="footer-credit">
+                    <p>当サイトおよび関連コンテンツの制作には、以下の素材を使用しています。</p>
+                    <p>音声: VOICEVOX (ずんだもん, 四国めたん, 春日部つむぎ, 中国うさぎ, 冥鳴ひまり) / 立ち絵: 坂本アヒル様, とらっかぁ様</p>
+                </div>
+                <p class="copyright">運営者: 山本 倫久 (Chromachannel)</p>
+                <p class="copyright">© 2025 Chromachannel. All rights reserved.</p>
+            </div>
+        </footer>
+    
+    <script src="../../JavaScript/script.js" defer></script>
+    <script src="JavaScript/real-time-preview.js" defer></script>
+</body>
+</html>

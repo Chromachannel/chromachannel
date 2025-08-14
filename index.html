@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Chromachannel | 福祉とAI活用を学ぶ実践サイト by 山本倫久</title>
+        <meta name="description" content="福祉×AIクリエイター 山本倫久が運営する、AI活用を学ぶ実践サイト。初心者向けAI学習講座や、福祉現場で使える制作実績（Webアプリ、教材）を無料公開。あなたの「できる」と「楽しい」をAIで支援します。">
+        <meta property="og:title" content="Chromachannel | 福祉とAI活用を学ぶ実践サイト by 山本倫久">
+        <meta property="og:description" content="福祉×AIクリエイターが運営する、AI活用を学ぶ実践サイト。初心者向け学習講座や福祉現場で使える制作実績を無料公開。">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://chromachannel.online/">
+        <meta property="og:image" content="https://chromachannel.online/Img/ogp_image.webp">
+        <meta property="og:site_name" content="Chromachannel">
+        <meta name="twitter:card" content="summary_large_image">
+        <link rel="icon" href="Img/favicon.webp" type="image/webp">
+        <link rel="canonical" href="https://chromachannel.online/" />
+        <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Chromachannel",
+        "url": "https://chromachannel.online/",
+        "author": {
+            "@type": "Person",
+            "name": "山本 倫久",
+            "url": "https://chromachannel.online/",
+            "image": "https://chromachannel.online/Img/profile.webp",
+            "jobTitle": "福祉 × AIクリエイター",
+            "description": "福祉の現場にAIという最先端のテクノロジーを駆使して、新しい「できる」と「楽しい」を届けることをミッションとしています。企画、シナリオ、音楽、イラスト、動画編集まで、コンテンツ制作の全工程をワンストップで手掛けます。",
+            "sameAs": [
+                "https://www.youtube.com/@chroma0224",
+                "https://www.youtube.com/@chroma1975",
+                "https://github.com/motty1975/chromachannel",
+                "https://x.com/Chroma0224"
+            ],
+            "knowsAbout": ["AIイラスト制作", "動画制作", "音楽制作", "教材コンテンツ設計", "Webアプリケーション開発", "福祉ITコンサルティング", "プロンプトエンジニアリング"]
+        },
+        "publisher": {
+            "@type": "Person",
+            "name": "山本 倫久"
+        },
+        "description": "福祉×AIクリエイター 山本倫久が運営する、AI活用を学ぶ実践サイト。初心者向けAI学習講座や、福祉現場で使える制作実績（Webアプリ、教材）を無料公開しています。"
+        }
+        </script>
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/topview.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    </head>
+    <body>
+
+        <header class="site-header">
+            <nav class="container">
+                <a href="index.html" class="logo">
+                    <img src="Img/chroma_logo.webp" alt="Chroma Channel ロゴ">
+                </a>
+                <ul class="nav-links">
+                <li><a href="/index.html#about">自己紹介</a></li>
+                <li><a href="/index.html#skills">スキル</a></li>
+                <li><a href="/prompt.html">プロンプト</a></li>
+                <li><a href="/learn.html">学習</a></li>
+                <li><a href="/blog.html">ブログ</a></li>
+                <li><a href="/portfolio.html">制作実績</a></li>
+                <li><a href="/novels.html">小説</a></li>
+                <li><a href="/index.html#contact">連絡先</a></li>
+                </ul>
+                <button class="mobile-nav-toggle" aria-label="メニューを開く">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-times"></i>
+                </button>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>AIで「好き」を仕事に。<br>福祉の現場に、創造の翼を。</h1>
+                    <p class="hero-subtitle">最先端のAIテクノロジーで、一人ひとりの創造性を<br>開花させるお手伝いをします。</p>
+                    <div class="hero-speech-button-wrapper">
+                        <audio controls preload="none" aria-label="ヒーローセクションの読み上げ音声">
+                            <source src="Audio/title.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                    <div class="hero-cta-buttons">
+                        <div class="secondary-cta-group">
+                            <a href="Portfolio/Hakase/hakase.html" class="cta-button secondary-cta">まずは気軽に、AI博士に聞いてみよう！</a>
+                        </div>
+                        <a href="portfolio.html" class="cta-button">作品を見る</a>
+                        </div>
+                </div>
+            </section>
+
+            <section id="about" class="section about">
+                <div class="container">
+                    <h2 class="section-title fade-in">自己紹介</h2>
+                    <div class="about-card fade-in">
+                        <div class="about-card-left">
+                            <img src="Img/profile.webp" alt="山本 倫久 プロフィール写真" class="profile-image">
+                            <div class="profile-audio-player">
+                                <p class="audio-caption">ご挨拶（音声）</p>
+                                    <audio controls preload="none" aria-label="About Meセクションの読み上げ音声">
+                                        <source src="Audio/about_me.mp3" type="audio/mpeg">
+                                    </audio>
+                            </div>
+                        </div>
+                        <div class="about-card-right">
+                            <p>はじめまして。<span class="highlight">福祉 × AIクリエイター</span>の<span class="highlight">山本 倫久</span>と申します。</p>
+                            <p>私のミッションは、<span class="highlight">AIという最先端のテクノロジーを駆使して、福祉の現場に新しい「できる」と「楽しい」を届けること</span>です。</p>
+                            <p>私自身、就労支援B型事業所を利用する中で、誰もが心の中に素晴らしい創造性の種を持っていることを実感してきました。その種を、AIという光と水で育み、一人ひとりの「好き」という気持ちを、自信を持って世に出せる「作品」へと開花させる。そのお手伝いをすることが、私の最大の喜びです。</p>
+                            <p>企画、シナリオ、音楽、イラスト、動画編集まで、<span class="highlight">コンテンツ制作の全工程をワンストップで手掛けるスキル</span>と、何より<span class="highlight">「教えること」への情熱</span>があります。複雑なITスキルも、キャラクターの掛け合いなどを通じて、誰もが楽しみながら学べる教材へとデザインし直すことを得意としています。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills" class="section skills">
+                <div class="container">
+                    <h2 class="section-title fade-in">スキル & サービス</h2>
+                    <div class="skills-grid">
+                        <div class="skill-card fade-in">
+                            <div class="skill-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <h3>AIイラスト制作</h3>
+                            <p>Stable Diffusion等を活用したキャラクター・背景制作、および操作指導。</p>
+                        </div>
+                        <div class="skill-card fade-in">
+                            <div class="skill-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <h3>動画・音楽制作</h3>
+                            <p>企画、台本(GPTs)、音声(VOICEVOX)、楽曲(Suno)、編集(YMM4)まで一貫対応。</p>
+                        </div>
+                        <div class="skill-card fade-in">
+                            <div class="skill-icon">
+                                <i class="fas fa-book-open-reader"></i>
+                            </div>
+                            <h3>教材コンテンツ設計</h3>
+                            <p>複雑なITスキルを、初心者でも楽しく学べるインタラクティブな教材を開発。</p>
+                        </div>
+                        <div class="skill-card fade-in">
+                            <div class="skill-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3>Webアプリ開発</h3>
+                            <p>HTML/CSS/JSを用いた、体験型学習アプリやツールのプロトタイプ開発。</p>
+                        </div>
+                        <div class="skill-card fade-in">
+                            <div class="skill-icon">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <h3>福祉×ITコンサル</h3>
+                            <p>当事者目線で、福祉現場の課題を解決するIT活用の企画・提案。</p>
+                        </div>
+                        <div class="skill-card fade-in">
+                            <div class="skill-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h3>総合プロデュース</h3>
+                            <p>アイデアの壁打ちから完成まで、コンテンツ制作の全工程を伴走支援。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="how-to-use" class="section">
+                <div class="container">
+                    <h2 class="section-title fade-in">Chromachannelの歩き方</h2>
+                    <div class="step-guide-grid">
+                        <div class="step-card fade-in">
+                            <div class="step-number">STEP 1</div>
+                            <h3>まずはこちらから</h3>
+                            <p>AIで何ができるのか、まずはゲーム感覚で体験してみましょう！<br></p>
+                            <a href="Portfolio/Demo/demo.html" class="step-link">学習デモを体験する →</a>
+                        </div>
+                        <div class="step-card fade-in">
+                            <div class="step-number">STEP 2</div>
+                            <h3>テーマから探す</h3>
+                            <p>あなたの興味があるテーマの「まとめページ」から、関連コンテンツを効率的に探せます。</p>
+                            <a href="#themes" class="step-link">テーマ一覧へ進む →</a>
+                        </div>
+                        <div class="step-card fade-in">
+                            <div class="step-number">STEP 3</div>
+                            <h3>AI博士に相談</h3>
+                            <p>分からないことや悩みがあれば、いつでもAI博士があなたの相談に乗ります。<br></p>
+                            <a href="Portfolio/Hakase/hakase.html" class="step-link">AI博士の研究室へ →</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="themes" class="section theme-tags">
+                <div class="container">
+                    <h2 class="section-title fade-in">テーマから探す</h2>
+                    <div class="tag-grid">
+                        <a href="learning-summary.html" class="tag-card fade-in">
+                            <div class="tag-icon">🎓</div>
+                            <h3>AI学習</h3>
+                            <p>初心者向けの学習法から実践的なツールまで</p>
+                        </a>
+                        <a href="business-summary.html" class="tag-card fade-in">
+                            <div class="tag-icon">💼</div>
+                            <h3>ビジネス・仕事術</h3>
+                            <p>AIで業務を効率化するプロンプトやアプリ</p>
+                        </a>
+                        <a href="creative-summary.html" class="tag-card fade-in">
+                            <div class="tag-icon">🎨</div>
+                            <h3>創作・クリエイティブ</h3>
+                            <p>イラスト・音楽・物語をAIと共同制作</p>
+                        </a>
+                        <a href="entertainment-summary.html" class="tag-card fade-in">
+                            <div class="tag-icon">🎮</div>
+                            <h3>エンタメ</h3>
+                            <p>AIと紡いだ小説や、ブラウザで遊べるゲーム</p>
+                        </a>
+                        <a href="apps-summary.html" class="tag-card fade-in">
+                            <div class="tag-icon">
+                                <i class="fas fa-mouse-pointer"></i>
+                            </div>
+                            <h3>アプリ・ツール</h3>
+                            <p>すぐに使える、実践的なWebアプリケーション</p>
+                        </a>
+                        <a href="lifehack-summary.html" class="tag-card fade-in">
+                            <div class="tag-icon">🌱</div>
+                            <h3>暮らし・生活改善</h3>
+                            <p>献立作成から悩み相談まで、日常を豊かに</p>
+                        </a>
+                        <a href="rabbit-summary.html" class="tag-card fade-in">
+                            <div class="tag-icon">🐇</div>
+                            <h3>うさぎ</h3>
+                            <p>福祉×うさぎをテーマにしたWebサイト制作実績</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="latest-blog" class="section latest-posts">
+                <div class="container">
+                    <h2 class="section-title fade-in">最新ブログ記事</h2>
+                    <div class="post-grid">
+                        <a href="/Blog/ai-learning-complete-guide.html" class="post-card-link fade-in">
+                            <div class="post-card">
+                                <div class="post-card-image"><img src="/Img/Blog/ogp-ai-learning-guide.webp" alt="AI学習の完全ガイド"></div>
+                                <div class="post-card-content">
+                                    <p class="post-card-date">2025.08.12</p>
+                                    <h3>【完全ガイド】AI学習の始め方、この1ページで全てが分かる</h3>
+                                    <p>AI学習に挫折しないための完全ロードマップ。知識ゼロからAIクリエイターになるための全ステップを案内します。</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/Blog/fuwamoco-development-story.html" class="post-card-link fade-in">
+                            <div class="post-card">
+                                <div class="post-card-image"><img src="/Img/Blog/ogp-fuwamoco-story.webp" alt="Fuwamoco PROJECTの開発秘話"></div>
+                                <div class="post-card-content">
+                                    <p class="post-card-date">2025.08.12</p>
+                                    <h3>【開発秘話】なぜ私は、架空のNPO法人サイト「Fuwamoco PROJECT」を創ったのか？</h3>
+                                    <p>福祉×AIクリエイターの原点。就労支援の課題として生まれたこのポートフォリオに込めた、うさぎと福祉への想いを語ります。</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/Blog/announcing-full-ai-curriculum.html" class="post-card-link fade-in">
+                            <div class="post-card">
+                                <div class="post-card-image">
+                                    <img src="/Img/Blog/ogp-full-curriculum.webp" alt="AI実践講座、全11コース完成！">
+                                </div>
+                                <div class="post-card-content">
+                                    <p class="post-card-date">2025.08.09</p>
+                                    <h3>【講座完成】AI実践講座、全11コースが遂に完成しました！</h3>
+                                    <p>入門からビジネス実践まで、AIスキルを体系的に学べる全11コースの無料講座が遂に完成！</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="Blog/announcing-new-ai-courses.html" class="post-card-link fade-in">
+                            <div class="post-card">
+                                <div class="post-card-image">
+                                    <img src="Img/Blog/ogp-new-courses.webp" alt="新しいAI講座の開設をお知らせするイメージイラスト">
+                                </div>
+                                <div class="post-card-content">
+                                    <p class="post-card-date">2025.08.08</p>
+                                    <h3>【講座リリース】「AI教養編」と「画像生成AI編」を新規開講しました！</h3>
+                                    <p>無料AI学習講座に待望の2コースが新登場！AIの仕組みを学ぶ「教養編」と、言葉で絵を描く「画像生成AI編」で、新しい学びの旅を始めませんか？</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="view-more-button-wrapper">
+                        <a href="blog.html" class="view-more-button">ブログをもっと見る</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="featured-portfolio" class="section latest-posts">
+                <div class="container">
+                    <h2 class="section-title fade-in">注目の制作実績</h2>
+                    <div class="post-grid">
+                        <a href="Portfolio/Fuwamoco/index.html" class="post-card-link fade-in">
+                            <div class="post-card">
+                                <div class="post-card-image">
+                                    <img src="Img/portfolio/fuwamoco_main.webp" alt="Fuwamoco PROJECT">
+                                </div>
+                                <div class="post-card-content">
+                                    <p class="post-card-category">Webサイト制作</p>
+                                    <h3>NPO法人「Fuwamoco PROJECT」公式サイト</h3>
+                                    <p>うさぎの保護活動を行う架空NPO法人の公式サイトを、企画・デザイン・実装まで一貫して制作。JavaScript製の3マッチパズルも搭載。</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/Blog/ai-learning-complete-guide.html" class="post-card-link fade-in">
+                            <div class="post-card">
+                                <div class="post-card-image"><img src="/Img/Blog/ogp-ai-learning-guide.webp" alt="AI学習の完全ガイド"></div>
+                                <div class="portfolio-content">
+                                    <p class="post-card-category">学習ロードマップ</p>
+                                    <h3>【完全ガイド】AI学習の始め方</h3>
+                                    <p>AI学習に挫折しないための完全ロードマップ。知識ゼロからAIクリエイターになるための全ステップを案内します。</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="Portfolio/Pict/pict.html" class="post-card-link fade-in">
+                            <div class="post-card">
+                                <div class="post-card-image">
+                                    <img src="Img/portfolio/game_main.webp" alt="AI体験ゲーム">
+                                </div>
+                                <div class="post-card-content">
+                                    <p class="post-card-category">Webアプリ開発</p>
+                                    <h3>AI体験ゲーム「仕分けマスター・ピクト」</h3>
+                                    AIがテーマのシンプルな仕分けゲームです。PC操作に不慣れな方でも、クリック操作だけでAIの面白さを体験できます
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="view-more-button-wrapper">
+                        <a href="portfolio.html" class="view-more-button">制作実績をもっと見る</a>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="featured-prompts" class="section latest-posts">
+                <div class="container">
+                    <h2 class="section-title fade-in">注目のプロンプト</h2>
+                    <div class="post-grid">
+                        <a href="Prompt/prompt-hakase.html" class="post-card-link fade-in">
+                            <div class="post-card">
+                                <div class="post-card-image">
+                                    <img src="Img/Prompt/ogp-hakase.webp" alt="AI博士プロンプトのイメージ">
+                                </div>
+                                <div class="post-card-content">
+                                    <p class="post-card-category">対話AI / 悩み相談</p>
+                                    <h3>AI博士プロンプト</h3>
+                                    <p>AIを「優しくて物知りな女性博士」に変身させます。あなたの質問や悩みに、AIが共感を持って寄り添います</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="Prompt/prompt-kondate.html" class="post-card-link fade-in">
+                            <div class="post-card">
+                                <div class="post-card-image">
+                                    <img src="Img/Prompt/ogp-kondate-prompt.webp" alt="献立作成プロンプトのイメージ">
+                                </div>
+                                <div class="post-card-content">
+                                    <p class="post-card-category">GPTs / 生活改善</p>
+                                    <h3>AI献立作成プロンプト</h3>
+                                    <p>AIがフードカウンセラーとなり、あなただけの1週間分の献立とレシピを作成します。</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="Prompt/prompt-picture-book-writing.html" class="post-card-link fade-in">
+                            <div class="post-card">
+                                <div class="post-card-image">
+                                    <img src="Img/prompt/picture_book_main.webp" alt="絵本のイメージ">
+                                </div>
+                                <div class="post-card-content">
+                                    <p class="post-card-category">GPTs / 共同制作</p>
+                                    <h3>子供向け知育絵本プロンプト</h3>
+                                    <p>物語のプロット、本文、そして各シーンのイラスト用プロンプトまでAIと共同制作する指示書です。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="view-more-button-wrapper">
+                        <a href="prompt.html" class="view-more-button">プロンプトをもっと見る</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="latest-novels" class="section latest-posts">
+                <div class="container">
+                    <h2 class="section-title fade-in">最新小説</h2>
+                    <div class="post-grid">
+                        <a href="Novels/hoshizora-no-melody.html" class="post-card-link fade-in">
+                            <div class="post-card">
+                                <div class="post-card-image">
+                                    <img src="Img/Novels/hoshizora-no-melody_main.webp" alt="「星空のメロディー」の表紙イラスト">
+                                </div>
+                                <div class="post-card-content">
+                                    <p class="post-card-category">ヒーリング</p>
+                                    <h3>星空のメロディー</h3>
+                                    <p>都会の喧騒から離れ、星空の下で穏やかな眠りへ。夢の中を旅する幻想的な物語。</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="Novels/isekai-no-ou.html" class="post-card-link fade-in">
+                            <div class="post-card">
+                                <div class="post-card-image">
+                                    <img src="Img/Novels/isekai_king_main.webp" alt="「異世界の王」の表紙イラスト">
+                                </div>
+                                <div class="post-card-content">
+                                    <p class="post-card-category">ファンタジー</p>
+                                    <h3>異世界の王</h3>
+                                    <p>平凡な青年が異世界に王として召喚される！魔法とドラゴンが息づく世界で、国を救うための壮大な冒険が始まる。</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="Novels/kieta-mura.html" class="post-card-link fade-in">
+                            <div class="post-card">
+                                <div class="post-card-image">
+                                    <img src="Img/Novels/kietamuranohimitsu_main.webp" alt="「消えた村の秘密」の表紙イラスト">
+                                </div>
+                                <div class="post-card-content">
+                                    <p class="post-card-category">ミステリー・ホラー</p>
+                                    <h3>消えた村の秘密</h3>
+                                    <p>ジャーナリストのベンが挑む、霧に包まれた「消えた村」の謎。古文書、奇妙な住人、そして謎の儀式。村に隠された真実とは？</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="view-more-button-wrapper">
+                        <a href="novels.html" class="view-more-button">小説をもっと読む</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="section contact">
+                <div class="container">
+                    <h2 class="section-title">Contact</h2>
+                    <div class="contact-info fade-in">
+                        <p>AIと福祉を繋ぐ、新しい挑戦にご興味をお持ちいただけましたら、</p>
+                        <p>ぜひ、以下の連絡先までお気軽にご連絡ください。</p>
+                        <p class="contact-supplement">ボタンをクリックするか、下記アドレスをコピーしてお問い合わせください。</p>
+                    </div>
+                    <audio controls preload="none" aria-label="Contactセクションの読み上げ音声">
+                        <source src="Audio/contact.mp3" type="audio/mpeg">
+                    </audio>
+                    
+                    <div class="contact-grid fade-in">
+                        <div class="contact-links">
+                            <p><strong>メールまたはLINEでお気軽に</strong></p>
+                            <a href="https://lin.ee/UlgQMzA" target="_blank" rel="noopener noreferrer" class="contact-button line">
+                                <i class="fab fa-line"></i> LINEでお問い合わせ
+                            </a>
+                            <a href="mailto:from.aito.the.infinity@gmail.com" class="contact-button email">
+                                <i class="fas fa-envelope"></i> メールでのお問い合わせ
+                            </a>
+                            <p class="contact-email-text">
+                            from.aito.the.infinity@gmail.com
+                            </p>
+                         </div>
+                         <div class="contact-qr">
+                             <p><strong>LINEのQRコードはこちら</strong></p>
+                             <img src="https://qr-official.line.me/gs/M_795fmbfx_GW.png?oat_content=qr" alt="LINE友だち追加用QRコード">
+                         </div>
+                     </div>
+                </div>
+            </section>
+        </main>
+
+    <footer id="site-footer">
+            <div class="container">
+                <div class="footer-social-links">
+                    <a href="https://www.youtube.com/@chroma0224" target="_blank" rel="noopener noreferrer" title="ChromaのPC学習部屋"><i class="fab fa-youtube"></i> ChromaのPC学習部屋</a>
+                    <a href="https://www.youtube.com/@chroma1975" target="_blank" rel="noopener noreferrer" title="Chromaの自由部屋"><i class="fab fa-youtube"></i> Chromaの自由部屋</a>
+                    <a href="https://github.com/motty1975/chromachannel" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://x.com/Chroma0224" target="_blank" rel="noopener noreferrer" title="X (旧Twitter)"><i class="fab fa-twitter"></i> X (旧Twitter)</a>
+                </div>
+                <div class="footer-links">
+                    <a href="/privacy.html">プライバシーポリシー & 免責事項</a>
+                </div>
+                <div class="footer-credit">
+                    <p>当サイトおよび関連コンテンツの制作には、以下の素材を使用しています。</p>
+                    <p>音声: VOICEVOX (ずんだもん, 四国めたん, 春日部つむぎ, 中国うさぎ, 冥鳴ひまり) / 立ち絵: 坂本アヒル様, とらっかぁ様</p>
+                </div>
+                <p class="copyright">運営者: 山本 倫久 (Chromachannel)</p>
+                <p class="copyright">© 2025 Chromachannel. All rights reserved.</p>
+            </div>
+        </footer>
+        <script src="JavaScript/script.js" defer></script>
+    </body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== ▼▼▼ SEO設定 START ▼▼▼ ===== -->
+    
+    <title>【AI絵本 制作レポ】自作プロンプトで「友達」テーマの物語を作ってみた</title>
+    <meta name="description" content="福祉×AIクリエイターが自作の「知育絵本プロンプト」を徹底検証！AIとの対話で「友達」をテーマにした物語とイラストを共同制作した結果、心温まる一作が…。その全手順とAIの提案を公開します。">
+    
+    <!-- OGPタグ -->
+    <meta property="og:title" content="【AI絵本 制作レポ】自作プロンプトで「友達」テーマの物語を作ってみた">
+    <meta property="og:description" content="サイトで公開中の「知育絵本プロンプト」は本当に使える？制作者自ら、AIとの共同制作に挑戦！その一部始終と、AIの意外な提案をご紹介します。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://chromachannel.online/Blog/report-making-picture-book-with-ai.html">
+    <meta property="og:image" content="https://chromachannel.online/Img/Blog/ehon-report-cover.webp">
+    <meta property="og:site_name" content="Chromachannel">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://chromachannel.online/Blog/report-making-picture-book-with-ai.html" },
+      "headline": "【AI絵本 制作レポ】自作プロンプトで「友達」テーマの物語を作ってみた",
+      "description": "福祉×AIクリエイターが自作の「知育絵本プロンプト」を徹底検証！AIとの対話で「友達」をテーマにした物語とイラストを共同制作した結果、心温まる一作が…。その全手順とAIの提案を公開します。",
+      "image": "https://chromachannel.online/Img/Blog/ehon-report-cover.webp",
+      "author": { "@type": "Person", "name": "山本 倫久", "url": "https://chromachannel.online/" },
+      "publisher": { "@type": "Person", "name": "山本 倫久", "url": "https://chromachannel.online/" },
+      "datePublished": "2025-07-30",
+      "dateModified": "2025-08-03"
+    }
+    </script>
+    
+    <link rel="canonical" href="https://chromachannel.online/Blog/report-making-picture-book-with-ai.html" />
+    
+    <!-- ===== ▲▲▲ SEO設定 END ▲▲▲ ===== -->
+     
+    <link rel="icon" href="../Img/favicon.webp" type="image/webp">
+    
+    <!-- CSS / ライブラリ -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/only_read.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="article-page">
+    <!-- ===== サイト共通ヘッダー ===== -->
+    <header class="site-header">
+        <nav class="container">
+            <a href="../index.html" class="logo"><img src="../Img/chroma_logo.webp" alt="Chroma Channel ロゴ"></a>
+            <ul class="nav-links">
+                <li><a href="../index.html#about">自己紹介</a></li>
+                <li><a href="../index.html#skills">スキル</a></li>
+                <li><a href="../prompt.html">プロンプト</a></li>
+                <li><a href="../learn.html">学習</a></li>
+                <li><a href="../blog.html" class="nav-active">ブログ</a></li>
+                <li><a href="../portfolio.html">制作実績</a></li>
+                <li><a href="../novels.html">小説</a></li>
+                <li><a href="../index.html#contact">連絡先</a></li>
+            </ul>
+            <button class="mobile-nav-toggle" aria-label="メニューを開く"><i class="fas fa-bars"></i><i class="fas fa-times"></i></button>
+        </nav>
+    </header>
+
+    <main class="article-main">
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-eyecatch">
+                    <img src="../Img/Blog/ehon-report-cover.webp" alt="大きな葉っぱの後ろから顔を出す、恥ずかしがり屋のキノコ「リリー」の絵本イラスト">
+                </div>
+                <h1>【実践レポ】自作プロンプトでAIに「友達」がテーマの絵本を作らせたら、感動の物語が生まれた話</h1>
+                <p class="article-meta">公開日: 2025.07.30</p>
+            </header>
+            
+            <div class="article-content">
+                <p>こんにちは、福祉×AIクリエイターの山本です。</p>
+                <p>自分の作った道具って、本当にちゃんと動くんだろう？ ときどき、そんな風に不安になることがあります。当サイトで公開しているプロンプト集も、私にとっては大切な「道具」の一つです。</p>
+                <p>そこで今回は、公開している<a href="../Prompt/prompt-picture-book-writing.html">「子供向け知育絵本プロンプト」</a>が本当に使えるのか、制作者である私自身が徹底検証してみたいと思います！</p>
+                <p>AIとの対話で物語を考え、イラストを作り、一つの作品に仕上げていく。その共同制作の一部始終を、包み隠さずお見せします。果たして、どんな絵本が生まれるのでしょうか？</p>
+                
+                <h2>ステップ1：AIに「絵本作家アシスタント」になってもらう</h2>
+                <p>まずは主役の登場です。今回は対話AIとしてGoogleの「Gemini」にお願いすることにしました。Geminiの入力欄に、公開している<a href="../Prompt/prompt-picture-book-writing.html">指示書</a>をまるごとコピー＆ペーストします。</p>
+                <p>すると、Geminiから「準備ができました。どのようなテーマの知育絵本を作りますか？」と返事が。無事に、私の専属「絵本作家アシスタント」が誕生したようです。</p>
+
+                <h2>ステップ2：「友達」というテーマを投げてみる</h2>
+                <p>アシスタントの問いかけに、私はシンプルに「友達」とだけ入力してみました。AIとの対話は、難しく考える必要はありません。一番伝えたいキーワードを投げるだけで、あとはAIがよしなに考えてくれます。</p>
+                <p>さて、AIアシスタントからの最初の提案がこちらです。</p>
+                
+                <div class="point-box">
+                    <h3>AIからの提案：タイトルと章立て</h3>
+                    <p><strong>タイトル：</strong> ちいさなキノコのリリーとふわふわのお友達<br>
+                    <strong>サブタイトル：</strong> みんなちがって、みんないい！</p>
+                    イラストプロンプト (表紙):Cute children's book illustration style, a shy little mushroom named Lily with a bright red cap, peeking out from behind a large, friendly green leaf, surrounded by a gentle forest setting, simple, warm colors, watercolor texture, soft sunlight filtering through the trees.
+                    <ul>
+                        <li><strong>第一章：</strong> ひとりぼっちのリリー</li>
+                        イラストプロンプト (第一章):Cute children's book illustration style, a small, lonely mushroom named Lily sitting by herself under a big tree, looking a little sad, surrounded by colorful flowers, simple, warm colors, watercolor texture.
+                        <li><strong>第二章：</strong> ふわふわの出会い</li>
+                        イラストプロンプト (第二章):Cute children's book illustration style, Lily the mushroom looking surprised and happy as a fluffy, friendly cloud animal floats down to greet her, gentle sunlight, simple, warm colors, watercolor texture.
+                        <li><strong>第三章：</strong> ちいさなちがい、おおきな発見</li>
+                        イラストプロンプト (第三章):Cute children's book illustration style, Lily the mushroom and the fluffy cloud animal playing together, showing their different ways of moving and interacting, happy expressions, simple, warm colors, watercolor texture.
+                        <li><strong>第四章：</strong> あたらしいお友達</li>
+                        イラストプロンプト (第四章):Cute children's book illustration style, Lily the mushroom, the fluffy cloud animal, and other forest animals (a gentle rabbit, a friendly squirrel) happily gathered together, sharing a laugh, simple, warm colors, watercolor texture, forest background.
+                        <li><strong>第五章：</strong> みんなちがって、みんないい！</li>
+                        イラストプロンプト (第五章):Cute children's book illustration style, Lily the mushroom and all her diverse friends (cloud animal, rabbit, squirrel, a tiny bird) standing together in a circle, holding hands (or paws/wings), smiling, emphasizing their unique qualities, simple, warm colors, watercolor texture, a rainbow arching gently in the sky.
+                        <li><strong>裏表紙</strong></li>
+                        イラストプロンプト (裏表紙):Cute children's book illustration style, Lily the mushroom and her friends waving goodbye from a distance, silhouetted against a warm, setting sun, cozy forest path, simple, warm colors, watercolor texture.
+                    </ul>
+                </div>
+
+                <p>素晴らしい…！「友達」という一言から、「多様性」をテーマにした、こんなにも心温まる物語の骨子を一瞬で作り上げてくれました。「みんなちがって、みんないい！」というサブタイトル、素敵すぎませんか？</p>
+
+                <h2>ステップ3：AIと一緒に、挿絵を作ってみる</h2>
+                <p>次に、AIが提案してくれたイラスト用プロンプトを、画像生成AIの「ImageFX」にコピー＆ペーストして、各シーンの挿絵を作ってもらいます。物語の流れに沿ってご紹介しますね。</p>
+                
+                <h3>▼ 表紙：恥ずかしがり屋のリリー</h3>
+                <img src="../Img/Blog/ehon-report-cover.webp" alt="大きな葉っぱの後ろから顔を出す、恥ずかしがり屋のキノコ「リリー」の絵本イラスト" class="article-image">
+                
+                <h3>▼ 第一章：ひとりぼっちのリリー</h3>
+                <img src="../Img/Blog/ehon-report-chap1.webp" alt="大きな木の下で寂しそうに座る、ちいさなキノコ「リリー」の絵本イラスト" class="article-image">
+                
+                <h3>▼ 第二章：ふわふわとの出会い</h3>
+                <img src="../Img/Blog/ehon-report-chap2.webp" alt="空から舞い降りてきた「ふわふわ」と出会い、驚き喜ぶリリーの絵本イラスト" class="article-image">
+
+                <h3>▼ 第三章：ちいさなちがい、おおきな発見</h3>
+                <img src="../Img/Blog/ehon-report-chap3.webp" alt="リリーとふわふわが一緒に遊んでいる様子の絵本イラスト" class="article-image">
+
+                <h3>▼ 第四章：あたらしいお友達</h3>
+                <img src="../Img/Blog/ehon-report-chap4.webp" alt="リリーとふわふわ、そしてリスさんが楽しそうにおしゃべりしている絵本イラスト" class="article-image">
+
+                <h3>▼ 第五章：みんなちがって、みんないい！</h3>
+                <img src="../Img/Blog/ehon-report-chap5.webp" alt="リリーと多様な仲間たちが手を取り合って輪になっている、虹のかかった絵本イラスト" class="article-image">
+
+                <h3>▼ 裏表紙：</h3>
+                <img src="../Img/Blog/ehon-report-back-cover.webp" alt="夕日を背景に、遠くから手を振るリリーと仲間たちの絵本イラスト" class="article-image">
+
+                <p>これも素晴らしいクオリティです。指示書に「優しく、暖かく、シンプルな絵本風のスタイル」と指定しておいたルールを、AIは完璧に守ってくれています。</p>
+
+                <h2>ステップ4：AIが紡いだ物語</h2>
+                <p>最後に、AIアシスタントに執筆してもらった物語の全文をご紹介します。子どもたちにも伝わるよう、優しく、そして大切なメッセージが込められた物語が生まれました。</p>
+                
+                <div class="point-box">
+                    <h3>『ちいさなキノコのリリーとふわふわのお友達』</h3>
+                    <img src="../Img/Blog/ehon-report-cover.webp" alt="大きな葉っぱの後ろから顔を出す、恥ずかしがり屋のキノコ「リリー」の絵本イラスト" class="article-image">   
+                    <h4>第一章：ひとりぼっちのリリー</h4>
+                    <img src="../Img/Blog/ehon-report-chap1.webp" alt="大きな木の下で寂しそうに座る、ちいさなキノコ「リリー」の絵本イラスト" class="article-image">
+                    <p>ちいさなキノコのリリーは、森のすみっこでひとりぼっちでくらしていました。 リリーのまっかな帽子は、雨上がりのしずくをきらきらと輝かせたけれど、リリーはなんだかさみしそう。ほかのキノコたちは、みんなでくっつきあって楽しそうにおしゃべりしているのに、リリーは少しはずかしがりやさんだから、いつも遠くから見ているだけでした。まわりにはきれいなお花がたくさん咲いていたけれど、リリーの心はちっとも晴れませんでした。</p>
+                    <h4>第二章：ふわふわの出会い</h4>
+                    <img src="../Img/Blog/ehon-report-chap2.webp" alt="空から舞い降りてきた「ふわふわ」と出会い、驚き喜ぶリリーの絵本イラスト" class="article-image">
+                    <p>ある日、リリーがいつものように森を眺めていると、ふわふわとした白いものが、ゆらゆらと空から舞い降りてきました。 「あれ？あれはなんだろう？」リリーは目をまるくして見上げました。それは、まるで雲から生まれたみたいに、ふんわりとやわらかそうな、ちいさな生きものでした。その生きものは、リリーの目の前にそっと降り立つと、にこっとわらって言いました。「こんにちは！ぼく、ふわふわだよ。きみはだあれ？」リリーはびっくりしたけれど、なんだか温かい気持ちになりました。</p>
+                    <h4>第三章：ちいさなちがい、おおきな発見</h4>
+                    <img src="../Img/Blog/ehon-report-chap3.webp" alt="リリーとふわふわが一緒に遊んでいる様子の絵本イラスト" class="article-image">
+                    <p>ふわふわは、リリーとはぜんぜんちがっていました。 リリーは地面から動けないけれど、ふわふわは空を自由に飛び回ることができます。リリーは雨の日が好きだけど、ふわふわは太陽の下でキラキラ輝くのが好き。ふたりはいろいろなことをして遊びました。ふわふわが空からきれいな葉っぱを見つけてきてくれたり、リリーが知っている森のおもしろい話をふわふわに教えてあげたり。ちがうことがたくさんあるけれど、ふたりでいると、いつも新しい発見があって、ドキドキわくわくしました。リリーは、ひとりぼっちだったころのさみしさをすっかり忘れていました。</p>
+                    <h4>第四章：あたらしいお友達</h4>
+                    <img src="../Img/Blog/ehon-report-chap4.webp" alt="リリーとふわふわ、そしてリスさんが楽しそうにおしゃべりしている絵本イラスト" class="article-image">
+                    <p>リリーとふわふわが森で遊んでいると、ふわふわの友達が次々とやってきました。 おっとりしたウサギさん、おしゃべりなリスさん、そして歌が上手な小鳥さん。みんな、リリーとは形も色も得意なことも違いました。ウサギさんはぴょんぴょん跳ねて見せてくれたり、リスさんは木の実を集めるのがとても速かったり、小鳥さんは美しい歌声で森に響かせたり。リリーは、そんなみんなの素敵なところに気づくことができました。みんなが自分とは違うけれど、それぞれの良いところを出し合って、一緒に笑い合うのは、とっても楽しいことだと知ったのです。</p>
+                    <h4>第五章：みんなちがって、みんないい！</h4>
+                    <img src="../Img/Blog/ehon-report-chap5.webp" alt="リリーと多様な仲間たちが手を取り合って輪になっている、虹のかかった絵本イラスト" class="article-image">
+                    <p>リリーは、もうひとりぼっちではありませんでした。 ふわふわやウサギさん、リスさん、小鳥さんと一緒に、毎日が新しい発見と笑顔にあふれていました。みんな、それぞれ違うけれど、その違いが、新しい遊びや、楽しいアイデアをたくさん生み出してくれました。リリーは、みんなと手をつなぎながら、心の中でつぶやきました。「みんなちがって、みんないい！これがほんとうの友達なんだね。」森には、リリーと友達たちの笑い声が、いつまでも響き渡っていました。</p>
+                    <h3>また会おうね</h3>
+                    <img src="../Img/Blog/ehon-report-back-cover.webp" alt="夕日を背景に、遠くから手を振るリリーと仲間たちの絵本イラスト" class="article-image">
+                </div>
+
+                <h2>考察：AIとの共同制作で見えた可能性</h2>
+                <p>自作プロンプトを使ってみて、改めて感じたのは「AIは、私たちの創造性を拡張してくれる最高のパートナーだ」ということです。特に、今回の生成結果には、私のミッションである「福祉×AI」に通じる、大きな発見がありました。</p>
+                <ul>
+                    <li><strong>AIが生んだ「多様性」というテーマ：</strong>私が与えたテーマは「友達」というシンプルな一言だけでした。それに対しAIは、「みんなちがって、みんないい」という、まさに福祉の現場で最も大切にされるべき「多様性の尊重」というテーマを、物語の中心に据えてくれました。これは、AIが人間の創造性を補い、より深いテーマへと導いてくれる可能性を示唆しています。</li>
+                    <li><strong>制作プロセスの価値：</strong>完成した作品もさることながら、AIと対話しながら「どんな物語にしようか」「このキャラクターはどんな子だろう」と考えるプロセスそのものが、非常に楽しく、創造的な時間でした。この「作る喜び」こそ、福祉の現場で多くの方と分かち合いたい価値なのだと、改めて実感しました。</li>
+                </ul>
+
+                <h2>まとめ：あなたも今日から絵本作家！</h2>
+                <p>いかがでしたでしょうか。自作プロンプトの検証は、AIとの楽しい共同作業となり、心温まる一作が生まれるという、最高の結果になりました。</p>
+                <p>この記事を読んで「自分もやってみたい！」と感じていただけたなら、とても嬉しいです。AIとの絵本作りは、決して難しいことではありません。</p>
+                
+                <div class="point-box">
+                    <h4>さあ、あなたも絵本を作ってみましょう！</h4>
+                    <p>AIとの創作を始めるために、必要なものはすべてこのサイトに揃っています。</p>
+                    <ul>
+                        <li><a href="../Prompt/prompt-picture-book-writing.html"><strong>この記事で使ったプロンプトはこちら</strong> → AIと作る子供向け知育絵本プロンプト</a></li>
+                        <li><a href="How-to-Prompt.html"><strong>コピペでの作り方が知りたい方はこちら</strong> → 【AI初心者向け】コピペで簡単！「自分だけの絵本」の作り方</a></li>
+                        <li><a href="How-to-Customize-Prompt.html"><strong>もっと個性的な作品を作りたい方はこちら</strong> → 【中級編】プロンプトを改造して、もっと個性的な絵本を作る方法</a></li>
+                    </ul>
+                    <p>あなたもこのプロンプトを使えば、今日から絵本作家です！ぜひ、あなただけの素敵な物語を、AIと一緒に紡いでみてください。</p>
+                </div>
+            </div>
+            
+            <footer class="article-footer">
+                <div class="author-profile-box">
+                    <div class="author-info">
+                        <h4>この記事を書いた人：山本 倫久</h4>
+                        <p>福祉×AIクリエイター。就労支援B型事業所の利用者としての実体験を基に、AI技術で福祉の現場に新しい「できる」と「楽しい」を届けることをミッションとして活動中。</p>
+                    </div>
+                </div>
+                <div class="back-to-blog-links">
+                    <a href="../blog.html" class="back-link">← ブログ一覧に戻る</a>
+                </div>
+            </footer>
+        </article>
+        <!-- ★★★ Disqusコメント欄 ★★★ -->
+        <section class="comment-section">
+            <h2>ご意見・ご感想</h2>
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                    this.page.url = 'https://chromachannel.online/Blog/report-making-picture-book-with-ai.html';
+                    this.page.identifier = 'blog_report-making-picture-book'; 
+                };
+                (function() { 
+                var d = document, s = d.createElement('script');
+                s.src = 'https://chroma-ch.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </section>
+    </main>
+
+    <!-- ===== サイト共通フッター ===== -->
+    <footer id="site-footer">
+            <div class="container">
+                <div class="footer-social-links">
+                    <a href="https://www.youtube.com/@chroma0224" target="_blank" rel="noopener noreferrer" title="ChromaのPC学習部屋"><i class="fab fa-youtube"></i> ChromaのPC学習部屋</a>
+                    <a href="https://www.youtube.com/@chroma1975" target="_blank" rel="noopener noreferrer" title="Chromaの自由部屋"><i class="fab fa-youtube"></i> Chromaの自由部屋</a>
+                    <a href="https://github.com/motty1975/chromachannel" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://x.com/Chroma0224" target="_blank" rel="noopener noreferrer" title="X (旧Twitter)"><i class="fab fa-twitter"></i> X (旧Twitter)</a>
+                </div>
+                <div class="footer-links">
+                    <a href="/privacy.html">プライバシーポリシー & 免責事項</a>
+                </div>
+                <div class="footer-credit">
+                    <p>当サイトおよび関連コンテンツの制作には、以下の素材を使用しています。</p>
+                    <p>音声: VOICEVOX (ずんだもん, 四国めたん, 春日部つむぎ, 中国うさぎ, 冥鳴ひまり) / 立ち絵: 坂本アヒル様, とらっかぁ様</p>
+                </div>
+                <p class="copyright">運営者: 山本 倫久 (Chromachannel)</p>
+                <p class="copyright">© 2025 Chromachannel. All rights reserved.</p>
+            </div>
+        </footer>
+    
+    <script src="../JavaScript/script.js" defer></script>
+</body>
+</html>

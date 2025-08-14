@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<!-- ===== ▼▼▼ SEO設定 START ▼▼▼ ===== -->
+    <title>【制作実績】AI体験ゲーム「仕分けマスター・ピクト」｜機械学習入門</title>
+    <meta name="description" content="福祉×AIクリエイター山本倫久が制作した、AI体験ゲーム。ドラッグ＆ドロップの簡単操作で、AIに「くだもの」と「どうぶつ」の仕分けを教え、AIの学習（機械学習）の基本を楽しく学べます。">
+    <link rel="canonical" href="https://chromachannel.online/Portfolio/Game/pict.html" />
+    <link rel="icon" href="../../Img/favicon.webp" type="image/webp">
+
+    <!-- OGPタグ -->
+    <meta property="og:title" content="【制作実績】AI体験ゲーム「仕分けマスター・ピクト」｜機械学習入門">
+    <meta property="og:description" content="福祉×AIクリエイター制作。ドラッグ＆ドロップの簡単操作で、AIにアイテムの仕分けを教えて育てよう！AIの学習の基本を楽しく学べます。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chromachannel.online/Portfolio/Game/pict.html">
+    <meta property="og:image" content="https://chromachannel.online/Img/ogp_game_pict.webp">
+    <meta property="og:site_name" content="Chromachannel">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "AI体験ゲーム：仕分けマスター・ピクト",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Web-based",
+      "description": "福祉×AIクリエイター山本倫久が制作。ドラッグ＆ドロップ操作を通じて、ユーザーがAIキャラクターにアイテムの分類（教師あり学習）を教えることができるWebベースの教育的体験ゲームです。",
+      "author": { "@type": "Person", "name": "山本 倫久", "url": "https://chromachannel.online/" },
+      "publisher": { "@type": "Person", "name": "山本 倫久", "url": "https://chromachannel.online/" },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "JPY"
+      }
+    }
+    </script>
+<!-- ===== ▲▲▲ SEO設定 END ▲▲▲ ===== -->
+    
+    <!-- CSS / ライブラリ -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="../../CSS/style.css">
+    <link rel="stylesheet" href="CSS/pict.css"> <!-- ★正しいCSS名を指定！ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body class="app-body">
+
+    <!-- ===== サイト共通ヘッダー ===== -->
+    <header class="site-header">
+        <nav class="container">
+            <a href="../../index.html" class="logo"><img src="../../Img/chroma_logo.webp" alt="Chroma Channel ロゴ"></a>
+            <ul class="nav-links">
+                <li><a href="../../index.html#about">自己紹介</a></li>
+                <li><a href="../../index.html#skills">スキル</a></li>
+                <li><a href="../../prompt.html">プロンプト</a></li>
+                <li><a href="../../learn.html">学習</a></li>
+                <li><a href="../../blog.html">ブログ</a></li>
+                <li><a href="../../portfolio.html" class="nav-active">制作実績</a></li>
+                <li><a href="../../novels.html">小説</a></li>
+                <li><a href="../../index.html#contact">連絡先</a></li>
+            </ul>
+            <button class="mobile-nav-toggle" aria-label="メニューを開く"><i class="fas fa-bars"></i><i class="fas fa-times"></i></button>
+        </nav>
+    </header>
+
+    <main class="app-main">
+        <div id="game-container">
+            <h1>AI体験ゲーム：仕分けマスター・ピクト</h1>
+            <p>AIの「ピクト」にアイテムの仕分けを教えてあげよう！</p>
+            <div id="ai-character">🤖</div>
+            <div id="ai-feedback">ここにアイテムをドラッグして、僕に教えてね！</div>
+            <div id="game-area">
+                <p>↓ このアイテムはどっちかな？</p>
+                <div id="item-source" draggable="true"></div>
+                <div id="drop-zones">
+                    <div id="fruit-zone" class="drop-zone" data-category="くだもの">
+                        <div class="zone-icon">🍎</div>
+                        <div>くだもの</div>
+                    </div>
+                    <div id="animal-zone" class="drop-zone" data-category="どうぶつ">
+                        <div class="zone-icon">🐶</div>
+                        <div>どうぶつ</div>
+                    </div>
+                </div>
+            </div>
+            <div id="score-board">
+                モード: <span id="mode-text">学習モード</span> | スコア: <span id="score">0</span>
+            </div>
+            <div class="controls">
+                <button id="switch-mode-btn">テストモードに切り替え</button>
+                <button id="reset-btn">リセット</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- ===== サイト共通フッター ===== -->
+    <footer id="site-footer">
+            <div class="container">
+                <div class="footer-social-links">
+                    <a href="https://www.youtube.com/@chroma0224" target="_blank" rel="noopener noreferrer" title="ChromaのPC学習部屋"><i class="fab fa-youtube"></i> ChromaのPC学習部屋</a>
+                    <a href="https://www.youtube.com/@chroma1975" target="_blank" rel="noopener noreferrer" title="Chromaの自由部屋"><i class="fab fa-youtube"></i> Chromaの自由部屋</a>
+                    <a href="https://github.com/motty1975/chromachannel" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://x.com/Chroma0224" target="_blank" rel="noopener noreferrer" title="X (旧Twitter)"><i class="fab fa-twitter"></i> X (旧Twitter)</a>
+                </div>
+                <div class="footer-links">
+                    <a href="/privacy.html">プライバシーポリシー & 免責事項</a>
+                </div>
+                <div class="footer-credit">
+                    <p>当サイトおよび関連コンテンツの制作には、以下の素材を使用しています。</p>
+                    <p>音声: VOICEVOX (ずんだもん, 四国めたん, 春日部つむぎ, 中国うさぎ, 冥鳴ひまり) / 立ち絵: 坂本アヒル様, とらっかぁ様</p>
+                </div>
+                <p class="copyright">運営者: 山本 倫久 (Chromachannel)</p>
+                <p class="copyright">© 2025 Chromachannel. All rights reserved.</p>
+            </div>
+        </footer>
+    
+    <script src="../../JavaScript/script.js" defer></script>
+    <script src="JavaScript/pict.js" defer></script> <!-- ★正しいJS名を指定！ -->
+</body>
+</html>

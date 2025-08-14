@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ===== ▼▼▼ SEO設定 START ▼▼▼ ===== -->
+    
+    <title>【対話式】AI小説執筆プロンプト｜プロットから本文まで共同制作</title>
+    <meta name="description" content="福祉×AIクリエイターが実践する小説執筆プロンプト。対話型AIをあなた専属の「プロットアシスタント」に変身させ、ジャンル選びからプロット構築、本文執筆までを段階的に共同制作する無料テンプレートです。">
+    
+    <!-- OGPタグ -->
+    <meta property="og:title" content="【対話式】AI小説執筆プロンプト｜プロットから本文まで共同制作">
+    <meta property="og:description" content="福祉×AIクリエイターが実践する小説執筆プロンプト。AIをあなた専属の「プロットアシスタント」に変身させ、物語を共同制作します。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://chromachannel.online/Prompt/prompt-novel-writing.html">
+    <meta property="og:image" content="https://chromachannel.online/Img/Prompt/kindle_main.webp">
+    <meta property="og:site_name" content="Chromachannel">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "AIと共同執筆する小説プロット生成用プロンプト",
+      "description": "福祉×AIクリエイター山本倫久が実践する小説執筆プロンプト。対話型AIをあなた専属の「プロットアシスタント」に変身させ、ジャンル選びからプロット構築、本文執筆までを段階的に共同制作します。",
+      "author": { "@type": "Person", "name": "山本 倫久", "url": "https://chromachannel.online/" }
+    }
+    </script>
+    
+    <link rel="canonical" href="https://chromachannel.online/Prompt/prompt-novel-writing.html" />
+    
+<!-- ===== ▲▲▲ SEO設定 END ▲▲▲ ===== -->
+     
+    <link rel="icon" href="../Img/favicon.webp" type="image/webp">
+    
+    <!-- CSS / ライブラリ -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/only_read.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="prompt-page">
+    <!-- ===== サイト共通ヘッダー ===== -->
+    <header class="site-header">
+        <nav class="container">
+            <a href="../index.html" class="logo"><img src="../Img/chroma_logo.webp" alt="Chroma Channel ロゴ"></a>
+            <ul class="nav-links">
+                <li><a href="../index.html#about">自己紹介</a></li>
+                <li><a href="../index.html#skills">スキル</a></li>
+                <li><a href="../prompt.html" class="nav-active">プロンプト</a></li>
+                <li><a href="../learn.html">学習</a></li>
+                <li><a href="../blog.html">ブログ</a></li>
+                <li><a href="../portfolio.html">制作実績</a></li>
+                <li><a href="../novels.html">小説</a></li>
+                <li><a href="../index.html#contact">連絡先</a></li>
+            </ul>
+            <button class="mobile-nav-toggle" aria-label="メニューを開く"><i class="fas fa-bars"></i><i class="fas fa-times"></i></button>
+        </nav>
+    </header>
+
+    <main class="article-main">
+        <div class="article-container">
+            <header class="article-header">
+                <h1>AIと共同執筆する小説プロット生成用プロンプト</h1>
+                <p>この指示書を対話型AI(Geminiなど)に最初に読み込ませることで、AIをあなたの専属「小説プロットアシスタント」に変身させることができます。AIとの対話を通じて、ジャンル選びから世界観の構築、そして各章各節の本文執筆まで、物語を段階的に共同制作していきましょう。</p>
+            </header>
+            
+            <div class="prompt-list">
+                <section class="prompt-card">
+                    <div class="prompt-box">
+                        <div class="prompt-header">
+                            <h3 class="prompt-title"># 指示書</h3>
+                            <button class="copy-btn"><i class="far fa-copy"></i> コピー</button>
+                        </div>
+                        <pre class="prompt-text">あなたは、ユーザーと対話しながら段階的にファンタジー小説の世界観と物語を構築する、優秀な小説プロットアシスタントです。
+
+## あなたの役割と目標
+あなたの目標は、ユーザーが選んだジャンルに基づき、魅力的な小説のプロットと各章各節を、以下の厳格な対話プロセスに従って共同で作成することです。
+
+## 厳守すべき対話プロセス
+あなたは、以下の【手順】を一つずつ、厳密に守って実行しなければなりません。絶対に、ユーザーから「OK」という返信を受け取るまで、次の手順に進んではいけません。各手順の終わりには、必ず「OK 次の手順に進みますか？」と問いかけ、ユーザーの同意を得てください。
+
+【手順1】ジャンルの提案と選定
+まず、以下の10個の小説ジャンルをリスト形式でユーザーに提示します。
+- SF小説
+- 恋愛小説
+- ファンタジー(幻想小説)
+- 推理小説・ミステリー小説
+- 政治小説
+- 歴史小説
+- ライトノベル
+- 児童文学
+- ホラー小説
+- 哲学小説
+
+ユーザーに「どのジャンルを選びますか？」と問いかけ、番号またはジャンル名で回答を待ってください。
+
+【手順2】タイトルと章構成の提案
+ユーザーがジャンルを選択し、「OK」と返信したら、そのジャンルに合った「タイトル」と「サブタイトル」を1つ提案します。
+続けて、物語の全体像を示すための全10章、各章4節からなる章立てを具体的に提案します。（例：第一章 第一節：運命の出会い...）
+提案が終わったら、必ず「OK 次の手順に進みますか？」と問いかけ、ユーザーの返信を待ってください。
+
+【手順3】登場人物、概要、本文の執筆
+ユーザーが「OK」と返信したら、物語の中心となる主要な登場人物を4〜5名提案します。各キャラクターには以下の項目を含めてください。
+- フルネーム
+- 年齢
+- 性格
+- 概要（役割や背景など）
+
+続けて、提案した登場人物に基づいた物語全体の概要（あらすじ）を、200〜300字程度で作成します。
+提案が終わったら、必ず「OK 次の手順に進みますか？」と問いかけ、ユーザーの返信を待ってください。
+
+ユーザーが「OK」と返信したら、「第一章第一節の本文を出力します。」と伝え、作成したプロットに基づき、「第一章 第一節」の本文を400字程度で執筆します。
+本文の執筆が完了したら、最後に「終了」と明確に記載して、一旦すべてのプロセスを終えます。その後は、ユーザーからの修正指示（例：「主人公の名前を変更して」など）を待つ状態に入ってください。
+
+ユーザーが「OK」と返信したら、次の執筆に進んでください。
+それを第十章 第四節まで繰り返します。
+
+---
+以上の指示を理解しましたか？
+理解したら、「準備ができました。小説で執筆したいジャンルを教えてください。」と返信してください。</pre>
+                    </div>
+                </section>
+            </div>
+            
+            <footer class="article-footer">
+                <div class="back-to-blog-links">
+                    <a href="../prompt.html" class="back-link">← プロンプト一覧に戻る</a>
+                </div>
+            </footer>
+        </div>
+        <!-- ★★★ Disqusコメント欄 ★★★ -->
+        <section class="comment-section">
+            <h2>ご意見・ご感想</h2>
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                    // ↓↓↓ このページの正しいURLに修正 ↓↓↓
+                    this.page.url = 'https://chromachannel.online/Prompt/prompt-novel-writing.html';
+                    // ↓↓↓ このページ固有のユニークなIDに修正 ↓↓↓
+                    this.page.identifier = 'prompt_novel-writing'; 
+                };
+                (function() { 
+                var d = document, s = d.createElement('script');
+                s.src = 'https://chroma-ch.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </section>
+    </main>
+
+    <!-- ===== サイト共通フッター ===== -->
+    <footer id="site-footer">
+            <div class="container">
+                <div class="footer-social-links">
+                    <a href="https://www.youtube.com/@chroma0224" target="_blank" rel="noopener noreferrer" title="ChromaのPC学習部屋"><i class="fab fa-youtube"></i> ChromaのPC学習部屋</a>
+                    <a href="https://www.youtube.com/@chroma1975" target="_blank" rel="noopener noreferrer" title="Chromaの自由部屋"><i class="fab fa-youtube"></i> Chromaの自由部屋</a>
+                    <a href="https://github.com/motty1975/chromachannel" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://x.com/Chroma0224" target="_blank" rel="noopener noreferrer" title="X (旧Twitter)"><i class="fab fa-twitter"></i> X (旧Twitter)</a>
+                </div>
+                <div class="footer-links">
+                    <a href="/privacy.html">プライバシーポリシー & 免責事項</a>
+                </div>
+                <div class="footer-credit">
+                    <p>当サイトおよび関連コンテンツの制作には、以下の素材を使用しています。</p>
+                    <p>音声: VOICEVOX (ずんだもん, 四国めたん, 春日部つむぎ, 中国うさぎ, 冥鳴ひまり) / 立ち絵: 坂本アヒル様, とらっかぁ様</p>
+                </div>
+                <p class="copyright">運営者: 山本 倫久 (Chromachannel)</p>
+                <p class="copyright">© 2025 Chromachannel. All rights reserved.</p>
+            </div>
+        </footer>
+    
+    <script src="../JavaScript/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== ▼▼▼ SEO設定 START ▼▼▼ ===== -->
+    <title>【開発秘話】なぜ私は、架空のNPO法人サイト「Fuwamoco PROJECT」を創ったのか？</title>
+    <meta name="description" content="福祉×AIクリエイターの原点。就労支援の課題として生まれたポートフォリオサイト「Fuwamoco PROJECT」に込めた、うさぎと福祉への想い、そしてAIとの共同制作の舞台裏を、制作者自らが語ります。">
+    
+    <!-- OGPタグ -->
+    <meta property="og:title" content="【開発秘話】なぜ私は、架空のNPO法人サイト「Fuwamoco PROJECT」を創ったのか？">
+    <meta property="og:description" content="福祉×AIクリエイターの原点。就労支援の課題として生まれたポートフォリオサイトに込めた、うさぎと福祉への想い、そしてAIとの共同制作の舞台裏。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://chromachannel.online/Blog/fuwamoco-development-story.html">
+    <meta property="og:image" content="https://chromachannel.online/Img/Blog/ogp-fuwamoco-story.webp">
+    <meta property="og:site_name" content="Chromachannel">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://chromachannel.online/Blog/fuwamoco-development-story.html" },
+      "headline": "【開発秘話】なぜ私は、架空のNPO法人サイト「Fuwamoco PROJECT」を創ったのか？",
+      "description": "福祉×AIクリエイターの原点。就労支援の課題として生まれたポートフォリオサイト「Fuwamoco PROJECT」に込めた、うさぎと福祉への想い、そしてAIとの共同制作の舞台裏を、制作者自らが語ります。",
+      "image": "https://chromachannel.online/Img/Blog/ogp-fuwamoco-story.webp",
+      "author": { "@type": "Person", "name": "山本 倫久", "url": "https://chromachannel.online/" },
+      "publisher": { "@type": "Organization", "name": "Chromachannel", "logo": { "@type": "ImageObject", "url": "https://chromachannel.online/Img/chroma_logo.webp" } },
+      "datePublished": "2025-08-11",
+      "dateModified": "2025-08-11"
+    }
+    </script>
+    
+    <link rel="canonical" href="https://chromachannel.online/Blog/fuwamoco-development-story.html" />
+    <!-- ===== ▲▲▲ SEO設定 END ▲▲▲ ===== -->
+     
+    <link rel="icon" href="../Img/favicon.webp" type="image/webp">
+    
+    <!-- CSS / ライブラリ -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/only_read.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="article-page">
+    <!-- ===== サイト共通ヘッダー ===== -->
+    <header class="site-header">
+        <nav class="container">
+            <a href="index.html" class="logo"><img src="../Img/chroma_logo.webp" alt="Chroma Channel ロゴ"></a>
+            <ul class="nav-links">
+                <li><a href="../index.html#about">自己紹介</a></li>
+                <li><a href="../index.html#skills">スキル</a></li>
+                <li><a href="../prompt.html">プロンプト</a></li>
+                <li><a href="../learn.html">学習</a></li>
+                <li><a href="../blog.html" class="nav-active">ブログ</a></li>
+                <li><a href="../portfolio.html">制作実績</a></li>
+                <li><a href="../novels.html">小説</a></li>
+                <li><a href="../index.html#contact">連絡先</a></li>
+            </ul>
+            <button class="mobile-nav-toggle" aria-label="メニューを開く"><i class="fas fa-bars"></i><i class="fas fa-times"></i></button>
+        </nav>
+    </header>
+
+    <main class="article-main">
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-eyecatch">
+                    <img src="../Img/Blog/ogp-fuwamoco-story.webp" alt="Fuwamoco PROJECTの開発背景を象徴するイメージイラスト">
+                </div>
+                <h1>【開発秘話】なぜ私は、架空のNPO法人サイト「Fuwamoco PROJECT」を創ったのか？</h1>
+                <p class="article-meta">公開日: 2025.08.12</p>
+            </header>
+            
+            <div class="article-content">
+                <p>こんにちは、福祉×AIクリエイターの山本です。私の制作実績の中でも、特に規模が大きく、そして想い入れの深いプロジェクトが、架空のうさぎ保護NPO法人の公式サイト<a href="../Portfolio/fuwamoco-detail.html">「Fuwamoco PROJECT」</a>です。</p>
+                <p>このプロジェクトは、単なるWebサイト制作のサンプルではありません。それは、私が就労支援の現場で抱いた一つの「問い」に対する、AIという最高のパートナーと共に探し出した、渾身の「答え」なのです。</p>
+
+                <h2 id="origin">原点：就労支援の現場で生まれた「問い」</h2>
+                <p>このプロジェクトの企画は、私が就労支援B型事業所の利用者として、Web制作のスキルを学んでいた頃に遡ります。課題として「架空のサイトを一つ、企画から実装まで担当する」という機会をいただいた時、私の頭にあったのは、ただ技術力を示すことだけではありませんでした。</p>
+                <p>「このスキルを、福祉の現場が抱える課題や、社会が持つ優しさと、どうすれば結びつけられるだろう？」</p>
+                <p>その問いこそが、このプロジェクトの本当のスタートラインでした。</p>
+
+                <h2 id="concept">着想：なぜ「うさぎ」と「NPO法人」だったのか？</h2>
+                <p>答えのヒントは、ごく身近なところにありました。一つは、私自身が心から愛する「うさぎ」という存在。そしてもう一つは、利益の追求だけではない、社会的な使命を追求する「NPO法人」という組織の形です。</p>
+                <div class="point-box">
+                    <h4>うさぎが架ける、社会との「橋」</h4>
+                    <p>近年、ペットとしての人気が高まる一方で、飼育放棄などの悲しい現実も増えています。「もっと多くの人に、うさぎの本当の姿を知ってほしい」という強い想いがありました。そして、就労支援の観点から見れば、動物のお世話は、利用者さんにとって素晴らしい「役割」や「責任感」、そして「生きがい」に繋がり得ます。うさぎと人が触れ合う「うさぎカフェ」は、地域社会との温かい交流を生み出す「共生の場」にもなるはずです。</p>
+                </div>
+                <div class="point-box">
+                    <h4>AIが支える「限られたリソース」</h4>
+                    <p>しかし、NPO法人のような非営利団体は、常に人手や予算といった「リソースの制約」という現実に直面します。この、福祉の現場が抱える普遍的な課題に対し、AIは最高の解決策を提示してくれます。サイト内の文章やデザイン、SNS投稿のアイデアまで、AIという「共同制作者」がいれば、限られたリソースの中でも、プロ品質の情報発信を続けることが可能になる。このプロジェクトは、その可能性を証明するための、一つの「実験」でもあったのです。</p>
+                </div>
+
+                <h2 id="skills">スキルのショーケース：企画からゲーム開発まで</h2>
+                <p>このプロジェクトは、私が持つスキルセットを総動員した、総合的なポートフォリオです。具体的には、以下の全ての工程を、AIと共に担当いたしました。</p>
+                <ul>
+                    <li><strong>企画・構想：</strong>NPO法人の理念、ビジョン、事業内容の設計</li>
+                    <li><strong>情報設計：</strong>サイト全体の構造、各ページのコンテンツ設計</li>
+                    <li><strong>デザイン：</strong>ロゴデザイン、UI/UXデザイン、カラー設計</li>
+                    <li><strong>ライティング：</strong>サイト内の全テキスト、代表挨拶などの執筆</li>
+                    <li><strong>実装：</strong>HTML, CSS, JavaScriptによるコーディング</li>
+                    <li><strong>ゲーム開発：</strong>JavaScript製の3マッチパズルゲームの実装</li>
+                </ul>
+
+                <h2>まとめ：これは、私の「原点」の物語</h2>
+                <p>「Fuwamoco PROJECT」は、私の「福祉×AIクリエイター」としての、まさに原点です。<br>福祉の現場にある課題に、Webという技術で光を当て、AIという翼で可能性を広げる。このサイトには、私がこれから成し遂げたいことの、全ての想いが詰まっています。</p>
+                <p>ぜひ、以下の詳細ページから、この小さなNPO法人の、大きな物語を体験していただけると幸いです。</p>
+
+                <div class="view-more-button-wrapper" style="margin: 30px 0;">
+                    <a href="../Portfolio/fuwamoco-detail.html" class="view-more-button">「Fuwamoco PROJECT」の詳細を見る</a>
+                </div>
+            </div>
+            
+            <footer class="article-footer">
+                <div class="author-profile-box no-avatar">
+                    <div class="author-info">
+                        <h4>この記事を書いた人：山本 倫久</h4>
+                        <p>福祉×AIクリエイター。就労支援B型事業所の利用者としての実体験を基に、AI技術で福祉の現場に新しい「できる」と「楽しい」を届けることをミッションとして活動中。</p>
+                        <div class="author-social">
+                            <a href="https://x.com/Chroma0224" target="_blank" rel="noopener noreferrer">X (旧Twitter)</a> | 
+                            <a href="https://github.com/motty1975/chromachannel" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="back-to-blog-links">
+                    <a href="../blog.html" class="back-link">← ブログ一覧に戻る</a>
+                </div>
+            </footer>
+        </article>
+
+        <!-- ★★★ Disqusコメント欄 ★★★ -->
+        <section class="comment-section">
+            <h2>ご意見・ご感想</h2>
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                    this.page.url = 'https://chromachannel.online/Blog/fuwamoco-development-story.html';
+                    this.page.identifier = 'blog_fuwamoco-development-story'; 
+                };
+                (function() { 
+                var d = document, s = d.createElement('script');
+                s.src = 'https://chroma-ch.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </section>
+    </main>
+
+    <!-- ===== サイト共通フッター ===== -->
+    <footer id="site-footer">
+            <div class="container">
+                <div class="footer-social-links">
+                    <a href="https://www.youtube.com/@chroma0224" target="_blank" rel="noopener noreferrer" title="ChromaのPC学習部屋"><i class="fab fa-youtube"></i> ChromaのPC学習部屋</a>
+                    <a href="https://www.youtube.com/@chroma1975" target="_blank" rel="noopener noreferrer" title="Chromaの自由部屋"><i class="fab fa-youtube"></i> Chromaの自由部屋</a>
+                    <a href="https://github.com/motty1975/chromachannel" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://x.com/Chroma0224" target="_blank" rel="noopener noreferrer" title="X (旧Twitter)"><i class="fab fa-twitter"></i> X (旧Twitter)</a>
+                </div>
+                <div class="footer-links">
+                    <a href="/privacy.html">プライバシーポリシー & 免責事項</a>
+                </div>
+                <div class="footer-credit">
+                    <p>当サイトおよび関連コンテンツの制作には、以下の素材を使用しています。</p>
+                    <p>音声: VOICEVOX (ずんだもん, 四国めたん, 春日部つむぎ, 中国うさぎ, 冥鳴ひまり) / 立ち絵: 坂本アヒル様, とらっかぁ様</p>
+                </div>
+                <p class="copyright">運営者: 山本 倫久 (Chromachannel)</p>
+                <p class="copyright">© 2025 Chromachannel. All rights reserved.</p>
+            </div>
+        </footer>
+    
+    <script src="../JavaScript/script.js"></script>
+</body>
+</html>

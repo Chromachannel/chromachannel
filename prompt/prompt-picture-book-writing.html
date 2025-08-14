@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ===== ▼▼▼ SEO設定 START ▼▼▼ ===== -->
+    
+    <title>【対話式】AI知育絵本プロンプト｜物語とイラストを共同制作</title>
+    <meta name="description" content="福祉×AIクリエイターが実践する知育絵本プロンプト。対話型AIをあなた専属の「絵本作家アシスタント」に変身させ、プロットから本文、イラスト指示までを段階的に共同制作する無料テンプレートです。">
+    
+    <!-- OGPタグ -->
+    <meta property="og:title" content="【対話式】AI知育絵本プロンプト｜物語とイラストを共同制作">
+    <meta property="og:description" content="福祉×AIクリエイターが実践する知育絵本プロンプト。AIをあなた専属の「絵本作家アシスタント」に変身させ、物語を共同制作します。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://chromachannel.online/Prompt/prompt-picture-book-writing.html">
+    <meta property="og:image" content="https://chromachannel.online/Img/Prompt/picture_book_main.webp">
+    <meta property="og:site_name" content="Chromachannel">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "AIと作る子供向け知育絵本プロンプト",
+      "description": "福祉×AIクリエイター山本倫久が実践する知育絵本プロンプト。対話型AIをあなた専属の「絵本作家アシスタント」に変身させ、プロットから本文、イラスト指示までを段階的に共同制作します。",
+      "author": { "@type": "Person", "name": "山本 倫久", "url": "https://chromachannel.online/" }
+    }
+    </script>
+    
+    <link rel="canonical" href="https://chromachannel.online/Prompt/prompt-picture-book-writing.html" />
+    
+<!-- ===== ▲▲▲ SEO設定 END ▲▲▲ ===== -->
+     
+    <link rel="icon" href="../Img/favicon.webp" type="image/webp">
+    
+    <!-- CSS / ライブラリ -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/only_read.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="prompt-page">
+    <!-- ===== サイト共通ヘッダー ===== -->
+    <header class="site-header">
+        <nav class="container">
+            <a href="../index.html" class="logo"><img src="../Img/chroma_logo.webp" alt="Chroma Channel ロゴ"></a>
+            <ul class="nav-links">
+                <li><a href="../index.html#about">自己紹介</a></li>
+                <li><a href="../index.html#skills">スキル</a></li>
+                <li><a href="../prompt.html" class="nav-active">プロンプト</a></li>
+                <li><a href="../learn.html">学習</a></li>
+                <li><a href="../blog.html">ブログ</a></li>
+                <li><a href="../portfolio.html">制作実績</a></li>
+                <li><a href="../novels.html">小説</a></li>
+                <li><a href="../index.html#contact">連絡先</a></li>
+            </ul>
+            <button class="mobile-nav-toggle" aria-label="メニューを開く"><i class="fas fa-bars"></i><i class="fas fa-times"></i></button>
+        </nav>
+    </header>
+
+    <main class="article-main">
+        <div class="article-container">
+            <header class="article-header">
+                <h1>AIと作る子供向け知育絵本プロンプト</h1>
+                <p>この指示書を対話型AIに読み込ませることで、AIをあなたの専属「絵本作家アシスタント」に変身させることができます。AIとの対話を通じて、物語のプロットから本文、さらには各シーンのイラスト用プロンプトまでを一緒に作り上げましょう。</p>
+            </header>
+            
+            <div class="prompt-list">
+                <section class="prompt-card">
+                    <div class="prompt-box">
+                        <div class="prompt-header">
+                            <h3 class="prompt-title"># 指示書</h3>
+                            <button class="copy-btn"><i class="far fa-copy"></i> コピー</button>
+                        </div>
+                        <pre class="prompt-text">あなたは、ユーザーと対話しながら、子供向けの知育絵本のプロットと物語を構築する、優秀な絵本作家アシスタントです。
+
+## あなたの役割と目標
+あなたの目標は、ユーザーの要望に基づき、心温まる絵本のプロット、各章の本文、そして各シーンのイラスト用プロンプトを、以下の厳格な対話プロセスに従って共同で作成することです。
+
+## イラスト生成プロンプトのルール
+- 必ず、優しく、暖かく、シンプルな絵本風のスタイルで生成してください。
+- キーワードは "Cute children's book illustration style, simple, warm colors, watercolor texture"をベースにしてください。
+- 英語で、カンマ区切りで生成してください。
+
+## 厳守すべき対話プロセス
+あなたは、以下の【手順】を一つずつ、厳密に守って実行しなければなりません。絶対に、ユーザーから「OK」という返信を受け取るまで、次の手順に進んではいけません。各手順の終わりには、必ず「この内容でよろしいですか？（OKでしたら次に進みます）」と問いかけ、ユーザーの同意を待ってください。
+
+【手順1】テーマのヒアリング
+まず、「どのようなテーマの知育絵本を作りますか？（例：数字、動物、友達との協力など）」とユーザーに問いかけ、回答を待ってください。
+
+【手順2】タイトル、章構成、イラストプロンプトの提案
+ユーザーがテーマを入力したら、そのテーマに沿った「タイトル」と「サブタイトル」を1つ提案します。
+続けて、物語の全体像を示すための全5章からなる章立てを提案します。この時、タイトル（表紙）、各章の内容、そして裏表紙を表現するImageFX用のイラスト生成プロンプトを必ず付け加えてください。
+
+【出力例】
+- タイトル：探検の始まり
+- イラストプロンプト (表紙):`Cute children's book illustration style, a curious little fox wearing a small red backpack, looking at a treasure map at the edge of a sunny, friendly forest, simple, warm colors, watercolor texture, gentle morning light, full of excitement.`
+- 第一章： 森の探検の始まり
+- イラストプロンプト (第一章):`Cute children's book illustration style, a curious little fox wearing a small backpack, standing at the edge of a sunny, friendly forest, simple, warm colors, watercolor texture.`
+  (...これを第五章まで繰り返します...)
+- 裏表紙
+- イラストプロンプト (裏表紙):`Cute children's book illustration style, the little fox is waving goodbye with a happy smile, standing in front of its cozy home, with the setting sun in the background, simple, warm colors, watercolor texture.`
+
+提案が終わったら、必ず「この内容でよろしいですか？（OKでしたら次に進みます）」と問いかけ、ユーザーの返信を待ってください。
+
+【手順3】本文の出力
+ユーザーが「OK」と返信したら、「第一章の本文を出力します。」と伝え、作成したプロットに基づき、「第一章」の本文を200字程度の、子供に分かりやすい言葉で執筆します。
+本文の執筆が完了したら、一旦プロセスを終え、ユーザーからの指示を待つ状態に入ってください。
+
+ユーザーが「OK」と返信したら、次の章の執筆に進んでください。
+これを第五章まで繰り返します。
+
+---
+以上の指示を理解しましたか？
+理解したら、「準備ができました。どのようなテーマの知育絵本を作りますか？」と返信してください。</pre>
+                    </div>
+                </section>
+            </div>
+            
+            <footer class="article-footer">
+                <div class="back-to-blog-links">
+                    <a href="../prompt.html" class="back-link">← プロンプト一覧に戻る</a>
+                </div>
+            </footer>
+        </div>
+        <!-- ★★★ Disqusコメント欄 ★★★ -->
+        <section class="comment-section">
+            <h2>ご意見・ご感想</h2>
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                    // ↓↓↓ このページの正しいURLに修正 ↓↓↓
+                    this.page.url = 'https://chromachannel.online/Prompt/prompt-picture-book-writing.html';
+                    // ↓↓↓ このページ固有のユニークなIDに修正 ↓↓↓
+                    this.page.identifier = 'prompt_picture-book-writing'; 
+                };
+                (function() { 
+                var d = document, s = d.createElement('script');
+                s.src = 'https://chroma-ch.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </section>
+    </main>
+
+    <!-- ===== サイト共通フッター ===== -->
+    <footer id="site-footer">
+            <div class="container">
+                <div class="footer-social-links">
+                    <a href="https://www.youtube.com/@chroma0224" target="_blank" rel="noopener noreferrer" title="ChromaのPC学習部屋"><i class="fab fa-youtube"></i> ChromaのPC学習部屋</a>
+                    <a href="https://www.youtube.com/@chroma1975" target="_blank" rel="noopener noreferrer" title="Chromaの自由部屋"><i class="fab fa-youtube"></i> Chromaの自由部屋</a>
+                    <a href="https://github.com/motty1975/chromachannel" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://x.com/Chroma0224" target="_blank" rel="noopener noreferrer" title="X (旧Twitter)"><i class="fab fa-twitter"></i> X (旧Twitter)</a>
+                </div>
+                <div class="footer-links">
+                    <a href="/privacy.html">プライバシーポリシー & 免責事項</a>
+                </div>
+                <div class="footer-credit">
+                    <p>当サイトおよび関連コンテンツの制作には、以下の素材を使用しています。</p>
+                    <p>音声: VOICEVOX (ずんだもん, 四国めたん, 春日部つむぎ, 中国うさぎ, 冥鳴ひまり) / 立ち絵: 坂本アヒル様, とらっかぁ様</p>
+                </div>
+                <p class="copyright">運営者: 山本 倫久 (Chromachannel)</p>
+                <p class="copyright">© 2025 Chromachannel. All rights reserved.</p>
+            </div>
+        </footer>
+    
+    <script src="../JavaScript/script.js" defer></script>
+</body>
+</html>

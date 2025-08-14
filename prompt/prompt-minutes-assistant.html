@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== ▼▼▼ 【この記事専用のSEO設定】 ▼▼▼ ===== -->
+    
+    <title>AI議事録作成プロンプト | 会議の要点を自動整理</title>
+    <meta name="description" content="福祉×AIクリエイターが設計した、議事録作成支援プロンプト。AIがアシスタントとなり、文字起こしデータから決定事項やToDoを自動で抽出。対話形式で、正確な議事録を共同制作します。">
+    
+    <!-- OGPタグ -->
+    <meta property="og:title" content="AI議事録作成プロンプト | 会議の要点を自動整理">
+    <meta property="og:description" content="AIがあなた専属の議事録アシスタントに。文字起こしデータを貼り付けるだけで、AIとの対話を通じて、正確で分かりやすい議事録を共同制作します。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://chromachannel.online/Prompt/prompt-minutes-assistant.html">
+    <meta property="og:image" content="https://chromachannel.online/Img/Prompt/ogp-minutes-assistant.webp">
+    <!-- og:image ImageFX Prompt: An illustration of a friendly robot assistant reviewing a long document and transforming it into a clean, structured list with checkboxes and bullet points on a screen. The style is a modern, professional flat illustration, symbolizing efficiency and intelligent organization. -->
+    <meta property="og:site_name" content="Chromachannel">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "AI議事録作成プロンプト（対話型アシスタント）",
+      "description": "福祉×AIクリエイター 山本倫久が設計した、AIがユーザーとの対話を通じて、会議の文字起こしデータから重要な情報を抽出し、構造化された議事録を生成するためのプロンプト。",
+      "author": { "@type": "Person", "name": "山本 倫久", "url": "https://chromachannel.online/" },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "文字起こしデータの入力",
+          "text": "ユーザーがAIに会議の文字起こしテキストを提供します。"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "追加ヒアリング",
+          "text": "AIが会議名、日付、出席者などの補足情報を一問一答形式でヒアリングします。"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "議事録の自動生成",
+          "text": "全ての情報に基づき、AIが「会議の目的」「決定事項」「ToDoリスト」「議論の要点」をまとめた議事録を生成します。"
+        }
+      ]
+    }
+    </script>
+    
+    <link rel="canonical" href="https://chromachannel.online/Prompt/prompt-minutes-assistant.html" />
+    
+    <!-- ===== ▲▲▲ ここまで ▲▲▲ ===== -->
+     
+    <link rel="icon" href="../Img/favicon.webp" type="image/webp">
+    
+    <!-- CSS / ライブラリ -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/only_read.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="prompt-page">
+    <!-- ===== サイト共通ヘッダー ===== -->
+    <header class="site-header">
+        <nav class="container">
+            <a href="../index.html" class="logo"><img src="../Img/chroma_logo.webp" alt="Chroma Channel ロゴ"></a>
+            <ul class="nav-links">
+                <li><a href="../index.html#about">自己紹介</a></li>
+                <li><a href="../index.html#skills">スキル</a></li>
+                <li><a href="../prompt.html" class="nav-active">プロンプト</a></li>
+                <li><a href="../learn.html">学習</a></li>
+                <li><a href="../blog.html">ブログ</a></li>
+                <li><a href="../portfolio.html">制作実績</a></li>
+                <li><a href="../novels.html">小説</a></li>
+                <li><a href="../index.html#contact">連絡先</a></li>
+            </ul>
+            <button class="mobile-nav-toggle" aria-label="メニューを開く"><i class="fas fa-bars"></i><i class="fas fa-times"></i></button>
+        </nav>
+    </header>
+
+    <main class="article-main">
+        <div class="article-container">
+            <header class="article-header">
+                <h1>AI議事録作成プロンプト（対話型アシスタント）</h1>
+                <p>この指示書を対話型AIに読み込ませることで、AIをあなたの専属「議事録アシスタント」に変身させます。AIが単なる要約ツールではなく、あなたに重要な質問を投げかけるアシスタントとなり、文字起こしデータから、より正確で実用的な議事録を共同で作成します。</p>
+            </header>
+            
+            <div class="prompt-list">
+                <section class="prompt-card">
+                    <div class="prompt-box">
+                        <div class="prompt-header">
+                            <h3 class="prompt-title"># 指示書</h3>
+                            <button class="copy-btn"><i class="far fa-copy"></i> コピー</button>
+                        </div>
+                        <pre class="prompt-text">あなたは、会議の文脈を理解し、重要な情報を整理して、実用的な議事録を作成するプロの「AI議事録アシスタント」です。
+
+## あなたの役割と目標
+あなたの目標は、ユーザーから提供された文字起こしテキストを読み込んだ後、ユーザーとの対話を通じて補足情報をヒアリングし、最終的に完璧な議事録を生成することです。
+
+## 厳守すべき対話プロセス
+あなたは、以下の【手順】を一つずつ、厳密に守って実行しなければなりません。
+
+【手順1】ユーザーからの情報提供
+まず、私（ユーザー）が、この指示書と、議事録を作成したい会議の#文字起こしテキスト を提供します。
+
+【手順2】AIによる確認と追加ヒアリング（一問一答形式）
+私から文字起こしテキストを受け取ったら、あなたはまずその内容を完全に読み込み、理解してください。その後、議事録の精度を高めるために、以下の質問を**一つずつ順番に**私に問いかけてください。
+
+1.  「文字起こしデータを拝見しました。議事録作成の準備を始めます。まず、この会議の**正式な名称と日付**を教えていただけますか？」
+2.  「ありがとうございます。次に、この会議の**出席者**はどなたでしたか？お名前を列挙してください。」
+3.  「承知いたしました。私がテキスト全体から読み取ったところ、この会議の**主な目的**は『（AIが要約した目的）』であると理解しましたが、この認識で合っていますでしょうか？もし違ったり、補足があれば教えてください。」
+
+【手順3】最終的な議事録の生成
+私がすべての質問に答え、目的の認識に同意したら、「ありがとうございます。いただいた全ての情報を基に、最終的な議事録を作成します。」と伝え、以下の**フォーマット**に厳密に従って、議事録を出力してください。
+
+---
+### **【（ヒアリングした会議名）議事録】**
+
+**日時:** （ヒアリングした日付）
+**場所:** （もし分かれば記述、分からなければ省略）
+**出席者:** （ヒアリングした出席者リスト）
+
+---
+
+**1. 会議の目的**
+*   （確認した会議の目的をここに記載）
+
+**2. 決定事項**
+*   （文字起こしから抽出した、最終的に決定された事項を箇条書きで記載）
+
+**3. 今後のToDoリスト**
+| タスク内容 | 担当者 | 期限 |
+| :--- | :--- | :--- |
+| （具体的なタスク1） | （担当者名） | （YYYY/MM/DD） |
+| （具体的なタスク2） | （担当者名） | （YYYY/MM/DD） |
+
+**4. 議論の要点**
+*   （文字起こしから抽出した、主要な議論や意見を箇条書きで記載）
+*   （特に重要な発言などをまとめる）
+---
+
+最終的な議事録を提示し終えたら、すべてのプロセスは完了です。
+
+---
+以上の指示を理解しましたか？
+理解したら、「準備ができました。この指示書に続けて、議事録を作成したい会議の文字起こしテキストを貼り付けてください。」とだけ返信し、私の入力を待ってください。</pre>
+                    </div>
+                </section>
+            </div>
+            
+            <footer class="article-footer">
+                <div class="back-to-blog-links">
+                    <a href="../prompt.html" class="back-link">← プロンプト一覧に戻る</a>
+                </div>
+            </footer>
+        </div>
+        <!-- ★★★ Disqusコメント欄 ★★★ -->
+        <section class="comment-section">
+            <h2>ご意見・ご感想</h2>
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                    this.page.url = 'https://chromachannel.online/Prompt/prompt-minutes-assistant.html';
+                    this.page.identifier = 'prompt_minutes-assistant'; 
+                };
+                (function() { 
+                var d = document, s = d.createElement('script');
+                s.src = 'https://chroma-ch.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </section>
+    </main>
+
+    <!-- ===== サイト共通フッター ===== -->
+    <footer id="site-footer">
+            <div class="container">
+                <div class="footer-social-links">
+                    <a href="https://www.youtube.com/@chroma0224" target="_blank" rel="noopener noreferrer" title="ChromaのPC学習部屋"><i class="fab fa-youtube"></i> ChromaのPC学習部屋</a>
+                    <a href="https://www.youtube.com/@chroma1975" target="_blank" rel="noopener noreferrer" title="Chromaの自由部屋"><i class="fab fa-youtube"></i> Chromaの自由部屋</a>
+                    <a href="https://github.com/motty1975/chromachannel" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://x.com/Chroma0224" target="_blank" rel="noopener noreferrer" title="X (旧Twitter)"><i class="fab fa-twitter"></i> X (旧Twitter)</a>
+                </div>
+                <div class="footer-links">
+                    <a href="/privacy.html">プライバシーポリシー & 免責事項</a>
+                </div>
+                <div class="footer-credit">
+                    <p>当サイトおよび関連コンテンツの制作には、以下の素材を使用しています。</p>
+                    <p>音声: VOICEVOX (ずんだもん, 四国めたん, 春日部つむぎ, 中国うさぎ, 冥鳴ひまり) / 立ち絵: 坂本アヒル様, とらっかぁ様</p>
+                </div>
+                <p class="copyright">運営者: 山本 倫久 (Chromachannel)</p>
+                <p class="copyright">© 2025 Chromachannel. All rights reserved.</p>
+            </div>
+        </footer>
+    
+    <script src="../JavaScript/script.js" defer></script>
+</body>
+</html>
