@@ -110,18 +110,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const addMessageToLog = (sender, message) => {
         const messageElement = document.createElement('div');
         messageElement.classList.add('message', `${sender}-message`);
-        const iconClass = sender === 'ai' ? 'fas fa-robot' : 'fas fa-user';
+        
+        // ★★★ アイコン部分のHTMLを動的に生成 ★★★
+        let iconHTML;
+        if (sender === 'ai') {
+            // AIの場合は img/hakase.webp を表示
+            iconHTML = `<div class="icon"><img src="img/hakase.webp" alt="AI博士のアイコン"></div>`;
+        } else {
+            // ユーザーの場合は従来のアイコンを表示
+            iconHTML = `<div class="icon"><i class="fas fa-user"></i></div>`;
+        }
         
         const bubble = document.createElement('div');
         bubble.className = 'bubble';
         bubble.innerHTML = message.replace(/\n/g, '<br>');
 
-        messageElement.innerHTML = `<div class="icon"><i class="${iconClass}"></i></div>`;
+        messageElement.innerHTML = iconHTML; // 生成したアイコンHTMLをセット
         messageElement.appendChild(bubble);
 
         if (sender === 'ai') {
             const playBtn = document.createElement('button');
             playBtn.className = 'voice-play-btn';
+            // ... (これ以降の処理は変更なし) ...
             playBtn.innerHTML = '<i class="fas fa-play"></i>';
             playBtn.title = 'このメッセージを読み上げる';
             let isPlaying = false;
@@ -132,7 +142,6 @@ document.addEventListener('DOMContentLoaded', () => {
             playBtn.addEventListener('click', () => {
                 if (isPlaying) {
                     voiceBot.stop();
-                    // onEnd() は speak メソッドの onend イベントで呼ばれるのでここでは不要
                 } else {
                     isPlaying = true;
                     playBtn.innerHTML = '<i class="fas fa-stop"></i>';
