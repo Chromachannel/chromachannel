@@ -29,11 +29,11 @@
             "jobTitle": "福祉 × AIクリエイター",
             "description": "福祉の現場にAIという最先端のテクノロジーを駆使して、新しい「できる」と「楽しい」を届けることをミッションとしています。企画、シナリオ、音楽、イラスト、動画編集まで、コンテンツ制作の全工程をワンストップで手掛けます。",
             "sameAs": [
-            "https://www.youtube.com/@chroma0224",
-            "https://www.youtube.com/@chroma1975",
-            "https://github.com/motty1975/chromachannel",
-            "https://x.com/ChromachannelAI"
-        ],
+                "https://www.youtube.com/@chroma0224",
+                "https://www.youtube.com/@chroma1975",
+                "https://github.com/motty1975/chromachannel",
+                "https://x.com/Chroma0224"
+            ],
             "knowsAbout": ["AIイラスト制作", "動画制作", "音楽制作", "教材コンテンツ設計", "Webアプリケーション開発", "福祉ITコンサルティング", "プロンプトエンジニアリング"]
         },
         "publisher": {
@@ -50,10 +50,13 @@
     </head>
     <body>
 
+        <!-- ヘッダーをここに読み込む -->
+        <div id="header-placeholder"></div>
+
         <header class="site-header">
             <nav class="container">
-                <a href="index.html" class="logo">
-                    <img src="Img/chroma_logo.webp" alt="Chroma Channel ロゴ">
+                <a href="/index.html" class="logo">
+                    <img src="/Img/chroma_logo.webp" alt="Chroma Channel ロゴ">
                 </a>
                 <ul class="nav-links">
                 <li><a href="/index.html#about">自己紹介</a></li>
@@ -96,7 +99,7 @@
                     <h2 class="section-title fade-in">自己紹介</h2>
                     <div class="about-card fade-in">
                         <div class="about-card-left">
-                            <img src="Img/profile.webp" alt="山本 倫久 プロフィール写真" class="profile-image" loading="eager" fetchpriority="high">
+                            <img src="Img/profile.webp" alt="山本 倫久 プロフィール写真" class="profile-image">
                             <div class="profile-audio-player">
                                 <p class="audio-caption">ご挨拶（音声）</p>
                                     <audio controls preload="none" aria-label="About Meセクションの読み上げ音声">
@@ -463,31 +466,8 @@
             </section>
         </main>
 
-    <footer id="site-footer">
-            <div class="container">
-                <div class="footer-social-links">
-                    <a href="https://www.youtube.com/@chroma0224" target="_blank" rel="noopener noreferrer" title="ChromaのPC学習部屋"><i class="fab fa-youtube"></i> ChromaのPC学習部屋</a>
-                    <a href="https://www.youtube.com/@chroma1975" target="_blank" rel="noopener noreferrer" title="Chromaの自由部屋"><i class="fab fa-youtube"></i> Chromaの自由部屋</a>
-                    <a href="https://github.com/motty1975/chromachannel" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i> GitHub</a>
-                    <a href="https://x.com/ChromachannelAI" target="_blank" rel="noopener noreferrer" title="X (旧Twitter)"><i class="fab fa-twitter"></i> X (旧Twitter)</a>
-                </div>
-                <div class="footer-links">
-                    <a href="/privacy.html">プライバシーポリシー & 免責事項</a>
-                </div>
-                <div class="footer-credit">
-                    <p>当サイトおよび関連コンテンツの制作には、以下の素材を使用しています。</p>
-                    <p>音声: VOICEVOX (ずんだもん, 四国めたん, 春日部つむぎ, 中国うさぎ, 冥鳴ひまり) / 立ち絵: 坂本アヒル様, とらっかぁ様</p>
-                </div>
-                <p class="copyright">運営者: 山本 倫久 (Chromachannel)</p>
-                <p class="copyright">© 2025 Chromachannel. All rights reserved.</p>
-            </div>
-        </footer>
-        <!-- AI博士 フローティングボタン -->
-        <a href="/Portfolio/Hakase/hakase.html" class="floating-ai-button" title="AI博士に相談する">
-            <i class="fas fa-robot"></i>
-            <span>AI博士に<br>相 談</span>
-        </a>
-
+    <!-- フッターをここに読み込む -->
+    <div id="footer-placeholder"></div>
         <script src="JavaScript/script.js" defer></script>
     </body>
 </html>

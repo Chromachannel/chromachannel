@@ -2,6 +2,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- サイト共通の機能 ---
 
+    // ヘッダーとフッターを読み込んでから各種機能を初期化する関数
+    const loadComponentsAndInit = async () => {
+        // コンポーネントを読み込む関数
+        const loadComponent = async (id, url) => {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error(`Failed to fetch ${url}`);
+                const text = await response.text();
+                const element = document.getElementById(id);
+                if (element) {
+                    element.innerHTML = text;
+                }
+            } catch (error) {
+                console.error('Component load error:', error);
+            }
+        };
+
+        // ヘッダーとフッターの読み込みを待つ
+        await Promise.all([
+            loadComponent('header-placeholder', '/header.html'),
+            loadComponent('footer-placeholder', '/footer.html')
+        ]);
+
+        // ▼▼▼ コンポーネント読み込み完了後に実行したい処理をここに移動 ▼▼▼
+        initMobileMenu();
+        initHeaderScrollEffect();
+        // ▲▲▲ ここまで ▲▲▲
+
+    };
+
+    // --- サイト共通の機能 ---
+
     const initMobileMenu = () => {
         const toggleButton = document.querySelector('.mobile-nav-toggle');
         const navLinks = document.querySelector('.nav-links');
@@ -268,6 +300,17 @@ const initFilter = () => {
     initMobileMenu();
     initScrollAnimation();
     initHeaderScrollEffect();
+    initGalleryToggle();
+    initPromptCopy();
+    initPortfolioModal();
+    initLearnModal();
+    initFilter();
+
+    // 最初にコンポーネント読み込み＆初期化関数を呼び出す
+    loadComponentsAndInit();
+
+    // コンポーネントに依存しない機能はそのまま呼び出す
+    initScrollAnimation();
     initGalleryToggle();
     initPromptCopy();
     initPortfolioModal();
