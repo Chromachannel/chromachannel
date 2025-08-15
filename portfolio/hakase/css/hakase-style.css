@@ -257,4 +257,29 @@
     color: #dc3545; /* 赤色 */
     background-color: #fbebee;
 }
+/* ===== 音声再生ボタンのスタイル ===== */
+.voice-play-btn {
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--text-light);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 10px; /* 吹き出しとの間隔 */
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.voice-play-btn:hover {
+    background-color: var(--ai-bubble-bg);
+    color: var(--primary-color);
+}
+
+.message {
+    align-items: center; /* アイコン、吹き出し、再生ボタンを中央揃えに */
+}
 /* ===== ▲▲▲ 修正・追加ここまで ▲▲▲ ===== */
