@@ -1,4 +1,4 @@
-// ===== AI博士専用 JavaScript (音声機能付き・完全版) =====
+// ===== AI博士専用 JavaScript (音声機能付き・クロスプラットフォーム対応・完全版) =====
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -66,8 +66,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 this.voices = window.speechSynthesis.getVoices().filter(v => v.lang === 'ja-JP');
                 this.isLoading = false;
             };
-            window.speechSynthesis.onvoiceschanged = setVoices;
-            setVoices();
+            // voiceschangedイベントが複数回発生することがあるため、一度だけ実行されるようにする
+            if (window.speechSynthesis.onvoiceschanged !== undefined) {
+                window.speechSynthesis.onvoiceschanged = setVoices;
+            }
+            setVoices(); // 初期読み込み
         }
         
         speak(text, onEndCallback) {
@@ -75,11 +78,18 @@ document.addEventListener('DOMContentLoaded', () => {
             window.speechSynthesis.cancel();
             
             const utterance = new SpeechSynthesisUtterance(text);
-            const preferredVoice = this.voices.find(v => v.name === 'Google 日本語') || this.voices.find(v => v.name.includes('Microsoft Ayumi'));
-            utterance.voice = preferredVoice || this.voices[0];
+            
+            // --- ★★★ クロスプラットフォーム音声選択ロジック ★★★ ---
+            const preferredVoice = this.voices.find(v => v.name === 'Google 日本語') ||         // PC Chrome向け
+                                 this.voices.find(v => v.name.includes('Microsoft Ayumi')) || // Windows Edge向け
+                                 this.voices.find(v => v.name === 'Kyoko');                    // iPhone(iOS)向け
+            
+            // 優先音声が見つかればそれを使い、見つからなければリストの最初の音声(Android等)を使用
+            utterance.voice = preferredVoice || this.voices[0]; 
+            
             utterance.lang = 'ja-JP';
-            utterance.rate = 1.0;
-            utterance.pitch = 1.1;
+            utterance.rate = 1.0;  // 話す速度
+            utterance.pitch = 1.1; // 声の高さ
 
             utterance.onend = () => {
                 if (onEndCallback) onEndCallback();
@@ -122,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
             playBtn.addEventListener('click', () => {
                 if (isPlaying) {
                     voiceBot.stop();
-                    onEnd();
+                    // onEnd() は speak メソッドの onend イベントで呼ばれるのでここでは不要
                 } else {
                     isPlaying = true;
                     playBtn.innerHTML = '<i class="fas fa-stop"></i>';
@@ -224,8 +234,11 @@ document.addEventListener('DOMContentLoaded', () => {
         addMessageToLog('ai', aiMessage);
         conversationHistory.push({ role: 'model', parts: [{ text: aiMessage }] });
         saveCurrentChatToStorage();
-        const playBtn = chatLog.lastElementChild?.querySelector('.voice-play-btn');
-        if (playBtn) playBtn.click();
+        // 遅延させないとiOSで自動再生が動作しないことがあるため、短いsetTimeoutを入れる
+        setTimeout(() => {
+            const playBtn = chatLog.lastElementChild?.querySelector('.voice-play-btn');
+            if (playBtn) playBtn.click();
+        }, 100);
     };
 
     const startNewChat = async () => {
@@ -267,6 +280,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const deleteChat = (chatId) => {
         if (confirm('この対話履歴を本当に削除しますか？この操作は元に戻せません。')) {
+            voiceBot.stop();
             localStorage.removeItem(`${CONFIG.HISTORY_KEY_PREFIX}${chatId}`);
             if (currentChatId === chatId) {
                 startNewChat();
@@ -299,11 +313,10 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const handleApiError = (error) => {
-        if (error.message.includes('429')) {
-            addMessageToLog('ai', 'AI博士へのリクエストが少し早すぎるようです。大変申し訳ありませんが、もう少しゆっくり話しかけていただけますか？1分ほど待ってから、再度お試しください。');
-        } else {
-            addMessageToLog('ai', '申し訳ありません、通信エラーが発生しました。少し時間をおいてから、もう一度お試しください。');
-        }
+        const errorMessage = error.message.includes('429') 
+            ? 'AI博士へのリクエストが少し早すぎるようです。大変申し訳ありませんが、もう少しゆっくり話しかけていただけますか？1分ほど待ってから、再度お試しください。'
+            : '申し訳ありません、通信エラーが発生しました。少し時間をおいてから、もう一度お試しください。';
+        addMessageToLog('ai', errorMessage);
     };
 
     const initializeApp = () => {
