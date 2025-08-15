@@ -14,6 +14,7 @@ AI技術で福祉の現場に新しい「できる」と「楽しい」を届け
 ## ✨ 主な機能と特徴
 
 - **マルチページ構成:** サイトの目的別にページを分割 (`index`, `portfolio`, `learn`, `blog`, `prompt`, `novels`) し、ユーザーが必要な情報にアクセスしやすい構造。
+- **コンポーネント化:** ヘッダーとフッターを外部ファイル化し、JavaScriptで動的に読み込むことで、メンテナンス性を大幅に向上。
 - **ピラーページ戦略:** 専門テーマごとの「まとめページ」を設置し、サイト全体の情報構造を強化。
 - **モジュール化CSS:** `style.css` (共通), `topview.css` (トップページ), `only_read.css` (記事等), `hakase-style.css` (チャット) にファイルを分割し、高いメンテナンス性と拡張性を実現。
 - **レスポンシブデザイン:** PC、タブレット、スマートフォンなど、あらゆるデバイスで最適な表示を実現。
@@ -44,7 +45,7 @@ AI技術で福祉の現場に新しい「できる」と「楽しい」を届け
 ├── novels.html
 ├── privacy.html
 ├── sitemap.xml
-├── README.md
+├── readme.md
 ├── learning-summary.html
 ├── business-summary.html
 ├── creative-summary.html
@@ -53,19 +54,21 @@ AI技術で福祉の現場に新しい「できる」と「楽しい」を届け
 ├── lifehack-summary.html
 └── rabbit-summary.html
 │
-├── Blog/ (全17記事)
-│ ├── announcing-new-ai-courses.html
-│ ├── fuwamoco-development-story.html
+├── Blog/ (全19記事)
+│ ├── a-magic-wand-called-ai.html
+│ ├── ai-learning-complete-guide.html
 │ ├── ai-meal-planning-report.html
 │ ├── ai-recreation-welfare.html
 │ ├── ai-tool-diagnostic-chart.html
-│ ├── A-magic-wand-called-AI.html
 │ ├── announcing-ai-hakase.html
+│ ├── announcing-full-ai-curriculum.html
+│ ├── announcing-new-ai-courses.html
+│ ├── fuwamoco-development-story.html
 │ ├── goal-setting-for-ai-learning.html
 │ ├── hakase-development-story.html
-│ ├── How-to-Create-a-4-Step-Learning-Roadmap-with-AI.html
-│ ├── How-to-Customize-Prompt.html
-│ ├── How-to-Prompt.html
+│ ├── how-to-create-a-4-step-learning-roadmap-with-ai.html
+│ ├── how-to-customize-prompt.html
+│ ├── how-to-prompt.html
 │ ├── making-this-site-with-ai.html
 │ ├── rabbit-behavior-guide.html
 │ ├── release-chatgpt-course.html
