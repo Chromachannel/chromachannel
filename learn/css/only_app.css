@@ -60,7 +60,7 @@
     color: #3f51b5;
     border-color: #7986cb;
 }
-.next-lesson-btn {
+.nav-button-next {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -75,16 +75,16 @@
     transition: all 0.3s ease;
     margin-top: 20px;
 }
-.next-lesson-btn:hover {
+.nav-button-next:hover {
     background-color: #303f9f;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
     transform: translateY(-3px);
 }
-.next-lesson-btn i {
+.nav-button-next i {
     margin-left: 10px;
     transition: transform 0.3s ease;
 }
-.next-lesson-btn:hover i {
+.nav-button-next:hover i {
     transform: translateX(5px);
 }
 .lesson-content .prompt-list {
@@ -109,4 +109,13 @@
         font-size: 1em;
     }
     /* ===== ▲▲▲ ここまで追加 ▲▲▲ ===== */
+}
+/* ===== ▼▼▼ 画像のはみ出し防止と装飾のためのスタイル ▼▼▼ ===== */
+.lesson-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 35px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
