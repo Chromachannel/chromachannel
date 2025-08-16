@@ -784,3 +784,89 @@ color: #333;
         margin-bottom: 15px;
     }
 }
+/* ===== 関連記事セクション ===== */
+.related-posts {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.related-posts-title {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--text-dark);
+    font-weight: 700;
+}
+
+/* ===== AI博士 相談セクション ===== */
+.ai-hakase-cta {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 16px;
+    padding: 30px;
+    margin: 60px 0 30px 0;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.ai-hakase-cta .cta-icon {
+    flex-shrink: 0;
+}
+
+.ai-hakase-cta .cta-icon img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.ai-hakase-cta .cta-content h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.ai-hakase-cta .cta-content p {
+    margin: 0 0 20px 0;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-light);
+}
+
+.ai-hakase-cta .cta-button-wrapper {
+    text-align: center; /* ボタンを中央に配置 */
+}
+
+.ai-hakase-cta .cta-button {
+    display: inline-block;
+    padding: 10px 25px;
+    border: 2px solid var(--primary-color-start);
+    color: var(--primary-color-start);
+    background-color: transparent;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.ai-hakase-cta .cta-button:hover {
+    background-color: var(--primary-color-start);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* スマホ用の調整 */
+@media (max-width: 768px) {
+    .ai-hakase-cta {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+    }
+    .ai-hakase-cta .cta-icon {
+        margin-bottom: 15px;
+    }
+}

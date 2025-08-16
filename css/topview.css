@@ -46,13 +46,6 @@
     opacity: 0.9;
     animation: slideInUp 1s ease-out 0.3s both;
 }
-.hero-speech-button-wrapper {
-    margin-bottom: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-}
 .hero-cta-buttons {
     display: flex;
     flex-direction: column;
