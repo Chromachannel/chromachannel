@@ -54,8 +54,9 @@ AI技術で福祉の現場に新しい「できる」と「楽しい」を届け
 ├── lifehack-summary.html
 └── rabbit-summary.html
 │
-├── Blog/ (全19記事)
+├── Blog/ (全20記事)
 │ ├── a-magic-wand-called-ai.html
+│ ├── ai-illustration-overcoming-perfectionism.html
 │ ├── ai-learning-complete-guide.html
 │ ├── ai-meal-planning-report.html
 │ ├── ai-recreation-welfare.html
