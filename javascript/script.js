@@ -179,6 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 playBtn.title = 'この部分を読み上げる';
                 
                 playBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
                     e.stopPropagation();
                     
                     let finalTextToSpeak;
