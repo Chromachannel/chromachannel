@@ -2,33 +2,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- サイト共通の機能 ---
 
-    // ヘッダーとフッターを読み込んでから各種機能を初期化するメイン関数
     const loadComponentsAndInit = async () => {
-        // コンポーネントを読み込む関数
         const loadComponent = async (id, url) => {
             try {
                 const response = await fetch(url);
                 if (!response.ok) throw new Error(`Failed to fetch ${url}`);
                 const text = await response.text();
                 const element = document.getElementById(id);
-                if (element) {
-                    element.innerHTML = text;
-                }
+                if (element) element.innerHTML = text;
             } catch (error) {
                 console.error('Component load error:', error);
             }
         };
 
-        // ヘッダーとフッターの非同期読み込みを待つ
         await Promise.all([
             loadComponent('header-placeholder', '/header.html'),
             loadComponent('footer-placeholder', '/footer.html')
         ]);
 
-        // ▼▼▼ ヘッダー/フッター読み込み完了後に実行する処理 ▼▼▼
         initMobileMenu();
         initHeaderScrollEffect();
-        initActiveNavLinks(); // アクティブなナビゲーションリンクをハイライトする関数を追加
+        initActiveNavLinks();
     };
 
     const initMobileMenu = () => {
@@ -60,94 +54,65 @@ document.addEventListener('DOMContentLoaded', () => {
         const header = document.querySelector('.site-header');
         if (!header) return;
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
+            header.classList.toggle('scrolled', window.scrollY > 50);
         });
     };
     
-    // 現在のページに応じてナビゲーションリンクをハイライトする関数
     const initActiveNavLinks = () => {
         const navLinks = document.querySelectorAll('.nav-links a');
         const currentPath = window.location.pathname;
-
         navLinks.forEach(link => {
-            // href属性からファイル名を取得
             const linkPath = new URL(link.href).pathname;
-            
-            // トップページ(index.html)の場合、または他のページでパスが一致する場合
-            if ((currentPath === '/' || currentPath.endsWith('/index.html')) && (linkPath === '/' || linkPath.endsWith('/index.html'))) {
-                 link.classList.add('nav-active');
-            } else if (linkPath !== '/' && !linkPath.endsWith('/index.html') && currentPath.includes(linkPath)) {
+            const isHomePage = (currentPath === '/' || currentPath.endsWith('/index.html'));
+            const isLinkToHome = (linkPath === '/' || linkPath.endsWith('/index.html'));
+            if (isHomePage && isLinkToHome) {
+                link.classList.add('nav-active');
+            } else if (!isLinkToHome && currentPath.includes(linkPath.substring(1))) { // substring(1)で先頭の'/'を除く
                 link.classList.add('nav-active');
             }
         });
     };
 
     const initGalleryToggle = () => {
-        const toggleButtons = document.querySelectorAll('.gallery-toggle-btn');
-        toggleButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const portfolioCard = button.closest('.portfolio-card');
-                const galleryWrapper = portfolioCard.querySelector('.thumbnail-gallery-wrapper');
-                if (galleryWrapper) {
-                    galleryWrapper.classList.toggle('open');
-                    button.innerHTML = galleryWrapper.classList.contains('open') ?
-                        '<i class="fas fa-times-circle"></i> ギャラリーを閉じる' :
-                        '<i class="fas fa-images"></i> ギャラリーを見る';
-                }
-            });
+        document.body.addEventListener('click', (e) => {
+            const button = e.target.closest('.gallery-toggle-btn');
+            if (!button) return;
+            const portfolioCard = button.closest('.portfolio-card');
+            const galleryWrapper = portfolioCard.querySelector('.thumbnail-gallery-wrapper');
+            if (galleryWrapper) {
+                galleryWrapper.classList.toggle('open');
+                button.innerHTML = galleryWrapper.classList.contains('open') ?
+                    '<i class="fas fa-times-circle"></i> ギャラリーを閉じる' :
+                    '<i class="fas fa-images"></i> ギャラリーを見る';
+            }
         });
     };
 
     const initPromptCopy = () => {
-        const promptLists = document.querySelectorAll('.prompt-list');
-        if (promptLists.length === 0) return;
-
-        promptLists.forEach(promptList => {
-            promptList.addEventListener('click', (e) => {
-                const copyButton = e.target.closest('.copy-btn');
-                if (!copyButton || copyButton.classList.contains('copied')) return;
-                
-                const promptBox = copyButton.closest('.prompt-box');
-                if (!promptBox) return;
-
-                const textElement = promptBox.querySelector('.prompt-text');
-                if (!textElement) return;
-                
-                const codeElement = textElement.querySelector('code');
-                const textToCopy = codeElement ? codeElement.innerText : textElement.innerText;
-                
-                navigator.clipboard.writeText(textToCopy).then(() => {
-                    const originalText = copyButton.innerHTML;
-                    copyButton.classList.add('copied');
-                    copyButton.innerHTML = '<i class="fas fa-check"></i> コピー完了';
-                    setTimeout(() => {
-                        copyButton.classList.remove('copied');
-                        copyButton.innerHTML = originalText;
-                    }, 2000);
-                }).catch(err => {
-                    console.error('クリップボードへのコピーに失敗しました: ', err);
-                    alert('コピーに失敗しました。');
-                });
-            });
+        document.body.addEventListener('click', (e) => {
+            const copyButton = e.target.closest('.copy-btn');
+            if (!copyButton || copyButton.classList.contains('copied')) return;
+            const promptBox = copyButton.closest('.prompt-box');
+            if (!promptBox) return;
+            const textElement = promptBox.querySelector('.prompt-text');
+            if (!textElement) return;
+            const textToCopy = textElement.innerText;
+            
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                const originalText = copyButton.innerHTML;
+                copyButton.classList.add('copied');
+                copyButton.innerHTML = '<i class="fas fa-check"></i> コピー完了';
+                setTimeout(() => {
+                    copyButton.classList.remove('copied');
+                    copyButton.innerHTML = originalText;
+                }, 2000);
+            }).catch(err => console.error('クリップボードへのコピーに失敗しました: ', err));
         });
     };
     
-    const initPortfolioModal = () => {
-        // この機能は現在サイトでは使われていないようですが、将来のためにコードは残しておきます。
-        // もしモーダル用のHTMLが存在すれば、この関数が動作します。
-        const modal = document.getElementById('portfolio-modal');
-        if (!modal) return;
-        // ... (以下、モーダル関連のロジックが続く) ...
-    };
-    
     const initFilter = () => {
-        const categoryFilters = document.getElementById('category-filters');
-        const levelFilters = document.getElementById('level-filters');
-        if (!categoryFilters && !levelFilters) return;
+        const filterContainer = document.querySelector('.portfolio-categories, #level-filters');
+        if (!filterContainer) return;
 
         const items = document.querySelectorAll('.portfolio-item');
         let currentCategory = 'all';
@@ -157,57 +122,41 @@ document.addEventListener('DOMContentLoaded', () => {
             items.forEach(item => {
                 const itemCategories = item.dataset.category ? item.dataset.category.split(' ') : [];
                 const itemLevel = item.dataset.level || 'all';
-
                 const categoryMatch = currentCategory === 'all' || itemCategories.includes(currentCategory);
                 const levelMatch = currentLevel === 'all' || itemLevel === currentLevel;
-
                 item.style.display = (categoryMatch && levelMatch) ? 'block' : 'none';
             });
         };
+        
+        document.body.addEventListener('click', (e) => {
+            const button = e.target.closest('.category-btn');
+            if (!button) return;
 
-        if (categoryFilters) {
-            categoryFilters.addEventListener('click', (e) => {
-                const button = e.target.closest('.category-btn');
-                if (!button) return;
+            const parentId = button.parentElement.id;
+            if (parentId === 'category-filters') {
                 currentCategory = button.dataset.category;
-                categoryFilters.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-                if (levelFilters) {
-                    levelFilters.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
-                    levelFilters.querySelector('[data-level="all"]').classList.add('active');
-                    currentLevel = 'all';
-                }
-                applyFilters();
-            });
-        }
-
-        if (levelFilters) {
-            levelFilters.addEventListener('click', (e) => {
-                const button = e.target.closest('.category-btn');
-                if (!button) return;
+                document.querySelectorAll('#category-filters .category-btn').forEach(btn => btn.classList.remove('active'));
+                const levelAllBtn = document.querySelector('#level-filters [data-level="all"]');
+                if(levelAllBtn) levelAllBtn.click();
+            } else if (parentId === 'level-filters') {
                 currentLevel = button.dataset.level;
-                levelFilters.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-                if (categoryFilters) {
-                    categoryFilters.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
-                    categoryFilters.querySelector('[data-category="all"]').classList.add('active');
-                    currentCategory = 'all';
-                }
-                applyFilters();
-            });
-        }
+                 document.querySelectorAll('#level-filters .category-btn').forEach(btn => btn.classList.remove('active'));
+                 const categoryAllBtn = document.querySelector('#category-filters [data-category="all"]');
+                 if(categoryAllBtn) categoryAllBtn.click();
+            }
+            button.classList.add('active');
+            applyFilters();
+        });
     };
     
-// --- サイトワイド音声合成機能の初期化（親要素と子要素のdata-speech両対応版） ---
+    // --- ★★★ サイトワイド音声合成機能（最終版） ★★★ ---
     const initSiteWideSpeech = () => {
         setTimeout(() => {
-            // voice-module.jsの読み込みを待つ
             if (typeof SiteWideSpeaker === 'undefined' || !window.siteSpeaker || window.siteSpeaker.isLoading) {
                 setTimeout(initSiteWideSpeech, 200);
                 return;
             }
 
-            // 読み上げ対象となる可能性のある要素をすべて取得
             const readableElements = document.querySelectorAll(
                 '.article-content p, .article-content h2, .article-content h3, .article-content li, ' +
                 '.lesson-content p, .lesson-content h2, .lesson-content h3, .lesson-content li, ' +
@@ -215,7 +164,11 @@ document.addEventListener('DOMContentLoaded', () => {
             );
 
             readableElements.forEach(el => {
-                // 空の要素や、特定のクラスを持つ要素、既にボタンがある要素はスキップ
+                // 親が既に読み上げ対象の場合、子にはボタンを追加しないロジック
+                if (el.parentElement.closest('.readable') && !el.classList.contains('readable')) {
+                    return;
+                }
+
                 if (el.textContent.trim() === '' || el.classList.contains('post-card-category') || el.classList.contains('article-meta') || el.querySelector('.speech-button')) {
                     return;
                 }
@@ -226,24 +179,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 playBtn.title = 'この部分を読み上げる';
                 
                 playBtn.addEventListener('click', (e) => {
-                    e.preventDefault();  // リンクへ飛ぶなどのデフォルト動作をキャンセル
-                    e.stopPropagation(); // 親要素（<a>タグなど）へのイベント伝播をストップ
+                    e.stopPropagation();
                     
-                    // ▼▼▼ ここからが新しいロジックです ▼▼▼
-
                     let finalTextToSpeak;
-
-                    // パターン1：読み上げ対象の要素自身がdata-speech属性を持っているか？
+                    // パターン1：要素自身がdata-speechを持つ場合 (ブロック読み上げ)
                     if (el.dataset.speech) {
-                        // 持っていれば、そのテキストを最優先で採用
                         finalTextToSpeak = el.dataset.speech;
                     } else {
-                        // パターン2：持っていなければ、これまで通りの「子要素のdata-speechを探す」処理を実行
+                    // パターン2：子要素にdata-speechを持つ場合 (部分読み替え)
                         const elementForSpeech = el.cloneNode(true);
-                        
                         const buttonToRemove = elementForSpeech.querySelector('.speech-button');
                         if (buttonToRemove) buttonToRemove.remove();
-
+                        
                         const speechSpans = elementForSpeech.querySelectorAll('[data-speech]');
                         speechSpans.forEach(span => {
                             span.textContent = span.dataset.speech;
@@ -251,31 +198,47 @@ document.addEventListener('DOMContentLoaded', () => {
                         
                         finalTextToSpeak = elementForSpeech.textContent.trim();
                     }
-                    
-                    // ▲▲▲ ここまで ▲▲▲
 
                     window.siteSpeaker.speak(finalTextToSpeak, el);
                 });
 
                 el.appendChild(playBtn);
             });
+        }, 300); // コンポーネント描画などを待つため少し長めに
+    };
 
-        }, 100);
+    const initImageSpeech = () => {
+        setTimeout(() => {
+            if (typeof SiteWideSpeaker === 'undefined' || !window.siteSpeaker || window.siteSpeaker.isLoading) {
+                setTimeout(initImageSpeech, 200);
+                return;
+            }
+            const imageContainers = document.querySelectorAll('.article-content, .lesson-content, .novel-content');
+            imageContainers.forEach(container => {
+                container.querySelectorAll('img').forEach(img => {
+                    const altText = img.getAttribute('alt');
+                    if (altText && altText.trim() !== '') {
+                        img.classList.add('speech-target-image');
+                        img.setAttribute('title', 'クリックして画像の説明を読み上げる');
+                        img.addEventListener('click', (e) => {
+                            e.stopPropagation();
+                            img.classList.add('speaking-image');
+                            window.siteSpeaker.speak(altText, null, () => {
+                                img.classList.remove('speaking-image');
+                            });
+                        });
+                    }
+                });
+            });
+        }, 300);
     };
 
     // --- サイト全体の機能を初期化して実行 ---
-    
-    // まず、コンポーネント（ヘッダー/フッター）を読み込み、それに依存する機能を初期化
     loadComponentsAndInit();
-
-    // 次に、コンポーネントに依存しない、各ページで必要な機能を初期化
     initScrollAnimation();
     initGalleryToggle();
     initPromptCopy();
-    initPortfolioModal();
     initFilter();
-    
-    // 最後に、サイトワイド音声合成機能を初期化（voice-module.jsの読み込みを待つため、少し遅延させる）
     initSiteWideSpeech();
-
+    initImageSpeech();
 });

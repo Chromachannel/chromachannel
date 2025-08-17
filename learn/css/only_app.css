@@ -198,3 +198,34 @@
         padding: 20px 15px;
     }
 }
+/* ===== サイトワイド音声再生機能 ===== */
+.speech-button {
+    background: none;
+    border: 1px solid #ddd;
+    color: var(--text-light, #666); /* 変数がなくても動くようにデフォルト値を追加 */
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 8px;
+    flex-shrink: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    transition: all 0.2s ease;
+}
+
+.speech-button:hover {
+    background-color: var(--primary-color-start, #6a11cb);
+    color: white;
+    border-color: var(--primary-color-start, #6a11cb);
+}
+
+.speaking {
+    background-image: linear-gradient(to top, rgba(255, 255, 0, 0.4) 50%, transparent 50%);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transition: background-position 0.5s ease-out;
+    background-position: 0 100%;
+}

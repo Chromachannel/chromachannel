@@ -52,15 +52,13 @@ class SiteWideSpeaker {
         }
     }
 
-    speak(text, highlightElement) {
+    speak(text, highlightElement, onEndCallback = null) { // ★ onEndCallback引数を追加
         if (this.isLoading) return;
         
-        // 既に何か喋っていたら、一度完全に停止させる
         if (this.synth.speaking) {
             this.synth.cancel(); 
         }
 
-        // 以前のハイライトがあれば解除
         if (this.currentHighlightElement) {
             this.currentHighlightElement.style.backgroundPosition = '0 100%';
         }
@@ -78,39 +76,39 @@ class SiteWideSpeaker {
         this.currentHighlightElement = highlightElement;
 
         this.currentUtterance.onstart = () => {
-            this.showControls(); // 再生開始時にコントロールパネルを表示
+            this.showControls();
             if (this.currentHighlightElement) {
                 this.currentHighlightElement.style.backgroundPosition = '0 0';
             }
         };
 
         this.currentUtterance.onend = () => {
-            this.hideControls(); // 再生終了時にコントロールパネルを非表示
+            this.hideControls();
             if (this.currentHighlightElement) {
                 this.currentHighlightElement.style.backgroundPosition = '0 100%';
             }
             this.currentUtterance = null;
             this.currentHighlightElement = null;
+            
+            // ★ 追加：再生終了時にコールバックを実行
+            if (onEndCallback) {
+                onEndCallback();
+            }
         };
         
-        // エラーハンドリング
         this.currentUtterance.onerror = (event) => {
             console.error('SpeechSynthesisUtterance.onerror', event);
             this.hideControls();
              if (this.currentHighlightElement) {
                 this.currentHighlightElement.style.backgroundPosition = '0 100%';
             }
+            // ★ 追加：エラー時にもコールバックを実行
+            if (onEndCallback) {
+                onEndCallback();
+            }
         };
 
         this.synth.speak(this.currentUtterance);
-    }
-
-    stop() {
-        this.synth.cancel();
-        this.hideControls(); // 停止ボタンが押されたらパネルを非表示
-        if (this.currentHighlightElement) {
-            this.currentHighlightElement.style.backgroundPosition = '0 100%';
-        }
     }
 }
 
