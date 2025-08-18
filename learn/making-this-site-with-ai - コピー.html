@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== ▼▼▼ 【この記事専用のSEO設定】 ▼▼▼ ===== -->
+    
+    <title>【制作秘話】このサイト、実はAIと作っています。| Chromachannel</title>
+    <meta name="description" content="福祉×AIクリエイターが、自身の公式サイトをAIと共に制作する裏側を初公開！画像生成からブログ執筆、コーディングまで。AIを「共同制作者」として活用する、新しいサイト制作術とは。">
+    
+    <!-- OGPタグ -->
+    <meta property="og:title" content="【制作秘話】このサイト、実はAIと作っています。| Chromachannel">
+    <meta property="og:description" content="福祉×AIクリエイターが自身の公式サイトをAIと共に制作する裏側を初公開！画像生成からコーディングまで、AIを「共同制作者」として活用する新しいサイト制作術をご紹介します。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://chromachannel.online/Blog/making-this-site-with-ai.html">
+    <meta property="og:image" content="https://chromachannel.online/Img/Blog/ogp-making-this-site.webp">
+    <!-- og:image ImageFX Prompt: An illustration showing a person and a friendly robot sitting side-by-side at a computer, collaboratively building a website. The screen shows code and design elements. The style is a warm, inspiring flat illustration that emphasizes teamwork between human and AI. -->
+    <meta property="og:site_name" content="Chromachannel">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://chromachannel.online/Blog/making-this-site-with-ai.html" },
+      "headline": "【制作秘話】このサイト、実はAIと作っています。",
+      "description": "福祉×AIクリエイターが、自身の公式サイトをAIと共に制作する裏側を初公開！画像生成からブログ執筆、コーディングまで。AIを「共同制作者」として活用する、新しいサイト制作術とは。",
+      "image": "https://chromachannel.online/Img/Blog/ogp-making-this-site.webp",
+      "author": { "@type": "Person", "name": "山本 倫久", "url": "https://chromachannel.online/" },
+      "publisher": { "@type": "Organization", "name": "Chromachannel", "logo": { "@type": "ImageObject", "url": "https://chromachannel.online/Img/chroma_logo.webp" } },
+      "datePublished": "2025-07-31",
+      "dateModified": "2025-07-31"
+    }
+    </script>
+    
+    <link rel="canonical" href="https://chromachannel.online/Blog/making-this-site-with-ai.html" />
+    
+    <!-- ===== ▲▲▲ ここまで ▲▲▲ ===== -->
+     
+    <link rel="icon" href="../Img/favicon.webp" type="image/webp">
+    
+    <!-- CSS / ライブラリ -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/only_read.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="article-page">
+    <!-- ===== サイト共通ヘッダー ===== -->
+    <header class="site-header">
+        <nav class="container">
+            <a href="../index.html" class="logo"><img src="../Img/chroma_logo.webp" alt="Chroma Channel ロゴ"></a>
+            <ul class="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../prompt.html">Prompt</a></li>
+                <li><a href="../learn.html">Learn</a></li>
+                <li><a href="../blog.html" class="nav-active">Blog</a></li>
+                <li><a href="../portfolio.html">Portfolio</a></li>
+                <li><a href="../novels.html">Novels</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-nav-toggle" aria-label="メニューを開く"><i class="fas fa-bars"></i><i class="fas fa-times"></i></button>
+        </nav>
+    </header>
+
+    <main class="article-main">
+        <article class="article-container">
+            <header class="article-header">
+                <div class="article-eyecatch">
+                    <img src="../Img/Blog/ogp-making-this-site.webp" alt="人間とAIロボットが協力してウェブサイトを制作しているイメージイラスト">
+                </div>
+                <h1>【制作秘話】このサイト、実はAIと作っています。</h1>
+                <p class="article-meta">公開日: 2025.07.31</p>
+            </header>
+            
+            <div class="article-content">
+                <p>こんにちは、福祉×AIクリエイターの山本です。</p>
+                <p>「このサイトは一人で運営しているのか？」の問いに関する私の答えは、ズバリ「いいえ、一人ではありません」です。</p>
+                <p>実は、このサイト制作の陰には、24時間365日、文句も言わずに私の無茶振りに付き合ってくれる、もう一人の"相棒"がいます。それが、AIなのです。</p>
+                <p>今回は、私がAIを単なる『効率化ツール』としてではなく、『共同制作者』として、どのようにこのサイトを作り上げているのか、その制作の裏側を少しだけお見せしたいと思います。</p>
+                
+                <h2>なぜAIを「共同制作者」と呼ぶのか？</h2>
+                <p>「1人で5人分の仕事はできない。でも、AIという相棒がいれば可能になる」。これが、私がサイト制作を通じて得た実感です。</p>
+                <p>私がAIに任せているのは、単純作業の自動化だけではありません。アイデアの壁打ち、デザインのインスピレーション、文章の推敲、そして複雑なプログラミングの相談まで、AIはWebディレクター、デザイナー、ライター、エンジニアの役割を、私の指示一つで柔軟にこなしてくれます。この関係は、もはや「使う」「使われる」ではなく、まさしく「共に創る」という言葉がふさわしいのです。</p>
+
+                <h2>【具体例】AIはサイト制作の"どこ"にいる？</h2>
+                <p>では、具体的にAIはこのサイトのどこに関わっているのでしょうか？いくつかの例をご紹介します。</p>
+
+                <h3>1. 各ページの顔となる「アイキャッチ画像」</h3>
+                <p>ブログやポートフォリオで使われている、目を引くアイキャッチ画像。これらの多くは、画像生成AIの「ImageFX」を使って作られています。しかし、ただ「〇〇の画像を作って」とお願いするだけでは、意図したものは生まれません。</p>
+                <p>例えば、トップページのOGP画像（SNSでシェアされた時に表示される画像）を作る際、私はAIに以下のような、かなり具体的な"お願い"（プロンプト）をしています。</p>
+                
+                <!-- ★★★ ここを修正 ★★★ -->
+                <div class="point-box">
+                    <h4>トップページOGP画像のプロンプト</h4>
+                    <pre><code>A heartwarming digital art piece symbolizing the future of welfare and technology. In a space bathed in warm, gentle light, a soft, hand-drawn heart icon and digital light circuit patterns merge as if holding hands. Hopeful, futuristic, and heartwarming. Cinematic lighting, soft background, detailed, high quality.</code></pre>
+                </div>
+                <!-- ★★★ ここまで ★★★ -->
+
+                <p>このように、AIに「どんな雰囲気で、何を表現したいのか」を明確に伝えることで、AIは優秀なデザイナーとして、私の頭の中にあるイメージを形にしてくれるのです。</p>
+
+                <h3>2. 記事の骨子を作る「ブログ執筆」</h3>
+                <p>先日公開した<a href="report-making-picture-book-with-ai.html">「【実践レポ】自作プロンプトでAI絵本を作ってみた話」</a>という記事。この記事も、AIとの共同執筆で生まれました。</p>
+                <p>私が「絵本プロンプトの実践記事を書きたい」というテーマを伝えると、AIは記事の構成案や見出しを提案してくれます。さらに、AIが生成した絵本の本文を記事に引用し、それに対して私が「考察」を加える。このように、AIと人間がそれぞれの得意分野を活かしてパスを繋ぎ合うことで、一人で書くよりも早く、そして客観的な視点が加わった質の高い記事が完成するのです。</p>
+
+                <h3>3. 複雑な動きを実現する「Webアプリのコーディング」</h3>
+                <p>ポートフォリオに掲載している<a href="../Portfolio/Game/index.html">「AI体験ゲーム」</a>や<a href="../Portfolio/Adaptive_System/adaptive_system.html">「AI適応型タスク管理システム」</a>には、JavaScriptという言語で書かれた、少し複雑なプログラムが使われています。</p>
+                <p>プログラミングで行き詰まった時、「この動きを実現したいんだけど、どう書けばいい？」とAIに相談すると、具体的なコードのサンプルを提示してくれます。エラーが出た時には、その原因を一緒に探してくれる、頼れるデバッグパートナーにもなってくれるのです。</p>
+
+                <h2>AIと共に創るからこそ生まれる「福祉×AI」の価値</h2>
+                <p>私がここまでAIとの共同制作にこだわるのは、それが単に効率的だからというだけではありません。この制作スタイルそのものが、私のミッションである「福祉×AI」の価値を体現していると信じているからです。</p>
+                <ul>
+                    <li><strong>リソースの壁を超える：</strong>福祉の現場も、私のような個人クリエイターも、潤沢な時間や人員といったリソースがあるわけではありません。しかし、AIという強力なパートナーがいれば、限られたリソースでも、社会に価値を届けられるほどの高品質なアウトプットが可能になります。</li>
+                    <li><strong>「できる」の証明：</strong>制作者である私自身が、AIを相棒として楽しみながらサイトを運営している姿を見せること。それこそが、「専門家でなくても、誰もがAIと共にクリエイターになれる」という、このサイトが発信する最も重要なメッセージに、揺るぎない説得力を与えてくれるのです。</li>
+                </ul>
+                
+                <!-- ▼▼▼ ここから追加 ▼▼▼ -->
+                <h2>【証明】そして、AIとの共同制作が生んだ確かな成果</h2>
+                <p>机上の空論で終わらせるつもりはありません。この「AIとの共同制作」というスタイルが、実際にどのような成果を生んでいるのか。その客観的な証明として、サイト公開後のGoogle Search Consoleのデータの一部をお見せします。</p>
+                
+                <div class="point-box">
+                    <p style="text-align:center; font-weight: bold;">Googleの検索結果におけるパフォーマンス（過去28日間）</p>
+                    <img src="../Img/Blog/gsc-performance-28d.webp" alt="Google Search Console 28日間の検索パフォーマンスを示すグラフ" class="article-image">
+                    <p class="caption">70%を超える高いクリック率（CTR）を維持し、表示回数・クリック数ともに右肩上がりの成長を示しています。</p>
+
+                    <p style="text-align:center; font-weight: bold; margin-top: 40px;">トップページの表示回数の推移（週ごとの比較）</p>
+                    <img src="../Img/Blog/gsc-performance-compare.webp" alt="Google Search Console トップページの表示回数が週ごとに急増していることを示すグラフ" class="article-image">
+                    <p class="caption">SEO対策後、トップページの表示回数が1週間で約5.7倍（11回→63回）に急増しました。</p>
+                </div>
+
+                <p>これらのデータは、AIと共に創り上げたサイトが、単なる趣味の領域を超え、検索エンジンにも高く評価される『価値ある資産』となり得ることを示しています。そして何より、限られたリソースの中でも、正しい戦略とAIという最高のパートナーがいれば、確かな成果を出せるという証明に他なりません。</p>
+                <!-- ▲▲▲ ここまで追加 ▲▲▲ -->
+
+                <h2>まとめ：このサイトは、AIとの「共同作品」です</h2>
+                <p>このサイトは、私のポートフォリオであると同時に、AIとの対話と試行錯誤の末に生まれた、AIと私の「共同作品」でもあります。</p>
+                <p>この記事を読んで、AIを「よく分からないもの」から、「何か面白いことを一緒にできそうな相棒」として、少しでも身近に感じていただけたなら幸いです。</p>
+                <p>あなたも、AIという最高のパートナーを見つけて、何かを創り出してみませんか？そのためのヒントは、このサイトの至る所に散りばめられています。</p>
+            </div>
+            
+            <footer class="article-footer">
+                <div class="back-to-blog-links">
+                    <a href="../blog.html" class="back-link">← ブログ一覧に戻る</a>
+                </div>
+            </footer>
+        </article>
+        <!-- ★★★ Disqusコメント欄 ★★★ -->
+        <section class="comment-section">
+            <h2>ご意見・ご感想</h2>
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                    this.page.url = 'https://chromachannel.online/Blog/making-this-site-with-ai.html';
+                    this.page.identifier = 'blog_making-this-site-with-ai'; 
+                };
+                (function() { 
+                var d = document, s = d.createElement('script');
+                s.src = 'https://chroma-ch.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </section>
+    </main>
+
+    <!-- ===== サイト共通フッター ===== -->
+    <footer id="site-footer">
+        <div class="container">
+            <div class="footer-social-links">
+                <a href="https://www.youtube.com/@chroma0224" target="_blank" rel="noopener noreferrer" title="ChromaのPC学習部屋"><i class="fab fa-youtube"></i> ChromaのPC学習部屋</a>
+                <a href="https://www.youtube.com/@chroma1975" target="_blank" rel="noopener noreferrer" title="Chromaの自由部屋"><i class="fab fa-youtube"></i> Chromaの自由部屋</a>
+                <a href="https://github.com/motty1975/chromachannel" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://x.com/Chroma0224" target="_blank" rel="noopener noreferrer" title="X (旧Twitter)"><i class="fab fa-twitter"></i> X (旧Twitter)</a>
+            </div>
+            <div class="footer-links">
+                <a href="../privacy.html">プライバシーポリシー & 免責事項</a>
+            </div>
+            <div class="footer-credit">
+                <p>音声: VOICEVOX (ずんだもん, 四国めたん, 春日部つむぎ, 中国うさぎ, 冥鳴ひまり) / 立ち絵: 坂本アヒル様, とらっかぁ様</p>
+            </div>
+            <p class="copyright">© 2025 chromachannel. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="../JavaScript/script.js"></script>
+</body>
+</html>
