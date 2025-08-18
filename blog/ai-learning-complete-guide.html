@@ -1,195 +1,325 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- ===== ▼▼▼ SEO設定 START ▼▼▼ ===== -->
     <title>【完全ガイド】AI学習の始め方、この1ページで全てが分かる</title>
-    <meta name="description" content="AI学習に挫折しないための完全ロードマップ。「AIとは何か？」から、具体的な作品作り、そして仕事への応用まで、知識ゼロからAIクリエイターになるための全ステップを、当サイトの無料講座で体系的に学べます。">
-    
+    <meta
+      name="description"
+      content="AI学習に挫折しないための完全ロードマップ。「AIとは何か？」から、具体的な作品作り、そして仕事への応用まで、知識ゼロからAIクリエイターになるための全ステップを、当サイトの無料講座で体系的に学べます。"
+    />
+
     <!-- OGPタグ -->
-    <meta property="og:title" content="【完全ガイド】AI学習の始め方、この1ページで全てが分かる">
-    <meta property="og:description" content="AI学習に挫折しないための完全ロードマップ。「AIとは何か？」から具体的な作品作り、仕事への応用まで、知識ゼロからAIクリエイターになるための全ステップを、当サイトの無料講座で体系的に学べます。">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://chromachannel.online/Blog/ai-learning-complete-guide.html">
-    <meta property="og:image" content="https://chromachannel.online/Img/Blog/ogp-ai-learning-guide.webp">
-    <meta property="og:site_name" content="Chromachannel">
-    <meta name="twitter:card" content="summary_large_image">
-    
+    <meta
+      property="og:title"
+      content="【完全ガイド】AI学習の始め方、この1ページで全てが分かる"
+    />
+    <meta
+      property="og:description"
+      content="AI学習に挫折しないための完全ロードマップ。「AIとは何か？」から具体的な作品作り、仕事への応用まで、知識ゼロからAIクリエイターになるための全ステップを、当サイトの無料講座で体系的に学べます。"
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://chromachannel.online/blog/ai-learning-complete-guide.html"
+    />
+    <meta
+      property="og:image"
+      content="https://chromachannel.online/img/blog/ogp-ai-learning-guide.webp"
+    />
+    <meta property="og:site_name" content="Chromachannel" />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <!-- 構造化データ -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://chromachannel.online/Blog/ai-learning-complete-guide.html" },
-      "headline": "【完全ガイド】AI学習の始め方、この1ページで全てが分かる",
-      "description": "AI学習に挫折しないための完全ロードマップ。「AIとは何か？」から、具体的な作品作り、そして仕事への応用まで、知識ゼロからAIクリエイターになるための全ステップを、当サイトの無料講座で体系的に学べます。",
-      "image": "https://chromachannel.online/Img/Blog/ogp-ai-learning-guide.webp",
-      "author": { "@type": "Person", "name": "山本 倫久", "url": "https://chromachannel.online/" },
-      "publisher": { "@type": "Organization", "name": "Chromachannel", "logo": { "@type": "ImageObject", "url": "https://chromachannel.online/Img/chroma_logo.webp" } },
-      "datePublished": "2025-08-12",
-      "dateModified": "2025-08-12"
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "blogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://chromachannel.online/blog/ai-learning-complete-guide.html"
+        },
+        "headline": "【完全ガイド】AI学習の始め方、この1ページで全てが分かる",
+        "description": "AI学習に挫折しないための完全ロードマップ。「AIとは何か？」から、具体的な作品作り、そして仕事への応用まで、知識ゼロからAIクリエイターになるための全ステップを、当サイトの無料講座で体系的に学べます。",
+        "image": "https://chromachannel.online/img/blog/ogp-ai-learning-guide.webp",
+        "author": {
+          "@type": "Person",
+          "name": "山本 倫久",
+          "url": "https://chromachannel.online/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Chromachannel",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://chromachannel.online/img/chroma_logo.webp"
+          }
+        },
+        "datePublished": "2025-08-12",
+        "dateModified": "2025-08-12"
+      }
     </script>
-    
-    <link rel="canonical" href="https://chromachannel.online/Blog/ai-learning-complete-guide.html" />
+
+    <link
+      rel="canonical"
+      href="https://chromachannel.online/blog/ai-learning-complete-guide.html"
+    />
     <!-- ===== ▲▲▲ SEO設定 END ▲▲▲ ===== -->
 
     <!-- CSS / ライブラリ -->
-    <link rel="icon" type="image/png" href="../favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
-    <link rel="shortcut icon" href="../favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
-    <link rel="manifest" href="../site.webmanifest" />
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="stylesheet" href="../CSS/only_read.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head>
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <link rel="stylesheet" href="/CSS/only_read.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
 
-<body class="article-page">
+  <body class="article-page">
     <!-- ヘッダーをここに読み込む -->
     <div id="header-placeholder"></div>
 
     <main class="article-main">
-        <article class="article-container">
-            <header class="article-header">
-                <div class="article-eyecatch">
-                    <img src="../Img/Blog/ogp-ai-learning-guide.webp" alt="AI学習の完全ロードマップを示すイメージイラスト">
-                </div>
-                <h1 class="readable">【完全ガイド】AI学習の始め方、この1ページで全てが分かる</h1>
-                <p class="article-meta">公開日: 2025.08.12</p>
-            </header>
-            
-            <div class="article-content">
-                <p class="readable">「AIを学んでみたいけど、何から手をつければいいか、さっぱり分からない…」<br>「プログラミングスクールは高額だし、本を読んでも途中で挫折してしまいそう…」</p>
-                <p class="readable">こんにちは、福祉×AIクリエイターの山本です。AIという言葉が毎日のように聞かれる今、あなたのように感じている方は、決して少なくありません。情報の海はあまりにも広く、どこに向かって泳ぎ始めればいいのか、途方に暮れてしまいますよね。</p>
-                <p class="readable">もし、そんなあなたのための、知識ゼロからでも、完全無料で、そして楽しみながらAIクリエイターになるための「完璧な地図」があるとしたら、この冒険に挑戦してみたくはありませんか？</p>
+      <article class="article-container">
+        <header class="article-header">
+          <div class="article-eyecatch">
+            <img
+              src="/img/blog/ogp-ai-learning-guide_large.webp"
+              alt="AI学習の完全ロードマップを示すイメージイラスト"
+            />
+          </div>
+          <h1 class="readable">
+            【完全ガイド】AI学習の始め方、この1ページで全てが分かる
+          </h1>
+          <p class="article-meta">公開日: 2025.08.12</p>
+        </header>
 
-                <h2 class="readable">挫折させない「学びの地図」を、あなたに。</h2>
-                <p class="readable">このサイトの「AI学習」セクションは、単なる情報の寄せ集めではありません。それは、私が福祉の現場で、多くの仲間たちが「創る喜び」を発見していく姿を目の当たりにしながら作り上げた、一つの体系的な学習ロードマップです。</p>
-                <p class="readable">この地図は、あなたが決して道に迷うことなく、AIという翼を手に入れるまでの、最短で、最も楽しいルートを示してくれます。</p>
+        <div class="article-content">
+          <p class="readable">
+            「AIを学んでみたいけど、何から手をつければいいか、さっぱり分からない…」<br />「プログラミングスクールは高額だし、本を読んでも途中で挫折してしまいそう…」
+          </p>
+          <p class="readable">
+            こんにちは、福祉×AIクリエイターの山本です。AIという言葉が毎日のように聞かれる今、あなたのように感じている方は、決して少なくありません。情報の海はあまりにも広く、どこに向かって泳ぎ始めればいいのか、途方に暮れてしまいますよね。
+          </p>
+          <p class="readable">
+            もし、そんなあなたのための、知識ゼロからでも、完全無料で、そして楽しみながらAIクリエイターになるための「完璧な地図」があるとしたら、この冒険に挑戦してみたくはありませんか？
+          </p>
 
-                <div class="point-box">
-                    <h4 class="readable">この「学びの地図」が約束する、3つのステップ</h4>
-                    <ul>
-                        <li class="readable"><b>ステップ1：AIを知る（基礎編）</b><br>AIとの「対話術」から、その「仕組み」まで。まずはAIと友達になり、その性格と能力を知ることから始めます。</li>
-                        <li class="readable"><b>ステップ2：AIで創る（クリエイティブ応用編）</b><br>絵、音楽、動画…。専門スキルは不要です。「創りたい」という想いだけをコンパスに、具体的な作品を生み出す成功体験を積みます。</li>
-                        <li class="readable"><b>ステップ3：AIで仕事をする（ビジネス実践編）</b><br>あなたの創造力を、具体的な「価値」に変える旅路。AIを最強のビジネスパートナーとして、あなたの仕事をアップデートします。</li>
-                    </ul>
-                </div>
-                
-                <p class="readable">この3つのステップを順番に進めるだけで、あなたはAIを「使う人」から、「使いこなし、創造し、価値を生み出す人」へと、自然にステップアップできるように設計されています。</p>
-                
-                <h2 class="readable">さあ、冒険を始めよう！</h2>
-                <p class="readable">AI学習の旅は、もう孤独で、険しい道のりではありません。<br>このサイトの「AI学習まとめページ」には、あなたが次の一歩を踏み出すために必要な、全ての講座テキスト、実践ツール、そしてヒントが、完璧な順番で並べられています。</p>
-                <p class="readable">AIという最高の相棒と共に、あなたの「できる」を、もっと遠くまで広げる旅へ。さあ、下のボタンから、あなただけの冒険を始めましょう！</p>
-                
-                <div class="view-more-button-wrapper" style="margin: 30px 0;">
-                    <a href="/learning-summary.html" class="view-more-button">「AI学習」完全ロードマップを見る</a>
-                </div>
+          <h2 class="readable">挫折させない「学びの地図」を、あなたに。</h2>
+          <p class="readable">
+            このサイトの「AI学習」セクションは、単なる情報の寄せ集めではありません。それは、私が福祉の現場で、多くの仲間たちが「創る喜び」を発見していく姿を目の当たりにしながら作り上げた、一つの体系的な学習ロードマップです。
+          </p>
+          <p class="readable">
+            この地図は、あなたが決して道に迷うことなく、AIという翼を手に入れるまでの、最短で、最も楽しいルートを示してくれます。
+          </p>
 
+          <div class="point-box">
+            <h4 class="readable">
+              この「学びの地図」が約束する、3つのステップ
+            </h4>
+            <ul>
+              <li class="readable">
+                <b>ステップ1：AIを知る（基礎編）</b
+                ><br />AIとの「対話術」から、その「仕組み」まで。まずはAIと友達になり、その性格と能力を知ることから始めます。
+              </li>
+              <li class="readable">
+                <b>ステップ2：AIで創る（クリエイティブ応用編）</b
+                ><br />絵、音楽、動画…。専門スキルは不要です。「創りたい」という想いだけをコンパスに、具体的な作品を生み出す成功体験を積みます。
+              </li>
+              <li class="readable">
+                <b>ステップ3：AIで仕事をする（ビジネス実践編）</b
+                ><br />あなたの創造力を、具体的な「価値」に変える旅路。AIを最強のビジネスパートナーとして、あなたの仕事をアップデートします。
+              </li>
+            </ul>
+          </div>
+
+          <p class="readable">
+            この3つのステップを順番に進めるだけで、あなたはAIを「使う人」から、「使いこなし、創造し、価値を生み出す人」へと、自然にステップアップできるように設計されています。
+          </p>
+
+          <h2 class="readable">さあ、冒険を始めよう！</h2>
+          <p class="readable">
+            AI学習の旅は、もう孤独で、険しい道のりではありません。<br />このサイトの「AI学習まとめページ」には、あなたが次の一歩を踏み出すために必要な、全ての講座テキスト、実践ツール、そしてヒントが、完璧な順番で並べられています。
+          </p>
+          <p class="readable">
+            AIという最高の相棒と共に、あなたの「できる」を、もっと遠くまで広げる旅へ。さあ、下のボタンから、あなただけの冒険を始めましょう！
+          </p>
+
+          <div class="view-more-button-wrapper" style="margin: 30px 0">
+            <a href="/learning-summary.html" class="view-more-button"
+              >「AI学習」完全ロードマップを見る</a
+            >
+          </div>
+        </div>
+
+        <!-- AI博士 相談セクション -->
+        <section class="ai-hakase-cta">
+          <div class="cta-icon">
+            <img
+              src="/portfolio/hakase/img/ogp-hakase.webp"
+              alt="AI博士のアイコン"
+            />
+          </div>
+          <div class="cta-content">
+            <h3>この記事の内容、AI博士に相談しませんか？</h3>
+            <p>
+              この記事を読んで生まれた疑問や、さらに深掘りしたい点はありますか？AI博士が、あなたの質問に優しく、そして詳しくお答えします。
+            </p>
+            <div class="cta-button-wrapper">
+              <a href="/portfolio/hakase/hakase.html" class="cta-button"
+                >AI博士の研究室へ相談に行く</a
+              >
             </div>
-
-            <!-- AI博士 相談セクション -->
-            <section class="ai-hakase-cta">
-                <div class="cta-icon">
-                    <img src="../Portfolio/Hakase/img/hakase.webp" alt="AI博士のアイコン">
-                </div>
-                <div class="cta-content">
-                    <h3>この記事の内容、AI博士に相談しませんか？</h3>
-                    <p>この記事を読んで生まれた疑問や、さらに深掘りしたい点はありますか？AI博士が、あなたの質問に優しく、そして詳しくお答えします。</p>
-                    <div class="cta-button-wrapper">
-                        <a href="/Portfolio/Hakase/hakase.html" class="cta-button">AI博士の研究室へ相談に行く</a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ▼▼▼ 関連記事セクション（ここから下を差し替え） ▼▼▼ -->
-            <section class="related-posts">
-                <h2 class="related-posts-title readable" data-speech="次はこちらの記事もいかがでしょうか。あわせて読みたい記事。">あわせて読みたい記事</h2>
-                <div class="post-grid">
-                    <!-- 関連記事カード 1: AI学習の目標設定 -->
-                    <a href="/Blog/goal-setting-for-ai-learning.html" class="post-card-link">
-                        <div class="post-card">
-                            <div class="post-card-image"><img src="/Img/Blog/ogp-goal-setting.webp" alt="AI学習の目標設定"></div>
-                            <div class="post-card-content">
-                                <h3 class="readable">AI学習は「何を作るか」が9割。学びが続く目標設定のコツ</h3>
-                                <p>学びが楽しく続く、"作りたいもの"を原動力にする目標設定の3つのコツを実体験から解説します。</p>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- 関連記事カード 2: AIツール診断チャート -->
-                    <a href="/Blog/ai-tool-diagnostic-chart.html" class="post-card-link">
-                        <div class="post-card">
-                            <div class="post-card-image"><img src="/Img/Blog/ogp-ai-tool-chart.webp" alt="AIツール診断チャート"></div>
-                            <div class="post-card-content">
-                                <h3 class="readable">もう迷わない！あなたにピッタリのAIツールが見つかる、目的別診断チャート</h3>
-                                <p>あなたの目的に合った最適なAIツールを診断チャートで簡単にご紹介。ツールの選び方から解説します。</p>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- 関連記事カード 3: AI教養入門講座 -->
-                    <a href="/Learn/learn_lesson1.html" class="post-card-link">
-                        <div class="post-card">
-                            <div class="post-card-image"><img src="/Img/ogp-lesson1.webp" alt="AI教養入門講座"></div>
-                            <div class="post-card-content">
-                                <h3 class="readable">【無料講座】AIの「なぜ？」と「なに？」がわかるテキスト</h3>
-                                <p>AIの仕組みを専門用語ゼロで解説。AI時代を賢く生き抜くための教養を身につけます。</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </section>
-            
-            <footer class="article-footer">
-                <div class="author-profile-box no-avatar">
-                    <div class="author-info">
-                        <h4>この記事を書いた人：山本 倫久</h4>
-                        <p>福祉×AIクリエイター。就労支援B型事業所の利用者としての実体験を基に、AI技術で福祉の現場に新しい「できる」と「楽しい」を届けることをミッションとして活動中。</p>
-                        <div class="author-social">
-                            <a href="https://x.com/ChromachannelAI" target="_blank" rel="noopener noreferrer">X (旧Twitter)</a> | 
-                            <a href="https://github.com/motty1975/chromachannel" target="_blank" rel="noopener noreferrer">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="back-to-blog-links">
-                    <a href="../blog.html" class="back-link">← ブログ一覧に戻る</a>
-                </div>
-            </footer>
-        </article>
-
-        <!-- ★★★ Disqusコメント欄 ★★★ -->
-        <section class="comment-section">
-            <h2>ご意見・ご感想</h2>
-            <div id="disqus_thread"></div>
-            <script>
-                var disqus_config = function () {
-                    this.page.url = 'https://chromachannel.online/Blog/ai-learning-complete-guide.html';
-                    this.page.identifier = 'blog_ai-learning-complete-guide'; 
-                };
-                (function() { 
-                var d = document, s = d.createElement('script');
-                s.src = 'https://chroma-ch.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-                })();
-            </script>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          </div>
         </section>
+
+        <!-- ▼▼▼ 関連記事セクション（ここから下を差し替え） ▼▼▼ -->
+        <section class="related-posts">
+          <h2
+            class="related-posts-title readable"
+            data-speech="次はこちらの記事もいかがでしょうか。あわせて読みたい記事。"
+          >
+            あわせて読みたい記事
+          </h2>
+          <div class="post-grid">
+            <!-- 関連記事カード 1: AI学習の目標設定 -->
+            <a
+              href="/blog/goal-setting-for-ai-learning.html"
+              class="post-card-link"
+            >
+              <div class="post-card">
+                <div class="post-card-image">
+                  <img
+                    src="/img/blog/ogp-goal-setting_thumb.webp"
+                    alt="AI学習の目標設定"
+                  />
+                </div>
+                <div class="post-card-content">
+                  <h3 class="readable">
+                    AI学習は「何を作るか」が9割。学びが続く目標設定のコツ
+                  </h3>
+                  <p>
+                    学びが楽しく続く、"作りたいもの"を原動力にする目標設定の3つのコツを実体験から解説します。
+                  </p>
+                </div>
+              </div>
+            </a>
+            <!-- 関連記事カード 2: AIツール診断チャート -->
+            <a
+              href="/blog/ai-tool-diagnostic-chart.html"
+              class="post-card-link"
+            >
+              <div class="post-card">
+                <div class="post-card-image">
+                  <img
+                    src="/img/blog/ogp-ai-tool-chart_thumb.webp"
+                    alt="AIツール診断チャート"
+                  />
+                </div>
+                <div class="post-card-content">
+                  <h3 class="readable">
+                    もう迷わない！あなたにピッタリのAIツールが見つかる、目的別診断チャート
+                  </h3>
+                  <p>
+                    あなたの目的に合った最適なAIツールを診断チャートで簡単にご紹介。ツールの選び方から解説します。
+                  </p>
+                </div>
+              </div>
+            </a>
+            <!-- 関連記事カード 3: AI教養入門講座 -->
+            <a href="/Learn/learn_lesson1.html" class="post-card-link">
+              <div class="post-card">
+                <div class="post-card-image">
+                  <img src="/img/ogp-lesson1_thumb.webp" alt="AI教養入門講座" />
+                </div>
+                <div class="post-card-content">
+                  <h3 class="readable">
+                    【無料講座】AIの「なぜ？」と「なに？」がわかるテキスト
+                  </h3>
+                  <p>
+                    AIの仕組みを専門用語ゼロで解説。AI時代を賢く生き抜くための教養を身につけます。
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <footer class="article-footer">
+          <div class="author-profile-box no-avatar">
+            <div class="author-info">
+              <h4>この記事を書いた人：山本 倫久</h4>
+              <p>
+                福祉×AIクリエイター。就労支援B型事業所の利用者としての実体験を基に、AI技術で福祉の現場に新しい「できる」と「楽しい」を届けることをミッションとして活動中。
+              </p>
+              <div class="author-social">
+                <a
+                  href="https://x.com/ChromachannelAI"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >X (旧Twitter)</a
+                >
+                |
+                <a
+                  href="https://github.com/motty1975/chromachannel"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="back-to-blog-links">
+            <a href="/blog.html" class="back-link">← ブログ一覧に戻る</a>
+          </div>
+        </footer>
+      </article>
+
+      <!-- ★★★ Disqusコメント欄 ★★★ -->
+      <section class="comment-section">
+        <h2>ご意見・ご感想</h2>
+        <div id="disqus_thread"></div>
+        <script>
+          var disqus_config = function () {
+            this.page.url =
+              "https://chromachannel.online/blog/ai-learning-complete-guide.html";
+            this.page.identifier = "blog_ai-learning-complete-guide";
+          };
+          (function () {
+            var d = document,
+              s = d.createElement("script");
+            s.src = "https://chroma-ch.disqus.com/embed.js";
+            s.setAttribute("data-timestamp", +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript
+          >Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript"
+            >comments powered by Disqus.</a
+          ></noscript
+        >
+      </section>
     </main>
 
-        <!-- フッターをここに読み込む -->
-        <div id="footer-placeholder"></div>
+    <!-- フッターをここに読み込む -->
+    <div id="footer-placeholder"></div>
 
-        <div id="global-speech-control" class="global-speech-control hidden">
-            <button id="global-speech-stop-btn" title="読み上げを停止">
-                <i class="fas fa-stop"></i>
-            </button>
-        </div>
-    
-    <script src="../JavaScript/voice-module.js" defer></script>
-    <script src="../JavaScript/script.js" defer></script>
-</body>
+    <div id="global-speech-control" class="global-speech-control hidden">
+      <button id="global-speech-stop-btn" title="読み上げを停止">
+        <i class="fas fa-stop"></i>
+      </button>
+    </div>
+
+    <script src="/JavaScript/voice-module.js" defer></script>
+    <script src="/JavaScript/script.js" defer></script>
+  </body>
 </html>

@@ -3,13 +3,31 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- サイト共通の機能 ---
 
     const loadComponentsAndInit = async () => {
+        // コンポーネントを読み込む関数（パス自動調整機能付き）
         const loadComponent = async (id, url) => {
             try {
                 const response = await fetch(url);
                 if (!response.ok) throw new Error(`Failed to fetch ${url}`);
-                const text = await response.text();
+                let text = await response.text();
                 const element = document.getElementById(id);
-                if (element) element.innerHTML = text;
+                
+                if (element) {
+                    // 現在のページの階層を判断
+                    const pagePath = window.location.pathname;
+                    const depth = (pagePath.match(/\//g) || []).length - 1;
+
+                    // ルートディレクトリ以外の場合（例: /blog/ や /portfolio/Fuwamoco/）
+                    if (depth > 0) {
+                        // / を階層の数だけ先頭に追加する
+                        const prefix = '/'.repeat(depth);
+                        
+                        // HTML内の src="/..." や href="/..." といったルートパスを、
+                        // 正しい相対パスに自動で書き換える
+                        text = text.replace(/(src="|href=")\//g, `$1${prefix}`);
+                    }
+
+                    element.innerHTML = text;
+                }
             } catch (error) {
                 console.error('Component load error:', error);
             }
@@ -88,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    const initPromptCopy = () => {
+    const initpromptCopy = () => {
         document.body.addEventListener('click', (e) => {
             const copyButton = e.target.closest('.copy-btn');
             if (!copyButton || copyButton.classList.contains('copied')) return;
@@ -238,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadComponentsAndInit();
     initScrollAnimation();
     initGalleryToggle();
-    initPromptCopy();
+    initpromptCopy();
     initFilter();
     initSiteWideSpeech();
     initImageSpeech();

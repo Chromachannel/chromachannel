@@ -1,127 +1,529 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- ===== ▼▼▼ SEO設定 START ▼▼▼ ===== -->
     <title>【創作・クリエイティブ】まとめ｜AIと創るイラスト・音楽・物語</title>
-    <meta name="description" content="福祉×AIクリエイターが贈る、AI創作コンテンツの総まとめ。AIとの共同制作で、オリジナル小説・絵本・イラスト・楽曲を生み出すためのプロンプトや記事、ツールをここに集約。">
-    
+    <meta
+      name="description"
+      content="福祉×AIクリエイターが贈る、AI創作コンテンツの総まとめ。AIとの共同制作で、オリジナル小説・絵本・イラスト・楽曲を生み出すためのプロンプトや記事、ツールをここに集約。"
+    />
+
     <!-- OGPタグ -->
-    <meta property="og:title" content="【創作・クリエイティブ】まとめ｜AIと創るイラスト・音楽・物語">
-    <meta property="og:description" content="AIとの共同制作で、オリジナル小説・絵本・イラスト・楽曲を生み出すためのプロンプトや記事、ツールをここに集約。">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://chromachannel.online/creative-summary.html">
-    <meta property="og:image" content="https://chromachannel.online/Img/ogp-creative-summary.webp">
-    <meta property="og:site_name" content="Chromachannel">
-    <meta name="twitter:card" content="summary_large_image">
-    
+    <meta
+      property="og:title"
+      content="【創作・クリエイティブ】まとめ｜AIと創るイラスト・音楽・物語"
+    />
+    <meta
+      property="og:description"
+      content="AIとの共同制作で、オリジナル小説・絵本・イラスト・楽曲を生み出すためのプロンプトや記事、ツールをここに集約。"
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://chromachannel.online/creative-summary.html"
+    />
+    <meta
+      property="og:image"
+      content="https://chromachannel.online/img/ogp-creative-summary.webp"
+    />
+    <meta property="og:site_name" content="Chromachannel" />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <!-- 構造化データ -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "CollectionPage",
-      "name": "【創作・クリエイティブ】まとめ｜AIと創るイラスト・音楽・物語",
-      "description": "福祉×AIクリエイターが贈る、AI創作コンテンツの総まとめ。AIとの共同制作で、オリジナル小説・絵本・イラスト・楽曲を生み出すためのプロンプトや記事、ツールをここに集約。",
-      "url": "https://chromachannel.online/creative-summary.html",
-      "author": { "@type": "Person", "name": "山本 倫久", "url": "https://chromachannel.online/" }
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "【創作・クリエイティブ】まとめ｜AIと創るイラスト・音楽・物語",
+        "description": "福祉×AIクリエイターが贈る、AI創作コンテンツの総まとめ。AIとの共同制作で、オリジナル小説・絵本・イラスト・楽曲を生み出すためのプロンプトや記事、ツールをここに集約。",
+        "url": "https://chromachannel.online/creative-summary.html",
+        "author": {
+          "@type": "Person",
+          "name": "山本 倫久",
+          "url": "https://chromachannel.online/"
+        }
+      }
     </script>
-    
-    <link rel="canonical" href="https://chromachannel.online/creative-summary.html" />
+
+    <link
+      rel="canonical"
+      href="https://chromachannel.online/creative-summary.html"
+    />
     <!-- ===== ▲▲▲ SEO設定 END ▲▲▲ ===== -->
-    
+
     <!-- CSS / ライブラリ -->
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="CSS/only_read.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/only_read.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
 
-<body class="article-page">
+  <body class="article-page">
     <div id="header-placeholder"></div>
 
     <main class="article-main">
-        <section class="page-header"><div class="container"><h1>創作・クリエイティブ まとめ</h1><p>AIをあなたの創造の翼に。物語、イラスト、音楽、Webサイトまで、AIと共に創る楽しさの全てをここに集約しました。</p></div></section>
-        <article class="article-container">
-            <div class="article-content">
-                <p>「頭の中のイメージを、形にしてみたい」<br>
-                このページは、AIをあなたの創造的なパートナーとして、世界に一つだけの作品を生み出したいと願う、すべてのクリエイターのための総合案内所です。専門的なスキルは必要ありません。「創りたい」という情熱さえあれば、AIがあなたの翼となります。</p>
-                <nav class="table-of-contents">
-                    <h3>このページのコンテンツ</h3>
-                    <ul>
-                        <li><a href="#writing">① 言葉を紡ぐ（物語・文章創作）</a></li>
-                        <li><a href="#visuals">② 視覚を彩る（イラスト・デザイン）</a></li>
-                        <li><a href="#sounds">③ 音を奏でる（作詞・作曲）</a></li>
-                        <li><a href="#video-creation">④ 映像を創造する（動画制作）</a></li>
-                        <li><a href="#web-creation">⑤ 世界を構築する（Webサイト制作）</a></li>
-                    </ul>
-                </nav>
-                <h2 id="writing" class="summary-section-title">① 言葉を紡ぐ（物語・文章創作）</h2>
-                <div class="portfolio-grid">
-                    <a href="/Learn/learn_lesson1.html" class="portfolio-item fade-in"><div class="portfolio-card"><div class="portfolio-image"><img src="/Img/ogp-lesson1.webp" alt="対話AI入門講座"></div><div class="portfolio-content"><p class="post-card-category">講座テキスト</p><h3>【無料講座】ChatGPT・Gemini・Claude入門</h3><p>AIとの「付き合い方」を学び、あなたの日常や仕事をアップデートするための「思考法」をインストールします。</p></div></div></a>
-                    <a href="/Prompt/prompt-novel-writing.html" class="portfolio-item fade-in"><div class="portfolio-card"><div class="portfolio-image"><img src="/Img/prompt/kindle_main.webp" alt="小説執筆プロンプト"></div><div class="portfolio-content"><p class="post-card-category">プロンプト</p><h3>小説執筆 (プロット・本文)</h3><p>プロットから本文まで、AIと対話しながら物語を共同制作するための指示書です。</p></div></div></a>
-                    <a href="/Prompt/prompt-picture-book-writing.html" class="portfolio-item fade-in"><div class="portfolio-card"><div class="portfolio-image"><img src="/Img/prompt/picture_book_main.webp" alt="知育絵本プロンプト"></div><div class="portfolio-content"><p class="post-card-category">プロンプト</p><h3>子供向け知育絵本</h3><p>物語のプロット、本文、そして各シーンのイラスト用プロンプトまでAIと共同制作する指示書です。</p></div></div></a>
-                    <a href="/Prompt/prompt-book-report-wizard.html" class="portfolio-item fade-in"><div class="portfolio-card"><div class="portfolio-image"><img src="/Img/Prompt/ogp-book-report-wizard.webp" alt="AI読書感想文プロンプト"></div><div class="portfolio-content"><p class="post-card-category">プロンプト</p><h3>AI読書感想文</h3><p>AIとの対話を通じて子供の心の中から「書きたいこと」を引き出し、楽しく感想文を完成させます。</p></div></div></a>
-                    <a href="/Prompt/prompt-catchphrase-strategist.html" class="portfolio-item fade-in"><div class="portfolio-card"><div class="portfolio-image"><img src="/Img/Prompt/ogp-catchphrase-strategist.webp" alt="AIキャッチコピー作成プロンプト"></div><div class="portfolio-content"><p class="post-card-category">プロンプト</p><h3>AIキャッチコピー作成</h3><p>ターゲットの深層心理を分析し、商品の魅力を最大限に引き出すキャッチコピーを共同制作します。</p></div></div></a>
-                    <a href="/Blog/report-making-picture-book-with-ai.html" class="portfolio-item fade-in"><div class="portfolio-card"><div class="portfolio-image"><img src="/Img/Blog/ehon-report-cover.webp" alt="AI絵本制作レポート"></div><div class="portfolio-content"><p class="post-card-category">ブログ記事</p><h3>【実践レポ】自作プロンプトでAI絵本を作ってみた</h3><p>「知育絵本プロンプト」は本当に使える？制作者自ら、AIとの共同制作に挑戦した全手順を公開します。</p></div></div></a>
+      <section class="page-header">
+        <div class="container">
+          <h1>創作・クリエイティブ まとめ</h1>
+          <p>
+            AIをあなたの創造の翼に。物語、イラスト、音楽、Webサイトまで、AIと共に創る楽しさの全てをここに集約しました。
+          </p>
+        </div>
+      </section>
+      <article class="article-container">
+        <div class="article-content">
+          <p>
+            「頭の中のイメージを、形にしてみたい」<br />
+            このページは、AIをあなたの創造的なパートナーとして、世界に一つだけの作品を生み出したいと願う、すべてのクリエイターのための総合案内所です。専門的なスキルは必要ありません。「創りたい」という情熱さえあれば、AIがあなたの翼となります。
+          </p>
+          <nav class="table-of-contents">
+            <h3>このページのコンテンツ</h3>
+            <ul>
+              <li><a href="#writing">① 言葉を紡ぐ（物語・文章創作）</a></li>
+              <li><a href="#visuals">② 視覚を彩る（イラスト・デザイン）</a></li>
+              <li><a href="#sounds">③ 音を奏でる（作詞・作曲）</a></li>
+              <li>
+                <a href="#video-creation">④ 映像を創造する（動画制作）</a>
+              </li>
+              <li>
+                <a href="#web-creation">⑤ 世界を構築する（Webサイト制作）</a>
+              </li>
+            </ul>
+          </nav>
+          <h2 id="writing" class="summary-section-title">
+            ① 言葉を紡ぐ（物語・文章創作）
+          </h2>
+          <div class="portfolio-grid">
+            <a href="/Learn/learn_lesson1.html" class="portfolio-item fade-in">
+              <div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img src="/img/ogp-lesson1.webp" alt="対話AI入門講座" />
                 </div>
-                <h2 id="visuals" class="summary-section-title">② 視覚を彩る（イラスト・デザイン）</h2>
-                <div class="portfolio-grid">
-                    <a href="/Learn/learn_lesson3.html" class="portfolio-item fade-in"><div class="portfolio-card"><div class="portfolio-image"><img src="/Img/ogp-lesson3.webp" alt="画像生成AI入門講座"></div><div class="portfolio-content"><p class="post-card-category">講座テキスト</p><h3>画像生成AI入門</h3><p>ImageFX等を使い、簡単な言葉で思い通りの絵を描く方法を解説。あなたも今日からデジタルアーティストに。</p></div></div></a>
-                    <a href="/Learn/learn_lesson4.html" class="portfolio-item fade-in"><div class="portfolio-card"><div class="portfolio-image"><img src="/Img/ogp-lesson4.webp" alt="AIでLINEスタンプ制作入門"></div><div class="portfolio-content"><p class="post-card-category">講座テキスト</p><h3>AIでLINEスタンプ制作入門</h3><p>AI画像生成を使ってオリジナルLINEスタンプを作る方法を徹底解説。企画から申請までを完全ガイド。</p></div></div></a>
-                    <a href="/Learn/learn_lesson7.html" class="portfolio-item fade-in"><div class="portfolio-card"><div class="portfolio-image"><img src="/Img/ogp-lesson7.webp" alt="AIチラシ作成入門"></div><div class="portfolio-content"><p class="post-card-category">講座テキスト</p><h3>AIチラシ作成入門</h3><p>AIを使って、反響のあるチラシをデザインする方法を解説。企画からデザインまで、もうセンスはいりません。</p></div></div></a>
-                    <a href="/Prompt/prompt-stable-diffusion.html" class="portfolio-item fade-in"><div class="portfolio-card"><div class="portfolio-image"><img src="/Img/prompt/stable-diffusion_main.webp" alt="Stable Diffusionプロンプト"></div><div class="portfolio-content"><p class="post-card-category">プロンプト</p><h3>AIイラスト生成 (Stable Diffusion)</h3><p>簡単な日本語から高品質なイラスト用プロンプトを生成させるための、AIへの指示書です。</p></div></div></a>
-                    <a href="/Prompt/prompt-imagefx.html" class="portfolio-item fade-in"><div class="portfolio-card"><div class="portfolio-image"><img src="/Img/prompt/imagefx_main.webp" alt="ImageFXプロンプト"></div><div class="portfolio-content"><p class="post-card-category">プロンプト</p><h3>AIイラスト生成 (ImageFX)</h3><p>日本語の簡単なイメージから、情景が浮かぶような美しい英文プロンプトを生成する指示書です。</p></div></div></a>
-                    <a href="/Blog/How-to-Customize-Prompt.html" class="portfolio-item fade-in"><div class="portfolio-card"><div class="portfolio-image"><img src="/Img/Blog/How-to-Customize-Prompt.webp" alt="プロンプト改造テクニック"></div><div class="portfolio-content"><p class="post-card-category">ブログ記事</p><h3>【中級編】プロンプトを改造して個性的な絵本を作る方法</h3><p>プロンプトの設計図を理解し、主人公や絵のタッチなどを自由自在に改造する4つのテクニックを解説します。</p></div></div></a>
+                <div class="portfolio-content">
+                  <p class="post-card-category">講座テキスト</p>
+                  <h3>【無料講座】ChatGPT・Gemini・Claude入門</h3>
+                  <p>
+                    AIとの「付き合い方」を学び、あなたの日常や仕事をアップデートするための「思考法」をインストールします。
+                  </p>
                 </div>
-                <h2 id="sounds" class="summary-section-title">③ 音を奏でる（作詞・作曲）</h2>
-                <div class="portfolio-grid">
-                    <a href="/Learn/learn_lesson5.html" class="portfolio-item fade-in"><div class="portfolio-card"><div class="portfolio-image"><img src="/Img/ogp-lesson5.webp" alt="音楽生成AI「Suno」入門"></div><div class="portfolio-content"><p class="post-card-category">講座テキスト</p><h3>音楽生成AI「Suno」入門</h3><p>作曲経験ゼロでも大丈夫。歌詞やイメージを伝えるだけでオリジナルソングを作る方法を優しく解説します。</p></div></div></a>
-                    <a href="/Prompt/prompt-suno-ai-v2.html" class="portfolio-item fade-in"><div class="portfolio-card"><div class="portfolio-image"><img src="/Img/Prompt/ogp-suno-ai-v2.webp" alt="Suno AI V2プロンプト"></div><div class="portfolio-content"><p class="post-card-category">プロンプト</p><h3>Suno AIプロンプト V2 (対話・高機能版)</h3><p>曲の構成からボーカル、韻の踏み方まで細かく指定可能。AIとの対話で、あなたの理想の一曲を創り上げます。</p></div></div></a>
+              </div></a
+            >
+            <a
+              href="/prompt/prompt-novel-writing.html"
+              class="portfolio-item fade-in"
+              ><div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img
+                    src="/img/prompt/kindle_main.webp"
+                    alt="小説執筆プロンプト"
+                  />
                 </div>
-                <h2 id="video-creation" class="summary-section-title">④ 映像を創造する（動画制作）</h2>
-                <div class="portfolio-grid">
-                    <a href="/Learn/learn_lesson6.html" class="portfolio-item fade-in"><div class="portfolio-card"><div class="portfolio-image"><img src="/Img/ogp-lesson6.webp" alt="AI動画制作入門"></div><div class="portfolio-content"><p class="post-card-category">講座テキスト</p><h3>AI動画制作入門</h3><p>VOICEVOXとYMM4を使い、キャラクターが喋る動画を作る方法を解説。目パチ・口パクまで完全ガイド。</p></div></div></a>
-                    <a href="/Learn/learn_lesson10.html" class="portfolio-item fade-in"><div class="portfolio-card"><div class="portfolio-image"><img src="/Img/ogp-lesson10.webp" alt="AI YouTube投稿術"></div><div class="portfolio-content"><p class="post-card-category">講座テキスト</p><h3>AI YouTube投稿術</h3><p>企画、台本作成、素材準備、SEO最適化まで、AIと共に「バズる動画」を生み出すための実践的な手法を解説します。</p></div></div></a>
-                    <a href="/Prompt/prompt-youtube-shorts.html" class="portfolio-item fade-in"><div class="portfolio-card"><div class="portfolio-image"><img src="/Img/prompt/scenario_main.webp" alt="シナリオのイメージ"></div><div class="portfolio-content"><p class="post-card-category">プロンプト</p><h3>YouTubeショート動画シナリオ</h3><p>バズる可能性のある動画台本を、AIと対話しながら段階的に作成するための指示書です。</p></div></div></a>
+                <div class="portfolio-content">
+                  <p class="post-card-category">プロンプト</p>
+                  <h3>小説執筆 (プロット・本文)</h3>
+                  <p>
+                    プロットから本文まで、AIと対話しながら物語を共同制作するための指示書です。
+                  </p>
                 </div>
-                <h2 id="web-creation" class="summary-section-title">⑤ 世界を構築する（Webサイト制作）</h2>
-                <div class="portfolio-grid">
-                    <a href="/Blog/fuwamoco-development-story.html" class="portfolio-item fade-in">
-                        <div class="portfolio-card">
-                            <div class="portfolio-image"><img src="/Img/Blog/ogp-fuwamoco-story.webp" alt="Fuwamoco PROJECTの開発秘話"></div>
-                            <div class="portfolio-content"><p class="post-card-category">開発秘話</p><h3>【開発秘話】Fuwamoco PROJECT</h3><p>福祉の課題意識から生まれた、架空NPO法人サイト。その企画から実装までの「物語」を語ります。</p></div>
-                        </div>
-                    </a>
-                    <a href="/Learn/learn_lesson8.html" class="portfolio-item fade-in"><div class="portfolio-card"><div class="portfolio-image"><img src="/Img/ogp-lesson8.webp" alt="AIホームページ作成入門"></div><div class="portfolio-content"><p class="post-card-category">講座テキスト</p><h3>AIホームページ作成入門</h3><p>AIウェブサイトビルダーを使い、デザイン・文章・コーディング不要でホームページを作る方法を解説します。</p></div></div></a>
-                    <a href="/Blog/making-this-site-with-ai.html" class="portfolio-item fade-in"><div class="portfolio-card"><div class="portfolio-image"><img src="/Img/Blog/ogp-making-this-site.webp" alt="AIとのサイト制作秘話"></div><div class="portfolio-content"><p class="post-card-category">ブログ記事</p><h3>【制作秘話】このサイト、実はAIと作っています。</h3><p>画像生成からコーディングまで、AIを「共同制作者」として活用する新しいサイト制作術をご紹介します。</p></div></div></a>
-                    <a href="/Portfolio/Real-time-preview/real-time-preview.html" class="portfolio-item fade-in"><div class="portfolio-card"><div class="portfolio-image"><img src="/Img/ogp_realtime_editor.webp" alt="リアルタイムプレビューエディタ"></div><div class="portfolio-content"><p class="post-card-category">Webアプリ</p><h3>HTML/CSS リアルタイムプレビューエディタ</h3><p>コードを書きながら瞬時に結果を確認できるWeb制作学習ツール。福祉現場でのプログラミング教育にも活用できます。</p></div></div></a>
+              </div></a
+            >
+            <a
+              href="/prompt/prompt-picture-book-writing.html"
+              class="portfolio-item fade-in"
+              ><div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img
+                    src="/img/prompt/picture_book_main.webp"
+                    alt="知育絵本プロンプト"
+                  />
                 </div>
+                <div class="portfolio-content">
+                  <p class="post-card-category">プロンプト</p>
+                  <h3>子供向け知育絵本</h3>
+                  <p>
+                    物語のプロット、本文、そして各シーンのイラスト用プロンプトまでAIと共同制作する指示書です。
+                  </p>
+                </div>
+              </div></a
+            >
+            <a
+              href="/prompt/prompt-book-report-wizard.html"
+              class="portfolio-item fade-in"
+              ><div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img
+                    src="/img/prompt/ogp-book-report-wizard.webp"
+                    alt="AI読書感想文プロンプト"
+                  />
+                </div>
+                <div class="portfolio-content">
+                  <p class="post-card-category">プロンプト</p>
+                  <h3>AI読書感想文</h3>
+                  <p>
+                    AIとの対話を通じて子供の心の中から「書きたいこと」を引き出し、楽しく感想文を完成させます。
+                  </p>
+                </div>
+              </div></a
+            >
+            <a
+              href="/prompt/prompt-catchphrase-strategist.html"
+              class="portfolio-item fade-in"
+              ><div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img
+                    src="/img/prompt/ogp-catchphrase-strategist.webp"
+                    alt="AIキャッチコピー作成プロンプト"
+                  />
+                </div>
+                <div class="portfolio-content">
+                  <p class="post-card-category">プロンプト</p>
+                  <h3>AIキャッチコピー作成</h3>
+                  <p>
+                    ターゲットの深層心理を分析し、商品の魅力を最大限に引き出すキャッチコピーを共同制作します。
+                  </p>
+                </div>
+              </div></a
+            >
+            <a
+              href="/blog/report-making-picture-book-with-ai.html"
+              class="portfolio-item fade-in"
+              ><div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img
+                    src="/img/blog/ehon-report-cover.webp"
+                    alt="AI絵本制作レポート"
+                  />
+                </div>
+                <div class="portfolio-content">
+                  <p class="post-card-category">ブログ記事</p>
+                  <h3>【実践レポ】自作プロンプトでAI絵本を作ってみた</h3>
+                  <p>
+                    「知育絵本プロンプト」は本当に使える？制作者自ら、AIとの共同制作に挑戦した全手順を公開します。
+                  </p>
+                </div>
+              </div></a
+            >
+          </div>
+          <h2 id="visuals" class="summary-section-title">
+            ② 視覚を彩る（イラスト・デザイン）
+          </h2>
+          <div class="portfolio-grid">
+            <a href="/Learn/learn_lesson3.html" class="portfolio-item fade-in"
+              ><div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img src="/img/ogp-lesson3.webp" alt="画像生成AI入門講座" />
+                </div>
+                <div class="portfolio-content">
+                  <p class="post-card-category">講座テキスト</p>
+                  <h3>画像生成AI入門</h3>
+                  <p>
+                    ImageFX等を使い、簡単な言葉で思い通りの絵を描く方法を解説。あなたも今日からデジタルアーティストに。
+                  </p>
+                </div>
+              </div></a
+            >
+            <a href="/Learn/learn_lesson4.html" class="portfolio-item fade-in"
+              ><div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img
+                    src="/img/ogp-lesson4.webp"
+                    alt="AIでLINEスタンプ制作入門"
+                  />
+                </div>
+                <div class="portfolio-content">
+                  <p class="post-card-category">講座テキスト</p>
+                  <h3>AIでLINEスタンプ制作入門</h3>
+                  <p>
+                    AI画像生成を使ってオリジナルLINEスタンプを作る方法を徹底解説。企画から申請までを完全ガイド。
+                  </p>
+                </div>
+              </div></a
+            >
+            <a href="/Learn/learn_lesson7.html" class="portfolio-item fade-in"
+              ><div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img src="/img/ogp-lesson7.webp" alt="AIチラシ作成入門" />
+                </div>
+                <div class="portfolio-content">
+                  <p class="post-card-category">講座テキスト</p>
+                  <h3>AIチラシ作成入門</h3>
+                  <p>
+                    AIを使って、反響のあるチラシをデザインする方法を解説。企画からデザインまで、もうセンスはいりません。
+                  </p>
+                </div>
+              </div></a
+            >
+            <a
+              href="/prompt/prompt-stable-diffusion.html"
+              class="portfolio-item fade-in"
+              ><div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img
+                    src="/img/prompt/stable-diffusion_main.webp"
+                    alt="Stable Diffusionプロンプト"
+                  />
+                </div>
+                <div class="portfolio-content">
+                  <p class="post-card-category">プロンプト</p>
+                  <h3>AIイラスト生成 (Stable Diffusion)</h3>
+                  <p>
+                    簡単な日本語から高品質なイラスト用プロンプトを生成させるための、AIへの指示書です。
+                  </p>
+                </div>
+              </div></a
+            >
+            <a href="/prompt/prompt-imagefx.html" class="portfolio-item fade-in"
+              ><div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img
+                    src="/img/prompt/imagefx_main.webp"
+                    alt="ImageFXプロンプト"
+                  />
+                </div>
+                <div class="portfolio-content">
+                  <p class="post-card-category">プロンプト</p>
+                  <h3>AIイラスト生成 (ImageFX)</h3>
+                  <p>
+                    日本語の簡単なイメージから、情景が浮かぶような美しい英文プロンプトを生成する指示書です。
+                  </p>
+                </div>
+              </div></a
+            >
+            <a
+              href="/blog/How-to-Customize-prompt.html"
+              class="portfolio-item fade-in"
+              ><div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img
+                    src="/img/blog/How-to-Customize-prompt.webp"
+                    alt="プロンプト改造テクニック"
+                  />
+                </div>
+                <div class="portfolio-content">
+                  <p class="post-card-category">ブログ記事</p>
+                  <h3>【中級編】プロンプトを改造して個性的な絵本を作る方法</h3>
+                  <p>
+                    プロンプトの設計図を理解し、主人公や絵のタッチなどを自由自在に改造する4つのテクニックを解説します。
+                  </p>
+                </div>
+              </div></a
+            >
+          </div>
+          <h2 id="sounds" class="summary-section-title">
+            ③ 音を奏でる（作詞・作曲）
+          </h2>
+          <div class="portfolio-grid">
+            <a href="/Learn/learn_lesson5.html" class="portfolio-item fade-in"
+              ><div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img
+                    src="/img/ogp-lesson5.webp"
+                    alt="音楽生成AI「Suno」入門"
+                  />
+                </div>
+                <div class="portfolio-content">
+                  <p class="post-card-category">講座テキスト</p>
+                  <h3>音楽生成AI「Suno」入門</h3>
+                  <p>
+                    作曲経験ゼロでも大丈夫。歌詞やイメージを伝えるだけでオリジナルソングを作る方法を優しく解説します。
+                  </p>
+                </div>
+              </div></a
+            >
+            <a
+              href="/prompt/prompt-suno-ai-v2.html"
+              class="portfolio-item fade-in"
+              ><div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img
+                    src="/img/prompt/ogp-suno-ai-v2.webp"
+                    alt="Suno AI V2プロンプト"
+                  />
+                </div>
+                <div class="portfolio-content">
+                  <p class="post-card-category">プロンプト</p>
+                  <h3>Suno AIプロンプト V2 (対話・高機能版)</h3>
+                  <p>
+                    曲の構成からボーカル、韻の踏み方まで細かく指定可能。AIとの対話で、あなたの理想の一曲を創り上げます。
+                  </p>
+                </div>
+              </div></a
+            >
+          </div>
+          <h2 id="video-creation" class="summary-section-title">
+            ④ 映像を創造する（動画制作）
+          </h2>
+          <div class="portfolio-grid">
+            <a href="/Learn/learn_lesson6.html" class="portfolio-item fade-in"
+              ><div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img src="/img/ogp-lesson6.webp" alt="AI動画制作入門" />
+                </div>
+                <div class="portfolio-content">
+                  <p class="post-card-category">講座テキスト</p>
+                  <h3>AI動画制作入門</h3>
+                  <p>
+                    VOICEVOXとYMM4を使い、キャラクターが喋る動画を作る方法を解説。目パチ・口パクまで完全ガイド。
+                  </p>
+                </div>
+              </div></a
+            >
+            <a href="/Learn/learn_lesson10.html" class="portfolio-item fade-in"
+              ><div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img src="/img/ogp-lesson10.webp" alt="AI YouTube投稿術" />
+                </div>
+                <div class="portfolio-content">
+                  <p class="post-card-category">講座テキスト</p>
+                  <h3>AI YouTube投稿術</h3>
+                  <p>
+                    企画、台本作成、素材準備、SEO最適化まで、AIと共に「バズる動画」を生み出すための実践的な手法を解説します。
+                  </p>
+                </div>
+              </div></a
+            >
+            <a
+              href="/prompt/prompt-youtube-shorts.html"
+              class="portfolio-item fade-in"
+              ><div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img
+                    src="/img/prompt/scenario_main.webp"
+                    alt="シナリオのイメージ"
+                  />
+                </div>
+                <div class="portfolio-content">
+                  <p class="post-card-category">プロンプト</p>
+                  <h3>YouTubeショート動画シナリオ</h3>
+                  <p>
+                    バズる可能性のある動画台本を、AIと対話しながら段階的に作成するための指示書です。
+                  </p>
+                </div>
+              </div></a
+            >
+          </div>
+          <h2 id="web-creation" class="summary-section-title">
+            ⑤ 世界を構築する（Webサイト制作）
+          </h2>
+          <div class="portfolio-grid">
+            <a
+              href="/blog/fuwamoco-development-story.html"
+              class="portfolio-item fade-in"
+            >
+              <div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img
+                    src="/img/blog/ogp-fuwamoco-story_thumb.webp"
+                    alt="Fuwamoco PROJECTの開発秘話"
+                  />
+                </div>
+                <div class="portfolio-content">
+                  <p class="post-card-category">開発秘話</p>
+                  <h3>【開発秘話】Fuwamoco PROJECT</h3>
+                  <p>
+                    福祉の課題意識から生まれた、架空NPO法人サイト。その企画から実装までの「物語」を語ります。
+                  </p>
+                </div>
+              </div>
+            </a>
+            <a href="/Learn/learn_lesson8.html" class="portfolio-item fade-in"
+              ><div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img
+                    src="/img/ogp-lesson8.webp"
+                    alt="AIホームページ作成入門"
+                  />
+                </div>
+                <div class="portfolio-content">
+                  <p class="post-card-category">講座テキスト</p>
+                  <h3>AIホームページ作成入門</h3>
+                  <p>
+                    AIウェブサイトビルダーを使い、デザイン・文章・コーディング不要でホームページを作る方法を解説します。
+                  </p>
+                </div>
+              </div></a
+            >
+            <a
+              href="/blog/making-this-site-with-ai.html"
+              class="portfolio-item fade-in"
+              ><div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img
+                    src="/img/blog/ogp-making-this-site.webp"
+                    alt="AIとのサイト制作秘話"
+                  />
+                </div>
+                <div class="portfolio-content">
+                  <p class="post-card-category">ブログ記事</p>
+                  <h3>【制作秘話】このサイト、実はAIと作っています。</h3>
+                  <p>
+                    画像生成からコーディングまで、AIを「共同制作者」として活用する新しいサイト制作術をご紹介します。
+                  </p>
+                </div>
+              </div></a
+            >
+            <a
+              href="/portfolio/Real-time-preview/real-time-preview.html"
+              class="portfolio-item fade-in"
+              ><div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img
+                    src="/img/ogp_realtime_editor.webp"
+                    alt="リアルタイムプレビューエディタ"
+                  />
+                </div>
+                <div class="portfolio-content">
+                  <p class="post-card-category">Webアプリ</p>
+                  <h3>HTML/CSS リアルタイムプレビューエディタ</h3>
+                  <p>
+                    コードを書きながら瞬時に結果を確認できるWeb制作学習ツール。福祉現場でのプログラミング教育にも活用できます。
+                  </p>
+                </div>
+              </div></a
+            >
+          </div>
+        </div>
+        <footer class="article-footer">
+          <div class="author-profile-box no-avatar">
+            <div class="author-info">
+              <h4>このページを監修した人：山本 倫久</h4>
+              <p>
+                福祉×AIクリエイター。就労支援B型事業所の利用者としての実体験を基に、AI技術で福祉の現場に新しい「できる」と「楽しい」を届けることをミッションとして活動中。
+              </p>
+              <div class="author-social">
+                <a
+                  href="https://x.com/ChromachannelAI"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >X (旧Twitter)</a
+                >
+                |
+                <a
+                  href="https://github.com/motty1975/chromachannel"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+              </div>
             </div>
-            <footer class="article-footer">
-                <div class="author-profile-box no-avatar">
-                    <div class="author-info">
-                        <h4>このページを監修した人：山本 倫久</h4>
-                        <p>福祉×AIクリエイター。就労支援B型事業所の利用者としての実体験を基に、AI技術で福祉の現場に新しい「できる」と「楽しい」を届けることをミッションとして活動中。</p>
-                        <div class="author-social">
-                            <a href="https://x.com/ChromachannelAI" target="_blank" rel="noopener noreferrer">X (旧Twitter)</a> | 
-                            <a href="https://github.com/motty1975/chromachannel" target="_blank" rel="noopener noreferrer">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-        </article>
+          </div>
+        </footer>
+      </article>
     </main>
 
     <!-- フッターをここに読み込む -->
     <div id="footer-placeholder"></div>
     <script src="JavaScript/script.js" defer></script>
-</body>
+  </body>
 </html>

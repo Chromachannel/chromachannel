@@ -1,212 +1,363 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- ===== ▼▼▼ SEO設定 START ▼▼▼ ===== -->
-    <title>【時短レシピ】AI献立プロンプトを使ったら、1週間の夕食の悩みが5分で解決した話</title>
-    <meta name="description" content="毎日の献立作成に疲れていませんか？福祉×AIクリエイターが、自作の「AI献立作成プロンプト」を徹底検証！AIとのリアルな対話ログ付きで、パーソナライズされた1週間分の献立と買い物リストが完成するまでを全公開します。">
-    
+    <title>
+      【時短レシピ】AI献立プロンプトを使ったら、1週間の夕食の悩みが5分で解決した話
+    </title>
+    <meta
+      name="description"
+      content="毎日の献立作成に疲れていませんか？福祉×AIクリエイターが、自作の「AI献立作成プロンプト」を徹底検証！AIとのリアルな対話ログ付きで、パーソナライズされた1週間分の献立と買い物リストが完成するまでを全公開します。"
+    />
+
     <!-- OGPタグ -->
-    <meta property="og:title" content="【時短レシピ】AI献立プロンプトを使ったら、1週間の夕食の悩みが5分で解決した話">
-    <meta property="og:description" content="毎日の献立作成に疲れていませんか？AIとのリアルな対話ログ付きで、パーソナライズされた1週間分の献立と買い物リストが完成するまでを全公開します。">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://chromachannel.online/Blog/ai-meal-planning-report.html">
-    <meta property="og:image" content="https://chromachannel.online/Img/Blog/ogp-ai-meal-planning.webp">
-    <meta property="og:site_name" content="Chromachannel">
-    <meta name="twitter:card" content="summary_large_image">
-    
+    <meta
+      property="og:title"
+      content="【時短レシピ】AI献立プロンプトを使ったら、1週間の夕食の悩みが5分で解決した話"
+    />
+    <meta
+      property="og:description"
+      content="毎日の献立作成に疲れていませんか？AIとのリアルな対話ログ付きで、パーソナライズされた1週間分の献立と買い物リストが完成するまでを全公開します。"
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://chromachannel.online/blog/ai-meal-planning-report.html"
+    />
+    <meta
+      property="og:image"
+      content="https://chromachannel.online/img/blog/ogp-ai-meal-planning.webp"
+    />
+    <meta property="og:site_name" content="Chromachannel" />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <!-- 構造化データ -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://chromachannel.online/Blog/ai-meal-planning-report.html" },
-      "headline": "【時短レシピ】AI献立プロンプトを使ったら、1週間の夕食の悩みが5分で解決した話",
-      "description": "毎日の献立作成に疲れていませんか？福祉×AIクリエイターが、自作の「AI献立作成プロンプト」を徹底検証！AIとのリアルな対話ログ付きで、パーソナライズされた1週間分の献立と買い物リストが完成するまでを全公開します。",
-      "image": "https://chromachannel.online/Img/Blog/ogp-ai-meal-planning.webp",
-      "author": { "@type": "Person", "name": "山本 倫久", "url": "https://chromachannel.online/" },
-      "publisher": { "@type": "Organization", "name": "Chromachannel", "logo": { "@type": "ImageObject", "url": "https://chromachannel.online/Img/chroma_logo.webp" } },
-      "datePublished": "2025-08-07",
-      "dateModified": "2025-08-07"
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "blogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://chromachannel.online/blog/ai-meal-planning-report.html"
+        },
+        "headline": "【時短レシピ】AI献立プロンプトを使ったら、1週間の夕食の悩みが5分で解決した話",
+        "description": "毎日の献立作成に疲れていませんか？福祉×AIクリエイターが、自作の「AI献立作成プロンプト」を徹底検証！AIとのリアルな対話ログ付きで、パーソナライズされた1週間分の献立と買い物リストが完成するまでを全公開します。",
+        "image": "https://chromachannel.online/img/blog/ogp-ai-meal-planning.webp",
+        "author": {
+          "@type": "Person",
+          "name": "山本 倫久",
+          "url": "https://chromachannel.online/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Chromachannel",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://chromachannel.online/img/chroma_logo.webp"
+          }
+        },
+        "datePublished": "2025-08-07",
+        "dateModified": "2025-08-07"
+      }
     </script>
-    
-    <link rel="canonical" href="https://chromachannel.online/Blog/ai-meal-planning-report.html" />
-    <!-- ===== ▲▲▲ SEO設定 END ▲▲▲ ===== -->
-     
-    <link rel="icon" type="image/png" href="../favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
-    <link rel="shortcut icon" href="../favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
-    <link rel="manifest" href="../site.webmanifest" />
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="stylesheet" href="../CSS/only_read.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head>
 
-<body class="article-page">
+    <link
+      rel="canonical"
+      href="https://chromachannel.online/blog/ai-meal-planning-report.html"
+    />
+    <!-- ===== ▲▲▲ SEO設定 END ▲▲▲ ===== -->
+
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <link rel="stylesheet" href="/CSS/only_read.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+
+  <body class="article-page">
     <!-- ヘッダーをここに読み込む -->
     <div id="header-placeholder"></div>
 
     <main class="article-main">
-        <article class="article-container">
-            <header class="article-header">
-                <div class="article-eyecatch">
-                    <img src="../Img/Blog/ogp-ai-meal-planning.webp" alt="AIが献立プランを提案しているイメージイラスト">
-                </div>
-                <h1 class="readable">【時短レシピ】AI献立プロンプトを使ったら、1週間の夕食の悩みが5分で解決した話</h1>
-                <p class="article-meta">公開日: 2025.08.07</p>
-            </header>
-            
-            <div class="article-content">
-                <p>「今日の夕飯、何にしよう…」</p>
-                <p>この、毎日繰り返される無限の問いに、頭を悩ませている方は少なくないはずです。こんにちは、福祉×AIクリエイターの山本です。私自身、日々の食事の準備には、時間もエネルギーもかなり使ってきました。</p>
-                <p>そこで今回は、「AIは、この普遍的な悩みを解決できるのか？」を検証すべく、当サイトで公開している<a href="../Prompt/prompt-recipe-creator.html">「AIレシピ提案プロンプト」</a>を実際に使って、AIに1週間分の献立を"丸投げ"してみました。その結果、わずか数分の対話で、驚くほどパーソナライズされた、実用的な献立が完成したのです！そのリアルな対話の全貌を、包み隠さずお見せします。</p>
+      <article class="article-container">
+        <header class="article-header">
+          <div class="article-eyecatch">
+            <img
+              src="/img/blog/ogp-ai-meal-planning_large.webp"
+              alt="AIが献立プランを提案しているイメージイラスト"
+            />
+          </div>
+          <h1 class="readable">
+            【時短レシピ】AI献立プロンプトを使ったら、1週間の夕食の悩みが5分で解決した話
+          </h1>
+          <p class="article-meta">公開日: 2025.08.07</p>
+        </header>
 
-                <h2>AIフードカウンセラーとの対話ログ、全公開！</h2>
-                <p>このプロンプトは、AIを単なるレシピ検索機ではなく、「パーソナル栄養士兼料理家」として機能させるのが特徴です。AIは、私の状況を一つずつ、丁寧にヒアリングしてくれました。</p>
-                
-                <div class="dialogue-box-full">
-                    <img src="../Img/Blog/kondate-log-full.webp" alt="AIとの献立作成に関する対話ログのスクリーンショット" class="article-image">
-                    <p class="caption">実際の対話ログ。一問一答で、スムーズに要望が伝わっていきます。</p>
-                </div>
-                
-                <p>ご覧ください。AIは、私が提示した非現実的な予算（700円）に対して、ただ命令に従うのではなく、「申し訳ありません。ご提示いただいた週間の食費700円は…現実的に難しいと考えられます」と、プロのカウンセラーとして、丁寧かつ正直に代替案を提示してくれました。この対話能力こそが、このプロンプトの真価です。</p>
+        <div class="article-content">
+          <p>「今日の夕飯、何にしよう…」</p>
+          <p>
+            この、毎日繰り返される無限の問いに、頭を悩ませている方は少なくないはずです。こんにちは、福祉×AIクリエイターの山本です。私自身、日々の食事の準備には、時間もエネルギーもかなり使ってきました。
+          </p>
+          <p>
+            そこで今回は、「AIは、この普遍的な悩みを解決できるのか？」を検証すべく、当サイトで公開している<a
+              href="/prompt/prompt-recipe-creator.html"
+              >「AIレシピ提案プロンプト」</a
+            >を実際に使って、AIに1週間分の献立を"丸投げ"してみました。その結果、わずか数分の対話で、驚くほどパーソナライズされた、実用的な献立が完成したのです！そのリアルな対話の全貌を、包み隠さずお見せします。
+          </p>
 
-                <h2>AIからの最終提案：これが私のための1週間献立だ！</h2>
-                <p>全てのヒアリングが終わると、AIは私の全ての要望を完璧に反映した、素晴らしい献立プランを提案してくれました。</p>
-                
-                <div class="point-box">
-                    <h3>AIからの提案：「週3回の自炊でも大丈夫！残り物活用＆バランス献立」</h3>
-                    <h4>▼ 1週間分の献立の提案</h4>
-                    <ul>
-                        <li><strong>1日目:</strong> 鶏むね肉のねぎ塩炒め、にんじんとツナの和え物、わかめスープ</li>
-                        <li><strong>2日目:</strong> おにぎり、味噌汁（※前日の残り物や市販品を利用）</li>
-                        <li><strong>3日目:</strong> 豚バラ大根、きゅうりとワカメの酢の物、ご飯</li>
-                        <li><strong>4日目:</strong> 前日の残り物を活用</li>
-                        <li><strong>5日目:</strong> サバ缶のカレー風味、キャベツの千切り、豆腐の味噌汁</li>
-                        <li><strong>6日目:</strong> おにぎり、味噌汁（※市販品などを利用）</li>
-                        <li><strong>7日目:</strong> パスタ（前日のサバ缶の残りを使用）、グリーンサラダ</li>
-                    </ul>
-                </div>
-                <p>驚くべきは、ただレシピを並べるだけでなく、「自炊は週3回」「食費1000円」という私の厳しい条件の中で、「残り物の活用」や「市販品の利用」を巧みに組み合わせ、現実的で無駄のないプランを構築している点です。</p>
+          <h2>AIフードカウンセラーとの対話ログ、全公開！</h2>
+          <p>
+            このプロンプトは、AIを単なるレシピ検索機ではなく、「パーソナル栄養士兼料理家」として機能させるのが特徴です。AIは、私の状況を一つずつ、丁寧にヒアリングしてくれました。
+          </p>
 
-                <h2>まとめ：AIは、最高の「食生活パートナー」になる</h2>
-                <p>今回の検証で、AIが単なる情報検索ツールではなく、私たちのライフスタイルや悩みに深く寄り添い、具体的な解決策を提案してくれる、最高の「パートナー」になり得ることを、改めて確信しました。</p>
-                <p>毎日の献立に悩む時間は、もう必要ありません。その時間を、家族との団らんや、あなた自身の創造的な活動に使ってみませんか？</p>
+          <div class="dialogue-box-full">
+            <img
+              src="/img/blog/kondate-log-full.webp"
+              alt="AIとの献立作成に関する対話ログのスクリーンショット"
+              class="article-image"
+            />
+            <p class="caption">
+              実際の対話ログ。一問一答で、スムーズに要望が伝わっていきます。
+            </p>
+          </div>
 
-                <div class="point-box">
-                    <h4>あなたの食生活も、AIでアップデートしませんか？</h4>
-                    <p>今回使用した「AIフードカウンセラー・プロンプト」は、以下のページで全文をコピーできます。ぜひ、あなたの食の悩みをAIに相談してみてください。</p>
-                    <ul>
-                        <li><a href="../Prompt/prompt-recipe-creator.html"><strong>今回使ったプロンプトはこちら</strong> → AIレシピ提案プロンプト（パーソナル栄養士 対話式）</a></li>
-                    </ul>
-                </div>
-            </div>
+          <p>
+            ご覧ください。AIは、私が提示した非現実的な予算（700円）に対して、ただ命令に従うのではなく、「申し訳ありません。ご提示いただいた週間の食費700円は…現実的に難しいと考えられます」と、プロのカウンセラーとして、丁寧かつ正直に代替案を提示してくれました。この対話能力こそが、このプロンプトの真価です。
+          </p>
 
-            <!-- AI博士 相談セクション -->
-            <section class="ai-hakase-cta">
-                <div class="cta-icon">
-                    <img src="../Portfolio/Hakase/img/hakase.webp" alt="AI博士のアイコン">
-                </div>
-                <div class="cta-content">
-                    <h3>この記事の内容、AI博士に相談しませんか？</h3>
-                    <p>この記事を読んで生まれた疑問や、さらに深掘りしたい点はありますか？AI博士が、あなたの質問に優しく、そして詳しくお答えします。</p>
-                    <div class="cta-button-wrapper">
-                        <a href="/Portfolio/Hakase/hakase.html" class="cta-button">AI博士の研究室へ相談に行く</a>
-                    </div>
-                </div>
-            </section>
+          <h2>AIからの最終提案：これが私のための1週間献立だ！</h2>
+          <p>
+            全てのヒアリングが終わると、AIは私の全ての要望を完璧に反映した、素晴らしい献立プランを提案してくれました。
+          </p>
 
-            <!-- 関連記事セクション -->
-            <section class="related-posts">
-                <h2 class="related-posts-title readable" data-speech="次はこちらの記事もいかがでしょうか。あわせて読みたい記事。">あわせて読みたい記事</h2>
-                <div class="post-grid">
-                    <!-- 関連記事カード 1: この記事で使ったプロンプト -->
-                    <a href="/Prompt/prompt-kondate.html" class="post-card-link">
-                        <div class="post-card">
-                            <div class="post-card-image"><img src="/Img/Prompt/ogp-kondate-prompt.webp" alt="献立作成プロンプトのイメージ"></div>
-                            <div class="post-card-content">
-                                <h3 class="readable">【対話式】AI献立作成プロンプト</h3>
-                                <p>AIがフードカウンセラーとなり、あなただけの1週間分の献立とレシピを作成します。</p>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- 関連記事カード 2: 暮らし・生活改善のまとめページ -->
-                    <a href="/lifehack-summary.html" class="post-card-link">
-                        <div class="post-card">
-                            <div class="post-card-image"><img src="/Img/ogp-lifehack-summary.webp" alt="暮らし・生活改善のまとめ"></div>
-                            <div class="post-card-content">
-                                <h3 class="readable">【暮らし・生活改善】まとめページ</h3>
-                                <p>献立作成から旅行計画、悩み相談まで、AIであなたの日常を豊かにするヒントを集めました。</p>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- 関連記事カード 3: 旅行計画の実践レポート -->
-                    <a href="/Blog/report-making-travel-plan-with-ai.html" class="post-card-link">
-                        <div class="post-card">
-                            <div class="post-card-image"><img src="/Img/Blog/ogp-report-travel-plan.webp" alt="AIが旅行プランを提案しているイメージイラスト"></div>
-                            <div class="post-card-content">
-                                <h3 class="readable">【実践レポ】AI旅行コンシェルジュに「夏の家族旅行」を丸投げしてみた</h3>
-                                <p>AIとの対話だけで、予算3万円の「夏の家族旅行プラン」は作れるのか？AIの驚くべき提案能力を全公開します。</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </section>
-            
-            <footer class="article-footer">
-                <div class="author-profile-box no-avatar">
-                    <div class="author-info">
-                        <h4>この記事を書いた人：山本 倫久</h4>
-                        <p>福祉×AIクリエイター。就労支援B型事業所の利用者としての実体験を基に、AI技術で福祉の現場に新しい「できる」と「楽しい」を届けることをミッションとして活動中。</p>
-                        <div class="author-social">
-                            <a href="https://x.com/ChromachannelAI" target="_blank" rel="noopener noreferrer">X (旧Twitter)</a> | 
-                            <a href="https://github.com/motty1975/chromachannel" target="_blank" rel="noopener noreferrer">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="back-to-blog-links">
-                    <a href="../blog.html" class="back-link">← ブログ一覧に戻る</a>
-                </div>
-            </footer>
-        </article>
+          <div class="point-box">
+            <h3>
+              AIからの提案：「週3回の自炊でも大丈夫！残り物活用＆バランス献立」
+            </h3>
+            <h4>▼ 1週間分の献立の提案</h4>
+            <ul>
+              <li>
+                <strong>1日目:</strong>
+                鶏むね肉のねぎ塩炒め、にんじんとツナの和え物、わかめスープ
+              </li>
+              <li>
+                <strong>2日目:</strong>
+                おにぎり、味噌汁（※前日の残り物や市販品を利用）
+              </li>
+              <li>
+                <strong>3日目:</strong>
+                豚バラ大根、きゅうりとワカメの酢の物、ご飯
+              </li>
+              <li><strong>4日目:</strong> 前日の残り物を活用</li>
+              <li>
+                <strong>5日目:</strong>
+                サバ缶のカレー風味、キャベツの千切り、豆腐の味噌汁
+              </li>
+              <li>
+                <strong>6日目:</strong> おにぎり、味噌汁（※市販品などを利用）
+              </li>
+              <li>
+                <strong>7日目:</strong>
+                パスタ（前日のサバ缶の残りを使用）、グリーンサラダ
+              </li>
+            </ul>
+          </div>
+          <p>
+            驚くべきは、ただレシピを並べるだけでなく、「自炊は週3回」「食費1000円」という私の厳しい条件の中で、「残り物の活用」や「市販品の利用」を巧みに組み合わせ、現実的で無駄のないプランを構築している点です。
+          </p>
 
-        <!-- ★★★ Disqusコメント欄 ★★★ -->
-        <section class="comment-section">
-            <h2>ご意見・ご感想</h2>
-            <div id="disqus_thread"></div>
-            <script>
-                var disqus_config = function () {
-                    this.page.url = 'https://chromachannel.online/Blog/ai-meal-planning-report.html';
-                    this.page.identifier = 'blog_ai-meal-planning-report'; 
-                };
-                (function() { 
-                var d = document, s = d.createElement('script');
-                s.src = 'https://chroma-ch.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-                })();
-            </script>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        </section>
-    </main>
-    
-        <!-- フッターをここに読み込む -->
-        <div id="footer-placeholder"></div>
+          <h2>まとめ：AIは、最高の「食生活パートナー」になる</h2>
+          <p>
+            今回の検証で、AIが単なる情報検索ツールではなく、私たちのライフスタイルや悩みに深く寄り添い、具体的な解決策を提案してくれる、最高の「パートナー」になり得ることを、改めて確信しました。
+          </p>
+          <p>
+            毎日の献立に悩む時間は、もう必要ありません。その時間を、家族との団らんや、あなた自身の創造的な活動に使ってみませんか？
+          </p>
 
-            <!-- ▼▼▼ ここから追加 ▼▼▼ -->
-        <div id="global-speech-control" class="global-speech-control hidden">
-            <button id="global-speech-stop-btn" title="読み上げを停止">
-                <i class="fas fa-stop"></i>
-            </button>
+          <div class="point-box">
+            <h4>あなたの食生活も、AIでアップデートしませんか？</h4>
+            <p>
+              今回使用した「AIフードカウンセラー・プロンプト」は、以下のページで全文をコピーできます。ぜひ、あなたの食の悩みをAIに相談してみてください。
+            </p>
+            <ul>
+              <li>
+                <a href="/prompt/prompt-recipe-creator.html"
+                  ><strong>今回使ったプロンプトはこちら</strong> →
+                  AIレシピ提案プロンプト（パーソナル栄養士 対話式）</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
+
+        <!-- AI博士 相談セクション -->
+        <section class="ai-hakase-cta">
+          <div class="cta-icon">
+            <img
+              src="/portfolio/hakase/img/ogp-hakase.webp"
+              alt="AI博士のアイコン"
+            />
+          </div>
+          <div class="cta-content">
+            <h3>この記事の内容、AI博士に相談しませんか？</h3>
+            <p>
+              この記事を読んで生まれた疑問や、さらに深掘りしたい点はありますか？AI博士が、あなたの質問に優しく、そして詳しくお答えします。
+            </p>
+            <div class="cta-button-wrapper">
+              <a href="/portfolio/hakase/hakase.html" class="cta-button"
+                >AI博士の研究室へ相談に行く</a
+              >
+            </div>
+          </div>
+        </section>
+
+        <!-- 関連記事セクション -->
+        <section class="related-posts">
+          <h2
+            class="related-posts-title readable"
+            data-speech="次はこちらの記事もいかがでしょうか。あわせて読みたい記事。"
+          >
+            あわせて読みたい記事
+          </h2>
+          <div class="post-grid">
+            <!-- 関連記事カード 1: この記事で使ったプロンプト -->
+            <a href="/prompt/prompt-kondate.html" class="post-card-link">
+              <div class="post-card">
+                <div class="post-card-image">
+                  <img
+                    src="/img/prompt/ogp-kondate-prompt_thumb.webp"
+                    alt="献立作成プロンプトのイメージ"
+                  />
+                </div>
+                <div class="post-card-content">
+                  <h3 class="readable">【対話式】AI献立作成プロンプト</h3>
+                  <p>
+                    AIがフードカウンセラーとなり、あなただけの1週間分の献立とレシピを作成します。
+                  </p>
+                </div>
+              </div>
+            </a>
+            <!-- 関連記事カード 2: 暮らし・生活改善のまとめページ -->
+            <a href="/lifehack-summary.html" class="post-card-link">
+              <div class="post-card">
+                <div class="post-card-image">
+                  <img
+                    src="/img/ogp-lifehack-summary_thumb.webp"
+                    alt="暮らし・生活改善のまとめ"
+                  />
+                </div>
+                <div class="post-card-content">
+                  <h3 class="readable">【暮らし・生活改善】まとめページ</h3>
+                  <p>
+                    献立作成から旅行計画、悩み相談まで、AIであなたの日常を豊かにするヒントを集めました。
+                  </p>
+                </div>
+              </div>
+            </a>
+            <!-- 関連記事カード 3: 旅行計画の実践レポート -->
+            <a
+              href="/blog/report-making-travel-plan-with-ai.html"
+              class="post-card-link"
+            >
+              <div class="post-card">
+                <div class="post-card-image">
+                  <img
+                    src="/img/blog/ogp-report-travel-plan_thumb.webp"
+                    alt="AIが旅行プランを提案しているイメージイラスト"
+                  />
+                </div>
+                <div class="post-card-content">
+                  <h3 class="readable">
+                    【実践レポ】AI旅行コンシェルジュに「夏の家族旅行」を丸投げしてみた
+                  </h3>
+                  <p>
+                    AIとの対話だけで、予算3万円の「夏の家族旅行プラン」は作れるのか？AIの驚くべき提案能力を全公開します。
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <footer class="article-footer">
+          <div class="author-profile-box no-avatar">
+            <div class="author-info">
+              <h4>この記事を書いた人：山本 倫久</h4>
+              <p>
+                福祉×AIクリエイター。就労支援B型事業所の利用者としての実体験を基に、AI技術で福祉の現場に新しい「できる」と「楽しい」を届けることをミッションとして活動中。
+              </p>
+              <div class="author-social">
+                <a
+                  href="https://x.com/ChromachannelAI"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >X (旧Twitter)</a
+                >
+                |
+                <a
+                  href="https://github.com/motty1975/chromachannel"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="back-to-blog-links">
+            <a href="/blog.html" class="back-link">← ブログ一覧に戻る</a>
+          </div>
+        </footer>
+      </article>
+
+      <!-- ★★★ Disqusコメント欄 ★★★ -->
+      <section class="comment-section">
+        <h2>ご意見・ご感想</h2>
+        <div id="disqus_thread"></div>
+        <script>
+          var disqus_config = function () {
+            this.page.url =
+              "https://chromachannel.online/blog/ai-meal-planning-report.html";
+            this.page.identifier = "blog_ai-meal-planning-report";
+          };
+          (function () {
+            var d = document,
+              s = d.createElement("script");
+            s.src = "https://chroma-ch.disqus.com/embed.js";
+            s.setAttribute("data-timestamp", +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript
+          >Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript"
+            >comments powered by Disqus.</a
+          ></noscript
+        >
+      </section>
+    </main>
+
+    <!-- フッターをここに読み込む -->
+    <div id="footer-placeholder"></div>
+
+    <!-- ▼▼▼ ここから追加 ▼▼▼ -->
+    <div id="global-speech-control" class="global-speech-control hidden">
+      <button id="global-speech-stop-btn" title="読み上げを停止">
+        <i class="fas fa-stop"></i>
+      </button>
+    </div>
     <!-- ▲▲▲ ここまで追加 ▲▲▲ -->
 
-    <script src="../JavaScript/voice-module.js" defer></script>
-    <script src="../JavaScript/script.js" defer></script>
-</body>
+    <script src="/JavaScript/voice-module.js" defer></script>
+    <script src="/JavaScript/script.js" defer></script>
+  </body>
 </html>

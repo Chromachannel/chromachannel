@@ -642,7 +642,7 @@ p.copyright + p.copyright {
     background-color: #f8f9fa; /* 画像が読み込めない時用の背景色 */
     
     /* ▼▼▼ ここからが重要 ▼▼▼ */
-    background-image: url('../portfolio/hakase/img/hakase.webp'); /* ★あなたの画像ファイルのパスに変更してください */
+    background-image: url('/portfolio/hakase/img/ogp-hakase.webp'); /* ★あなたの画像ファイルのパスに変更してください */
     background-size: cover; /* ボタンのサイズに合わせて画像を調整 */
     background-position: center; /* 画像を中央に配置 */
     /* ▲▲▲ ここまで ▲▲▲ */

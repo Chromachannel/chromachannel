@@ -54,7 +54,7 @@ AI技術で福祉の現場に新しい「できる」と「楽しい」を届け
 ├── lifehack-summary.html
 └── rabbit-summary.html
 │
-├── Blog/ (全20記事)
+├── blog/ (全20記事)
 │ ├── a-magic-wand-called-ai.html
 │ ├── ai-illustration-overcoming-perfectionism.html
 │ ├── ai-learning-complete-guide.html
@@ -98,7 +98,7 @@ AI技術で福祉の現場に新しい「できる」と「楽しい」を届け
 │ ├── unmei-no-ito.html
 │ └── yoru-no-koe.html
 │
-├── Portfolio/ (全21制作実績ページ)
+├── portfolio/ (全21制作実績ページ)
 │ ├── fuwamoco-detail.html
 │ ├── Adaptive_System/adaptive_system.html
 │ ├── Ai-Slide-App/ai-slide-app.html
@@ -115,14 +115,14 @@ AI技術で福祉の現場に新しい「できる」と「楽しい」を届け
 │ │ ├── questionnaire.html
 │ │ └── rabbit.html
 │ ├── Game/pict.html
-│ ├── Hakase/hakase.html
+│ ├── hakase/hakase.html
 │ ├── Household_Account_Book/household-account-book.html
 │ ├── Real-time-preview/real-time-preview.html
 │ ├── Task-Tool/task-tool.html
 │ ├── Timer/timer.html
 │ └── chirashi/chirashi.html
 │
-├── Prompt/ (全29プロンプトページ)
+├── prompt/ (全29プロンプトページ)
 │ ├── prompt-architect.html
 │ ├── prompt-article-editor.html
 │ ├── prompt-book-report-wizard.html
@@ -155,7 +155,7 @@ AI技術で福祉の現場に新しい「できる」と「楽しい」を届け
 │
 ├── CSS/
 ├── JavaScript/
-├── Img/
+├── img/
 └── Audio/
 ```
 

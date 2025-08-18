@@ -343,7 +343,7 @@ main {
     position: relative; /* 必要に応じて */
     max-width: 1200px; /* コンテンツの幅 */
     min-height: 80px; /* アイコンの高さやh2の行の高さに合わせて調整 */
-    background-image: url('../img/icon.webp');
+    background-image: url('/img/icon.webp');
     background-repeat: no-repeat; /* アイコンが繰り返されないように */
     background-size: 45px; /* アイコンのサイズ */
     background-position: 10px 10px; /* 左から20px、垂直方向中央に配置 */
@@ -542,7 +542,7 @@ textarea {
         margin-top: 80px;
     }
     #main-title .maining {
-        background-image: url(../img/index-hero.webp);
+        background-image: url(/img/index-hero.webp);
         background-size: cover;
         background-position: 7% 50%;
         height: 70vh; 
@@ -589,7 +589,7 @@ textarea {
         margin-top: 70px;
     }
     #main-title .maining {
-        background-image: url(../img/index-hero.webp);
+        background-image: url(/img/index-hero.webp);
         background-size: cover;
         background-position: 7% 50%;
         height: 70vh; 

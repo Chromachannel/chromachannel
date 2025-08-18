@@ -3,6 +3,7 @@
     text-align: center;
     background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
     color: white;
+    margin-top: 70px; /* ★★★ この行を追加して、ヘッダーの下に余白を作成 ★★★ */
     margin-bottom: 24px;
 }
 .page-header h1 {
