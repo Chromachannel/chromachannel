@@ -55,15 +55,16 @@
               "price": "0",
               "priceCurrency": "JPY"
             },
-            "category": "業務効率化", // ★offersから移動しました
+            "category": "業務効率化", // ★これはCourseのカテゴリとして正しい位置です
             "hasCourseInstance": {
-              // ★追加を推奨します
               "@type": "CourseInstance",
-              "courseMode": "online"
+              "courseMode": "online",
+              "courseWorkload": "PT1H30M" // ★この行を追加
             }
           },
           {
             "@type": "Article",
+            // ... Articleの部分は変更なし ...
             "mainEntityOfPage": {
               "@type": "WebPage",
               "@id": "https://chromachannel.online/Learn/learn_lesson12.html"
