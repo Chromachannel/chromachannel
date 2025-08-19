@@ -202,7 +202,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const deleteBtn = document.createElement("button");
     deleteBtn.className = "delete-btn";
+    // ▼▼▼ この一行が最も重要です ▼▼▼
     deleteBtn.innerHTML = '<i class="fas fa-trash-alt"></i>';
+    // ▲▲▲ この一行が最も重要です ▲▲▲
     deleteBtn.title = "この対話を削除";
     deleteBtn.addEventListener("click", (e) => {
       e.stopPropagation();
