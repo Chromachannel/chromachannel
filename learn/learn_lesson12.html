@@ -53,8 +53,13 @@
             "offers": {
               "@type": "Offer",
               "price": "0",
-              "priceCurrency": "JPY",
-              "category": "業務効率化"
+              "priceCurrency": "JPY"
+            },
+            "category": "業務効率化", // ★offersから移動しました
+            "hasCourseInstance": {
+              // ★追加を推奨します
+              "@type": "CourseInstance",
+              "courseMode": "online"
             }
           },
           {
@@ -70,7 +75,10 @@
               "name": "山本 倫久",
               "url": "https://chromachannel.online/"
             },
-            "publisher": { "@type": "Organization", "name": "Chromachannel" },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Chromachannel"
+            },
             "datePublished": "2025-08-11T00:00:00+09:00",
             "dateModified": "2025-08-11T00:00:00+09:00"
           }

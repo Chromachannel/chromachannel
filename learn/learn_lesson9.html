@@ -16,35 +16,53 @@
     <link rel="canonical" href="https://chromachannel.online/Learn/learn_lesson9.html">
     <!-- 構造化データ(統合・最適化済み) -->
 <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Course",
-          "name": "【無料講座】AIホームページ作成入門｜コーディング不要でサイトを公開",
-          "description": "AIウェブサイトビルダーを使い、デザイン・文章・コーディング不要でホームページを作る方法を解説。企画からSEO対策まで、AIと共にあなたのWebサイトを公開する無料講座。",
-          "provider": { "@type": "Person", "name": "山本 倫久", "url": "https://chromachannel.online/" },
-          "timeRequired": "PT45M",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "JPY",
-            "category": "Web制作"
-          }
-        },
-        {
-          "@type": "Article",
-          "mainEntityOfPage": { "@type": "WebPage", "@id": "https://chromachannel.online/Learn/learn_lesson9.html" },
-          "headline": "【無料講座】AIホームページ作成入門｜コーディング不要でサイトを公開",
-          "image": "https://chromachannel.online/Img/ogp-lesson9.webp",
-          "author": { "@type": "Person", "name": "山本 倫久", "url": "https://chromachannel.online/" },
-          "publisher": { "@type": "Organization", "name": "Chromachannel" },
-          "datePublished": "2025-08-10T00:00:00+09:00",
-          "dateModified": "2025-08-11T00:00:00+09:00"
-        }
-      ]
+      "@type": "Course",
+      "name": "【無料講座】AIホームページ作成入門｜コーディング不要でサイトを公開",
+      "description": "AIウェブサイトビルダーを使い、デザイン・文章・コーディング不要でホームページを作る方法を解説。企画からSEO対策まで、AIと共にあなたのWebサイトを公開する無料講座。",
+      "provider": {
+        "@type": "Person",
+        "name": "山本 倫久",
+        "url": "https://chromachannel.online/"
+      },
+      "timeRequired": "PT45M",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "JPY"
+      },
+      "category": "Web制作", // ★offersから移動しました
+      "hasCourseInstance": { // ★追加を推奨します
+        "@type": "CourseInstance",
+        "courseMode": "online"
+      }
+    },
+    {
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://chromachannel.online/Learn/learn_lesson9.html"
+      },
+      "headline": "【無料講座】AIホームページ作成入門｜コーディング不要でサイトを公開",
+      "image": "https://chromachannel.online/Img/ogp-lesson9.webp",
+      "author": {
+        "@type": "Person",
+        "name": "山本 倫久",
+        "url": "https://chromachannel.online/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Chromachannel"
+      },
+      "datePublished": "2025-08-10T00:00:00+09:00",
+      "dateModified": "2025-08-11T00:00:00+09:00"
     }
-    </script>
+  ]
+}
+</script>
     <!-- ===== ▲▲▲ SEO設定 END ▲▲▲ ===== -->
     
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
