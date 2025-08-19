@@ -28,7 +28,7 @@
     />
     <meta
       property="og:image"
-      content="https://chromachannel.online/img/ogp-lesson1.webp"
+      content="https://chromachannel.online/Img/ogp-lesson1.webp"
     />
     <meta property="og:site_name" content="Chromachannel" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -47,27 +47,15 @@
             "name": "【無料講座】AIの「なぜ？」と「なに？」がわかるテキスト｜AI教養入門",
             "description": "AIの仕組み（機械学習・ディープラーニング）を専門用語を使わずに優しく解説。AIがもたらす未来のメリットと、知っておくべきリスク（光と影）を学び、AI時代を賢く生き抜くための教養を身につける無料講座です。",
             "provider": {
-              "@type": "Organization",
-              "name": "Chromachannel",
+              "@type": "Person",
+              "name": "山本 倫久",
               "url": "https://chromachannel.online/"
             },
+            "timeRequired": "PT30M",
             "offers": {
               "@type": "Offer",
-              "category": "Free",
               "price": "0",
               "priceCurrency": "JPY"
-            },
-            "hasCourseInstance": {
-              "@type": "CourseInstance",
-              "courseMode": "online",
-              "location": {
-                "@type": "VirtualLocation"
-              },
-              "instructor": {
-                "@type": "Person",
-                "name": "山本 倫久"
-              },
-              "courseWorkload": "PT1H"
             }
           },
           {
@@ -77,18 +65,15 @@
               "@id": "https://chromachannel.online/Learn/learn_lesson1.html"
             },
             "headline": "【無料講座】AIの「なぜ？」と「なに？」がわかるテキスト｜AI教養入門",
-            "image": "https://chromachannel.online/img/ogp-lesson1.webp",
+            "image": "https://chromachannel.online/Img/ogp-lesson1.webp",
             "author": {
               "@type": "Person",
               "name": "山本 倫久",
               "url": "https://chromachannel.online/"
             },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Chromachannel"
-            },
-            "datePublished": "2025-08-08T00:00:00+09:00",
-            "dateModified": "2025-08-16T00:00:00+09:00"
+            "publisher": { "@type": "Organization", "name": "Chromachannel" },
+            "datePublished": "2025-08-07T00:00:00+09:00",
+            "dateModified": "2025-08-07T00:00:00+09:00"
           }
         ]
       }
@@ -98,6 +83,11 @@
     <link rel="icon" href="../Img/favicon.webp" type="image/webp" />
 
     <!-- CSS / ライブラリ -->
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
     <link rel="stylesheet" href="../CSS/style.css" />
     <link rel="stylesheet" href="../CSS/only_read.css" />
@@ -115,11 +105,9 @@
         <div class="lesson-content">
           <h1>AIの「なぜ？」と「なに？」がわかるテキスト</h1>
           <nav class="lesson-nav">
-            <a href="/Learn/learn_lesson1.html" class="nav-link"
-              >前のレッスンへ</a
-            >
+            <span class="nav-link disabled">前のレッスンへ</span>
             <a href="/learn.html" class="nav-link">講座一覧へ</a>
-            <a href="/Learn/learn_lesson3.html" class="nav-link"
+            <a href="/Learn/learn_lesson2.html" class="nav-link"
               >次のレッスンへ</a
             >
           </nav>
@@ -608,39 +596,61 @@
 
           <!-- AI博士 相談セクション -->
           <section class="ai-hakase-cta">
-            <div class="cta-icon">
-              <i class="fas fa-robot"></i>
-            </div>
+            <img src="../portfolio/hakase/img/hakase.webp" />
             <div class="cta-content">
               <h3>この記事の内容、AI博士に相談しませんか？</h3>
               <p>
                 この記事を読んで生まれた疑問や、さらに深掘りしたい点はありますか？AI博士が、あなたの質問に優しく、そして詳しくお答えします。
               </p>
-              <a href="/Portfolio/Hakase/hakase.html" class="cta-button"
-                >AI博士の研究室へ相談に行く</a
-              >
+              <div class="button-wrapper">
+                <a href="/Portfolio/Hakase/hakase.html" class="category-btn"
+                  >AI博士の談話室へ行く</a
+                >
+              </div>
             </div>
           </section>
-          <!-- ▼▼▼ 次のステップへのナビゲーション ▼▼▼ -->
-          <section class="next-lesson-section">
-            <h2>素晴らしい探求の旅、お疲れ様でした！</h2>
+
+          <!-- ===== 次のレッスンへの案内 ===== -->
+          <div class="next-lesson-section">
+            <h2>AIの全体像、見えましたか？</h2>
             <p>
-              AIの「なぜ？」と「なに？」を解き明かす旅を、最後までやり遂げたあなたに、心からの拍手を送ります！<br />
-              あなたはもう、AIという言葉にただ惑わされることなく、その本質を理解し、未来を見据えるための確かな視点を手に入れました。
+              AIの仕組みとその可能性（光と影）について、本当にお疲れ様でした。<br />あなたはもう、AI時代を賢く生き抜くための、最も重要な「知識の地図」を手に入れました。
             </p>
             <p>
-              ここで得た知識は、これからのあなたの人生を、そしてキャリアを、より豊かに、より主体的に歩んでいくための、強力な羅針盤となるはずです。<br />
-              さあ、この新しい羅針盤を手に、次なる冒険へと出発しましょう！
+              その地図を手に、いよいよ冒険の旅へ出発です。<br />次のレッスンでは、AIという最高の相棒と、実際に「対話」する方法を学びます。
             </p>
-            <div class="lesson-navigation-buttons">
-              <a href="/Learn/learn_lesson3.html" class="nav-button-next">
-                <span>「ChatGPT・Gemini・Claude入門」へ進む</span>
-                <i class="fas fa-arrow-right"></i>
-              </a>
-            </div>
-          </section>
+            <a href="/Learn/learn_lesson2.html" class="category-btn">
+              <span>ステップ1-② AIとの対話編へ進む</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
+
+      <section class="comment-section">
+        <h2>ご意見・ご感想</h2>
+        <div id="disqus_thread"></div>
+        <script>
+          var disqus_config = function () {
+            this.page.url =
+              "https://chromachannel.online/Learn/learn_lesson1.html";
+            this.page.identifier = "learn_lesson1_ai-literacy";
+          };
+          (function () {
+            var d = document,
+              s = d.createElement("script");
+            s.src = "https://chroma-ch.disqus.com/embed.js";
+            s.setAttribute("data-timestamp", +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript
+          >Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript"
+            >comments powered by Disqus.</a
+          ></noscript
+        >
+      </section>
     </main>
 
     <!-- フッターをここに読み込む -->
