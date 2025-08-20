@@ -169,15 +169,19 @@ body {
 }
 .step-link {
   display: inline-block;
+  padding: 12px 30px;
+  border: 2px solid var(--primary-color-start);
   color: var(--primary-color-start);
+  border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
-  transition: transform 0.3s ease;
-  flex-shrink: 0;
+  transition: all 0.3s ease;
 }
 .step-link:hover {
-  transform: translateX(3px);
-  text-decoration: underline;
+  background-color: var(--primary-color-start);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* ===== テーマ別まとめセクションのスタイル ===== */

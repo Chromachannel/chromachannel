@@ -1,67 +1,97 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- ===== ▼▼▼ SEO設定 START ▼▼▼ ===== -->
-    
+    <!-- ===== ▼▼▼ SEO設定 START ▼▼▼ ===== -->
+
     <title>【対話式】AI知育絵本プロンプト｜物語とイラストを共同制作</title>
-    <meta name="description" content="福祉×AIクリエイターが実践する知育絵本プロンプト。対話型AIをあなた専属の「絵本作家アシスタント」に変身させ、プロットから本文、イラスト指示までを段階的に共同制作する無料テンプレートです。">
-    
+    <meta
+      name="description"
+      content="福祉×AIクリエイターが実践する知育絵本プロンプト。対話型AIをあなた専属の「絵本作家アシスタント」に変身させ、プロットから本文、イラスト指示までを段階的に共同制作する無料テンプレートです。"
+    />
+
     <!-- OGPタグ -->
-    <meta property="og:title" content="【対話式】AI知育絵本プロンプト｜物語とイラストを共同制作">
-    <meta property="og:description" content="福祉×AIクリエイターが実践する知育絵本プロンプト。AIをあなた専属の「絵本作家アシスタント」に変身させ、物語を共同制作します。">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://chromachannel.online/prompt/prompt-picture-book-writing.html">
-    <meta property="og:image" content="https://chromachannel.online/img/prompt/picture_book_main.webp">
-    <meta property="og:site_name" content="Chromachannel">
-    <meta name="twitter:card" content="summary_large_image">
-    
+    <meta
+      property="og:title"
+      content="【対話式】AI知育絵本プロンプト｜物語とイラストを共同制作"
+    />
+    <meta
+      property="og:description"
+      content="福祉×AIクリエイターが実践する知育絵本プロンプト。AIをあなた専属の「絵本作家アシスタント」に変身させ、物語を共同制作します。"
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://chromachannel.online/prompt/prompt-picture-book-writing.html"
+    />
+    <meta
+      property="og:image"
+      content="https://chromachannel.online/img/prompt/picture_book_main.webp"
+    />
+    <meta property="og:site_name" content="Chromachannel" />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <!-- 構造化データ -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "HowTo",
-      "name": "AIと作る子供向け知育絵本プロンプト",
-      "description": "福祉×AIクリエイター山本倫久が実践する知育絵本プロンプト。対話型AIをあなた専属の「絵本作家アシスタント」に変身させ、プロットから本文、イラスト指示までを段階的に共同制作します。",
-      "author": { "@type": "Person", "name": "山本 倫久", "url": "https://chromachannel.online/" }
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "AIと作る子供向け知育絵本プロンプト",
+        "description": "福祉×AIクリエイター山本倫久が実践する知育絵本プロンプト。対話型AIをあなた専属の「絵本作家アシスタント」に変身させ、プロットから本文、イラスト指示までを段階的に共同制作します。",
+        "author": {
+          "@type": "Person",
+          "name": "山本 倫久",
+          "url": "https://chromachannel.online/"
+        }
+      }
     </script>
-    
-    <link rel="canonical" href="https://chromachannel.online/prompt/prompt-picture-book-writing.html" />
-    
-<!-- ===== ▲▲▲ SEO設定 END ▲▲▲ ===== -->
-     
+
+    <link
+      rel="canonical"
+      href="https://chromachannel.online/prompt/prompt-picture-book-writing.html"
+    />
+
+    <!-- ===== ▲▲▲ SEO設定 END ▲▲▲ ===== -->
+
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <link rel="stylesheet" href="/CSS/style.css">
-    <link rel="stylesheet" href="/CSS/only_read.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <link rel="stylesheet" href="/CSS/only_read.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
 
-<body class="prompt-page">
+  <body class="prompt-page">
     <div id="header-placeholder"></div>
 
     <main class="article-main">
-        <div class="article-container">
-            <header class="article-header">
-                <h1>AIと作る子供向け知育絵本プロンプト</h1>
-                <p>この指示書を対話型AIに読み込ませることで、AIをあなたの専属「絵本作家アシスタント」に変身させることができます。AIとの対話を通じて、物語のプロットから本文、さらには各シーンのイラスト用プロンプトまでを一緒に作り上げましょう。</p>
-            </header>
-            
-            <div class="prompt-list">
-                <section class="prompt-card">
-                    <div class="prompt-box">
-                        <div class="prompt-header">
-                            <h3 class="prompt-title"># 指示書</h3>
-                            <button class="copy-btn"><i class="far fa-copy"></i> コピー</button>
-                        </div>
-                        <pre class="prompt-text">あなたは、ユーザーと対話しながら、子供向けの知育絵本のプロットと物語を構築する、優秀な絵本作家アシスタントです。
+      <div class="article-container">
+        <header class="article-header">
+          <h1>AIと作る子供向け知育絵本プロンプト</h1>
+          <p>
+            この指示書を対話型AIに読み込ませることで、AIをあなたの専属「絵本作家アシスタント」に変身させることができます。AIとの対話を通じて、物語のプロットから本文、さらには各シーンのイラスト用プロンプトまでを一緒に作り上げましょう。
+          </p>
+        </header>
+
+        <div class="prompt-list">
+          <section class="prompt-card">
+            <div class="prompt-box">
+              <div class="prompt-header">
+                <h3 class="prompt-title"># 指示書</h3>
+                <button class="copy-btn">
+                  <i class="far fa-copy"></i> コピー
+                </button>
+              </div>
+              <pre class="prompt-text">
+あなたは、ユーザーと対話しながら、子供向けの知育絵本のプロットと物語を構築する、優秀な絵本作家アシスタントです。
 
 ## あなたの役割と目標
 あなたの目標は、ユーザーの要望に基づき、心温まる絵本のプロット、各章の本文、そして各シーンのイラスト用プロンプトを、以下の厳格な対話プロセスに従って共同で作成することです。
@@ -101,93 +131,183 @@
 
 ---
 以上の指示を理解しましたか？
-理解したら、「準備ができました。どのようなテーマの知育絵本を作りますか？」と返信してください。</pre>
-                    </div>
-                </section>
+理解したら、「準備ができました。どのようなテーマの知育絵本を作りますか？」と返信してください。</pre
+              >
             </div>
-
-                        <!-- AI博士 相談セクション -->
-            <section class="ai-hakase-cta">
-                <div class="cta-icon">
-                    <img src="/portfolio/hakase/img/ogp-hakase.webp" alt="AI博士のアイコン">
-                </div>
-                <div class="cta-content">
-                    <h3 class="readable" data-speech="この記事の内容を、AI博士に相談しませんか？">この記事の内容、AI博士に相談しませんか？</h3>
-                    <p class="readable" data-speech="この記事を読んで生まれた疑問や、さらに深掘りしたい点はありますか？AI博士が、あなたの質問に優しく、そして詳しくお答えします。">この記事を読んで生まれた疑問や、さらに深掘りしたい点はありますか？AI博士が、あなたの質問に優しく、そして詳しくお答えします。</p>
-                    <div class="cta-button-wrapper">
-                        <a href="/portfolio/hakase/hakase.html" class="cta-button">AI博士の研究室へ相談に行く</a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 関連記事セクション -->
-            <section class="related-posts">
-                <h2 class="related-posts-title readable" data-speech="次はこちらの記事もいかがでしょうか。あわせて読みたい記事。">あわせて読みたい記事</h2>
-                <div class="post-grid">
-                    <!-- 関連記事カード 1: 絵本制作の実践レポート -->
-                    <a href="/blog/report-making-picture-book-with-ai.html" class="post-card-link">
-                        <div class="post-card">
-                            <div class="post-card-image"><img src="/img/blog/ehon-report-cover.webp" alt="AI絵本制作レポート"></div>
-                            <div class="post-card-content">
-                                <h3 class="readable" data-speech="【実践レポ】自作プロンプトでエーアイ絵本を作ってみた。">【実践レポ】自作プロンプトでAI絵本を作ってみた</h3>
-                                <p>「知育絵本プロンプト」は本当に使える？制作者自ら、AIとの共同制作に挑戦した全手順を公開します。</p>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- 関連記事カード 2: プロンプト改造の中級者向け記事 -->
-                    <a href="/blog/how-to-customize-prompt.html" class="post-card-link">
-                        <div class="post-card">
-                            <div class="post-card-image"><img src="/img/blog/How-to-Customize-prompt.webp" alt="プロンプト改造テクニック"></div>
-                            <div class="post-card-content">
-                                <h3 class="readable" data-speech="【中級編】プロンプトを改造して個性的な絵本を作る方法。">【中級編】プロンプトを改造して個性的な絵本を作る方法</h3>
-                                <p>プロンプトの設計図を理解し、主人公や絵のタッチなどを自由自在に改造する4つのテクニックを解説します。</p>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- 関連記事カード 3: AI小説執筆プロンプト -->
-                    <a href="/prompt/prompt-novel-writing.html" class="post-card-link">
-                        <div class="post-card">
-                            <div class="post-card-image"><img src="/img/prompt/kindle_main.webp" alt="小説のイメージ"></div>
-                            <div class="post-card-content">
-                                <h3 class="readable" data-speech="小説執筆プロンプト（プロット・本文）。">小説執筆 (プロット・本文)</h3>
-                                <p>プロットから本文まで、AIと対話しながら物語を共同制作するための指示書です。</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </section>
-            
-            <footer class="article-footer">
-                <div class="back-to-blog-links">
-                    <a href="/prompt.html" class="back-link">← プロンプト一覧に戻る</a>
-                </div>
-            </footer>
+          </section>
         </div>
-        <!-- ★★★ Disqusコメント欄 ★★★ -->
-        <section class="comment-section">
-            <h2>ご意見・ご感想</h2>
-            <div id="disqus_thread"></div>
-            <script>
-                var disqus_config = function () {
-                    // ↓↓↓ このページの正しいURLに修正 ↓↓↓
-                    this.page.url = 'https://chromachannel.online/prompt/prompt-picture-book-writing.html';
-                    // ↓↓↓ このページ固有のユニークなIDに修正 ↓↓↓
-                    this.page.identifier = 'prompt_picture-book-writing'; 
-                };
-                (function() { 
-                var d = document, s = d.createElement('script');
-                s.src = 'https://chroma-ch.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-                })();
-            </script>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        <!-- AI博士 相談セクション -->
+        <section class="ai-hakase-cta">
+          <div class="cta-icon">
+            <img
+              src="/portfolio/hakase/img/ogp-hakase.webp"
+              alt="AI博士のアイコン"
+            />
+          </div>
+          <div class="cta-content">
+            <h3 class="readable">この記事の内容、AI博士に相談しませんか？</h3>
+            <p class="readable">
+              この記事を読んで生まれた疑問や、さらに深掘りしたい点はありますか？AI博士が、あなたの質問に優しく、そして詳しくお答えします。
+            </p>
+            <div class="cta-button-wrapper">
+              <a
+                href="/portfolio/hakase/hakase.html"
+                class="cta-button readable"
+                >AI博士の談話室へ相談に行く</a
+              >
+            </div>
+          </div>
         </section>
+
+        <!-- 関連記事セクション -->
+        <section class="related-posts">
+          <h2
+            class="related-posts-title readable"
+            data-speech="次はこちらの記事もいかがでしょうか。あわせて読みたい記事。"
+          >
+            あわせて読みたい記事
+          </h2>
+          <div class="post-grid">
+            <!-- 関連記事カード 1: 絵本制作の実践レポート -->
+            <a
+              href="/blog/report-making-picture-book-with-ai.html"
+              class="post-card-link"
+            >
+              <div class="post-card">
+                <div class="post-card-image">
+                  <img
+                    src="/img/blog/ehon-report-cover.webp"
+                    alt="AI絵本制作レポート"
+                  />
+                </div>
+                <div class="post-card-content">
+                  <h3
+                    class="readable"
+                    data-speech="【実践レポ】自作プロンプトでエーアイ絵本を作ってみた。"
+                  >
+                    【実践レポ】自作プロンプトでAI絵本を作ってみた
+                  </h3>
+                  <p>
+                    「知育絵本プロンプト」は本当に使える？制作者自ら、AIとの共同制作に挑戦した全手順を公開します。
+                  </p>
+                </div>
+              </div>
+            </a>
+            <!-- 関連記事カード 2: プロンプト改造の中級者向け記事 -->
+            <a href="/blog/how-to-customize-prompt.html" class="post-card-link">
+              <div class="post-card">
+                <div class="post-card-image">
+                  <img
+                    src="/img/blog/How-to-Customize-prompt.webp"
+                    alt="プロンプト改造テクニック"
+                  />
+                </div>
+                <div class="post-card-content">
+                  <h3
+                    class="readable"
+                    data-speech="【中級編】プロンプトを改造して個性的な絵本を作る方法。"
+                  >
+                    【中級編】プロンプトを改造して個性的な絵本を作る方法
+                  </h3>
+                  <p>
+                    プロンプトの設計図を理解し、主人公や絵のタッチなどを自由自在に改造する4つのテクニックを解説します。
+                  </p>
+                </div>
+              </div>
+            </a>
+            <!-- 関連記事カード 3: AI小説執筆プロンプト -->
+            <a href="/prompt/prompt-novel-writing.html" class="post-card-link">
+              <div class="post-card">
+                <div class="post-card-image">
+                  <img
+                    src="/img/prompt/kindle_main.webp"
+                    alt="小説のイメージ"
+                  />
+                </div>
+                <div class="post-card-content">
+                  <h3
+                    class="readable"
+                    data-speech="小説執筆プロンプト（プロット・本文）。"
+                  >
+                    小説執筆 (プロット・本文)
+                  </h3>
+                  <p>
+                    プロットから本文まで、AIと対話しながら物語を共同制作するための指示書です。
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <footer class="article-footer">
+          <div class="author-profile-box no-avatar">
+            <div class="author-info">
+              <h4 class="readable">この記事を書いた人</h4>
+              <p class="readable">
+                <span class="highlight" data-speech="やまもと のりひさ"
+                  >山本 倫久</span
+                >（福祉 ×
+                AIクリエイター）就労支援B型事業所の利用者としての実体験を基に、<span
+                  class="highlight"
+                  >AI技術で福祉の現場に新しい「できる」と「楽しい」を届けること</span
+                >をミッションとして活動中。
+              </p>
+              <div class="author-social">
+                <a
+                  href="https://x.com/ChromachannelAI"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >X (旧Twitter)</a
+                >
+                |
+                <a
+                  href="https://github.com/motty1975/chromachannel"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="back-to-blog-links">
+            <a href="/prompt.html" class="back-link">← プロンプト一覧に戻る</a>
+          </div>
+        </footer>
+      </div>
+      <!-- ★★★ Disqusコメント欄 ★★★ -->
+      <section class="comment-section">
+        <h2>ご意見・ご感想</h2>
+        <div id="disqus_thread"></div>
+        <script>
+          var disqus_config = function () {
+            // ↓↓↓ このページの正しいURLに修正 ↓↓↓
+            this.page.url =
+              "https://chromachannel.online/prompt/prompt-picture-book-writing.html";
+            // ↓↓↓ このページ固有のユニークなIDに修正 ↓↓↓
+            this.page.identifier = "prompt_picture-book-writing";
+          };
+          (function () {
+            var d = document,
+              s = d.createElement("script");
+            s.src = "https://chroma-ch.disqus.com/embed.js";
+            s.setAttribute("data-timestamp", +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript
+          >Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript"
+            >comments powered by Disqus.</a
+          ></noscript
+        >
+      </section>
     </main>
 
     <!-- フッターをここに読み込む -->
     <div id="footer-placeholder"></div>
-    
+
     <script src="/JavaScript/script.js" defer></script>
-</body>
+  </body>
 </html>

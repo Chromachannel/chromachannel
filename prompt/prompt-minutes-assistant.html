@@ -1,85 +1,115 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- ===== ▼▼▼ 【この記事専用のSEO設定】 ▼▼▼ ===== -->
-    
+
     <title>AI議事録作成プロンプト | 会議の要点を自動整理</title>
-    <meta name="description" content="福祉×AIクリエイターが設計した、議事録作成支援プロンプト。AIがアシスタントとなり、文字起こしデータから決定事項やToDoを自動で抽出。対話形式で、正確な議事録を共同制作します。">
-    
+    <meta
+      name="description"
+      content="福祉×AIクリエイターが設計した、議事録作成支援プロンプト。AIがアシスタントとなり、文字起こしデータから決定事項やToDoを自動で抽出。対話形式で、正確な議事録を共同制作します。"
+    />
+
     <!-- OGPタグ -->
-    <meta property="og:title" content="AI議事録作成プロンプト | 会議の要点を自動整理">
-    <meta property="og:description" content="AIがあなた専属の議事録アシスタントに。文字起こしデータを貼り付けるだけで、AIとの対話を通じて、正確で分かりやすい議事録を共同制作します。">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://chromachannel.online/prompt/prompt-minutes-assistant.html">
-    <meta property="og:image" content="https://chromachannel.online/img/prompt/ogp-minutes-assistant.webp">
+    <meta
+      property="og:title"
+      content="AI議事録作成プロンプト | 会議の要点を自動整理"
+    />
+    <meta
+      property="og:description"
+      content="AIがあなた専属の議事録アシスタントに。文字起こしデータを貼り付けるだけで、AIとの対話を通じて、正確で分かりやすい議事録を共同制作します。"
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://chromachannel.online/prompt/prompt-minutes-assistant.html"
+    />
+    <meta
+      property="og:image"
+      content="https://chromachannel.online/img/prompt/ogp-minutes-assistant.webp"
+    />
     <!-- og:image ImageFX prompt: An illustration of a friendly robot assistant reviewing a long document and transforming it into a clean, structured list with checkboxes and bullet points on a screen. The style is a modern, professional flat illustration, symbolizing efficiency and intelligent organization. -->
-    <meta property="og:site_name" content="Chromachannel">
-    <meta name="twitter:card" content="summary_large_image">
-    
+    <meta property="og:site_name" content="Chromachannel" />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <!-- 構造化データ -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "HowTo",
-      "name": "AI議事録作成プロンプト（対話型アシスタント）",
-      "description": "福祉×AIクリエイター 山本倫久が設計した、AIがユーザーとの対話を通じて、会議の文字起こしデータから重要な情報を抽出し、構造化された議事録を生成するためのプロンプト。",
-      "author": { "@type": "Person", "name": "山本 倫久", "url": "https://chromachannel.online/" },
-      "step": [
-        {
-          "@type": "HowToStep",
-          "name": "文字起こしデータの入力",
-          "text": "ユーザーがAIに会議の文字起こしテキストを提供します。"
+      {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "AI議事録作成プロンプト（対話型アシスタント）",
+        "description": "福祉×AIクリエイター 山本倫久が設計した、AIがユーザーとの対話を通じて、会議の文字起こしデータから重要な情報を抽出し、構造化された議事録を生成するためのプロンプト。",
+        "author": {
+          "@type": "Person",
+          "name": "山本 倫久",
+          "url": "https://chromachannel.online/"
         },
-        {
-          "@type": "HowToStep",
-          "name": "追加ヒアリング",
-          "text": "AIが会議名、日付、出席者などの補足情報を一問一答形式でヒアリングします。"
-        },
-        {
-          "@type": "HowToStep",
-          "name": "議事録の自動生成",
-          "text": "全ての情報に基づき、AIが「会議の目的」「決定事項」「ToDoリスト」「議論の要点」をまとめた議事録を生成します。"
-        }
-      ]
-    }
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "文字起こしデータの入力",
+            "text": "ユーザーがAIに会議の文字起こしテキストを提供します。"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "追加ヒアリング",
+            "text": "AIが会議名、日付、出席者などの補足情報を一問一答形式でヒアリングします。"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "議事録の自動生成",
+            "text": "全ての情報に基づき、AIが「会議の目的」「決定事項」「ToDoリスト」「議論の要点」をまとめた議事録を生成します。"
+          }
+        ]
+      }
     </script>
-    
-    <link rel="canonical" href="https://chromachannel.online/prompt/prompt-minutes-assistant.html" />
-    
+
+    <link
+      rel="canonical"
+      href="https://chromachannel.online/prompt/prompt-minutes-assistant.html"
+    />
+
     <!-- ===== ▲▲▲ ここまで ▲▲▲ ===== -->
-     
+
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <link rel="stylesheet" href="/CSS/style.css">
-    <link rel="stylesheet" href="/CSS/only_read.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <link rel="stylesheet" href="/CSS/only_read.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
 
-<body class="prompt-page">
+  <body class="prompt-page">
     <div id="header-placeholder"></div>
 
     <main class="article-main">
-        <div class="article-container">
-            <header class="article-header">
-                <h1>AI議事録作成プロンプト（対話型アシスタント）</h1>
-                <p>この指示書を対話型AIに読み込ませることで、AIをあなたの専属「議事録アシスタント」に変身させます。AIが単なる要約ツールではなく、あなたに重要な質問を投げかけるアシスタントとなり、文字起こしデータから、より正確で実用的な議事録を共同で作成します。</p>
-            </header>
-            
-            <div class="prompt-list">
-                <section class="prompt-card">
-                    <div class="prompt-box">
-                        <div class="prompt-header">
-                            <h3 class="prompt-title"># 指示書</h3>
-                            <button class="copy-btn"><i class="far fa-copy"></i> コピー</button>
-                        </div>
-                        <pre class="prompt-text">あなたは、会議の文脈を理解し、重要な情報を整理して、実用的な議事録を作成するプロの「AI議事録アシスタント」です。
+      <div class="article-container">
+        <header class="article-header">
+          <h1>AI議事録作成プロンプト（対話型アシスタント）</h1>
+          <p>
+            この指示書を対話型AIに読み込ませることで、AIをあなたの専属「議事録アシスタント」に変身させます。AIが単なる要約ツールではなく、あなたに重要な質問を投げかけるアシスタントとなり、文字起こしデータから、より正確で実用的な議事録を共同で作成します。
+          </p>
+        </header>
+
+        <div class="prompt-list">
+          <section class="prompt-card">
+            <div class="prompt-box">
+              <div class="prompt-header">
+                <h3 class="prompt-title"># 指示書</h3>
+                <button class="copy-btn">
+                  <i class="far fa-copy"></i> コピー
+                </button>
+              </div>
+              <pre class="prompt-text">
+あなたは、会議の文脈を理解し、重要な情報を整理して、実用的な議事録を作成するプロの「AI議事録アシスタント」です。
 
 ## あなたの役割と目標
 あなたの目標は、ユーザーから提供された文字起こしテキストを読み込んだ後、ユーザーとの対話を通じて補足情報をヒアリングし、最終的に完璧な議事録を生成することです。
@@ -130,91 +160,175 @@
 
 ---
 以上の指示を理解しましたか？
-理解したら、「準備ができました。この指示書に続けて、議事録を作成したい会議の文字起こしテキストを貼り付けてください。」とだけ返信し、私の入力を待ってください。</pre>
-                    </div>
-                </section>
+理解したら、「準備ができました。この指示書に続けて、議事録を作成したい会議の文字起こしテキストを貼り付けてください。」とだけ返信し、私の入力を待ってください。</pre
+              >
             </div>
-
-                        <!-- AI博士 相談セクション -->
-            <section class="ai-hakase-cta">
-                <div class="cta-icon">
-                    <img src="/portfolio/hakase/img/ogp-hakase.webp" alt="AI博士のアイコン">
-                </div>
-                <div class="cta-content">
-                    <h3 class="readable" data-speech="この記事の内容を、AI博士に相談しませんか？">この記事の内容、AI博士に相談しませんか？</h3>
-                    <p class="readable" data-speech="この記事を読んで生まれた疑問や、さらに深掘りしたい点はありますか？AI博士が、あなたの質問に優しく、そして詳しくお答えします。">この記事を読んで生まれた疑問や、さらに深掘りしたい点はありますか？AI博士が、あなたの質問に優しく、そして詳しくお答えします。</p>
-                    <div class="cta-button-wrapper">
-                        <a href="/portfolio/hakase/hakase.html" class="cta-button">AI博士の研究室へ相談に行く</a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 関連記事セクション -->
-            <section class="related-posts">
-                <h2 class="related-posts-title readable" data-speech="次はこちらの記事もいかがでしょうか。あわせて読みたい記事。">あわせて読みたい記事</h2>
-                <div class="post-grid">
-                    <!-- 関連記事カード 1: AI記事構成プロンプト -->
-                    <a href="/prompt/prompt-article-editor.html" class="post-card-link">
-                        <div class="post-card">
-                            <div class="post-card-image"><img src="/img/prompt/ogp-article-editor.webp" alt="AI記事構成プロンプト"></div>
-                            <div class="post-card-content">
-                                <h3 class="readable" data-speech="エーアイ記事構成プロンプト。">AI記事構成プロンプト</h3>
-                                <p>長い文字起こしから、読者の心を掴む最も響く記事の構成案を3パターン提案・解説します。</p>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- 関連記事カード 2: AIビジネスメール作成プロンプト -->
-                    <a href="/prompt/prompt-business-email.html" class="post-card-link">
-                        <div class="post-card">
-                            <div class="post-card-image"><img src="/img/prompt/ogp-business-email.webp" alt="ビジネスメール作成プロンプト"></div>
-                            <div class="post-card-content">
-                                <h3 class="readable" data-speech="エーアイビジネスメール作成プロンプト。">AIビジネスメール作成</h3>
-                                <p>AIがプロのゴーストライターに。お礼、謝罪、依頼など、あらゆる場面に最適なメール文面を3パターン提案・解説します。</p>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- 関連記事カード 3: AI仕事術マスター編講座 -->
-                    <a href="/Learn/learn_lesson12.html" class="post-card-link">
-                        <div class="post-card">
-                            <div class="post-card-image"><img src="/img/ogp-lesson12.webp" alt="AI仕事術マスター編"></div>
-                            <div class="post-card-content">
-                                <h3 class="readable" data-speech="無料講座、エーアイ仕事術マスター編。">【無料講座】AI仕事術マスター編</h3>
-                                <p>情報収集、資料作成から専用アプリ開発まで、あなたの仕事を劇的に効率化する実践的な仕事術を解説します。</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </section>
-            
-            <footer class="article-footer">
-                <div class="back-to-blog-links">
-                    <a href="/prompt.html" class="back-link">← プロンプト一覧に戻る</a>
-                </div>
-            </footer>
+          </section>
         </div>
-        <!-- ★★★ Disqusコメント欄 ★★★ -->
-        <section class="comment-section">
-            <h2>ご意見・ご感想</h2>
-            <div id="disqus_thread"></div>
-            <script>
-                var disqus_config = function () {
-                    this.page.url = 'https://chromachannel.online/prompt/prompt-minutes-assistant.html';
-                    this.page.identifier = 'prompt_minutes-assistant'; 
-                };
-                (function() { 
-                var d = document, s = d.createElement('script');
-                s.src = 'https://chroma-ch.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-                })();
-            </script>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+        <!-- AI博士 相談セクション -->
+        <section class="ai-hakase-cta">
+          <div class="cta-icon">
+            <img
+              src="/portfolio/hakase/img/ogp-hakase.webp"
+              alt="AI博士のアイコン"
+            />
+          </div>
+          <div class="cta-content">
+            <h3 class="readable">この記事の内容、AI博士に相談しませんか？</h3>
+            <p class="readable">
+              この記事を読んで生まれた疑問や、さらに深掘りしたい点はありますか？AI博士が、あなたの質問に優しく、そして詳しくお答えします。
+            </p>
+            <div class="cta-button-wrapper">
+              <a
+                href="/portfolio/hakase/hakase.html"
+                class="cta-button readable"
+                >AI博士の談話室へ相談に行く</a
+              >
+            </div>
+          </div>
         </section>
+
+        <!-- 関連記事セクション -->
+        <section class="related-posts">
+          <h2
+            class="related-posts-title readable"
+            data-speech="次はこちらの記事もいかがでしょうか。あわせて読みたい記事。"
+          >
+            あわせて読みたい記事
+          </h2>
+          <div class="post-grid">
+            <!-- 関連記事カード 1: AI記事構成プロンプト -->
+            <a href="/prompt/prompt-article-editor.html" class="post-card-link">
+              <div class="post-card">
+                <div class="post-card-image">
+                  <img
+                    src="/img/prompt/ogp-article-editor.webp"
+                    alt="AI記事構成プロンプト"
+                  />
+                </div>
+                <div class="post-card-content">
+                  <h3
+                    class="readable"
+                    data-speech="エーアイ記事構成プロンプト。"
+                  >
+                    AI記事構成プロンプト
+                  </h3>
+                  <p>
+                    長い文字起こしから、読者の心を掴む最も響く記事の構成案を3パターン提案・解説します。
+                  </p>
+                </div>
+              </div>
+            </a>
+            <!-- 関連記事カード 2: AIビジネスメール作成プロンプト -->
+            <a href="/prompt/prompt-business-email.html" class="post-card-link">
+              <div class="post-card">
+                <div class="post-card-image">
+                  <img
+                    src="/img/prompt/ogp-business-email.webp"
+                    alt="ビジネスメール作成プロンプト"
+                  />
+                </div>
+                <div class="post-card-content">
+                  <h3
+                    class="readable"
+                    data-speech="エーアイビジネスメール作成プロンプト。"
+                  >
+                    AIビジネスメール作成
+                  </h3>
+                  <p>
+                    AIがプロのゴーストライターに。お礼、謝罪、依頼など、あらゆる場面に最適なメール文面を3パターン提案・解説します。
+                  </p>
+                </div>
+              </div>
+            </a>
+            <!-- 関連記事カード 3: AI仕事術マスター編講座 -->
+            <a href="/Learn/learn_lesson12.html" class="post-card-link">
+              <div class="post-card">
+                <div class="post-card-image">
+                  <img src="/img/ogp-lesson12.webp" alt="AI仕事術マスター編" />
+                </div>
+                <div class="post-card-content">
+                  <h3
+                    class="readable"
+                    data-speech="無料講座、エーアイ仕事術マスター編。"
+                  >
+                    【無料講座】AI仕事術マスター編
+                  </h3>
+                  <p>
+                    情報収集、資料作成から専用アプリ開発まで、あなたの仕事を劇的に効率化する実践的な仕事術を解説します。
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <footer class="article-footer">
+          <div class="author-profile-box no-avatar">
+            <div class="author-info">
+              <h4 class="readable">この記事を書いた人</h4>
+              <p class="readable">
+                <span class="highlight" data-speech="やまもと のりひさ"
+                  >山本 倫久</span
+                >（福祉 ×
+                AIクリエイター）就労支援B型事業所の利用者としての実体験を基に、<span
+                  class="highlight"
+                  >AI技術で福祉の現場に新しい「できる」と「楽しい」を届けること</span
+                >をミッションとして活動中。
+              </p>
+              <div class="author-social">
+                <a
+                  href="https://x.com/ChromachannelAI"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >X (旧Twitter)</a
+                >
+                |
+                <a
+                  href="https://github.com/motty1975/chromachannel"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="back-to-blog-links">
+            <a href="/prompt.html" class="back-link">← プロンプト一覧に戻る</a>
+          </div>
+        </footer>
+      </div>
+      <!-- ★★★ Disqusコメント欄 ★★★ -->
+      <section class="comment-section">
+        <h2>ご意見・ご感想</h2>
+        <div id="disqus_thread"></div>
+        <script>
+          var disqus_config = function () {
+            this.page.url =
+              "https://chromachannel.online/prompt/prompt-minutes-assistant.html";
+            this.page.identifier = "prompt_minutes-assistant";
+          };
+          (function () {
+            var d = document,
+              s = d.createElement("script");
+            s.src = "https://chroma-ch.disqus.com/embed.js";
+            s.setAttribute("data-timestamp", +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript
+          >Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript"
+            >comments powered by Disqus.</a
+          ></noscript
+        >
+      </section>
     </main>
 
     <!-- フッターをここに読み込む -->
     <div id="footer-placeholder"></div>
-    
+
     <script src="/JavaScript/script.js" defer></script>
-</body>
+  </body>
 </html>
