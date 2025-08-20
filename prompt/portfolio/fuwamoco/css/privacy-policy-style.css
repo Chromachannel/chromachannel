@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    color: #333;
+}
+h1, h2 {
+    color: #555;
+}
+ul {
+    padding-left: 20px;
+}
+li {
+    margin-bottom: 10px;
+}
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+.privacy {
+    padding: 16px;
+}
+/* ボタンのスタイルを追加 */
+.back-button {
+    color: #fff;
+    margin-left: 10px;
+    padding: 3px 8px;
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.back-button:hover {
+    background-color: #000; /* ホバー時の背景色 */
+}

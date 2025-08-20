@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ===== ▼▼▼ SEO設定 START ▼▼▼ ===== -->
+    <title>【制作実績】アンケートページデザイン | Fuwamoco PROJECT</title>
+    <meta name="description" content="福祉×AIクリエイター山本倫久による、架空NPO法人サイトの「お客様アンケート」ページのデザイン制作実績。ユーザーが回答しやすいUI/UXを考慮したフォーム設計のポイントを紹介。">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://chromachannel.online/portfolio/Fuwamoco/questionnaire.html" />
+    <link rel="icon" href="img/favicon.webp">
+
+    <!-- OGPタグ -->
+    <meta property="og:title" content="【制作実績】アンケートページデザイン | Fuwamoco PROJECT">
+    <meta property="og:description" content="福祉×AIクリエイター山本倫久による、架空NPO法人サイトの「お客様アンケート」ページのデザイン制作実績。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://chromachannel.online/portfolio/Fuwamoco/questionnaire.html">
+    <meta property="og:image" content="https://chromachannel.online/img/ogp-questionnaire.webp">
+    <meta property="og:site_name" content="Chromachannel">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- ===== ▲▲▲ SEO設定 END ▲▲▲ ===== -->
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="stylesheet" href="CSS/questionnaire-style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+    <body>
+        <header id="header">
+            <div class="inner">
+                <div class="header-container">
+                    <a href="index.html" class="logo-link"><img src="img/logo.webp" alt="ロゴ" class="logo"></a>                    
+                    <nav class="gnavi" id="pc-gnavi">
+                        <div class="gnavi__wrap">
+                            <ul class="gnavi__lists">
+                                <li class="gnavi__list">
+                                    <a href="index.html">トップページ</a>
+                                </li>
+                                <li class="gnavi__list">
+                                    <a href="">ラビット</a>
+                                    <ul class="dropdown__lists">
+                                        <li class="dropdown__list"><a href="rabbit.html">うさぎについて</a></li>
+                                        <li class="dropdown__list"><a href="rabbit.html#breeds">種類</a></li>
+                                        <li class="dropdown__list"><a href="rabbit.html#charm">魅力</a></li>
+                                        <li class="dropdown__list"><a href="rabbit.html#merit">うさぎの良い点</a></li>
+                                    </ul>
+                                </li>
+                                <li class="gnavi__list">
+                                    <a href="">アバウト</a>
+                                    <ul class="dropdown__lists">
+                                        <li class="dropdown__list"><a href="company-info.html">私たちについて</a></li>
+                                        <li class="dropdown__list"><a href="company.html">運営団体概要</a></li>
+                                    </ul>
+                                </li>
+                                <li class="gnavi__list">
+                                    <a href="cafe.html">カフェ</a>
+                                </li>
+                                <li class="gnavi__list">
+                                    <a href="3-match-puzzle.html">3マッチパズル</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="hamburger-menu" id="header-hamburger">
+                        <button class="hamburger-btn">
+                            <i class="fas fa-bars"></i> </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="floating-hamburger" id="floating-hamburger">
+            <img src="img/tap.webp" alt="タップ"> </div>
+        <nav class="header-nav" id="hamburger-nav">
+            <ul>
+                <li><a href="index.html">トップページ</a></li>
+                <li>
+                    <div class="accordion-menu" data-accordion="rabbit">
+                        ラビット<span class="arrow">▼</span>
+                    </div>
+                    <ul id="rabbit" class="accordion-content">
+                        <li><a href="rabbit.html">うさぎについて</a></li>
+                        <li><a href="rabbit.html#breeds">種類</a></li>
+                        <li><a href="rabbit.html#charm">魅力</a></li>
+                        <li><a href="rabbit.html#merit">うさぎの良い点</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="accordion-menu" data-accordion="about">
+                        アバウト<span class="arrow">▼</span>
+                    </div>
+                    <ul id="about" class="accordion-content">
+                        <li><a href="company-info.html">私たちについて</a></li>
+                        <li><a href="company.html">運営団体概要</a></li>
+                    </ul>
+                </li>
+                <li><a href="cafe.html">カフェ</a></li>
+                <li><a href="3-match-puzzle.html">3マッチパズル</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="main-container">
+                <img src="img/questionnaire-hero.webp" alt="メインビジュアル">
+                <h1>アンケート</h1>
+                <div class="main-comment">
+                    <p>今後の運営改善、および店舗（接客）改善のために、アンケートにご協力よろしくお願いします。</p>
+                </div>
+            </div>
+            <div class="main-content" >
+                <div class="inner">
+                    <form id="rabbit-cafe-survey">
+                        <div class="survey-container">
+                            <div class="section">
+                                <h2>1. 基本情報</h2>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label class="required" for="visit-date">ご来店日:</label>
+                                        <input type="date" id="visit-date" name="visit-date" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="required" for="visitor-count">ご来店人数:</label>
+                                        <input type="number" id="visitor-count" name="visitor-count" min="1" required> 名
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>当店を知ったきっかけは何でしたか？ (複数選択可):</label>
+                                    <div class="checkbox-options-row">
+                                        <div class="checkbox-option-inline">
+                                        <input type="checkbox" id="source-web" name="source[]" value="web">
+                                        <label for="source-web">Web検索</label>
+                                        </div>
+                                        <div class="checkbox-option-inline">
+                                        <input type="checkbox" id="source-sns" name="source[]" value="sns">
+                                        <label for="source-sns">SNS</label>
+                                        </div>
+                                        <div class="checkbox-option-inline">
+                                        <input type="checkbox" id="source-friend" name="source[]" value="friend">
+                                        <label for="source-friend">友人・家族の紹介</label>
+                                        </div>
+                                        <div class="checkbox-option-inline">
+                                        <input type="checkbox" id="source-sign" name="source[]" value="sign">
+                                        <label for="source-sign">看板・ポスター</label>
+                                        </div>
+                                        <div class="checkbox-option-inline">
+                                        <input type="checkbox" id="source-other" name="source[]" value="other">
+                                        <label for="source-other">その他</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section">
+                                <h2>2. ご利用体験について</h2>
+                                <div class="form-group">
+                                    <label>今回の来店目的は何でしたか？ (複数選択可)</label>
+                                    <div class="checkbox-group">
+                                        <div class="checkbox-option">
+                                            <input type="checkbox" id="purpose-rabbit" name="purpose" value="うさぎと触れ合うため">
+                                            <label for="purpose-rabbit">うさぎと触れ合うため</label>
+                                        </div>
+                                        <div class="checkbox-option">
+                                            <input type="checkbox" id="purpose-cafe" name="purpose" value="カフェで休憩するため">
+                                            <label for="purpose-cafe">カフェで休憩するため</label>
+                                        </div>
+                                        <div class="checkbox-option">
+                                            <input type="checkbox" id="purpose-meeting" name="purpose" value="知人・友人との待ち合わせ">
+                                            <label for="purpose-meeting">知人・友人との待ち合わせ</label>
+                                        </div>
+                                        <div class="checkbox-option">
+                                            <input type="checkbox" id="purpose-other" name="purpose" value="その他">
+                                            <label for="purpose-other">その他</label>
+                                            <input type="text" id="purpose-other-text" name="purpose-other-text" placeholder="具体的に">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="required">当カフェ全体の満足度はいかがでしたか？</label>
+                                    <div class="radio-group">
+                                        <div class="radio-option">
+                                            <input type="radio" id="satisfaction-5" name="satisfaction" value="非常に満足" required>
+                                            <label for="satisfaction-5">非常に満足</label>
+                                        </div>
+                                        <div class="radio-option">
+                                            <input type="radio" id="satisfaction-4" name="satisfaction" value="満足">
+                                            <label for="satisfaction-4">満足</label>
+                                        </div>
+                                        <div class="radio-option">
+                                            <input type="radio" id="satisfaction-3" name="satisfaction" value="まあまあ満足">
+                                            <label for="satisfaction-3">まあまあ満足</label>
+                                        </div>
+                                        <div class="radio-option">
+                                            <input type="radio" id="satisfaction-2" name="satisfaction" value="あまり満足できなかった">
+                                            <label for="satisfaction-2">あまり満足できなかった</label>
+                                        </div>
+                                        <div class="radio-option">
+                                            <input type="radio" id="satisfaction-1" name="satisfaction" value="全く満足できなかった">
+                                            <label for="satisfaction-1">全く満足できなかった</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>特に良かった点は何ですか？ (複数選択可)</label>
+                                    <div class="checkbox-group">
+                                        <div class="checkbox-option">
+                                            <input type="checkbox" id="good-cuteness" name="good-points" value="うさぎの可愛さ">
+                                            <label for="good-cuteness">うさぎの可愛さ</label>
+                                        </div>
+                                        <div class="checkbox-option">
+                                            <input type="checkbox" id="good-interaction" name="good-points" value="うさぎとの触れ合いやすさ">
+                                            <label for="good-interaction">うさぎとの触れ合いやすさ</label>
+                                        </div>
+                                        <div class="checkbox-option">
+                                            <input type="checkbox" id="good-atmosphere" name="good-points" value="カフェの雰囲気・清潔さ">
+                                            <label for="good-atmosphere">カフェの雰囲気・清潔さ</label>
+                                        </div>
+                                        <div class="checkbox-option">
+                                            <input type="checkbox" id="good-food" name="good-points" value="ドリンク・フードの味">
+                                            <label for="good-food">ドリンク・フードの味</label>
+                                        </div>
+                                        <div class="checkbox-option">
+                                            <input type="checkbox" id="good-staff" name="good-points" value="スタッフの対応">
+                                            <label for="good-staff">スタッフの対応</label>
+                                        </div>
+                                        <div class="checkbox-option">
+                                            <input type="checkbox" id="good-other" name="good-points" value="その他">
+                                            <label for="good-other">その他</label>
+                                            <input type="text" id="good-other-text" name="good-other-text" placeholder="具体的に">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>改善点やご要望はありますか？ (複数選択可)</label>
+                                    <div class="checkbox-group">
+                                        <div class="checkbox-option">
+                                            <input type="checkbox" id="improve-variety" name="improvements" value="うさぎの種類を増やしてほしい">
+                                            <label for="improve-variety">うさぎの種類を増やしてほしい</label>
+                                        </div>
+                                        <div class="checkbox-option">
+                                            <input type="checkbox" id="improve-time" name="improvements" value="触れ合える時間を増やしてほしい">
+                                            <label for="improve-time">触れ合える時間を増やしてほしい</label>
+                                        </div>
+                                        <div class="checkbox-option">
+                                            <input type="checkbox" id="improve-menu" name="improvements" value="ドリンク・フードの種類を増やしてほしい">
+                                            <label for="improve-menu">ドリンク・フードの種類を増やしてほしい</label>
+                                        </div>
+                                        <div class="checkbox-option">
+                                            <input type="checkbox" id="improve-facility" name="improvements" value="店内の設備を改善してほしい">
+                                            <label for="improve-facility">店内の設備を改善してほしい</label>
+                                            <input type="text" id="improve-facility-text" name="improve-facility-text" placeholder="具体的に">
+                                        </div>
+                                        <div class="checkbox-option">
+                                            <input type="checkbox" id="improve-other" name="improvements" value="その他">
+                                            <label for="improve-other">その他</label>
+                                            <input type="text" id="improve-other-text" name="improve-other-text" placeholder="具体的に">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>うさぎとの触れ合いについて、どのように感じましたか？</label>
+                                    <div class="radio-group">
+                                        <div class="radio-option">
+                                            <input type="radio" id="rabbit-healing" name="rabbit-experience" value="とても癒された">
+                                            <label for="rabbit-healing">とても癒された</label>
+                                        </div>
+                                        <div class="radio-option">
+                                            <input type="radio" id="rabbit-fun" name="rabbit-experience" value="楽しかった">
+                                            <label for="rabbit-fun">楽しかった</label>
+                                        </div>
+                                        <div class="radio-option">
+                                            <input type="radio" id="rabbit-more" name="rabbit-experience" value="もう少し触れ合いたかった">
+                                            <label for="rabbit-more">もう少し触れ合いたかった</label>
+                                        </div>
+                                        <div class="radio-option">
+                                            <input type="radio" id="rabbit-neutral" name="rabbit-experience" value="特に何も感じなかった">
+                                            <label for="rabbit-neutral">特に何も感じなかった</label>
+                                        </div>
+                                        <div class="radio-option">
+                                            <input type="radio" id="rabbit-other" name="rabbit-experience" value="その他">
+                                            <label for="rabbit-other">その他</label>
+                                            <input type="text" id="rabbit-other-text" name="rabbit-other-text" placeholder="具体的に">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>スタッフの対応はいかがでしたか？</label>
+                                    <div class="radio-group">
+                                        <div class="radio-option">
+                                            <input type="radio" id="staff-5" name="staff-rating" value="非常に良かった">
+                                            <label for="staff-5">非常に良かった</label>
+                                        </div>
+                                        <div class="radio-option">
+                                            <input type="radio" id="staff-4" name="staff-rating" value="良かった">
+                                            <label for="staff-4">良かった</label>
+                                        </div>
+                                        <div class="radio-option">
+                                            <input type="radio" id="staff-3" name="staff-rating" value="普通">
+                                            <label for="staff-3">普通</label>
+                                        </div>
+                                        <div class="radio-option">
+                                            <input type="radio" id="staff-2" name="staff-rating" value="あまり良くなかった">
+                                            <label for="staff-2">あまり良くなかった</label>
+                                        </div>
+                                        <div class="radio-option">
+                                            <input type="radio" id="staff-1" name="staff-rating" value="全く良くなかった">
+                                            <label for="staff-1">全く良くなかった</label>
+                                        </div>
+                                    </div>
+                                    <textarea id="staff-comment" name="staff-comment" placeholder="具体的なエピソードがあればご記入ください"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>カフェの雰囲気や清潔さについて、どのように感じましたか？</label>
+                                    <div class="radio-group">
+                                        <div class="radio-option">
+                                            <input type="radio" id="cleanliness-5" name="cleanliness-rating" value="非常に良かった">
+                                            <label for="cleanliness-5">非常に良かった</label>
+                                        </div>
+                                        <div class="radio-option">
+                                            <input type="radio" id="cleanliness-4" name="cleanliness-rating" value="良かった">
+                                            <label for="cleanliness-4">良かった</label>
+                                        </div>
+                                        <div class="radio-option">
+                                            <input type="radio" id="cleanliness-3" name="cleanliness-rating" value="普通">
+                                            <label for="cleanliness-3">普通</label>
+                                        </div>
+                                        <div class="radio-option">
+                                            <input type="radio" id="cleanliness-2" name="cleanliness-rating" value="あまり良くなかった">
+                                            <label for="cleanliness-2">あまり良くなかった</label>
+                                        </div>
+                                        <div class="radio-option">
+                                            <input type="radio" id="cleanliness-1" name="cleanliness-rating" value="全く良くなかった">
+                                            <label for="cleanliness-1">全く良くなかった</label>
+                                        </div>
+                                    </div>
+                                    <textarea id="cleanliness-comment" name="cleanliness-comment" placeholder="具体的なご意見があればご記入ください"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label class="required">当カフェをまた利用したいと思いますか？</label>
+                                    <div class="radio-group">
+                                        <div class="radio-option">
+                                            <input type="radio" id="revisit-yes" name="revisit" value="はい" required>
+                                            <label for="revisit-yes">はい</label>
+                                        </div>
+                                        <div class="radio-option">
+                                            <input type="radio" id="revisit-no" name="revisit" value="いいえ">
+                                            <label for="revisit-no">いいえ</label>
+                                        </div>
+                                        <div class="radio-option">
+                                            <input type="radio" id="revisit-maybe" name="revisit" value="どちらとも言えない">
+                                            <label for="revisit-maybe">どちらとも言えない</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section">
+                                <h2>3. お客様について (任意)</h2>
+                                
+                                <div class="form-group">
+                                    <label>年齢層:</label>
+                                    <div class="radio-group">
+                                        <div class="radio-option">
+                                            <input type="radio" id="age-10" name="age" value="10代以下">
+                                            <label for="age-10">10代以下</label>
+                                        </div>
+                                        <div class="radio-option">
+                                            <input type="radio" id="age-20" name="age" value="20代">
+                                            <label for="age-20">20代</label>
+                                        </div>
+                                        <div class="radio-option">
+                                            <input type="radio" id="age-30" name="age" value="30代">
+                                            <label for="age-30">30代</label>
+                                        </div>
+                                        <div class="radio-option">
+                                            <input type="radio" id="age-40" name="age" value="40代">
+                                            <label for="age-40">40代</label>
+                                        </div>
+                                        <div class="radio-option">
+                                            <input type="radio" id="age-50" name="age" value="50代">
+                                            <label for="age-50">50代</label>
+                                        </div>
+                                        <div class="radio-option">
+                                            <input type="radio" id="age-60" name="age" value="60代以上">
+                                            <label for="age-60">60代以上</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>性別:</label>
+                                    <div class="radio-group">
+                                        <div class="radio-option">
+                                            <input type="radio" id="gender-male" name="gender" value="男性">
+                                            <label for="gender-male">男性</label>
+                                        </div>
+                                        <div class="radio-option">
+                                            <input type="radio" id="gender-female" name="gender" value="女性">
+                                            <label for="gender-female">女性</label>
+                                        </div>
+                                        <div class="radio-option">
+                                            <input type="radio" id="gender-other" name="gender" value="その他">
+                                            <label for="gender-other">その他</label>
+                                        </div>
+                                        <div class="radio-option">
+                                            <input type="radio" id="gender-noanswer" name="gender" value="回答しない">
+                                            <label for="gender-noanswer">回答しない</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section">
+                                <h2>4. その他ご意見・ご要望</h2>
+                                
+                                <div class="form-group">
+                                    <textarea id="other-comments" name="other-comments" placeholder="ご意見・ご要望がございましたらご自由にお書きください"></textarea>
+                                </div>
+                            </div>
+                            <button type="submit">アンケートを送信する</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-wrapper">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <a href="index.html"><img src="img/logo.webp" alt="ロゴ"></a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://x.com/" aria-label="x"><i class="fab fa-x"></i>
+                        </a>
+                        <a href="https://www.facebook.com/?locale=ja_JP" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.youtube.com/results?search_query=%E3%81%86%E3%81%95%E3%81%8E" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright">© 2025 Fuwamoco PROJECT All Rights Reserved.</p>
+        </footer>
+    </body>
+</html>

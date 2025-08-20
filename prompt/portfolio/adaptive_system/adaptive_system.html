@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ===== ▼▼▼ SEO設定 START ▼▼▼ ===== -->
+    <title>【制作実績】AI適応型タスク管理システム｜福祉現場の業務効率化アプリ</title>
+    <meta name="description" content="福祉×AIクリエイター山本倫久が制作した、福祉現場向けのAI適応型タスク管理Webアプリ。ユーザーのスキルや作業パターンをAIが分析し、タスクを自動で最適化。かんばん方式で、利用者の「できる」を支援し生産性を向上させます。">
+    <link rel="canonical" href="https://chromachannel.online/portfolio/Adaptive_System/adaptive_system.html" />
+    
+    <!-- OGPタグ -->
+    <meta property="og:title" content="【制作実績】AI適応型タスク管理システム｜福祉現場の業務効率化アプリ">
+    <meta property="og:description" content="AIがあなたの作業パターンを分析しタスクを自動最適化。かんばん方式で生産性を向上させる、福祉現場向けの次世代タスク管理システム。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chromachannel.online/portfolio/Adaptive_System/adaptive_system.html">
+    <meta property="og:image" content="https://chromachannel.online/img/ogp_adaptive_system.webp">
+    <meta property="og:site_name" content="Chromachannel">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "AI適応型タスク管理システム",
+      "applicationCategory": "ProductivityApplication",
+      "operatingSystem": "Web-based",
+      "description": "福祉×AIクリエイター山本倫久が制作した、ユーザーのスキルレベルや平均作業時間などを基に、AIがタスクの難易度や順序を最適化して提案する、福祉現場向けのWebベースのタスク管理システムです。",
+      "author": {
+        "@type": "Person",
+        "name": "山本 倫久",
+        "url": "https://chromachannel.online/"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "山本 倫久",
+        "url": "https://chromachannel.online/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "JPY"
+      }
+    }
+    </script>
+<!-- ===== ▲▲▲ SEO設定 END ▲▲▲ ===== -->
+    
+    <link rel="icon" href="//img/favicon.webp" type="image/webp">
+    
+    <!-- CSS / ライブラリ -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="//CSS/style.css">
+    <link rel="stylesheet" href="CSS/adaptive_system.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="app-body">
+    <div id="header-placeholder"></div>
+
+    <main class="app-main">
+        <div class="container app-container">
+            <header>
+                <div class="header-top">
+                    <h1 class="main-title">
+                        <i data-lucide="brain"></i>
+                        適応型作業管理システム
+                    </h1>
+                    <div class="view-switcher">
+                        <button id="btn-view-tasks" class="view-btn active">タスク管理</button>
+                        <button id="btn-view-analytics" class="view-btn">
+                            <i data-lucide="bar-chart-3"></i>
+                            分析
+                        </button>
+                        <button id="settings-btn" class="view-btn" title="設定">
+                            <i data-lucide="settings"></i>
+                        </button>
+                    </div>
+                </div>
+                <div id="optimization-banner" class="optimization-banner">
+                    <i data-lucide="zap"></i>
+                    <span id="optimization-suggestion"></span>
+                </div>
+            </header>
+
+            <main>
+                <div id="tasks-view">
+                    <div class="card add-task-card">
+                        <h2 class="card-title">
+                            <i data-lucide="plus"></i>
+                            新しいタスクを追加
+                        </h2>
+                        <form id="add-task-form" class="add-task-form">
+                            <input type="text" id="new-task-title" placeholder="タスク名" required>
+                            <input type="text" id="new-task-desc" placeholder="詳細説明">
+                            <button type="submit" class="btn btn-primary">AIで最適化して追加</button>
+                        </form>
+                    </div>
+                    <div class="task-columns">
+                        <div class="task-column">
+                            <h3>待機中のタスク</h3>
+                            <div id="pending-tasks-list" class="task-list"></div>
+                        </div>
+                        <div class="task-column">
+                            <h3>進行中のタスク</h3>
+                            <div id="inprogress-tasks-list" class="task-list"></div>
+                        </div>
+                        <div class="task-column">
+                            <h3>完了したタスク</h3>
+                            <div id="completed-tasks-list" class="task-list"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="analytics-view" class="hidden">
+                    <div class="analytics-grid">
+                        <div class="card">
+                            <h3 class="card-title"><i data-lucide="user"></i>ユーザープロファイル</h3>
+                            <div class="profile-list">
+                                <div><span>スキルレベル:</span> <strong id="profile-skill"></strong></div>
+                                <div><span>完了率:</span> <strong id="profile-completion"></strong></div>
+                                <div><span>平均作業時間:</span> <strong id="profile-avg-time"></strong></div>
+                                <div><span>最適な作業時間:</span> <strong id="profile-best-hours"></strong></div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h3 class="card-title">タスク統計</h3>
+                            <div class="profile-list">
+                                <div><span>総タスク数:</span> <strong id="stats-total"></strong></div>
+                                <div><span>完了済み:</span> <strong id="stats-completed"></strong></div>
+                                <div><span>進行中:</span> <strong id="stats-inprogress"></strong></div>
+                                <div><span>待機中:</span> <strong id="stats-pending"></strong></div>
+                            </div>
+                        </div>
+                        <div class="card analytics-full-width">
+                            <h3 class="card-title">AI最適化の提案</h3>
+                            <div class="ai-suggestions">
+                                <div class="suggestion-box info">
+                                    <h4>作業パターン分析</h4>
+                                    <p id="suggestion-pattern"></p>
+                                </div>
+                                <div class="suggestion-box success">
+                                    <h4>推奨改善点</h4>
+                                    <p id="suggestion-improvement"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!-- ★★★ ここからDisqusの実装を追加 ★★★ -->
+            <section class="comment-section">
+                <h2>ご意見・ご感想</h2>
+                <div id="disqus_thread"></div>
+                <script>
+                    var disqus_config = function () {
+                        this.page.url = 'https://chromachannel.online/portfolio/Adaptive_System/adaptive_system.html';
+                        this.page.identifier = 'portfolio_adaptive_system';
+                    };
+                    (function() { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://chroma-ch.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </section>
+            <!-- ★★★ ここまで ★★★ -->
+
+        </div>
+    </main>
+
+    <div id="settings-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>ユーザープロファイル設定</h2>
+                <button id="close-modal-btn" class="close-btn">×</button>
+            </div>
+            <form id="profile-form">
+                <div class="form-group">
+                    <label for="skill-level-select">スキルレベル</label>
+                    <select id="skill-level-select">
+                        <option value="beginner">初心者 (Beginner)</option>
+                        <option value="intermediate">中級者 (Intermediate)</option>
+                        <option value="advanced">上級者 (Advanced)</option>
+                    </select>
+                    <small>あなたの作業習熟度を設定します。</small>
+                </div>
+                <div class="form-group">
+                    <label for="avg-time-input">平均作業時間（分）</label>
+                    <input type="number" id="avg-time-input" min="5" value="45">
+                    <small>1つのタスクにかかるおおよその時間。</small>
+                </div>
+                <div class="form-group">
+                    <label for="best-hours-input">最適な作業時間帯</label>
+                    <input type="text" id="best-hours-input" placeholder="例: 9, 10, 14, 15">
+                    <small>集中しやすい時間帯をカンマ区切りで入力 (0-23時)。</small>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">保存する</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- フッターをここに読み込む -->
+    <div id="footer-placeholder"></div>
+    
+    <script src="//JavaScript/script.js" defer></script> 
+    <script src="JavaScript/adaptive_system.js" defer></script> 
+</body>
+</html>

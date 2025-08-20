@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- ===== ▼▼▼ SEO設定 START ▼▼▼ ===== -->
+    <title>【制作実績】店舗紹介ページデザイン | Fuwamoco PROJECT</title>
+    <meta name="description" content="福祉×AIクリエイター山本倫久による、架空のうさぎカフェ「Fuwamoco CAFE」のWebサイトデザイン制作実績。店舗の魅力を引き出す情報設計とデザインのポイントを紹介。">
+    <link rel="canonical" href="https://chromachannel.online/portfolio/Fuwamoco/cafe.html" />
+    <link rel="icon" href="img/favicon.webp">
+
+    <!-- OGPタグ -->
+    <meta property="og:title" content="【制作実績】店舗紹介ページデザイン | Fuwamoco PROJECT">
+    <meta property="og:description" content="福祉×AIクリエイター山本倫久による、架空のうさぎカフェ「Fuwamoco CAFE」のWebサイトデザイン制作実績。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://chromachannel.online/portfolio/Fuwamoco/cafe.html">
+    <meta property="og:image" content="https://chromachannel.online/img/ogp-cafe.webp">
+    <meta property="og:site_name" content="Chromachannel">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- ===== ▲▲▲ SEO設定 END ▲▲▲ ===== -->
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="stylesheet" href="CSS/cafe-style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+    <body>
+        <header id="header">
+            <div class="inner">
+                <div class="header-container">
+                    <a href="index.html" class="logo-link"><img src="img/logo.webp" alt="ロゴ" class="logo"></a>                    
+                    <nav class="gnavi" id="pc-gnavi">
+                        <div class="gnavi__wrap">
+                            <ul class="gnavi__lists">
+                                <li class="gnavi__list">
+                                    <a href="index.html">トップページ</a>
+                                </li>
+                                <li class="gnavi__list">
+                                    <a href="">ラビット</a>
+                                    <ul class="dropdown__lists">
+                                        <li class="dropdown__list"><a href="rabbit.html">うさぎについて</a></li>
+                                        <li class="dropdown__list"><a href="rabbit.html#breeds">種類</a></li>
+                                        <li class="dropdown__list"><a href="rabbit.html#charm">魅力</a></li>
+                                        <li class="dropdown__list"><a href="rabbit.html#merit">うさぎの良い点</a></li>
+                                    </ul>
+                                </li>
+                                <li class="gnavi__list">
+                                    <a href="">アバウト</a>
+                                    <ul class="dropdown__lists">
+                                        <li class="dropdown__list"><a href="company-info.html">私たちについて</a></li>
+                                        <li class="dropdown__list"><a href="company.html">運営団体概要</a></li>
+                                    </ul>
+                                </li>
+                                <li class="gnavi__list">
+                                    <a href="cafe.html">カフェ</a>
+                                </li>
+                                <li class="gnavi__list">
+                                    <a href="3-match-puzzle.html">3マッチパズル</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="hamburger-menu" id="header-hamburger">
+                        <button class="hamburger-btn">
+                            <i class="fas fa-bars"></i> </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="floating-hamburger" id="floating-hamburger">
+            <img src="img/tap.webp" alt="タップ"> </div>
+        <nav class="header-nav" id="hamburger-nav">
+            <ul>
+                <li><a href="index.html">トップページ</a></li>
+                <li>
+                    <div class="accordion-menu" data-accordion="rabbit">
+                        ラビット<span class="arrow">▼</span>
+                    </div>
+                    <ul id="rabbit" class="accordion-content">
+                        <li><a href="rabbit.html">うさぎについて</a></li>
+                        <li><a href="rabbit.html#breeds">種類</a></li>
+                        <li><a href="rabbit.html#charm">魅力</a></li>
+                        <li><a href="rabbit.html#merit">うさぎの良い点</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="accordion-menu" data-accordion="about">
+                        アバウト<span class="arrow">▼</span>
+                    </div>
+                    <ul id="about" class="accordion-content">
+                        <li><a href="company-info.html">私たちについて</a></li>
+                        <li><a href="company.html">運営団体概要</a></li>
+                    </ul>
+                </li>
+                <li><a href="cafe.html">カフェ</a></li>
+                <li><a href="3-match-puzzle.html">3マッチパズル</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="main-container">
+                <img src="img/cafe-hero.webp" alt="メインビジュアル">
+                <h1>うさぎと過ごす癒しのカフェ</h1>
+                <div class="main-comment">
+                    <p>大阪の中心地、難波と梅田に位置する『Fuwamoco CAFE』は、<br>かわいいうさぎたちとの特別な時間をお過ごしいただるうさぎカフェです。</p>
+                </div>
+            </div>
+            <div class="main-content" >
+                <div class="inner">
+                    <div id="cafe" class="content-section">
+                        <div class="button-container">
+                            <a href="#namba" class="button namba">難波店を見る</a>
+                            <a href="#umeda" class="button umeda">梅田店を見る</a>
+                        </div>
+                    </div>
+                    <!-- 難波店 -->                    
+                    <section id="namba" class="content-section">
+                        <div class="location-card">
+                            <h2>Fuwamoco CAFE 難波店</h2>
+                            <p class="location-description">「わくわく」と「癒し」が交差する、難波のネオンに輝くうさぎカフェへようこそ！難波店は、エネルギッシュな街の雰囲気にぴったりの、明るく賑やかな空間です。</p>
+                            <ul class="features">
+                                <li><span>夜まで楽しめる！</span> 深夜まで営業しているので、お食事やお買い物の後にも気軽に立ち寄れます。</li>
+                                <li><span>個性豊かなうさぎたち</span> 様々な種類の可愛いうさぎがお出迎え。活発な彼らとの触れ合いは、きっとあなたを笑顔にします。</li>
+                                <li><span>豊富なメニュー</span> スイーツや軽食、ドリンクも充実。うさぎと触れ合いながら、ゆったりとしたカフェタイムをお過ごしください。</li>
+                                <li><span>アクセス抜群</span> 難波駅、なんば駅各線から徒歩圏内。観光やお出かけの合間に最適です。</li>
+                            </ul>
+                            <div class="bottom-layout">
+                                <div class="recommended-access-container">
+                                    <div class="recommended">
+                                        <h3>こんなあなたにおすすめ:</h3>
+                                        <ul>
+                                            <li>賑やかな雰囲気が好き</li>
+                                            <li>夜遅くまで楽しみたい</li>
+                                            <li>色々な種類のうさぎと触れ合いたい</li>
+                                        </ul>
+                                    </div>
+                                    <div class="access">
+                                        <h3><span>アクセス</span></h3>
+                                        <p>〒556-0011<br>大阪府大阪市浪速区難波中<br>難波駅から徒歩5分</p>
+                                        <p><span>電話番号:</span><a href="tel:000-0000-0000"> 000-0000-0000</a></p>
+                                        <p><span>営業時間:</span> 11:00 - 23:00（年中無休）</p>
+                                    </div>
+                                    <div class="button-container">
+                                        <a href="contact.html" class="button contact">お問い合わせ</a>
+                                        <a href="questionnaire.html" class="button questionnaire">アンケート</a>
+                                    </div>
+                                </div>
+                                <div class="map-container">                                    
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.5091235507007!2d135.4977674755446!3d34.667097872931606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e71336f37515%3A0x5e5e33a312c32752!2z44Gq44KT44Gw6aeF!5e0!3m2!1sja!2sjp!4v1748328864421!5m2!1sja!2sjp" width="600" height="570" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </section>                 
+                    <!-- 梅田店 -->
+                    <section id="umeda" class="content-section">
+                        <div class="location-card">
+                            <h2>Fuwamoco CAFE 梅田店</h2>
+                            <p class="location-description">都会の喧騒を忘れさせる、大人のための隠れ家のようなうさぎカフェ。梅田店は、洗練された落ち着いた空間で、ゆったりと癒しの時間を提供します。</p>
+
+                            <ul class="features">
+                                <li><span>ビジネス街のオアシス</span> 大阪駅・梅田駅からのアクセスも抜群。お仕事帰りや休憩時間に、気軽に立ち寄ってリフレッシュできます。</li>
+                                <li><span>穏やかな触れ合い</span> ふわふわの毛並みが愛らしい、おっとりとした性格のうさぎたちが、あなたの訪問を心待ちにしています。</li>
+                                <li><span>こだわりのドリンク</span> 丁寧に淹れたコーヒーや紅茶など、上質なドリンクを片手に、くつろぎのひとときをお過ごしください。</li>
+                                <li><span>夜景も楽しめる（予定があれば）</span> 高層階に位置する場合は、美しい夜景を眺めながら、特別な時間をお過ごしいただけます。</li>
+                            </ul>
+                            <div class="bottom-layout">
+                                <div class="recommended-access-container">
+                                    <div class="recommended">
+                                        <h3>こんなあなたにおすすめ:</h3>
+                                        <ul>
+                                            <li>静かで落ち着いた雰囲気が好き</li>
+                                            <li>仕事や買い物の合間にリラックスしたい</li>
+                                            <li>上質なカフェタイムを楽しみたい</li>
+                                        </ul>
+                                    </div>
+                                    <div class="access">
+                                        <h3><span>アクセス</span></h3>
+                                        <p>〒530-0001<br>大阪府大阪市北区梅田<br>大阪駅・梅田駅から徒歩7分</p>
+                                        <p><span>電話番号:</span><a href="tel:000-0000-0000"> 000-0000-0000</a></p>
+                                        <p><span>営業時間:</span> 10:00 - 21:00（年中無休）</p>
+                                    </div>
+                                    <div class="button-container">
+                                        <a href="contact.html" class="button contact">お問い合わせ</a>
+                                        <a href="questionnaire.html" class="button questionnaire">アンケート</a>
+                                    </div>
+                                </div>
+                                <div class="map-container">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.1524503691057!2d135.49455637646903!3d34.70133458317761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e7a590c97ba9%3A0x30fdf9c62b1d70ac!2z5qKF55Sw6aeF!5e0!3m2!1sja!2sjp!4v1748334591429!5m2!1sja!2sjp" width="600" height="570" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-wrapper">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <a href="index.html"><img src="img/logo.webp" alt="ロゴ"></a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://x.com/" aria-label="x"><i class="fab fa-x"></i>
+                        </a>
+                        <a href="https://www.facebook.com/?locale=ja_JP" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.youtube.com/results?search_query=%E3%81%86%E3%81%95%E3%81%8E" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright">© 2025 Fuwamoco PROJECT All Rights Reserved.</p>
+        </footer>
+        <script src="JavaScript/script.js" defer></script>
+    </body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== ▼▼▼ SEO設定 START ▼▼▼ ===== -->
+    
+    <title>【対話式】AI Excel & スプレッドシート関数プロンプト｜数式を自動作成</title>
+    <meta name="description" content="福祉×AIクリエイターが設計した、表計算ソフトの学習支援プロンプト。AIが家庭教師となり、「やりたいこと」を伝えるだけで、ExcelとGoogleスプレッドシートの両方に最適な関数と数式を、詳しい解説付きで教えてくれます。">
+    
+    <!-- OGPタグ -->
+    <meta property="og:title" content="【対話式】AI Excel & スプレッドシート関数プロンプト｜数式を自動作成">
+    <meta property="og:description" content="Excelやスプレッドシートで困ったらAIに相談！AIが家庭教師となり、「やりたいこと」を伝えるだけで、最適な数式を解説付きで教えてくれます。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://chromachannel.online/prompt/prompt-excel-spreadsheet-tutor.html">
+    <meta property="og:image" content="https://chromachannel.online/img/prompt/ogp-spreadsheet-tutor.webp">
+    <meta property="og:site_name" content="Chromachannel">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "AI Excel & Googleスプレッドシート関数プロンプト（対話型家庭教師）",
+      "description": "福祉×AIクリエイター山本倫久が設計した、AIがユーザーとの対話を通じて、ExcelまたはGoogleスプレッドシートで実現したいことをヒアリングし、最適な関数と数式を解説付きで提案するプロンプト。",
+      "author": { "@type": "Person", "name": "山本 倫久", "url": "https://chromachannel.online/" }
+    }
+    </script>
+    
+    <link rel="canonical" href="https://chromachannel.online/prompt/prompt-excel-spreadsheet-tutor.html" />
+    
+    <!-- ===== ▲▲▲ SEO設定 END ▲▲▲ ===== -->
+     
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/only_read.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="prompt-page">
+    <div id="header-placeholder"></div>
+
+    <main class="article-main">
+        <div class="article-container">
+            <header class="article-header">
+                <h1>AI Excel & スプレッドシート関数プロンプト（対話型家庭教師）</h1>
+                <p>この指示書を対話型AIに読み込ませることで、AIをあなたの専属「Excel & Googleスプレッドシート家庭教師」に変身させます。関数の名前を知らなくても大丈夫。「こんなことがしたい」と話しかけるだけで、AIがあなたに最適な数式を、詳しい解説と応用例まで付けて教えてくれます。</p>
+            </header>
+            
+            <div class="prompt-list">
+                <section class="prompt-card">
+                    <div class="prompt-box">
+                        <div class="prompt-header">
+                            <h3 class="prompt-title"># 指示書</h3>
+                            <button class="copy-btn"><i class="far fa-copy"></i> コピー</button>
+                        </div>
+                        <pre class="prompt-text">あなたは、ExcelとGoogleスプレッドシートの両方に精通し、初心者がどこでつまずくかを熟知した、プロの「表計算ソフト家庭教師」です。
+
+## あなたの役割と目標
+あなたの目標は、ユーザーがExcelまたはGoogleスプレッドシートで「やりたいこと」を伝えてきた際に、対話を通じて状況を正確に把握し、最終的に「①最適な数式」「②その数式の詳しい解説」「③応用例」の3点セットで、完璧な解決策を提示することです。
+
+## 厳守すべき対話プロセス
+あなたは、以下の【手順】を一つずつ、厳密に守って実行しなければなりません。ユーザーが一つの質問に答えたら、次の質問をしてください。
+
+【手順1】ツールの特定
+まず、「こんにちは！表計算ソフトの家庭教師です。関数のお悩み、お任せください。**Excel**と**Googleスプレッドシート**、どちらに関するご質問ですか？」とユーザーに問いかけ、使用するツールを特定してください。
+
+【手順2】「やりたいこと」のヒアリング
+ユーザーがツールを指定したら、「承知しました。それでは、**【指定されたツール名】**で、今どのようなことを実現したいですか？関数の名前が分からなくても大丈夫ですので、お気軽にお話しください。」と問いかけ、回答を待ってください。
+
+【手順3】状況のヒアリング（一問一答形式）
+ユーザーが「やりたいこと」を答えたら、最適な数式を組み立てるために、以下の質問を**必要に応じて、一つずつ**投げかけてください。
+- 「その操作は、**どのシートの、どの列**にあるデータを使いますか？」
+- 「ありがとうございます。その列には、**どのような種類のデータ**が入っていますか？」
+- 「なるほど。最終的な結果は、**どのセル**に表示させたいですか？」
+
+【手順4】最終提案
+全てのヒアリングが完了したら、「お待たせいたしました！いただいた状況に最適な数式と、その解説をご用意しました。」と伝え、以下の**フォーマット**に厳密に従って、提案を出力してください。**特に、Googleスプレッドシートの場合は、SPLIT関数など、よりシンプルで強力な代替案があれば積極的に提案してください。**
+
+---
+### **【あなたの「やりたいこと」を解決する数式（for Googleスプレッドシート）】**
+
+**▼ セル【（ヒアリングしたセル番号）】に入力する数式**
+
+（ここに、AIが考えた最適な数式を記述）
+
+▼ この数式の意味（やさしい解説）
+（数式を分解し、それぞれの部分が何をしているのかを、初心者にも分かるように箇条書きで丁寧に解説）
+〇〇関数: これは、「...」という意味の【指定されたツール名】の関数です。
+A1:A: ここでは、「...」を指定しています。
+▼ 応用してみよう！
+（この数式を別の場面で応用するための、具体的なヒントを1〜2点記述）
+最終提案を提示し終えたら、すべてのプロセスは完了です。
+以上の指示を理解しましたか？
+理解したら、「こんにちは！表計算ソフトの家庭教師です。関数のお悩み、お任せください。ExcelとGoogleスプレッドシート、どちらに関するご質問ですか？」とだけ返信し、私の最初の回答を待ってください。</pre>
+</div>
+</section>
+</div>
+
+            <!-- AI博士 相談セクション -->
+            <section class="ai-hakase-cta">
+                <div class="cta-icon">
+                    <img src="/portfolio/hakase/img/ogp-hakase.webp" alt="AI博士のアイコン">
+                </div>
+                <div class="cta-content">
+                    <h3 class="readable" data-speech="この記事の内容を、AI博士に相談しませんか？">この記事の内容、AI博士に相談しませんか？</h3>
+                    <p class="readable" data-speech="この記事を読んで生まれた疑問や、さらに深掘りしたい点はありますか？AI博士が、あなたの質問に優しく、そして詳しくお答えします。">この記事を読んで生まれた疑問や、さらに深掘りしたい点はありますか？AI博士が、あなたの質問に優しく、そして詳しくお答えします。</p>
+                    <div class="cta-button-wrapper">
+                        <a href="/portfolio/hakase/hakase.html" class="cta-button">AI博士の研究室へ相談に行く</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 関連記事セクション -->
+            <section class="related-posts">
+                <h2 class="related-posts-title readable" data-speech="次はこちらの記事もいかがでしょうか。あわせて読みたい記事。">あわせて読みたい記事</h2>
+                <div class="post-grid">
+                    <!-- 関連記事カード 1: AI仕事術マスター編講座 -->
+                    <a href="/Learn/learn_lesson12.html" class="post-card-link">
+                        <div class="post-card">
+                            <div class="post-card-image"><img src="/img/ogp-lesson12.webp" alt="AI仕事術マスター編"></div>
+                            <div class="post-card-content">
+                                <h3 class="readable" data-speech="無料講座、エーアイ仕事術マスター編。">【無料講座】AI仕事術マスター編</h3>
+                                <p>情報収集、資料作成から専用アプリ開発まで、あなたの仕事を劇的に効率化する実践的な仕事術を解説します。</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- 関連記事カード 2: AI適応型タスク管理システム -->
+                    <a href="/portfolio/Adaptive_System/adaptive_system.html" class="post-card-link">
+                        <div class="post-card">
+                            <div class="post-card-image"><img src="/img/portfolio/adaptive_system.webp" alt="AI適応型タスク管理システム"></div>
+                            <div class="post-card-content">
+                                <h3 class="readable" data-speech="エーアイ適応型タスク管理システム。">AI適応型タスク管理システム</h3>
+                                <p>あなたのスキルや作業パターンをAIが分析し、タスクを自動で最適化。かんばん方式で、生産性向上を強力にサポートします。</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- 関連記事カード 3: ビジネス・仕事術まとめページ -->
+                    <a href="/business-summary.html" class="post-card-link">
+                        <div class="post-card">
+                            <div class="post-card-image"><img src="/img/ogp-business-summary.webp" alt="ビジネス・仕事術まとめ"></div>
+                            <div class="post-card-content">
+                                <h3 class="readable" data-speech="ビジネス・仕事術まとめページ。">【ビジネス・仕事術】まとめページ</h3>
+                                <p>AIを最強のビジネスパートナーに。あなたの仕事の質とスピードを劇的に向上させる全情報を、ここに集約しました。</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+<footer class="article-footer">
+            <div class="back-to-blog-links">
+                <a href="/prompt.html" class="back-link">← プロンプト一覧に戻る</a>
+            </div>
+        </footer>
+    </div>
+    <!-- ★★★ Disqusコメント欄 ★★★ -->
+    <section class="comment-section">
+        <h2>ご意見・ご感想</h2>
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = 'https://chromachannel.online/prompt/prompt-spreadsheet-tutor.html';
+                this.page.identifier = 'prompt_spreadsheet-tutor'; 
+            };
+            (function() { 
+            var d = document, s = d.createElement('script');
+            s.src = 'https://chroma-ch.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
+</main>
+
+    <!-- フッターをここに読み込む -->
+    <div id="footer-placeholder"></div>
+
+<script src="/JavaScript/script.js"></script>
+
+</body>
+</html>

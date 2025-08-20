@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<!-- ===== ▼▼▼ SEO設定 START ▼▼▼ ===== -->
+    <title>【AI体験ゲーム】AIの赤ちゃん 育成アプリ｜育てて学ぶAIの基本</title>
+    <meta name="description" content="福祉×AIクリエイター制作の無料学習ゲーム。AIはどうやって賢くなるの？「教師あり学習」と「教師なし学習」の違いを、AIの赤ちゃんを育てるゲームで楽しく体験！クリックだけでAIの基本が直感的にわかります。">
+    <link rel="canonical" href="https://chromachannel.online/portfolio/Components/components.html" />
+    <link rel="icon" href="//img/favicon.webp" type="image/webp">
+
+    <!-- OGPタグ -->
+    <meta property="og:title" content="【AI体験ゲーム】AIの赤ちゃん 育成アプリ｜育てて学ぶAIの基本">
+    <meta property="og:description" content="AIはどうやって賢くなるの？「教師あり・なし学習」の違いを、AIの赤ちゃんを育てるゲームで楽しく体験できます。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chromachannel.online/portfolio/Components/components.html">
+    <meta property="og:image" content="https://chromachannel.online/img/ogp_ai_baby.webp">
+    <meta property="og:site_name" content="Chromachannel">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "AIの赤ちゃん 育成アプリ",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Web-based",
+      "description": "福祉×AIクリエイター 山本倫久が制作。「教師あり学習」と「教師なし学習」の違いを、AIの赤ちゃんを育てるゲーム形式でインタラクティブに体験できるWebアプリケーションです。",
+      "author": {
+        "@type": "Person",
+        "name": "山本 倫久",
+        "url": "https://chromachannel.online/"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "山本 倫久",
+        "url": "https://chromachannel.online/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "JPY"
+      }
+    }
+    </script>
+<!-- ===== ▲▲▲ SEO設定 END ▲▲▲ ===== -->
+    
+    <!-- CSS / ライブラリ -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="//CSS/style.css">
+    <link rel="stylesheet" href="CSS/components.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body class="app-body">
+    <div id="header-placeholder"></div>
+    
+    <main class="app-main">
+        <div class="app-container">
+            <header>
+                <h1>AIの赤ちゃん 育成アプリ</h1>
+            </header>
+            <main>
+                <!-- シーン1: はじめに -->
+                <div id="scene-start" class="scene active">
+                    <div class="description">
+                        <p>ようこそ！あなたは今日から、生まれたばかりの「AIの赤ちゃん」の先生です。</p>
+                        <p>これから、AIがどうやって物事を学んでいくのか、赤ちゃんの成長と一緒にながめていきましょう！</p>
+                    </div>
+                    <div class="ai-area">
+                        <div id="baby-start" class="ai-baby">👶</div>
+                        <p class="ai-thought">（...なにもわからない...）</p>
+                    </div>
+                    <div class="button-group">
+                        <button id="start-btn" class="btn-primary">育成をはじめる</button>
+                    </div>
+                </div>
+
+                <!-- シーン2: モード選択 -->
+                <div id="scene-select" class="scene">
+                    <div class="description">
+                        <p>AIの学習方法には、大きく分けて2つの方法があります。どちらの育て方を試してみますか？</p>
+                    </div>
+                    <div class="button-group">
+                        <button id="select-supervised" class="btn-primary">「教師あり学習」で育てる</button>
+                        <button id="select-unsupervised" class="btn-secondary">「教師なし学習」で育てる</button>
+                    </div>
+                </div>
+
+                <!-- シーン3: 教師あり学習 -->
+                <div id="scene-supervised" class="scene">
+                    <div class="description">
+                        <h3>【先生役】教師あり学習</h3>
+                        <p>先生（あなた）が、AIの赤ちゃんに「これはりんごだよ」「これはみかんだよ」と、正解（ラベル）を一つひとつ教えてあげる方法です。AIは、その答えを元に、りんごとみかんの見分け方を学びます。</p>
+                    </div>
+                    <div class="ai-area">
+                        <div id="baby-supervised" class="ai-baby">🤔</div>
+                        <p id="thought-supervised" class="ai-thought">これは...なに？</p>
+                    </div>
+                    <p style="text-align: center; font-weight: bold;">AIの赤ちゃんに、このおもちゃの名前を教えてあげてください。</p>
+                    <div id="supervised-data" class="data-options"></div>
+                </div>
+
+                <!-- シーン4: 教師なし学習 -->
+                <div id="scene-unsupervised" class="scene">
+                    <div class="description">
+                        <h3>【見守る役】教師なし学習</h3>
+                        <p>先生は答えを教えません。ただ、りんごとみかんのおもちゃを、たくさん与えるだけです。AIの赤ちゃんは、答えを知らないまま、見た目の特徴（色や形）だけで、自分なりに仲間分けを始めます。</p>
+                    </div>
+                     <div class="ai-area">
+                        <div id="baby-unsupervised" class="ai-baby">🧐</div>
+                        <p id="thought-unsupervised" class="ai-thought">ふむふむ...なんとなく、仲間わけできそう...</p>
+                    </div>
+                    <p style="text-align: center; font-weight: bold;">AIの赤ちゃんに、たくさんのおもちゃを与えて、観察してみましょう。</p>
+                    <div id="unsupervised-data" class="data-options"></div>
+                </div>
+                
+                <!-- シーン5: 結果・まとめ -->
+                <div id="scene-result" class="scene">
+                     <div id="result-content"></div>
+                     <div class="button-group">
+                        <button id="restart-btn" class="btn-primary">もう一度育てる</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </main>
+
+    <!-- フッターをここに読み込む -->
+    <div id="footer-placeholder"></div>
+    
+    <script src="//JavaScript/script.js" defer></script>
+    <script src="JavaScript/components.js" defer></script>
+</body>
+</html>

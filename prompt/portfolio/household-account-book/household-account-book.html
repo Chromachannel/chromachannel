@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<!-- ===== ▼▼▼ SEO設定 START ▼▼▼ ===== -->
+    <title>【制作実績】かわいい家計簿アプリ｜福祉×AIクリエイターのJavaScript開発事例</title>
+    <meta name="description" content="福祉×AIクリエイター山本倫久がJavaScriptで制作した、シンプルでかわいい家計簿Webアプリ。デザインからフロントエンド開発まで一貫して担当した、Webアプリケーション開発の制作実績です。">
+    <link rel="canonical" href="https://chromachannel.online/portfolio/Household_Account_Book/household-account-book.html" />
+    <link rel="icon" href="//img/favicon.webp" type="image/webp">
+
+    <!-- OGPタグ -->
+    <meta property="og:title" content="【制作実績】かわいい家計簿アプリ｜福祉×AIクリエイターのJavaScript開発事例">
+    <meta property="og:description" content="福祉×AIクリエイター山本倫久がJavaScriptで制作した、シンプルでかわいい家計簿アプリ。デザインから実装まで担当。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chromachannel.online/portfolio/Household_Account_Book/household-account-book.html">
+    <meta property="og:image" content="https://chromachannel.online/img/ogp_kakeibo.webp">
+    <meta property="og:site_name" content="Chromachannel">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "かわいい家計簿アプリ",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web-based",
+      "description": "福祉×AIクリエイター山本倫久が制作した、JavaScriptで実装されたシンプルで使いやすいWebベースの家計簿アプリケーションです。",
+      "author": {
+        "@type": "Person",
+        "name": "山本 倫久",
+        "url": "https://chromachannel.online/"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "山本 倫久",
+        "url": "https://chromachannel.online/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "JPY"
+      }
+    }
+    </script>
+<!-- ===== ▲▲▲ SEO設定 END ▲▲▲ ===== -->
+    
+    <!-- CSS / ライブラリ -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="//CSS/style.css">
+    <link rel="stylesheet" href="CSS/household-account-book.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body class="app-body">
+    <div id="header-placeholder"></div>
+
+    <main class="app-main">
+        <div class="container app-container">
+            <h1>🐷 かわいい家計簿 💰</h1>
+            <div id="summary">
+                <div class="summary-box income-box">
+                    <h3>収入</h3>
+                    <p id="total-income">¥0</p>
+                </div>
+                <div class="summary-box expense-box">
+                    <h3>支出</h3>
+                    <p id="total-expense">¥0</p>
+                </div>
+                <div class="summary-box balance-box">
+                    <h3>残高</h3>
+                    <p id="balance">¥0</p>
+                </div>
+            </div>
+            <form id="transaction-form">
+                <h2>新しい取引を追加 ✍️</h2>
+                <div class="form-control">
+                    <label for="date">日付</label>
+                    <input type="date" id="date" required>
+                </div>
+                <div class="form-control">
+                    <label for="type">種類</label>
+                    <select id="type">
+                        <option value="expense">支出</option>
+                        <option value="income">収入</option>
+                    </select>
+                </div>
+                <div class="form-control">
+                    <label for="category">カテゴリ</label>
+                    <select id="category">
+                        <option value="食費">食費 🍽️</option>
+                        <option value="交通費">交通費 🚌</option>
+                        <option value="趣味">趣味 🎨</option>
+                        <option value="日用品">日用品 🛍️</option>
+                        <option value="交際費">交際費 ☕</option>
+                        <option value="教育費">教育費 📚</option>
+                        <option value="給料">給料 💼</option>
+                        <option value="その他">その他 ✨</option>
+                    </select>
+                </div>
+                <div class="form-control">
+                    <label for="description">内容</label>
+                    <input type="text" id="description" placeholder="例：ランチ代" required>
+                </div>
+                <div class="form-control">
+                    <label for="amount">金額 (円)</label>
+                    <input type="number" id="amount" placeholder="例：800" min="0" required>
+                </div>
+                <button type="submit" class="btn">追加する</button>
+            </form>
+            <h2>取引履歴</h2>
+            <table id="history-table">
+                <thead>
+                    <tr>
+                        <th>日付</th>
+                        <th>内容</th>
+                        <th>金額</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="transaction-list"></tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- フッターをここに読み込む -->
+    <div id="footer-placeholder"></div>
+    
+    <script src="//JavaScript/script.js" defer></script>
+    <script src="JavaScript/household-account-book.js" defer></script>
+</body>
+</html>
