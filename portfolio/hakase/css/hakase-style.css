@@ -1,297 +1,293 @@
-/* ===== AI博士の談話室専用スタイル ===== */
+/* ===== AI博士の研究室専用スタイル ===== */
 
 :root {
-  --counselor-bg: #f8f9fa;
-  --panel-bg: rgba(255, 255, 255, 0.9);
-  --window-bg: rgba(240, 244, 248, 0.95);
-  --ai-bubble-bg: #eef2ff;
-  --user-bubble-bg: #ffffff;
-  --border-color: rgba(226, 232, 240, 0.7);
-  --text-dark: #333;
-  --text-light: #666;
-  --primary-color: #6a11cb;
-  --primary-color-start: #6a11cb; /* グラデーション用に定義 */
-  --primary-color-end: #2575fc; /* グラデーション用に定義 */
+    --counselor-bg: #f8f9fa;
+    --panel-bg: rgba(255, 255, 255, 0.9);
+    --window-bg: rgba(240, 244, 248, 0.95);
+    --ai-bubble-bg: #eef2ff;
+    --user-bubble-bg: #ffffff;
+    --border-color: rgba(226, 232, 240, 0.7);
+    --text-dark: #333;
+    --text-light: #666;
+    --primary-color: #6a11cb;
+    --primary-color-start: #6a11cb; /* グラデーション用に定義 */
+    --primary-color-end: #2575fc;   /* グラデーション用に定義 */
 }
 
 .counselor-main {
-  padding-top: 70px;
-  height: 100vh;
-  display: flex;
-  background: linear-gradient(
-    135deg,
-    var(--primary-color-start) 0%,
-    var(--primary-color-end) 100%
-  );
-  overflow: hidden;
+    padding-top: 70px;
+    height: 100vh;
+    display: flex;
+    background: linear-gradient(135deg, var(--primary-color-start) 0%, var(--primary-color-end) 100%);
+    overflow: hidden;
 }
 
 .counselor-container {
-  display: flex;
-  width: 100%;
-  height: calc(100vh - 70px);
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  gap: 20px;
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 70px); 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px;
+    gap: 20px;
 }
 
 /* --- 左側：履歴パネル --- */
 .history-panel {
-  display: flex;
-  flex-direction: column;
-  width: 280px;
-  background-color: var(--panel-bg);
-  border-radius: 12px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    background-color: var(--panel-bg);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 .history-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  border-bottom: 1px solid var(--border-color);
-  flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--border-color);
+    flex-shrink: 0;
 }
 .history-header h2 {
-  color: var(--text-dark);
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin: 0;
+    color: var(--text-dark);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
 }
 
 #new-chat-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 1.2rem;
-  color: var(--text-light);
-  transition: color 0.2s;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--text-light);
+    transition: color 0.2s;
 }
 #new-chat-btn:hover {
-  color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 .history-list {
-  list-style: none;
-  padding: 10px;
-  margin: 0;
-  overflow-y: auto;
-  flex-grow: 1;
-  color: var(--text-dark);
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    overflow-y: auto;
+    flex-grow: 1;
+    color: var(--text-dark);
 }
 
 /* --- 右側：チャットウィンドウ --- */
 .chat-window {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  background-color: var(--panel-bg);
-  border-radius: 12px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: var(--panel-bg);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 .chat-header {
-  padding: 15px 20px;
-  border-bottom: 1px solid var(--border-color);
-  text-align: center;
-  flex-shrink: 0;
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+    flex-shrink: 0;
 }
 .chat-header h1 {
-  color: var(--text-dark);
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin: 0;
+    color: var(--text-dark);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
 }
 
 .chat-log {
-  flex-grow: 1;
-  padding: 20px;
-  overflow-y: auto;
-  background-color: var(--window-bg);
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: var(--window-bg);
 }
 
 .chat-input-area {
-  display: flex;
-  align-items: flex-end;
-  padding: 15px;
-  border-top: 1px solid var(--border-color);
-  gap: 10px;
-  flex-shrink: 0;
-  background-color: var(--panel-bg);
+    display: flex;
+    align-items: flex-end;
+    padding: 15px;
+    border-top: 1px solid var(--border-color);
+    gap: 10px;
+    flex-shrink: 0;
+    background-color: var(--panel-bg);
 }
 
 #user-input {
-  flex-grow: 1;
-  border: 1px solid var(--border-color);
-  border-radius: 20px;
-  padding: 10px 15px;
-  font-size: 1rem;
-  resize: none;
-  max-height: 150px;
-  font-family: inherit;
-  background-color: #fff;
+    flex-grow: 1;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    resize: none;
+    max-height: 150px;
+    font-family: inherit;
+    background-color: #fff;
 }
 #user-input:focus {
-  outline: none;
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 2px rgba(106, 17, 203, 0.2);
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(106, 17, 203, 0.2);
 }
 
 #send-btn {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: none;
-  background-color: var(--primary-color);
-  color: white;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: background-color 0.2s;
-  flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    flex-shrink: 0;
 }
 #send-btn:hover {
-  background-color: #5a0fb1;
+    background-color: #5a0fb1;
 }
 
 /* --- レスポンシブ対応 --- */
 @media (max-width: 800px) {
-  .counselor-container {
-    flex-direction: column;
-    padding: 10px;
-    gap: 10px;
-    height: calc(100vh - 70px - 20px);
-  }
-  .history-panel {
-    width: 100%;
-    height: 200px;
-  }
+    .counselor-container {
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+        height: calc(100vh - 70px - 20px);
+    }
+    .history-panel {
+        width: 100%;
+        height: 200px;
+    }
 }
 /* ===== チャットログの吹き出しデザイン ===== */
 
 .message {
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
-  max-width: 90%;
-  margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    max-width: 90%;
+    margin-bottom: 20px;
 }
 .message .icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  flex-shrink: 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 .message .bubble {
-  padding: 12px 18px;
-  border-radius: 18px;
-  line-height: 1.6;
-  word-break: break-word;
+    padding: 12px 18px;
+    border-radius: 18px;
+    line-height: 1.6;
+    word-break: break-word;
 }
 .ai-message {
-  justify-content: flex-start;
+    justify-content: flex-start;
 }
 .ai-message .bubble {
-  background-color: var(--ai-bubble-bg);
-  border-top-left-radius: 4px;
-  color: var(--text-dark);
+    background-color: var(--ai-bubble-bg);
+    border-top-left-radius: 4px;
+    color: var(--text-dark);
 }
 .user-message {
-  margin-left: auto;
-  flex-direction: row-reverse;
+    margin-left: auto;
+    flex-direction: row-reverse;
 }
 .user-message .bubble {
-  background-color: var(--user-bubble-bg);
-  border-top-right-radius: 4px;
-  color: var(--text-dark);
+    background-color: var(--user-bubble-bg);
+    border-top-right-radius: 4px;
+    color: var(--text-dark);
 }
 
 /* ===== ▼▼▼ ここから修正・追加 ▼▼▼ ===== */
 .history-item {
-  padding: 12px 15px;
-  cursor: pointer;
-  border-radius: 8px;
-  margin-bottom: 5px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  transition: background-color 0.2s;
-  /* Flexboxでタイトルとボタンを両端に配置 */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px; /* タイトルとボタンの間の余白 */
+    padding: 12px 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: background-color 0.2s;
+    /* Flexboxでタイトルとボタンを両端に配置 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px; /* タイトルとボタンの間の余白 */
 }
 .history-item:hover {
-  background-color: #f0f4f8;
+    background-color: #f0f4f8;
 }
 .history-item.active {
-  background-color: var(--ai-bubble-bg);
-  font-weight: 600;
-  color: var(--primary-color);
+    background-color: var(--ai-bubble-bg);
+    font-weight: 600;
+    color: var(--primary-color);
 }
 .delete-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #aaa;
-  font-size: 0.9rem;
-  padding: 5px;
-  line-height: 1;
-  border-radius: 50%;
-  transition: color 0.2s, background-color 0.2s;
-  flex-shrink: 0; /* ボタンが縮まないように */
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #aaa;
+    font-size: 0.9rem;
+    padding: 5px;
+    line-height: 1;
+    border-radius: 50%;
+    transition: color 0.2s, background-color 0.2s;
+    flex-shrink: 0; /* ボタンが縮まないように */
 }
 .delete-btn:hover {
-  color: #dc3545; /* 赤色 */
-  background-color: #fbebee;
+    color: #dc3545; /* 赤色 */
+    background-color: #fbebee;
 }
 /* ===== 音声再生ボタンのスタイル ===== */
 .voice-play-btn {
-  background: none;
-  border: 1px solid var(--border-color);
-  color: var(--text-light);
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  cursor: pointer;
-  margin-left: 10px; /* 吹き出しとの間隔 */
-  flex-shrink: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.2s ease;
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--text-light);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 10px; /* 吹き出しとの間隔 */
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
 }
 
 .voice-play-btn:hover {
-  background-color: var(--ai-bubble-bg);
-  color: var(--primary-color);
+    background-color: var(--ai-bubble-bg);
+    color: var(--primary-color);
 }
 
 .message {
-  align-items: center; /* アイコン、吹き出し、再生ボタンを中央揃えに */
+    align-items: center; /* アイコン、吹き出し、再生ボタンを中央揃えに */
 }
 /* ===== ▼▼▼ 画像アイコン用の追加スタイル ▼▼▼ ===== */
 .message .icon img {
-  width: 40px; /* 親要素(円)の幅いっぱいに広げる */
-  height: 40px; /* 親要素(円)の高さっぱいに広げる */
-  object-fit: cover; /* 縦横比を維持したまま、要素を完全に覆う */
-  border-radius: 50%; /* 画像自体も円形にする */
+    width: 40px;            /* 親要素(円)の幅いっぱいに広げる */
+    height: 40px;           /* 親要素(円)の高さっぱいに広げる */
+    object-fit: cover;      /* 縦横比を維持したまま、要素を完全に覆う */
+    border-radius: 50%;     /* 画像自体も円形にする */
 }
 /* ===== ▲▲▲ 追加ここまで ▲▲▲ ===== */
 /* ===== ▲▲▲ 修正・追加ここまで ▲▲▲ ===== */
