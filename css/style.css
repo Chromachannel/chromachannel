@@ -660,24 +660,20 @@ p.copyright + p.copyright {
   right: 25px;
   width: 90px;
   height: 90px;
-  background-color: #f8f9fa; /* 画像が読み込めない時用の背景色 */
+  background-color: #f8f9fa; 
+  background-image: url("/portfolio/hakase/img/ogp-hakase.webp");
+  background-size: cover;
+  background-position: center; 
 
-  /* ▼▼▼ ここからが重要 ▼▼▼ */
-  background-image: url("/portfolio/hakase/img/ogp-hakase.webp"); /* ★あなたの画像ファイルのパスに変更してください */
-  background-size: cover; /* ボタンのサイズに合わせて画像を調整 */
-  background-position: center; /* 画像を中央に配置 */
-  /* ▲▲▲ ここまで ▲▲▲ */
-
-  border-radius: 50%; /* 円形にする */
-  border: 2px solid white; /* 画像の周りに白い縁取りを追加 */
+  border-radius: 50%; 
+  border: 2px solid white;
   text-decoration: none;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   transition: all 0.3s ease;
 }
-
 .floating-ai-button:hover {
-  transform: translateY(-5px) scale(1.05); /* 少し拡大するアニメーションを追加 */
+  transform: translateY(-5px) scale(1.05); 
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
 

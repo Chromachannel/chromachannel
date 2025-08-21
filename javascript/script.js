@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         // / を階層の数だけ先頭に追加する
                         const prefix = '/'.repeat(depth);
                         
-                        // HTML内の src="/..." や href="/..." といったルートパスを、
+                        // HTML内の src=/..." や href=/..." といったルートパスを、
                         // 正しい相対パスに自動で書き換える
                         text = text.replace(/(src="|href=")\//g, `$1${prefix}`);
                     }
