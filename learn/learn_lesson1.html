@@ -51,9 +51,8 @@
 
     <!-- =================================================================
     ▼ 構造化データ（JSON-LD）/ 検索エンジンにページ内容を詳細に伝える ▼
-    Googleの最新仕様に合わせて「Course」情報を最適化。
-    不要になったプロパティ（category, timeRequired, offers, hasCourseInstance）を削除し、
-    Googleが必須・推奨とする項目に絞り込んでいます。
+    このページが「講座(Course)」であり「記事(Article)」でもあることを明示し、
+    著者情報(author)を紐付けることでE-E-A-Tを高めます。
     ================================================================== -->
     <script type="application/ld+json">
       {
@@ -67,6 +66,18 @@
               "@type": "Person",
               "name": "山本 倫久",
               "url": "https://chromachannel.online/"
+            },
+            "timeRequired": "PT30M",
+            "offers": {
+              "category": "AIリテラシー",
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "JPY"
+            },
+            "category": "AIリテラシー",
+            "hasCourseInstance": {
+              "@type": "CourseInstance",
+              "courseMode": "online"
             }
           },
           {
