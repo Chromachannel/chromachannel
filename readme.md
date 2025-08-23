@@ -54,7 +54,8 @@ AI技術で福祉の現場に新しい「できる」と「楽しい」を届け
 ├── lifehack-summary.html
 └── rabbit-summary.html
 │
-├── blog/ (全20記事)
+├── blog/ (全21記事)
+│ ├── 15min-ai-habit.html
 │ ├── a-magic-wand-called-ai.html
 │ ├── ai-illustration-overcoming-perfectionism.html
 │ ├── ai-learning-complete-guide.html
@@ -87,7 +88,8 @@ AI技術で福祉の現場に新しい「できる」と「楽しい」を届け
 │ ├── learn_lesson8.html
 │ ├── learn_lesson9.html
 │ ├── learn_lesson10.html
-│ └── learn_lesson11.html
+│ ├── learn_lesson11.html
+│ └── learn_lesson12.html
 │
 ├── Novels/ (全7小説)
 │ ├── hoshizora-no-melody.html
