@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
     let learnedData = {}; // AIが学習したデータを保存する場所
     let currentItem = null;
-    let isLearnMode = true;
+    let islearnMode = true;
     let score = 0;
 
     // --- DOM要素の取得 ---
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     function resetGame() {
         learnedData = {};
-        isLearnMode = true;
+        islearnMode = true;
         score = 0;
         updateScore();
         switchModeBtn.textContent = 'テストモードに切り替え';
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const droppedItem = e.dataTransfer.getData('text/plain');
             const targetCategory = zone.dataset.category;
 
-            if (isLearnMode) {
+            if (islearnMode) {
                 learnedData[droppedItem] = targetCategory;
                 updateFeedback(`「${droppedItem}」は「${targetCategory}」だね！覚えたよ！`, true);
             } else {
@@ -100,8 +100,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (switchModeBtn) {
         switchModeBtn.addEventListener('click', () => {
-            isLearnMode = !isLearnMode;
-            if (isLearnMode) {
+            islearnMode = !islearnMode;
+            if (islearnMode) {
                 modeTextEl.textContent = '学習モード';
                 switchModeBtn.textContent = 'テストモードに切り替え';
                 switchModeBtn.classList.remove('testing');

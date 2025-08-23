@@ -1,51 +1,69 @@
-/* === アニメーション === */
+/* =================================== */
+/* ===== キーフレームアニメーション ===== */
+/* =================================== */
+
+/* 下から上へスライドしながら表示されるアニメーションを定義 */
 @keyframes slideInUp {
     from {
-        opacity: 0; transform: translateY(30px);
-    } 
+        opacity: 0;
+        transform: translateY(30px);
+    }
     to {
-        opacity: 1; transform: translateY(0);
-    } 
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* === メインヒーロー (トップページ用) === */
+/* =================================== */
+/* ===== ヒーローセクション (トップページメインビジュアル) ===== */
+/* =================================== */
+
 .hero {
-    min-height: 100vh;
+    min-height: 100vh; /* 画面の高さいっぱいに表示 */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* 垂直方向中央揃え */
+    justify-content: center; /* 水平方向中央揃え */
     text-align: center;
     color: white;
     padding: 80px 20px;
-    position: relative;
-    overflow: hidden;
+    position: relative; /* 背景要素の基準点 */
+    overflow: hidden; /* はみ出した背景要素を隠す */
     background: linear-gradient(135deg, var(--primary-color-start) 0%, var(--primary-color-end) 100%);
     z-index: 1;
 }
+
+/* ヒーローセクション内のコンテンツ（テキストやボタン）をまとめるコンテナ */
 .hero-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 25px;
     max-width: 800px;
-    z-index: 2;
+    z-index: 2; /* 背景より手前に表示 */
     position: relative;
 }
+
+/* メインキャッチコピー */
 .hero h1 {
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-size: clamp(2.5rem, 5vw, 3.5rem); /* 画面幅に応じてフォントサイズを可変 */
     margin-bottom: 20px;
     font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    animation: slideInUp 1s ease-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* 文字に影をつけて視認性を向上 */
+    animation: slideInUp 1s ease-out; /* アニメーションを適用 */
     position: relative;
     z-index: 2;
 }
+
+/* サブタイトル */
 .hero-subtitle {
     font-size: clamp(1.1rem, 3vw, 1.4rem);
     margin-bottom: 40px;
     opacity: 0.9;
+    /* `both`でアニメーション終了後もその状態を維持 */
     animation: slideInUp 1s ease-out 0.3s both;
 }
+
+/* CTA（Call To Action）ボタンのコンテナ */
 .hero-cta-buttons {
     display: flex;
     flex-direction: column;
@@ -60,30 +78,34 @@
     justify-content: center;
     gap: 20px;
 }
+
+/* CTAボタンの共通スタイル */
 .cta-button {
     margin: 0;
     animation: none;
     padding: 15px 40px;
     font-size: 1rem;
     display: inline-block;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.2); /* 半透明の背景 */
     color: white;
     text-decoration: none;
-    border-radius: 50px;
+    border-radius: 50px; /* 角を丸めてカプセル型に */
     font-weight: 600;
     border: 2px solid rgba(255, 255, 255, 0.3);
     transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); /* 背景をぼかす「すりガラス」効果 */
 }
 .cta-button:hover {
     background: rgba(255, 255, 255, 0.3);
     transform: translateY(-3px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
+
+/* サブのCTAボタンのスタイル */
 .cta-button.secondary-cta {
     padding: 12px 28px;
     font-size: 0.95rem;
-    background: transparent;
+    background: transparent; /* 背景を透明に */
     border: 2px solid rgba(255, 255, 255, 0.8);
     color: rgba(255, 255, 255, 0.9);
 }
@@ -92,32 +114,43 @@
     color: white;
 }
 
-/* === 共通セクションスタイル === */
+/* =================================== */
+/* ===== 共通セクションスタイル ===== */
+/* =================================== */
+
+/* 各コンテンツセクションの上下の余白 */
 .section {
     padding: 100px 0;
 }
+
+/* 各セクションのタイトル */
 .section-title {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 60px;
     background: linear-gradient(45deg, var(--primary-color-start), var(--primary-color-end));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; /* 背景をテキストの形で切り抜く */
+    -webkit-text-fill-color: transparent; /* テキストの色を透明にする */
     background-clip: text;
     font-weight: 700;
 }
+
+/* テキスト内の強調表示 */
 .highlight {
     color: var(--primary-color-start);
     font-weight: 600;
 }
 
-/* === About Me セクション === */
+/* =================================== */
+/* ===== 自己紹介 (About Me) セクション ===== */
+/* =================================== */
+
 .about {
     background: var(--bg-white);
 }
 .about-card {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* モバイルでは1カラム */
     gap: 30px;
     align-items: start;
     background: var(--bg-white);
@@ -126,13 +159,15 @@
     box-shadow: 0 20px 60px rgba(0,0,0,0.1);
 }
 
+/* PC（992px以上）では2カラムレイアウトに */
 @media (min-width: 992px) {
     .about-card {
-        grid-template-columns: 1fr 1.5fr;
+        grid-template-columns: 1fr 1.5fr; /* 左(画像):右(テキスト) = 1:1.5 */
         gap: 50px;
         padding: 50px;
     }
 }
+
 .about-card-left {
     text-align: center;
 }
@@ -140,31 +175,26 @@
     width: 100%;
     max-width: 250px;
     height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
+    border-radius: 50%; /* 画像を円形にする */
+    object-fit: cover; /* 画像の比率を保ったままトリミング */
     margin: 0 auto 25px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
-.profile-audio-player .audio-caption {
-    font-size: 0.9rem;
-    color: var(--text-light);
-    margin-bottom: 10px;
-    font-weight: 500;
-}
-.profile-audio-player audio {
-    width: 100%;
-    max-width: 280px;
-    margin: 0 auto;
-}
+
+/* 自己紹介文のテキストエリア */
 .about-card-right {
     font-size: 1.1rem;
-    line-height: 1.8;
+    line-height: 1.8; /* 行間を広めにとり読みやすくする */
 }
 
-/* === スキル === */
+/* =================================== */
+/* ===== スキルセクション ===== */
+/* =================================== */
+
 .skills {
     background: var(--bg-light);
 }
+/* スキルカードを並べるレスポンシブなグリッド */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -182,6 +212,7 @@
     transform: translateY(-5px);
     box-shadow: 0 20px 40px var(--shadow-dark);
 }
+/* スキルアイコンの円形背景 */
 .skill-icon {
     width: 80px;
     height: 80px;
@@ -194,21 +225,17 @@
     color: white;
     font-size: 2.5rem;
 }
-.skill-card h3 {
-    margin-bottom: 15px;
-    font-size: 1.3rem;
-}
-.skill-card p {
-    color: var(--text-light);
-    line-height: 1.6;
-}
 
-/* === コンタクト === */
+/* =================================== */
+/* ===== お問い合わせセクション ===== */
+/* =================================== */
+
 .contact {
-    background: linear-gradient(135deg, var(--primary-color-start) 0%, var(--primary-color-end) 100%); 
+    background: linear-gradient(135deg, var(--primary-color-start) 0%, var(--primary-color-end) 100%);
     color: white;
     text-align: center;
 }
+/* Contactセクションのタイトルは白文字にするため、グラデーションをリセット */
 .contact .section-title {
     color: white;
     background: none;
@@ -219,22 +246,13 @@
     flex-direction: column;
     align-items: center;
 }
-.contact-info {
-    margin-bottom: 20px;
-}
 .contact-info p {
     font-size: 1.1rem;
     margin-bottom: 10px;
     opacity: 0.9;
 }
-.contact-supplement {
-    font-size: 0.9rem;
-    opacity: 0.8;
-    margin-top: 15px;
-}
-.contact-email-wrapper {
-    margin-top: 30px;
-}
+
+/* メールアドレスボタン */
 .contact-email {
     display: inline-flex;
     align-items: center;

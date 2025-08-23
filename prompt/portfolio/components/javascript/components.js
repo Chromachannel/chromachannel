@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function setupSupervisedLearning() {
+    function setupSupervisedlearning() {
         learningCount = 0;
         dataContainers.supervised.innerHTML = '';
         dataItems.forEach(item => {
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function setupUnsupervisedLearning() {
+    function setupUnsupervisedlearning() {
         dataContainers.unsupervised.innerHTML = '';
         const allToys = [...dataItems, ...dataItems, ...dataItems, ...dataItems].sort(() => 0.5 - Math.random());
         allToys.forEach(item => {
@@ -128,11 +128,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (startBtn) startBtn.addEventListener('click', () => switchScene('select'));
     if (selectSupervisedBtn) selectSupervisedBtn.addEventListener('click', () => {
-        setupSupervisedLearning();
+        setupSupervisedlearning();
         switchScene('supervised');
     });
     if (selectUnsupervisedBtn) selectUnsupervisedBtn.addEventListener('click', () => {
-        setupUnsupervisedLearning();
+        setupUnsupervisedlearning();
         switchScene('unsupervised');
     });
     if (restartBtn) restartBtn.addEventListener('click', () => {
