@@ -7,166 +7,98 @@ AI技術で福祉の現場に新しい「できる」と「楽しい」を届け
 
 ## 📖 コンセプト
 
-このサイトは、私、山本倫久の「AIという最先端のテクノロジーを駆使して、福祉の現場に新しい『できる』と『楽しい』を届ける」というミッションを体現するものです。私の持つ多様なスキルセット、具体的な作品群（ポートフォリオ）、そして実践的なノウハウ（ブログやプロンプト集など）を、訪問者が直感的に理解できるよう、構造的に設計されています。
+このサイトは、私、山本倫久の「AIという最先端のテクノロジーを駆使して、福祉の現場に新しい『できる』と『楽しい』を届ける」というミッションを体現するものです。これは単なるポートフォリオサイトではなく、**私自身の経験に基づき体系化された、知識ゼロからでもAIクリエイターを目指せる完全無料の「教育プラットフォーム」**です。
 
-このサイト自体が、AIを「共同制作者」として活用する、私の制作スタイルの最大のショーケースです。
+このサイト自体が、AIを「共同制作者」として活用する、私の制作スタイルの最大のショーケースとなっています。
 
 ## ✨ 主な機能と特徴
 
-- **マルチページ構成:** サイトの目的別にページを分割 (`index`, `portfolio`, `learn`, `blog`, `prompt`, `novels`) し、ユーザーが必要な情報にアクセスしやすい構造。
-- **コンポーネント化:** ヘッダーとフッターを外部ファイル化し、JavaScriptで動的に読み込むことで、メンテナンス性を大幅に向上。
-- **ピラーページ戦略:** 専門テーマごとの「まとめページ」を設置し、サイト全体の情報構造を強化。
-- **モジュール化CSS:** `style.css` (共通), `topview.css` (トップページ), `only_read.css` (記事等), `hakase-style.css` (チャット) にファイルを分割し、高いメンテナンス性と拡張性を実現。
-- **レスポンシブデザイン:** PC、タブレット、スマートフォンなど、あらゆるデバイスで最適な表示を実現。
-- **インタラクティブUI:** スクロールに応じたフェードインアニメーションや、モバイル用のハンバーガーメニューを実装。
-- **高機能な一覧ページ:** ポートフォリオとプロンプト集には、カテゴリ別の絞り込み（フィルター）機能をJavaScriptで実装。
-- **新機能: AI博士の研究室:** Gemini APIと連携した、プライバシー配慮型の対話AIチャットボットを実装。会話履歴の自動保存・復元・削除機能も搭載。
-- **高度なSEO対策:** 各ページに最適化された`meta`タグ, `canonical`タグ, `OGP`タグを設定。さらに、構造化データ（JSON-LD）や`sitemap.xml`も活用し、検索エンジンからの評価を最大化。
+- **体系的な学習ロードマップ:** 全26の講座を通じて、PCの基本操作から、画像・音声・動画生成、さらにはビジネス応用までをステップ・バイ・ステップで学べます。
+- **実践的なプロンプト集:** コピペで使える30種類以上の高品質プロンプトを提供。AIに特定の役割を与え、対話形式で成果物を生み出す独自のノウハウが詰まっています。
+- **多様な制作実績:** 静的なウェブサイト制作から、JavaScriptを用いたインタラクティブなゲームやWebアプリケーションまで、幅広い開発スキルを証明しています。
+- **高度なインタラクティブUI:** JavaScriptによるコンポーネントの動的読み込み、スクロールに応じたフェードインアニメーション、カテゴリ別フィルター機能などを実装。
+- **アクセシビリティへの配慮:** サイトワイドの音声読み上げ機能を`voice-module.js`で独自に実装。`data-speech`属性による読み替えなど、誰にとっても使いやすいサイトを目指しています。
+- **高機能AIチャットボット:** Gemini APIと連携した「AI博士の談話室」を設置。会話履歴の`localStorage`への自動保存・復元・削除機能を備えた、プライバシー配慮型の実用的なアプリケーションです。
+- **徹底したSEO対策:** 各ページに最適化された`meta`タグ, `canonical`, `OGP`タグ、そして網羅的な`sitemap.xml`と構造化データ（JSON-LD）を活用し、検索エンジンからの評価を最大化しています。
 
-## 💻 使用技術
+## 💻 使用技術・ツール
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Font Awesome](https://img.shields.io/badge/Font%20Awesome-528DD7?style=for-the-badge&logo=fontawesome&logoColor=white)
 ![Google Gemini API](https://img.shields.io/badge/Gemini%20API-4285F4?style=for-the-badge&logo=google&logoColor=white)
+![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
 
-- **ライブラリ:** ress.min.css
+- **AIアシスタント:** ChatGPT, Google Gemini, Microsoft Copilot, Claude
+- **画像生成:** Stable Diffusion, ImageFX, Leonardo.Ai, SeaArt.ai
+- **音声・音楽生成:** VOICEVOX, Suno AI
+- **動画編集:** ゆっくりムービーメーカー4 (YMM4)
+- **デザイン・加工:** Canva, GIMP, Inkscape, Photopea, Squoosh
+- **ライブラリ:** ress.min.css, Font Awesome
 
-## 📂 サイト構造
+## 📂 サイト構造 (主要ファイル)
 
 ```
 / (ルート)
-├── index.html
-├── portfolio.html
-├── learn.html
-├── blog.html
-├── prompt.html
-├── novels.html
+├── index.html (トップページ)
+├── portfolio.html (制作実績一覧)
+├── learn.html (学習トップ - 講座一覧)
+├── blog.html (ブログ一覧)
+├── prompt.html (プロンプト一覧)
+├── novels.html (小説一覧)
 ├── privacy.html
 ├── sitemap.xml
 ├── readme.md
-├── learning-summary.html
-├── business-summary.html
-├── creative-summary.html
-├── entertainment-summary.html
-├── apps-summary.html
-├── lifehack-summary.html
-└── rabbit-summary.html
+├── learning-summary.html (各テーマまとめページ x7)
 │
 ├── blog/ (全21記事)
-│ ├── 15min-ai-habit.html
-│ ├── a-magic-wand-called-ai.html
-│ ├── ai-illustration-overcoming-perfectionism.html
-│ ├── ai-learning-complete-guide.html
-│ ├── ai-meal-planning-report.html
-│ ├── ai-recreation-welfare.html
-│ ├── ai-tool-diagnostic-chart.html
-│ ├── announcing-ai-hakase.html
-│ ├── announcing-full-ai-curriculum.html
-│ ├── announcing-new-ai-courses.html
-│ ├── fuwamoco-development-story.html
-│ ├── goal-setting-for-ai-learning.html
-│ ├── hakase-development-story.html
-│ ├── how-to-create-a-4-step-learning-roadmap-with-ai.html
-│ ├── how-to-customize-prompt.html
-│ ├── how-to-prompt.html
-│ ├── making-this-site-with-ai.html
-│ ├── rabbit-behavior-guide.html
-│ ├── release-chatgpt-course.html
-│ ├── report-making-picture-book-with-ai.html
-│ └── report-making-travel-plan-with-ai.html
+│   ├── 15min-ai-habit.html
+│   └── ... (他20記事)
 │
-├── learn/ (全11ページ)
-│ ├── learn_lesson1.html
-│ ├── learn_lesson2.html
-│ ├── learn_lesson3.html
-│ ├── learn_lesson4.html
-│ ├── learn_lesson5.html
-│ ├── learn_lesson6.html
-│ ├── learn_lesson7.html
-│ ├── learn_lesson8.html
-│ ├── learn_lesson9.html
-│ ├── learn_lesson10.html
-│ ├── learn_lesson11.html
-│ └── learn_lesson12.html
+├── learn/ (全26講座)
+│   ├── learn_lesson0.html (PC操作入門)
+│   ├── ... (lesson1～24)
+│   └── learn_lesson25.html (講座付録)
 │
-├── Novels/ (全7小説)
-│ ├── hoshizora-no-melody.html
-│ ├── isekai-no-ou.html
-│ ├── kieta-mura.html
-│ ├── seishun-no-1page.html
-│ ├── unmei-no-akaiito.html
-│ ├── unmei-no-ito.html
-│ └── yoru-no-koe.html
+├── novels/ (全7小説)
+│   ├── hoshizora-no-melody.html
+│   └── ... (他6作品)
 │
-├── portfolio/ (全21制作実績ページ)
-│ ├── fuwamoco-detail.html
-│ ├── Adaptive_System/adaptive_system.html
-│ ├── Ai-Slide-App/ai-slide-app.html
-│ ├── Components/components.html
-│ ├── Demo/demo.html
-│ ├── Fuwamoco/
-│ │ ├── index.html
-│ │ ├── 3-match-puzzle.html
-│ │ ├── cafe.html
-│ │ ├── company-info.html
-│ │ ├── company.html
-│ │ ├── contact.html
-│ │ ├── privacy-policy.html
-│ │ ├── questionnaire.html
-│ │ └── rabbit.html
-│ ├── Game/pict.html
-│ ├── hakase/hakase.html
-│ ├── Household_Account_Book/household-account-book.html
-│ ├── Real-time-preview/real-time-preview.html
-│ ├── Task-Tool/task-tool.html
-│ ├── Timer/timer.html
-│ └── chirashi/chirashi.html
+├── portfolio/ (Webアプリ/サイト制作実績)
+│   ├── fuwamoco-detail.html
+│   ├── hakase/hakase.html (AI博士)
+│   ├── Adaptive_System/adaptive_system.html (AIタスク管理)
+│   ├── Game/pict.html (AI体験ゲーム)
+│   ├── Fuwamoco/ (架空NPOサイト 全9ページ)
+│   │   ├── index.html
+│   │   └── ... (他8ページ)
+│   └── ... (他多数のWebアプリ/ツール)
 │
-├── prompt/ (全29プロンプトページ)
-│ ├── prompt-architect.html
-│ ├── prompt-article-editor.html
-│ ├── prompt-book-report-wizard.html
-│ ├── prompt-business-email.html
-│ ├── prompt-catchphrase-strategist.html
-│ ├── prompt-consultant.html
-│ ├── prompt-decline-coach.html
-│ ├── prompt-excel-spreadsheet-tutor.html
-│ ├── prompt-excel-tutor.html
-│ ├── prompt-hakase.html
-│ ├── prompt-imagefx.html
-│ ├── prompt-kondate.html
-│ ├── prompt-minutes-assistant.html
-│ ├── prompt-novel-writing.html
-│ ├── prompt-personality-test.html
-│ ├── prompt-picture-book-writing.html
-│ ├── prompt-presentation-strategist.html
-│ ├── prompt-recipe-creator.html
-│ ├── prompt-reminder-coach.html
-│ ├── prompt-roadmap-lv1.html
-│ ├── prompt-roadmap-lv2.html
-│ ├── prompt-roadmap-lv3.html
-│ ├── prompt-science-teacher.html
-│ ├── prompt-stable-diffusion.html
-│ ├── prompt-suno-ai.html
-│ ├── prompt-suno-ai-v2.html
-│ ├── prompt-travel-planner.html
-│ ├── prompt-vegetable-hero.html
-│ └── prompt-youtube-shorts.html
+├── prompt/ (全29プロンプト)
+│   ├── prompt-architect.html (プロンプト自動設計)
+│   └── ... (他28プロンプト)
 │
 ├── CSS/
+│   ├── style.css (共通)
+│   └── ... (ページ/アプリ専用CSS x10以上)
+│
 ├── JavaScript/
-├── img/
-└── Audio/
+│   ├── script.js (共通)
+│   ├── voice-module.js (音声読み上げ機能)
+│   └── ... (各アプリ専用JS x8)
+│
+├── img/ (画像素材)
+└── Sounds/ (音声素材)
 ```
 
 ## 👤 制作者
 
 - **氏名:** 山本 倫久 (Norihisa Yamamoto)
 - **役職:** 福祉 × AIクリエイター
-- **住所:** 大阪府大阪市
+- **拠点:** 大阪府大阪市
 - **連絡先:** from.aito.the.infinity@gmail.com
+- **X (旧Twitter):** [@ChromachannelAI](https://x.com/ChromachannelAI)
+- **GitHub:** [Chromachannel](https://github.com/Chromachannel)
 
 ---
 © 2025 chromachannel. All rights reserved.
