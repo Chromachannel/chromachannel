@@ -76,7 +76,7 @@ AI技術で福祉の現場に新しい「できる」と「楽しい」を届け
 │ ├── report-making-picture-book-with-ai.html
 │ └── report-making-travel-plan-with-ai.html
 │
-├── Learn/ (全11ページ)
+├── learn/ (全11ページ)
 │ ├── learn_lesson1.html
 │ ├── learn_lesson2.html
 │ ├── learn_lesson3.html

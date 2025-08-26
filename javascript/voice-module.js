@@ -38,6 +38,12 @@ class SiteWideSpeaker {
         }
     }
 
+    stop() {
+        if (this.synth.speaking) {
+            this.synth.cancel();
+        }
+    }
+
     showControls() {
         if(this.controlPanel) {
             this.controlPanel.classList.remove('hidden');

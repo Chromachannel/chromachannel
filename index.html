@@ -1,37 +1,44 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
+    <!-- =================================================================
+    ▼ 基本的なメタ情報 ▼
+    ================================================================== -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- =================================================================
+    ▼ SEO関連の重要なメタタグ ▼
+    ================================================================== -->
+    <!-- ページのタイトル（検索結果に表示される最も重要な要素の一つ） -->
     <title>Chromachannel | 福祉とAI活用を学ぶ実践サイト by 山本倫久</title>
-    <meta
-      name="description"
-      content="福祉×AIクリエイター 山本倫久が運営する、AI活用を学ぶ実践サイト。初心者向けAI学習講座や、福祉現場で使える制作実績（Webアプリ、教材）を無料公開。あなたの「できる」と「楽しい」をAIで支援します。"
-    />
-    <meta
-      property="og:title"
-      content="Chromachannel | 福祉とAI活用を学ぶ実践サイト by 山本倫久"
-    />
-    <meta
-      property="og:description"
-      content="福祉×AIクリエイターが運営する、AI活用を学ぶ実践サイト。初心者向け学習講座や福祉現場で使える制作実績を無料公開。"
-    />
+    <!-- ページの概要（検索結果のタイトル下に表示される説明文） -->
+    <meta name="description" content="福祉×AIクリエイター 山本倫久が運営する、AI活用を学ぶ実践サイト。初心者向けAI学習講座や、福祉現場で使える制作実績（Webアプリ、教材）を無料公開。あなたの「できる」と「楽しい」をAIで支援します。"/>
+    <!-- 重複コンテンツを避け、正規のURLを検索エンジンに伝える -->
+    <link rel="canonical" href="https://chromachannel.online/index.html" />
+
+    <!-- =================================================================
+    ▼ OGP (Open Graph Protocol) タグ / SNSでシェアされた際の表示を設定 ▼
+    ================================================================== -->
+    <meta property="og:title" content="Chromachannel | 福祉とAI活用を学ぶ実践サイト by 山本倫久"/>
+    <meta property="og:description" content="福祉×AIクリエイターが運営する、AI活用を学ぶ実践サイト。初心者向け学習講座や福祉現場で使える制作実績を無料公開。"/>
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://chromachannel.online/index.html" />
-    <meta
-      property="og:image"
-      content="https://chromachannel.online/img/ogp_image.webp"
-    />
+    <meta property="og:image" content="https://chromachannel.online/img/ogp_image.webp"/>
     <meta property="og:site_name" content="Chromachannel" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="canonical" href="https://chromachannel.online/index.html" />
+
+    <!-- =================================================================
+    ▼ 構造化データ（JSON-LD）/ 検索エンジンにサイトの情報をより深く伝える ▼
+    E-E-A-T（経験・専門性・権威性・信頼性）の観点から著者情報を明記することが重要です
+    ================================================================== -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "Chromachannel",
         "url": "https://chromachannel.online/",
+        "description": "福祉×AIクリエイター 山本倫久が運営する、AI活用を学ぶ実践サイト。初心者向けAI学習講座や、福祉現場で使える制作実績（Webアプリ、教材）を無料公開しています。",
         "author": {
           "@type": "Person",
           "name": "山本 倫久",
@@ -58,585 +65,362 @@
         "publisher": {
           "@type": "Person",
           "name": "山本 倫久"
-        },
-        "description": "福祉×AIクリエイター 山本倫久が運営する、AI活用を学ぶ実践サイト。初心者向けAI学習講座や、福祉現場で使える制作実績（Webアプリ、教材）を無料公開しています。"
+        }
       }
     </script>
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- =================================================================
+    ▼ ファビコン・アプリアイコン ▼
+    ================================================================== -->
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+
+    <!-- =================================================================
+    ▼ スタイルシート ▼
+    ================================================================== -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/topview.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/topview.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
   </head>
   <body>
+    <!-- ヘッダーのプレースホルダー -->
     <div id="header-placeholder"></div>
 
     <main>
+      <!-- =================================================================
+      ▼ メインビジュアル（ヒーローセクション） ▼
+      サイトの第一印象を決める重要なエリア
+      ================================================================== -->
       <section class="hero">
         <div class="hero-content">
-          <h1 class="readable">
-            AIで「好き」を仕事に。<br />福祉の現場に、創造の翼を。
-          </h1>
-          <p class="hero-subtitle readable">
-            最先端のAIテクノロジーで、一人ひとりの創造性を<br />開花させるお手伝いをします。
-          </p>
+          <!-- H1タグはページ内で最も重要な見出し。主要キーワードを含めることが望ましい -->
+          <h1 class="readable">AIで「好き」を仕事に。<br>
+            福祉の現場に、創造の翼を。</h1>
+          <p class="hero-subtitle readable">最先端のAIテクノロジーで、一人ひとりの創造性を<br>
+            開花させるお手伝いをします。</p>
           <div class="hero-cta-buttons">
             <div class="secondary-cta-group">
-              <a
-                href="/portfolio/hakase/hakase.html"
-                class="cta-button readable"
-                >まずは気軽に、AI博士に聞いてみよう！</a
-              >
+              <a href="portfolio/hakase/hakase.html" class="cta-button readable">まずは気軽に、AI博士に聞いてみよう！</a>
             </div>
-            <a href="/portfolio.html" class="cta-button secondary-cta readable"
-              >作品を見る</a
-            >
+            <a href="portfolio.html" class="cta-button secondary-cta readable">作品を見る</a>
           </div>
         </div>
       </section>
 
+      <!-- =================================================================
+      ▼ 自己紹介セクション ▼
+      著者情報を明確にし、E-E-A-Tを高める
+      ================================================================== -->
       <section id="about" class="section about">
         <div class="container">
           <h2 class="section-title fade-in readable">自己紹介</h2>
           <div class="about-card fade-in">
             <div class="about-card-left">
-              <img
-                src="/img/profile_thumb.avif"
-                alt="山本 倫久 プロフィール写真"
-                class="profile-image"
-                loading="lazy"
-                width="250"
-                height="250"
-              />
+              <!-- 画像には必ずalt属性で説明を記述。SEO及びアクセシビリティ対策 -->
+              <img src="img/profile_thumb.avif" alt="山本 倫久 プロフィール写真"
+                class="profile-image" loading="lazy" width="250" height="250"/>
             </div>
             <div class="about-card-right">
-              <p class="readable">
-                はじめまして。<span class="highlight"
-                  >福祉 × AIクリエイター</span
-                >の<span class="highlight" data-speech="やまもと のりひさ"
-                  >山本 倫久</span
-                >と申します。 私のミッションは、<span class="highlight"
-                  >AIという最先端のテクノロジーを駆使して、福祉の現場に新しい「できる」と「楽しい」を届けること</span
-                >です。
-                私自身、就労支援B型事業所を利用する中で、誰もが心の中に素晴らしい創造性の種を持っていることを実感してきました。その種を、AIという光と水で育み、一人ひとりの「好き」という気持ちを、自信を持って世に出せる「作品」へと開花させる。そのお手伝いをすることが、私の最大の喜びです。
-                企画、シナリオ、音楽、イラスト、動画編集まで、<span
-                  class="highlight"
-                  >コンテンツ制作の全工程をワンストップで手掛けるスキル</span
-                >と、何より<span class="highlight">「教えること」への情熱</span
-                >があります。複雑なITスキルも、キャラクターの掛け合いなどを通じて、誰もが楽しみながら学べる教材へとデザインし直すことを得意としています。
-              </p>
+              <p class="readable">はじめまして。<span class="highlight">福祉 × AIクリエイター</span>の<span class="highlight" data-speech="やまもと のりひさ">山本 倫久</span>と申します。 <br>
+                私のミッションは、<span class="highlight">AIという最先端のテクノロジーを駆使して、福祉の現場に新しい「できる」と「楽しい」を届けること</span>です。<br>
+                私自身、就労支援B型事業所を利用する中で、誰もが心の中に素晴らしい創造性の種を持っていることを実感してきました。その種を、AIという光と水で育み、一人ひとりの「好き」という気持ちを、自信を持って世に出せる「作品」へと開花させる。そのお手伝いをすることが、私の最大の喜びです。<br>
+                企画、シナリオ、音楽、イラスト、動画編集まで、<span class="highlight">コンテンツ制作の全工程をワンストップで手掛けるスキル</span>と、何より<span class="highlight">「教えること」への情熱</span>があります。複雑なITスキルも、キャラクターの掛け合いなどを通じて、誰もが楽しみながら学べる教材へとデザインし直すことを得意としています。</p>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- =================================================================
+      ▼ スキル & サービスセクション ▼
+      提供できる価値を具体的に示す
+      ================================================================== -->
       <section id="skills" class="section skills">
         <div class="container">
           <h2 class="section-title fade-in readable">スキル & サービス</h2>
           <div class="skills-grid">
             <div class="skill-card fade-in">
               <div class="skill-icon">
-                <i class="fas fa-palette"></i>
+                <!-- アイコンは装飾的な要素のため、aria-hidden="true"で読み上げをスキップ -->
+                <i class="fas fa-palette" aria-hidden="true"></i>
               </div>
               <h3 class="readable">AIイラスト制作</h3>
-              <p class="readable">
-                Stable
-                Diffusion等を活用したキャラクター・背景制作、および操作指導。
-              </p>
+              <p class="readable">Stable Diffusion等を活用したキャラクター・背景制作、および操作指導。</p>
             </div>
             <div class="skill-card fade-in">
               <div class="skill-icon">
-                <i class="fas fa-video"></i>
+                <i class="fas fa-video" aria-hidden="true"></i>
               </div>
               <h3 class="readable">動画・音楽制作</h3>
-              <p class="readable">
-                企画、台本(GPTs)、音声(VOICEVOX)、楽曲(Suno)、編集(YMM4)まで一貫対応。
-              </p>
+              <p class="readable">企画、台本(GPTs)、音声(VOICEVOX)、楽曲(Suno)、編集(YMM4)まで一貫対応。</p>
             </div>
             <div class="skill-card fade-in">
               <div class="skill-icon">
-                <i class="fas fa-book-open-reader"></i>
+                <i class="fas fa-book-open-reader" aria-hidden="true"></i>
               </div>
               <h3 class="readable">教材コンテンツ設計</h3>
-              <p class="readable">
-                複雑なITスキルを、初心者でも楽しく学べるインタラクティブな教材を開発。
-              </p>
+              <p class="readable">複雑なITスキルを、初心者でも楽しく学べるインタラクティブな教材を開発。</p>
             </div>
             <div class="skill-card fade-in">
               <div class="skill-icon">
-                <i class="fas fa-code"></i>
+                <i class="fas fa-code" aria-hidden="true"></i>
               </div>
               <h3 class="readable">Webアプリ開発</h3>
-              <p class="readable">
-                HTML/CSS/JSを用いた、体験型学習アプリやツールのプロトタイプ開発。
-              </p>
+              <p class="readable">HTML/CSS/JSを用いた、体験型学習アプリやツールのプロトタイプ開発。</p>
             </div>
             <div class="skill-card fade-in">
               <div class="skill-icon">
-                <i class="fas fa-hands-helping"></i>
+                <i class="fas fa-hands-helping" aria-hidden="true"></i>
               </div>
               <h3 class="readable">福祉×ITコンサル</h3>
-              <p class="readable">
-                当事者目線で、福祉現場の課題を解決するIT活用の企画・提案。
-              </p>
+              <p class="readable">当事者目線で、福祉現場の課題を解決するIT活用の企画・提案。</p>
             </div>
             <div class="skill-card fade-in">
               <div class="skill-icon">
-                <i class="fas fa-lightbulb"></i>
+                <i class="fas fa-lightbulb" aria-hidden="true"></i>
               </div>
               <h3 class="readable">総合プロデュース</h3>
-              <p class="readable">
-                アイデアの壁打ちから完成まで、コンテンツ制作の全工程を伴走支援。
-              </p>
+              <p class="readable">アイデアの壁打ちから完成まで、コンテンツ制作の全工程を伴走支援。</p>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- =================================================================
+      ▼ サイトの歩き方セクション ▼
+      ユーザーを導き、サイト内回遊を促進
+      ================================================================== -->
       <section id="how-to-use" class="section">
         <div class="container">
-          <h2
-            class="section-title fade-in readable"
-            data-speech="クロマチャンネルの歩き方の紹介です"
-          >
-            Chromachannelの歩き方
-          </h2>
+          <h2 class="section-title fade-in readable" data-speech="クロマチャンネルの歩き方の紹介です">Chromachannelの歩き方</h2>
           <div class="step-guide-grid">
             <div class="step-card fade-in">
               <div class="step-number readable">STEP 1</div>
-              <h3
-                class="readable"
-                data-speech="まずはこちらから進めてみてください"
-              >
-                まずはこちらから
-              </h3>
-              <p class="readable">
-                AIで何ができるのか、まずはゲーム感覚で体験してみましょう！<br />
-              </p>
-              <a
-                href="/portfolio/demo/demo.html"
-                class="step-link readable"
-                data-speech="学習デモを体験してみましょう"
-                >学習デモを体験する →</a
-              >
+              <h3 class="readable" data-speech="まずはこちらから進めてみてください">まずはこちらから</h3>
+              <p class="readable">AIで何ができるのか、まずはゲーム感覚で体験してみましょう！<br></p>
+              <a href="portfolio/demo/demo.html" class="step-link readable" data-speech="学習デモを体験してみましょう">学習デモを体験する →</a>
             </div>
             <div class="step-card fade-in">
               <div class="step-number readable">STEP 2</div>
               <h3 class="readable">テーマから探す</h3>
-              <p class="readable">
-                あなたの興味があるテーマの「まとめページ」から、関連コンテンツを効率的に探せます。
-              </p>
-              <a
-                href="#themes"
-                class="step-link readable"
-                data-speech="テーマ一覧へ移動します"
-                >テーマ一覧へ進む →</a
-              >
+              <p class="readable">あなたの興味があるテーマの「まとめページ」から、関連コンテンツを効率的に探せます。</p>
+              <a href="#themes" class="step-link readable" data-speech="テーマ一覧へ移動します">テーマ一覧へ進む →</a>
             </div>
             <div class="step-card fade-in">
               <div class="step-number readable">STEP 3</div>
-              <h3 class="readable" data-speech="AI博士に相談してみましょう">
-                AI博士に相談
-              </h3>
-              <p class="readable">
-                分からないことや悩みがあれば、いつでもAI博士があなたの相談に乗ります。<br />
-              </p>
-              <a
-                href="/portfolio/hakase/hakase.html"
-                class="step-link readable"
-                data-speech="AI博士の研究室へ移動します"
-                >AI博士の研究室へ →</a
-              >
+              <h3 class="readable" data-speech="AI博士に相談してみましょう">AI博士に相談</h3>
+              <p class="readable">分からないことや悩みがあれば、いつでもAI博士があなたの相談に乗ります。</p>
+              <a href="portfolio/hakase/hakase.html" class="step-link readable" data-speech="AI博士の研究室へ移動します">AI博士の研究室へ →</a>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- =================================================================
+      ▼ テーマ別コンテンツセクション ▼
+      内部リンクを充実させ、トピッククラスターを形成
+      ================================================================== -->
       <section id="themes" class="section theme-tags">
         <div class="container">
-          <h2
-            class="section-title readable"
-            data-speech="テーマから探しましょう"
-          >
-            テーマから探す
-          </h2>
+          <h2 class="section-title readable" data-speech="テーマから探しましょう">テーマから探す</h2>
           <div class="tag-grid">
-            <a href="/learning-summary.html" class="tag-card fade-in">
+            <a href="learning-summary.html" class="tag-card fade-in">
               <div class="tag-icon">🎓</div>
-              <h3 class="readable" data-speech="AI学習ページへ移動します">
-                AI学習
-              </h3>
-              <p
-                class="readable"
-                data-speech="初心者向けの学習法から実践的なツールまで紹介しています"
-              >
-                初心者向けの学習法から実践的なツールまで
-              </p>
+              <h3 class="readable" data-speech="AI学習ページへ移動します">AI学習</h3>
+              <p class="readable" data-speech="初心者向けの学習法から実践的なツールまで紹介しています">初心者向けの学習法から実践的なツールまで</p>
             </a>
-            <a href="/business-summary.html" class="tag-card fade-in">
+            <a href="business-summary.html" class="tag-card fade-in">
               <div class="tag-icon">💼</div>
-              <h3
-                class="readable"
-                data-speech="ビジネス・仕事術ページへ移動します"
-              >
-                ビジネス・仕事術
-              </h3>
-              <p
-                class="readable"
-                data-speech="AIで業務を効率化するプロンプトやアプリを紹介しています"
-              >
-                AIで業務を効率化するプロンプトやアプリ
-              </p>
+              <h3 class="readable" data-speech="ビジネス・仕事術ページへ移動します">ビジネス・仕事術</h3>
+              <p class="readable" data-speech="AIで業務を効率化するプロンプトやアプリを紹介しています">AIで業務を効率化するプロンプトやアプリ</p>
             </a>
-            <a href="/creative-summary.html" class="tag-card fade-in">
+            <a href="creative-summary.html" class="tag-card fade-in">
               <div class="tag-icon">🎨</div>
-              <h3
-                class="readable"
-                data-speech="創作・クリエイティブページへ移動します"
-              >
-                創作・クリエイティブ
-              </h3>
-              <p
-                class="readable"
-                data-speech="イラスト・音楽・物語をAIと共同制作してみませんか"
-              >
-                イラスト・音楽・物語をAIと共同制作
-              </p>
+              <h3 class="readable" data-speech="創作・クリエイティブページへ移動します">創作・クリエイティブ</h3>
+              <p class="readable" data-speech="イラスト・音楽・物語をAIと共同制作してみませんか">イラスト・音楽・物語をAIと共同制作</p>
             </a>
-            <a href="/entertainment-summary.html" class="tag-card fade-in">
+            <a href="entertainment-summary.html" class="tag-card fade-in">
               <div class="tag-icon">🎮</div>
-              <h3 class="readable" data-speech="エンタメページへ移動します">
-                エンタメ
-              </h3>
-              <p
-                class="readable"
-                data-speech="AIと紡いだ小説や、ブラウザで遊べるゲームを紹介しています"
-              >
-                AIと紡いだ小説や、ブラウザで遊べるゲーム
-              </p>
+              <h3 class="readable" data-speech="エンタメページへ移動します">エンタメ</h3>
+              <p class="readable" data-speech="AIと紡いだ小説や、ブラウザで遊べるゲームを紹介しています">AIと紡いだ小説や、ブラウザで遊べるゲーム</p>
             </a>
-            <a href="/apps-summary.html" class="tag-card fade-in">
+            <a href="apps-summary.html" class="tag-card fade-in">
               <div class="tag-icon">
-                <i class="fas fa-mouse-pointer"></i>
+                <i class="fas fa-mouse-pointer" aria-hidden="true"></i>
               </div>
-              <h3
-                class="readable"
-                data-speech="アプリ・ツールページへ移動します"
-              >
-                アプリ・ツール
-              </h3>
-              <p
-                class="readable"
-                data-speech="すぐに使える、実践的なウェブアプリケーションを紹介しています"
-              >
-                すぐに使える、実践的なWebアプリケーション
-              </p>
+              <h3 class="readable" data-speech="アプリ・ツールページへ移動します">
+                アプリ・ツール</h3>
+              <p class="readable" data-speech="すぐに使える、実践的なウェブアプリケーションを紹介しています">
+                すぐに使える、実践的なWebアプリケーション</p>
             </a>
-            <a href="/lifehack-summary.html" class="tag-card fade-in">
+            <a href="lifehack-summary.html" class="tag-card fade-in">
               <div class="tag-icon">🌱</div>
-              <h3
-                class="readable"
-                data-speech="暮らし・生活改善ページへ移動します"
-              >
+              <h3 class="readable" data-speech="暮らし・生活改善ページへ移動します">
                 暮らし・生活改善
               </h3>
-              <p
-                class="readable"
-                data-speech="献立作成から悩み相談まで、日常を豊かにするコンテンツを紹介しています"
-              >
-                献立作成から悩み相談まで、日常を豊かに
-              </p>
+              <p class="readable" data-speech="献立作成から悩み相談まで、日常を豊かにするコンテンツを紹介しています">献立作成から悩み相談まで、日常を豊かに</p>
             </a>
-            <a href="/rabbit-summary.html" class="tag-card fade-in">
+            <a href="rabbit-summary.html" class="tag-card fade-in">
               <div class="tag-icon">🐇</div>
-              <h3 class="readable" data-speech="福祉×うさぎページへ移動します">
-                うさぎ
-              </h3>
-              <p
-                class="readable"
-                data-speech="福祉×うさぎをテーマにしたWebサイト制作実績を紹介しています"
-              >
-                福祉×うさぎをテーマにしたWebサイト制作実績
-              </p>
+              <h3 class="readable" data-speech="福祉×うさぎページへ移動します">うさぎ</h3>
+              <p class="readable" data-speech="福祉×うさぎをテーマにしたWebサイト制作実績を紹介しています">福祉×うさぎをテーマにしたWebサイト制作実績</p>
             </a>
           </div>
         </div>
       </section>
 
+      <!-- =================================================================
+      ▼ 最新ブログ記事セクション ▼
+      更新頻度の高いコンテンツはSEOで評価されやすい
+      ================================================================== -->
       <section id="latest-blog" class="section latest-posts">
         <div class="container">
-          <h2
-            class="section-title fade-in readable"
-            data-speech="最新ブログ記事ページです"
-          >
-            最新ブログ記事
-          </h2>
+          <h2 class="section-title fade-in readable" data-speech="最新ブログ記事ページです">最新ブログ記事</h2>
           <div class="post-grid">
-            <a
-              href="/blog/ai-illustration-overcoming-perfectionism.html"
-              class="post-card-link fade-in"
-            >
+            <a href="blog/ai-illustration-overcoming-perfectionism.html" class="post-card-link fade-in">
               <div class="post-card">
                 <div class="post-card-image">
-                  <img
-                    src="/img/blog/ogp-ai-illustration-perfectionism_thumb.webp"
-                    alt="AIイラストで挫折しないためのヒントを示すイラスト"
-                    loading="lazy"
-                    width="300"
-                    height="169"
-                  />
+                  <img src="img/blog/ogp-ai-illustration-perfectionism_thumb.webp" alt="AIイラストで挫折しないためのヒントを示すイラスト" loading="lazy" width="300" height="169"/>
                 </div>
                 <div class="post-card-content">
                   <p class="post-card-date">2025.08.16</p>
-                  <h3 class="readable">
-                    AIイラストで挫折する人の共通点とは？「完璧」を目指さない、ゆるふわ継続術
-                  </h3>
-                  <p>
-                    AIイラスト、楽しいけど続かない…。その原因は「完璧主義」かも。挫折しないための思考法と、ゆるふわ継続術を解説します。
-                  </p>
+                  <h3 class="readable">AIイラストで挫折する人の共通点とは？「完璧」を目指さない、ゆるふわ継続術</h3>
+                  <p>AIイラスト、楽しいけど続かない…。その原因は「完璧主義」かも。挫折しないための思考法と、ゆるふわ継続術を解説します。</p>
                 </div>
               </div>
             </a>
-            <a
-              href="/blog/ai-learning-complete-guide.html"
-              class="post-card-link fade-in"
-            >
+            <a href="blog/ai-learning-complete-guide.html" class="post-card-link fade-in">
               <div class="post-card">
                 <div class="post-card-image">
-                  <img
-                    src="/img/blog/ogp-ai-learning-guide_thumb.webp"
-                    alt="AI学習の完全ガイド"
-                    loading="lazy"
-                    width="300"
-                    height="169"
-                  />
+                  <img src="img/blog/ogp-ai-learning-guide_thumb.webp" alt="AI学習の完全ガイド" loading="lazy" width="300" height="169"/>
                 </div>
                 <div class="post-card-content">
                   <p class="post-card-date">2025.08.12</p>
-                  <h3 class="readable">
-                    【完全ガイド】AI学習の始め方、この1ページで全てが分かる
-                  </h3>
-                  <p>
-                    AI学習に挫折しないための完全ロードマップ。知識ゼロからAIクリエイターになるための全ステップを案内します。
-                  </p>
+                  <h3 class="readable">完全ガイド】AI学習の始め方、この1ページで全てが分かる</h3>
+                  <p>AI学習に挫折しないための完全ロードマップ。知識ゼロからAIクリエイターになるための全ステップを案内します。</p>
                 </div>
               </div>
             </a>
-            <a
-              href="/blog/fuwamoco-development-story.html"
-              class="post-card-link fade-in"
-            >
+            <a href="blog/fuwamoco-development-story.html" class="post-card-link fade-in">
               <div class="post-card">
                 <div class="post-card-image">
-                  <img
-                    src="/img/blog/ogp-fuwamoco-story_thumb.webp"
-                    alt="Fuwamoco PROJECTの開発秘話"
-                    loading="lazy"
-                    width="300"
-                    height="169"
-                  />
+                  <img src="img/blog/ogp-fuwamoco-story_thumb.webp" alt="Fuwamoco PROJECTの開発秘話" loading="lazy" width="300" height="169"/>
                 </div>
                 <div class="post-card-content">
                   <p class="post-card-date">2025.08.12</p>
-                  <h3 class="readable">
-                    【開発秘話】なぜ私は、架空のNPO法人サイト「Fuwamoco
-                    PROJECT」を創ったのか？
+                  <h3 class="readable">【開発秘話】なぜ私は、架空のNPO法人サイト「Fuwamoco PROJECT」を創ったのか？
                   </h3>
-                  <p>
-                    福祉×AIクリエイターの原点。就労支援の課題として生まれたこのポートフォリオに込めた、うさぎと福祉への想いを語ります。
-                  </p>
+                  <p>福祉×AIクリエイターの原点。就労支援の課題として生まれたこのポートフォリオに込めた、うさぎと福祉への想いを語ります。</p>
                 </div>
               </div>
             </a>
           </div>
           <div class="view-more-button-wrapper">
-            <a
-              href="/blog.html"
-              class="view-more-button readable"
-              data-speech="ブログ記事一覧ページへ移動します"
-              >ブログをもっと見る</a
-            >
+            <a href="blog.html" class="view-more-button readable" data-speech="ブログ記事一覧ページへ移動します">ブログをもっと見る</a>
           </div>
         </div>
       </section>
 
+      <!-- =================================================================
+      ▼ 制作実績セクション ▼
+      専門性や実績を示し、信頼性を高める
+      ================================================================== -->
       <section id="featured-portfolio" class="section latest-posts">
         <div class="container">
-          <h2
-            class="section-title fade-in readable"
-            data-speech="注目の制作実績です"
-          >
-            注目の制作実績
-          </h2>
+          <h2 class="section-title fade-in readable" data-speech="注目の制作実績です">注目の制作実績</h2>
           <div class="post-grid">
-            <a
-              href="/portfolio/fuwamoco/index.html"
-              class="post-card-link fade-in"
-            >
+            <a href="portfolio/fuwamoco/index.html" class="post-card-link fade-in">
               <div class="post-card">
                 <div class="post-card-image">
-                  <img
-                    src="/img/portfolio/fuwamoco_main_thumb.webp"
-                    alt="Fuwamoco PROJECT"
-                    loading="lazy"
-                    width="300"
-                    height="169"
-                  />
+                  <img src="img/portfolio/fuwamoco_main_thumb.webp" alt="Fuwamoco PROJECT" loading="lazy" width="300" height="169"/>
                 </div>
                 <div class="post-card-content">
                   <p class="post-card-category">Webサイト制作</p>
-                  <h3 class="readable">
-                    NPO法人「Fuwamoco PROJECT」公式サイト
-                  </h3>
-                  <p class="readable">
-                    うさぎの保護活動を行う架空NPO法人の公式サイトを、企画・デザイン・実装まで一貫して制作。JavaScript製の3マッチパズルも搭載。
-                  </p>
+                  <h3 class="readable">NPO法人「Fuwamoco PROJECT」公式サイト</h3>
+                  <p class="readable">うさぎの保護活動を行う架空NPO法人の公式サイトを、企画・デザイン・実装まで一貫して制作。JavaScript製の3マッチパズルも搭載。</p>
                 </div>
               </div>
             </a>
-            <a
-              href="/blog/ai-learning-complete-guide.html"
-              class="post-card-link fade-in"
-            >
+            <a href="blog/ai-learning-complete-guide.html" class="post-card-link fade-in">
               <div class="post-card">
                 <div class="post-card-image">
-                  <img
-                    src="/img/blog/ogp-ai-learning-guide_thumb.webp"
-                    alt="AI学習の完全ガイド"
-                    loading="lazy"
-                    width="300"
-                    height="169"
-                  />
+                  <img src="img/blog/ogp-ai-learning-guide_thumb.webp" alt="AI学習の完全ガイド" loading="lazy" width="300" height="169"/>
                 </div>
                 <div class="post-card-content">
                   <p class="post-card-category">学習ロードマップ</p>
                   <h3 class="readable">【完全ガイド】AI学習の始め方</h3>
-                  <p class="readable">
-                    AI学習に挫折しないための完全ロードマップ。知識ゼロからAIクリエイターになるための全ステップを案内します。
-                  </p>
+                  <p class="readable">AI学習に挫折しないための完全ロードマップ。知識ゼロからAIクリエイターになるための全ステップを案内します。</p>
                 </div>
               </div>
             </a>
-            <a href="/portfolio/pict/pict.html" class="post-card-link fade-in">
+            <a href="portfolio/pict/pict.html" class="post-card-link fade-in">
               <div class="post-card">
                 <div class="post-card-image">
-                  <img
-                    src="/img/portfolio/game_main_thumb.webp"
-                    alt="AI体験ゲーム"
-                    loading="lazy"
-                    width="300"
-                    height="169"
-                  />
+                  <img src="img/portfolio/game_main_thumb.webp" alt="AI体験ゲーム" loading="lazy" width="300" height="169"/>
                 </div>
                 <div class="post-card-content">
                   <p class="post-card-category">Webアプリ開発</p>
-                  <h3 class="readable">
-                    AI体験ゲーム「仕分けマスター・ピクト」
-                  </h3>
-                  <p class="readable">
-                    AIがテーマのシンプルな仕分けゲームです。PC操作に不慣れな方でも、クリック操作だけでAIの面白さを体験できます。
-                  </p>
+                  <h3 class="readable">AI体験ゲーム「仕分けマスター・ピクト」</h3>
+                  <p class="readable">AIがテーマのシンプルな仕分けゲームです。PC操作に不慣れな方でも、クリック操作だけでAIの面白さを体験できます。</p>
                 </div>
               </div>
             </a>
           </div>
           <div class="view-more-button-wrapper">
-            <a
-              href="/portfolio.html"
-              class="view-more-button readable"
-              data-speech="制作実績一覧ページへ移動します"
-              >制作実績をもっと見る</a
-            >
+            <a href="portfolio.html" class="view-more-button readable" data-speech="制作実績一覧ページへ移動します">制作実績をもっと見る</a>
           </div>
         </div>
       </section>
 
+      <!-- =================================================================
+      ▼ プロンプト紹介セクション ▼
+      ================================================================== -->
       <section id="featured-prompts" class="section latest-posts">
         <div class="container">
-          <h2
-            class="section-title fade-in readable"
-            data-speech="注目のプロンプトです"
-          >
-            注目のプロンプト
-          </h2>
+          <h2 class="section-title fade-in readable" data-speech="注目のプロンプトです">注目のプロンプト</h2>
           <div class="post-grid">
-            <a href="/prompt/prompt-hakase.html" class="post-card-link fade-in">
+            <a href="prompt/prompt-hakase.html" class="post-card-link fade-in">
               <div class="post-card">
                 <div class="post-card-image">
-                  <img
-                    src="/img/prompt/ogp-hakase_thumb.webp"
-                    alt="AI博士プロンプトのイメージ"
-                    loading="lazy"
-                    width="300"
-                    height="169"
-                  />
+                  <img src="img/prompt/ogp-hakase_thumb.webp" alt="AI博士プロンプトのイメージ" loading="lazy" width="300" height="169"/>
                 </div>
                 <div class="post-card-content">
                   <p class="post-card-category">対話AI / 悩み相談</p>
                   <h3 class="readable">AI博士プロンプト</h3>
-                  <p class="readable">
-                    AIを「優しくて物知りな女性博士」に変身させます。あなたの質問や悩みに、AIが共感を持って寄り添います
-                  </p>
+                  <p class="readable">AIを「優しくて物知りな女性博士」に変身させます。あなたの質問や悩みに、AIが共感を持って寄り添います</p>
                 </div>
               </div>
             </a>
-            <a
-              href="/prompt/prompt-kondate.html"
-              class="post-card-link fade-in"
-            >
+            <a href="prompt/prompt-kondate.html" class="post-card-link fade-in">
               <div class="post-card">
                 <div class="post-card-image">
-                  <img
-                    src="/img/prompt/ogp-kondate-prompt_thumb.webp"
-                    alt="献立作成プロンプトのイメージ"
-                    loading="lazy"
-                    width="300"
-                    height="169"
-                  />
+                  <img src="img/prompt/ogp-kondate-prompt_thumb.webp" alt="献立作成プロンプトのイメージ" loading="lazy" width="300" height="169"/>
                 </div>
                 <div class="post-card-content">
                   <p class="post-card-category">GPTs / 生活改善</p>
                   <h3 class="readable">AI献立作成プロンプト</h3>
-                  <p class="readable">
-                    AIがフードカウンセラーとなり、あなただけの1週間分の献立とレシピを作成します。
-                  </p>
+                  <p class="readable">AIがフードカウンセラーとなり、あなただけの1週間分の献立とレシピを作成します。</p>
                 </div>
               </div>
             </a>
-            <a
-              href="/prompt/prompt-picture-book-writing.html"
-              class="post-card-link fade-in"
-            >
+            <a href="prompt/prompt-picture-book-writing.html" class="post-card-link fade-in">
               <div class="post-card">
                 <div class="post-card-image">
-                  <img
-                    src="/img/prompt/picture_book_main_thumb.webp"
-                    alt="絵本のイメージ"
-                    loading="lazy"
-                    width="300"
-                    height="169"
-                  />
+                  <img src="img/prompt/picture_book_main_thumb.webp" alt="絵本のイメージ" loading="lazy" width="300" height="169"/>
                 </div>
                 <div class="post-card-content">
                   <p class="post-card-category">GPTs / 共同制作</p>
                   <h3 class="readable">子供向け知育絵本プロンプト</h3>
-                  <p class="readable">
-                    物語のプロット、本文、そして各シーンのイラスト用プロンプトまでAIと共同制作する指示書です。
-                  </p>
+                  <p class="readable">物語のプロット、本文、そして各シーンのイラスト用プロンプトまでAIと共同制作する指示書です。</p>
                 </div>
               </div>
             </a>
           </div>
           <div class="view-more-button-wrapper">
-            <a
-              href="/prompt.html"
+            <a href="prompt.html"
               class="view-more-button readable"
               data-speech="プロンプト一覧ページへ移動します"
               >プロンプトをもっと見る</a
@@ -645,160 +429,102 @@
         </div>
       </section>
 
+      <!-- =================================================================
+      ▼ 最新小説セクション ▼
+      ================================================================== -->
       <section id="latest-novels" class="section latest-posts">
         <div class="container">
-          <h2 class="section-title fade-in readable" data-speech="最新小説です">
-            最新小説
-          </h2>
+          <h2 class="section-title fade-in readable" data-speech="最新小説です">最新小説</h2>
           <div class="post-grid">
-            <a
-              href="/novels/hoshizora-no-melody.html"
-              class="post-card-link fade-in"
-            >
+            <a href="novels/hoshizora-no-melody.html" class="post-card-link fade-in">
               <div class="post-card">
                 <div class="post-card-image">
-                  <img
-                    src="/img/novels/ogp-hoshizora-no-melody_main_thumb.webp"
-                    alt="「星空のメロディー」の表紙イラスト"
-                    loading="lazy"
-                    width="300"
-                    height="169"
-                  />
+                  <img src="img/novels/ogp-hoshizora-no-melody_main_thumb.webp" alt="「星空のメロディー」の表紙イラスト" loading="lazy" width="300" height="169"/>
                 </div>
                 <div class="post-card-content">
                   <p class="post-card-category">ヒーリング</p>
                   <h3 class="readable">星空のメロディー</h3>
-                  <p class="readable">
-                    都会の喧騒から離れ、星空の下で穏やかな眠りへ。夢の中を旅する幻想的な物語。
-                  </p>
+                  <p class="readable">都会の喧騒から離れ、星空の下で穏やかな眠りへ。夢の中を旅する幻想的な物語。</p>
                 </div>
               </div>
             </a>
-            <a href="/novels/isekai-no-ou.html" class="post-card-link fade-in">
+            <a href="novels/isekai-no-ou.html" class="post-card-link fade-in">
               <div class="post-card">
                 <div class="post-card-image">
-                  <img
-                    src="/img/novels/ogp-isekai_king_main_thumb.webp"
-                    alt="「異世界の王」の表紙イラスト"
-                    loading="lazy"
-                    width="300"
-                    height="169"
-                  />
+                  <img src="img/novels/ogp-isekai_king_main_thumb.webp" alt="「異世界の王」の表紙イラスト" loading="lazy" width="300" height="169"/>
                 </div>
                 <div class="post-card-content">
                   <p class="post-card-category">ファンタジー</p>
                   <h3 class="readable">異世界の王</h3>
-                  <p class="readable">
-                    平凡な青年が異世界に王として召喚される！魔法とドラゴンが息づく世界で、国を救うための壮大な冒険が始まる。
-                  </p>
+                  <p class="readable">平凡な青年が異世界に王として召喚される！魔法とドラゴンが息づく世界で、国を救うための壮大な冒険が始まる。</p>
                 </div>
               </div>
             </a>
-            <a href="/novels/kieta-mura.html" class="post-card-link fade-in">
+            <a href="novels/kieta-mura.html" class="post-card-link fade-in">
               <div class="post-card">
                 <div class="post-card-image">
-                  <img
-                    src="/img/novels/ogp-kietamuranohimitsu_main_thumb.webp"
-                    alt="「消えた村の秘密」の表紙イラスト"
-                    loading="lazy"
-                    width="300"
-                    height="169"
-                  />
+                  <img src="/img/novels/ogp-kietamuranohimitsu_main_thumb.webp" alt="「消えた村の秘密」の表紙イラスト" loading="lazy" width="300" height="169"/>
                 </div>
                 <div class="post-card-content">
                   <p class="post-card-category">ミステリー・ホラー</p>
                   <h3 class="readable">消えた村の秘密</h3>
-                  <p class="readable">
-                    ジャーナリストのベンが挑む、霧に包まれた「消えた村」の謎。古文書、奇妙な住人、そして謎の儀式。村に隠された真実とは？
-                  </p>
+                  <p class="readable">ジャーナリストのベンが挑む、霧に包まれた「消えた村」の謎。古文書、奇妙な住人、そして謎の儀式。村に隠された真実とは？</p>
                 </div>
               </div>
             </a>
           </div>
           <div class="view-more-button-wrapper">
-            <a
-              href="/novels.html"
-              class="view-more-button readable"
-              data-speech="小説一覧ページへ移動します"
-              >小説をもっと読む</a
-            >
+            <a href="novels.html" class="view-more-button readable" data-speech="小説一覧ページへ移動します">小説をもっと読む</a>
           </div>
         </div>
       </section>
 
+      <!-- =================================================================
+      ▼ お問い合わせセクション ▼
+      ================================================================== -->
       <section id="contact" class="section contact">
         <div class="container">
           <h2 class="section-title readable">Contact</h2>
           <div class="contact-info fade-in">
-            <p class="readable">
-              AIと福祉を繋ぐ、新しい挑戦にご興味をお持ちいただけましたら、
-              ぜひ、以下の連絡先までお気軽にご連絡ください。
-              ボタンをクリックするか、下記アドレスをコピーしてお問い合わせください。
-            </p>
+            <p class="readable">AIと福祉を繋ぐ、新しい挑戦にご興味をお持ちいただけましたら、<br>
+              ぜひ、以下の連絡先までお気軽にご連絡ください。<br>
+              ボタンをクリックするか、下記アドレスをコピーしてお問い合わせください。</p>
           </div>
           <div class="contact-grid fade-in">
             <div class="contact-links">
-              <p
-                class="readable"
-                data-speech="メールまたはLINEでお気軽にお問い合わせください"
-              >
-                <strong>メールまたはLINEでお気軽に</strong>
-              </p>
-              <a
-                href="https://lin.ee/UlgQMzA"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="contact-button line readable"
-              >
-                <i
-                  class="fab fa-line"
-                  data-speech="LINEでのお問い合わせはこちらです"
-                ></i>
-                LINEでのお問い合わせ
+              <p class="readable" data-speech="メールまたはLINEでお気軽にお問い合わせください"><strong>メールまたはLINEでお気軽に</strong></p>
+              <a href="https://lin.ee/UlgQMzA" target="_blank" rel="noopener noreferrer" class="contact-button line readable">
+                <i class="fab fa-line" aria-hidden="true" data-speech="LINEでのお問い合わせはこちらです"></i>LINEでのお問い合わせ
               </a>
-              <a
-                href="mailto:from.aito.the.infinity@gmail.com"
-                class="contact-button email readable"
-              >
-                <i
-                  class="fas fa-envelope"
-                  data-speech="メールでのお問い合わせはこちらです"
-                ></i>
-                メールでのお問い合わせ
+              <a href="mailto:from.aito.the.infinity@gmail.com" class="contact-button email readable">
+                <i class="fas fa-envelope" aria-hidden="true" data-speech="メールでのお問い合わせはこちらです"></i>メールでのお問い合わせ
               </a>
-              <p
-                class="contact-email-text readable"
-                data-speech="メールアドレスは、エフアールオーエム ドット エーアイティーオー ドット ティーエイチイー ドット インフィニティ アットマーク ジーメールドットコム です。"
-              >
-                from.aito.the.infinity@gmail.com
-              </p>
+              <p class="contact-email-text readable" data-speech="メールアドレスは、エフアール オーエム ドット エーアイ ティーオー ドット ティーエイチイー ドット アイエヌ エフアイ エヌアイ ティーワイ アットマーク ジーメール ドット コム です。">from.aito.the.infinity@gmail.com</p>
             </div>
             <div class="contact-qr">
-              <p class="readable" data-speech="LINEのQRコードはこちらです">
-                <strong>LINEのQRコードはこちら</strong>
-              </p>
-              <img
-                src="https://qr-official.line.me/gs/M_795fmbfx_GW.png?oat_content=qr"
-                alt="LINE友だち追加用QRコード"
-                loading="lazy"
-                width="180"
-                height="180"
-              />
+              <p class="readable" data-speech="LINEのQRコードはこちらです"><strong>LINEのQRコードはこちら</strong></p>
+              <img src="https://qr-official.line.me/gs/M_795fmbfx_GW.png?oat_content=qr" alt="LINE友だち追加用QRコード" loading="lazy" width="180" height="180"/>
             </div>
           </div>
         </div>
       </section>
     </main>
 
+    <!-- フッターのプレースホルダー -->
     <div id="footer-placeholder"></div>
 
+    <!-- サイト共通の読み上げ停止ボタン -->
     <div id="global-speech-control" class="global-speech-control hidden">
-      <button id="global-speech-stop-btn" title="読み上げを停止">
-        <i class="fas fa-stop"></i>
+      <!-- ボタンの役割をaria-labelで明確化 -->
+      <button id="global-speech-stop-btn" title="読み上げを停止" aria-label="読み上げを停止">
+        <i class="fas fa-stop" aria-hidden="true"></i>
       </button>
     </div>
 
-    <script src="/javascript/voice-module.js" defer></script>
+    <!-- =================================================================
+    ▼ JavaScriptファイル ▼
+    ================================================================== -->
+    <script src="javascript/voice-module.js" defer></script>
     <script src="javascript/script.js" defer></script>
   </body>
 </html>

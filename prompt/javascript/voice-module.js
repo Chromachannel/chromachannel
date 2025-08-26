@@ -1,4 +1,4 @@
-// /JavaScript/voice-module.js (改良版)
+// /JavaScript/voice-module.js 【最終確定版】
 
 class SiteWideSpeaker {
     constructor(controlPanelId, stopButtonId) {
@@ -38,6 +38,15 @@ class SiteWideSpeaker {
         }
     }
 
+    // =======================================================
+    // ★★ エラーの原因は、この stop() 関数がなかったことです ★★
+    // =======================================================
+    stop() {
+        if (this.synth.speaking) {
+            this.synth.cancel();
+        }
+    }
+
     showControls() {
         if(this.controlPanel) {
             this.controlPanel.classList.remove('hidden');
@@ -52,7 +61,7 @@ class SiteWideSpeaker {
         }
     }
 
-    speak(text, highlightElement, onEndCallback = null) { // ★ onEndCallback引数を追加
+    speak(text, highlightElement, onEndCallback = null) {
         if (this.isLoading) return;
         
         if (this.synth.speaking) {
@@ -90,7 +99,6 @@ class SiteWideSpeaker {
             this.currentUtterance = null;
             this.currentHighlightElement = null;
             
-            // ★ 追加：再生終了時にコールバックを実行
             if (onEndCallback) {
                 onEndCallback();
             }
@@ -102,7 +110,6 @@ class SiteWideSpeaker {
              if (this.currentHighlightElement) {
                 this.currentHighlightElement.style.backgroundPosition = '0 100%';
             }
-            // ★ 追加：エラー時にもコールバックを実行
             if (onEndCallback) {
                 onEndCallback();
             }

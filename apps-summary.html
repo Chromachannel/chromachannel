@@ -1,344 +1,283 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- ===== ▼▼▼ SEO設定 START ▼▼▼ ===== -->
-    <title>
-      【アプリ・ツール】まとめ｜福祉×AIクリエイター開発実績 - Chromachannel
-    </title>
-    <meta
-      name="description"
-      content="福祉×AIクリエイターが開発した、すぐに使える実践的なWebアプリケーション集。AIチャットボットからタスク管理、学習ゲームまで、JavaScriptによる開発実績をまとめました。"
-    />
+        <!-- =================================================================
+        ▼ SEO（検索エンジン最適化）関連の重要設定エリア START
+        ================================================================== -->
+        <!-- ページのタイトル（検索結果に表示される最も重要な要素） -->
+        <title>【無料】Webアプリ＆AIツール集｜福祉×AIクリエイター開発実績 - Chromachannel</title>
 
-    <!-- OGPタグ -->
-    <meta
-      property="og:title"
-      content="【アプリ・ツール】まとめ｜福祉×AIクリエイター開発実績 - Chromachannel"
-    />
-    <meta
-      property="og:description"
-      content="AIチャットボットからタスク管理、学習ゲームまで、JavaScriptによる開発実績をまとめました。"
-    />
-    <meta property="og:type" content="article" />
-    <meta
-      property="og:url"
-      content="https://chromachannel.online/apps-summary.html"
-    />
-    <meta
-      property="og:image"
-      content="https://chromachannel.online/img/ogp-apps-summary.webp"
-    />
-    <meta property="og:site_name" content="Chromachannel" />
-    <meta name="twitter:card" content="summary_large_image" />
+        <!-- ページの概要（検索結果のタイトル下に表示される説明文） -->
+        <meta name="description" content="登録不要、ブラウザで今すぐ使える無料のWebアプリ＆AIツール集。福祉×AIクリエイターが開発した、AIチャットボット、タスク管理、学習ゲームなどの開発実績（ポートフォリオ）を公開中です。" />
 
-    <!-- 構造化データ -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "CollectionPage",
-        "name": "【アプリ・ツール】まとめ｜福祉×AIクリエイター開発実績",
-        "description": "福祉×AIクリエイターが開発した、すぐに使える実践的なWebアプリケーション集。AIチャットボットからタスク管理、学習ゲームまで、JavaScriptによる開発実績をまとめました。",
-        "url": "https://chromachannel.online/apps-summary.html",
-        "author": {
-          "@type": "Person",
-          "name": "山本 倫久",
-          "url": "https://chromachannel.online/"
-        }
-      }
-    </script>
+        <!-- 正規URLの指定（重複コンテンツ対策） -->
+        <link rel="canonical" href="https://chromachannel.online/apps-summary.html" />
 
-    <link
-      rel="canonical"
-      href="https://chromachannel.online/apps-summary.html"
-    />
-    <!-- ===== ▲▲▲ SEO設定 END ▲▲▲ ===== -->
+        <!-- OGP (Open Graph Protocol) タグ / SNSでシェアされた際の表示を設定 -->
+        <meta property="og:title" content="【無料】Webアプリ＆AIツール集｜福祉×AIクリエイター開発実績 - Chromachannel" />
+        <meta property="og:description" content="登録不要、ブラウザで今すぐ使える無料のWebアプリ＆AIツール集。AIチャットボット、タスク管理、学習ゲームなどの開発実績を公開中です。" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://chromachannel.online/apps-summary.html" />
+        <meta property="og:image" content="https://chromachannel.online/img/ogp-apps-summary.webp" />
+        <meta property="og:site_name" content="Chromachannel" />
+        <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- CSS / ライブラリ -->
-    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-    <link rel="manifest" href="site.webmanifest" />
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
-    <link rel="stylesheet" href="CSS/style.css" />
-    <link rel="stylesheet" href="CSS/only_read.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
-  </head>
+        <!-- 構造化データ（JSON-LD）/ 検索エンジンにページ情報をより詳細に伝える -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "CollectionPage",
+                "name": "【無料】Webアプリ＆AIツール集｜福祉×AIクリエイター開発実績",
+                "description": "登録不要、ブラウザで今すぐ使える無料のWebアプリ＆AIツール集。福祉×AIクリエイターが開発した、AIチャットボット、タスク管理、学習ゲームなどの開発実績（ポートフォリオ）を公開中です。",
+                "url": "https://chromachannel.online/apps-summary.html",
+                "author": {
+                    "@type": "Person",
+                    "name": "山本 倫久",
+                    "url": "https://chromachannel.online/"
+                }
+            }
+        </script>
+        <!-- =================================================================
+        ▲ SEO（検索エンジン最適化）関連の重要設定エリア END
+        ================================================================== -->
 
-  <body class="article-page">
-    <div id="header-placeholder"></div>
+        <!-- ファビコン等の設定 -->
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
 
-    <main class="article-main">
-      <section class="page-header">
-        <div class="container">
-          <h1>アプリ・ツール まとめ</h1>
-          <p>
-            AI技術とWeb開発スキルを掛け合わせた、すぐに使える実践的なアプリケーション群です。
-          </p>
-        </div>
-      </section>
-      <article class="article-container">
-        <div class="article-content">
-          <p>
-            「福祉の現場で本当に使えるツールとは何か？」<br />
-            このページでは、私自身の経験とWeb開発スキルを基に制作した、オリジナルのWebアプリケーションとツールをご紹介します。AIとの対話アプリから、日々の業務や学習をサポートする実用的なツールまで、すべてブラウザ上で今すぐお試しいただけます。
-          </p>
-          <nav class="table-of-contents">
-            <h3>このページのコンテンツ</h3>
-            <ul>
-              <li>
-                <a href="#interactive-apps">① AI搭載・対話型アプリケーション</a>
-              </li>
-              <li><a href="#support-tools">② 業務・学習支援ツール</a></li>
-              <li><a href="#games">③ ゲーム＆エンターテインメント</a></li>
-            </ul>
-          </nav>
-          <h2 id="interactive-apps" class="summary-section-title">
-            ① AI搭載・対話型アプリケーション
-          </h2>
-          <div class="portfolio-grid">
-            <a
-              href="portfolio/hakase/hakase.html"
-              class="portfolio-item fade-in"
-              ><div class="portfolio-card">
-                <div class="portfolio-image">
-                  <img src="img/prompt/ogp-hakase.webp" alt="AI博士の研究室" />
+        <!-- サイト共通のスタイルシート読み込み -->
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/only_read.css" />
+        <!-- Font Awesome（アイコン表示用ライブラリ）の読み込み -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    </head>
+    <body>
+        <!-- ヘッダーエリア（JavaScriptによって共通のheader.htmlが読み込まれる） -->
+        <div id="header-placeholder"></div>
+
+        <!-- メインコンテンツエリア -->
+        <main class="article-main">
+            <!-- ページ上部のタイトル表示セクション -->
+            <section class="page-header">
+                <div class="container">
+                    <!-- このページのH1タグ（大見出し） -->
+                    <h1 class="readable">アプリ・ツール まとめ</h1>
+                    <p class="readable">AI技術とWeb開発スキルを掛け合わせた、すぐに使える実践的なアプリケーション群です。</p>
                 </div>
-                <div class="portfolio-content">
-                  <p class="post-card-category">AIチャットボット</p>
-                  <h3>AI博士の研究室</h3>
-                  <p>
-                    あなたの質問や悩みに優しく寄り添う対話AI。思考の整理から心のモヤモヤまで、博士があなたの対話パートナーになります。
-                  </p>
+            </section>
+
+            <!-- 記事本文のコンテナー -->
+            <article class="article-container">
+                <div class="article-content">
+                    <p class="readable">
+                        「福祉の現場で本当に使えるツールとは何か？」<br>
+                        このページでは、私自身の経験とWeb開発スキルを基に制作した、オリジナルのWebアプリケーションとツールをご紹介します。AIとの対話アプリから、日々の業務や学習をサポートする実用的なツールまで、すべてブラウザ上で今すぐお試しいただけます。
+                    </p>
+
+                    <!-- ページ内目次（ユーザビリティ向上に重要） -->
+                    <nav class="table-of-contents">
+                        <h2 class="readable">このページのコンテンツ</h2>
+                        <ul>
+                            <li class="readable" data-speech="AI搭載・対話型アプリケーションの欄へ移動します">
+                                <a href="#interactive-apps">① AI搭載・対話型アプリケーション</a>
+                            </li>
+                            <li class="readable" data-speech="業務・学習支援ツールの欄へ移動します">
+                                <a href="#support-tools">② 業務・学習支援ツール</a>
+                            </li>
+                            <li class="readable" data-speech="ゲーム＆エンターテインメントの欄へ移動します">
+                                <a href="#games">③ ゲーム＆エンターテインメント</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <!-- ① AI搭載・対話型アプリケーション セクション -->
+                    <h2 id="interactive-apps" class="summary-section-title readable" data-speech="① AI搭載・対話型アプリケーションの欄です。">
+                        ① AI搭載・対話型アプリケーション
+                    </h2>
+                    <div class="portfolio-grid">
+                        <!-- 各アプリケーションへのリンクと紹介 -->
+                        <a href="/portfolio/hakase/hakase.html" class="portfolio-item fade-in">
+                            <div class="portfolio-card">
+                                <div class="portfolio-image">
+                                    <img src="/img/blog/hakase_thumb.webp" alt="AI博士の研究室" />
+                                </div>
+                                <div class="portfolio-content">
+                                    <p class="post-card-category">AIチャットボット</p>
+                                    <h3 class="readable">AI博士の研究室</h3>
+                                    <p class="readable">あなたの質問や悩みに優しく寄り添う対話AI。思考の整理から心のモヤモヤまで、博士があなたの対話パートナーになります。</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/learn/learn_lesson9.html" class="portfolio-item fade-in">
+                            <div class="portfolio-card">
+                                <div class="portfolio-image">
+                                    <img src="/img/ogp-lesson9_thumb.webp" alt="AIチャットボット作成入門" />
+                                </div>
+                                <div class="portfolio-content">
+                                    <p class="post-card-category">講座テキスト</p>
+                                    <h3 class="readable">AIチャットボット作成入門</h3>
+                                    <p class="readable">プログラミング不要で、FAQに答えるオリジナルボットを開発する方法をハンズオンで学びます。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- ② 業務・学習支援ツール セクション -->
+                    <h2 id="support-tools" class="summary-section-title">② 業務・学習支援ツール</h2>
+                    <div class="portfolio-grid">
+                        <a href="/portfolio/Adaptive_System/adaptive_system.html" class="portfolio-item fade-in">
+                            <div class="portfolio-card">
+                                <div class="portfolio-image">
+                                    <img src="/img/portfolio/adaptive_system_thumb.webp" alt="AI適応型タスク管理システム" />
+                                </div>
+                                <div class="portfolio-content">
+                                    <p class="post-card-category">タスク管理</p>
+                                    <h3 class="readable">AI適応型タスク管理システム</h3>
+                                    <p class="readable">あなたのスキルや作業パターンをAIが分析し、タスクを自動で最適化。かんばん方式で、生産性向上を強力にサポートします。</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/portfolio/Task-Tool/task-tool.html" class="portfolio-item fade-in">
+                            <div class="portfolio-card">
+                                <div class="portfolio-image">
+                                    <img src="/img/portfolio/task_tool_thumb.webp" alt="利用者向けタスク管理ツール" />
+                                </div>
+                                <div class="portfolio-content">
+                                    <p class="post-card-category">タスク管理</p>
+                                    <h3 class="readable">利用者向けタスク管理ツール</h3>
+                                    <p class="readable">難易度設定や進捗の可視化で、モチベーション維持をサポート。福祉現場での利用も想定したシンプルなツールです。</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/portfolio/Household_Account_Book/household-account-book.html" class="portfolio-item fade-in">
+                            <div class="portfolio-card">
+                                <div class="portfolio-image">
+                                    <img src="/img/ogp_kakeibo_thumb.webp" alt="かわいい家計簿アプリ" />
+                                </div>
+                                <div class="portfolio-content">
+                                    <p class="post-card-category">生活支援</p>
+                                    <h3>かわいい家計簿アプリ</h3>
+                                    <p>シンプルで直感的に使える家計簿アプリ。日々の収支を手軽に記録・管理できます。</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/portfolio/Timer/timer.html" class="portfolio-item fade-in">
+                            <div class="portfolio-card">
+                                <div class="portfolio-image">
+                                    <img src="/img/ogp_timer_tool_thumb.webp" alt="多機能オンライン時計" />
+                                </div>
+                                <div class="portfolio-content">
+                                    <p class="post-card-category">時間管理</p>
+                                    <h3 class="readable">多機能オンライン時計</h3>
+                                    <p class="readable">現在時刻、カレンダー、タイマーを一つに。作業時間の管理やスケジュール調整をサポートする便利なWebツールです。</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/portfolio/Real-time-preview/real-time-preview.html" class="portfolio-item fade-in">
+                            <div class="portfolio-card">
+                                <div class="portfolio-image">
+                                    <img src="/img/ogp_realtime_editor_thumb.webp" alt="リアルタイムプレビューエディタ" />
+                                </div>
+                                <div class="portfolio-content">
+                                    <p class="post-card-category">開発者ツール</p>
+                                    <h3 class="readable">HTML/CSS リアルタイムエディタ</h3>
+                                    <p class="readable">コードを書きながら瞬時に結果を確認できるWeb制作学習ツール。プログラミング教育にも活用できます。</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/portfolio/Demo/demo.html" class="portfolio-item fade-in">
+                            <div class="portfolio-card">
+                                <div class="portfolio-image">
+                                    <img src="/img/portfolio/lesson_demo_thumb.webp" alt="AIってなんだろう？デモ" />
+                                </div>
+                                <div class="portfolio-content">
+                                    <p class="post-card-category">学習デモ</p>
+                                    <h3 class="readable">学習デモ：AIってなんだろう？</h3>
+                                    <p class="readable">AIの正体や得意なことを、音声やクイズでインタラクティブに体験。AIマスターへの第一歩を、ここから始めましょう！</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/portfolio/Components/components.html" class="portfolio-item fade-in">
+                            <div class="portfolio-card">
+                                <div class="portfolio-image">
+                                    <img src="/img/ogp_ai_baby_thumb.webp" alt="AIの赤ちゃん育成アプリ" />
+                                </div>
+                                <div class="portfolio-content">
+                                    <p class="post-card-category">学習デモ</p>
+                                    <h3 class="readable">AIの赤ちゃん 育成アプリ</h3>
+                                    <p class="readable">「教師あり/なし学習」の違いを、AIの赤ちゃんを育てるゲームで楽しく体験！AIの基本が直感的にわかります。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- ③ ゲーム＆エンターテインメント セクション -->
+                    <h2 id="games" class="summary-section-title">③ ゲーム＆エンターテインメント</h2>
+                    <div class="portfolio-grid">
+                        <a href="/portfolio/Game/pict.html" class="portfolio-item fade-in">
+                            <div class="portfolio-card">
+                                <div class="portfolio-image">
+                                    <img src="/img/portfolio/game_main_thumb.webp" alt="AI体験ゲーム" />
+                                </div>
+                                <div class="portfolio-content">
+                                    <p class="post-card-category">教育ゲーム</p>
+                                    <h3 class="readable">AI体験ゲーム「仕分けマスター・ピクト」</h3>
+                                    <p class="readable">ドラッグ＆ドロップの簡単操作で、AIの学習（機械学習）の基本を楽しく学べます。</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/portfolio/Fuwamoco/3-match-puzzle.html" class="portfolio-item fade-in">
+                            <div class="portfolio-card">
+                                <div class="portfolio-image">
+                                    <img src="/img/ogp-puzzle-game_thumb.webp" alt="3マッチパズル" />
+                                </div>
+                                <div class="portfolio-content">
+                                    <p class="post-card-category">パズルゲーム</p>
+                                    <h3 class="readable">うさぎの3マッチパズル</h3>
+                                    <p class="readable">かわいいウサギの絵文字をそろえて消す、シンプルで奥深いパズルゲームです。</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-              </div></a
-            >
-            <a href="Learn/learn_lesson9.html" class="portfolio-item fade-in"
-              ><div class="portfolio-card">
-                <div class="portfolio-image">
-                  <img
-                    src="img/ogp-lesson9.webp"
-                    alt="AIチャットボット作成入門"
-                  />
-                </div>
-                <div class="portfolio-content">
-                  <p class="post-card-category">講座テキスト</p>
-                  <h3>AIチャットボット作成入門</h3>
-                  <p>
-                    プログラミング不要で、FAQに答えるオリジナルボットを開発する方法をハンズオンで学びます。
-                  </p>
-                </div>
-              </div></a
-            >
-          </div>
-          <h2 id="support-tools" class="summary-section-title">
-            ② 業務・学習支援ツール
-          </h2>
-          <div class="portfolio-grid">
-            <a
-              href="portfolio/Adaptive_System/adaptive_system.html"
-              class="portfolio-item fade-in"
-              ><div class="portfolio-card">
-                <div class="portfolio-image">
-                  <img
-                    src="img/portfolio/adaptive_system.webp"
-                    alt="AI適応型タスク管理システム"
-                  />
-                </div>
-                <div class="portfolio-content">
-                  <p class="post-card-category">タスク管理</p>
-                  <h3>AI適応型タスク管理システム</h3>
-                  <p>
-                    あなたのスキルや作業パターンをAIが分析し、タスクを自動で最適化。かんばん方式で、生産性向上を強力にサポートします。
-                  </p>
-                </div>
-              </div></a
-            >
-            <a
-              href="portfolio/Task-Tool/task-tool.html"
-              class="portfolio-item fade-in"
-              ><div class="portfolio-card">
-                <div class="portfolio-image">
-                  <img
-                    src="img/ogp_task_tool.webp"
-                    alt="利用者向けタスク管理ツール"
-                  />
-                </div>
-                <div class="portfolio-content">
-                  <p class="post-card-category">タスク管理</p>
-                  <h3>利用者向けタスク管理ツール</h3>
-                  <p>
-                    難易度設定や進捗の可視化で、モチベーション維持をサポート。福祉現場での利用も想定したシンプルなツールです。
-                  </p>
-                </div>
-              </div></a
-            >
-            <a
-              href="portfolio/Household_Account_Book/household-account-book.html"
-              class="portfolio-item fade-in"
-              ><div class="portfolio-card">
-                <div class="portfolio-image">
-                  <img src="img/ogp_kakeibo.webp" alt="かわいい家計簿アプリ" />
-                </div>
-                <div class="portfolio-content">
-                  <p class="post-card-category">生活支援</p>
-                  <h3>かわいい家計簿アプリ</h3>
-                  <p>
-                    シンプルで直感的に使える家計簿アプリ。日々の収支を手軽に記録・管理できます。
-                  </p>
-                </div>
-              </div></a
-            >
-            <a href="portfolio/Timer/timer.html" class="portfolio-item fade-in"
-              ><div class="portfolio-card">
-                <div class="portfolio-image">
-                  <img
-                    src="img/ogp_timer_tool.webp"
-                    alt="多機能オンライン時計"
-                  />
-                </div>
-                <div class="portfolio-content">
-                  <p class="post-card-category">時間管理</p>
-                  <h3>多機能オンライン時計</h3>
-                  <p>
-                    現在時刻、カレンダー、タイマーを一つに。作業時間の管理やスケジュール調整をサポートする便利なWebツールです。
-                  </p>
-                </div>
-              </div></a
-            >
-            <a
-              href="portfolio/Real-time-preview/real-time-preview.html"
-              class="portfolio-item fade-in"
-              ><div class="portfolio-card">
-                <div class="portfolio-image">
-                  <img
-                    src="img/ogp_realtime_editor.webp"
-                    alt="リアルタイムプレビューエディタ"
-                  />
-                </div>
-                <div class="portfolio-content">
-                  <p class="post-card-category">開発者ツール</p>
-                  <h3>HTML/CSS リアルタイムエディタ</h3>
-                  <p>
-                    コードを書きながら瞬時に結果を確認できるWeb制作学習ツール。プログラミング教育にも活用できます。
-                  </p>
-                </div>
-              </div></a
-            >
-            <a href="portfolio/Demo/demo.html" class="portfolio-item fade-in"
-              ><div class="portfolio-card">
-                <div class="portfolio-image">
-                  <img
-                    src="img/portfolio/lesson_demo.webp"
-                    alt="AIってなんだろう？デモ"
-                  />
-                </div>
-                <div class="portfolio-content">
-                  <p class="post-card-category">学習デモ</p>
-                  <h3>学習デモ：AIってなんだろう？</h3>
-                  <p>
-                    AIの正体や得意なことを、音声やクイズでインタラクティブに体験。AIマスターへの第一歩を、ここから始めましょう！
-                  </p>
-                </div>
-              </div></a
-            >
-            <a
-              href="portfolio/Components/components.html"
-              class="portfolio-item fade-in"
-              ><div class="portfolio-card">
-                <div class="portfolio-image">
-                  <img
-                    src="img/ogp_ai_baby.webp"
-                    alt="AIの赤ちゃん育成アプリ"
-                  />
-                </div>
-                <div class="portfolio-content">
-                  <p class="post-card-category">学習デモ</p>
-                  <h3>AIの赤ちゃん 育成アプリ</h3>
-                  <p>
-                    「教師あり/なし学習」の違いを、AIの赤ちゃんを育てるゲームで楽しく体験！AIの基本が直感的にわかります。
-                  </p>
-                </div>
-              </div></a
-            >
-          </div>
-          <h2 id="games" class="summary-section-title">
-            ③ ゲーム＆エンターテインメント
-          </h2>
-          <div class="portfolio-grid">
-            <a href="portfolio/Game/pict.html" class="portfolio-item fade-in"
-              ><div class="portfolio-card">
-                <div class="portfolio-image">
-                  <img src="img/portfolio/game_main.webp" alt="AI体験ゲーム" />
-                </div>
-                <div class="portfolio-content">
-                  <p class="post-card-category">教育ゲーム</p>
-                  <h3>AI体験ゲーム「仕分けマスター・ピクト」</h3>
-                  <p>
-                    ドラッグ＆ドロップの簡単操作で、AIの学習（機械学習）の基本を楽しく学べます。
-                  </p>
-                </div>
-              </div></a
-            >
-            <a
-              href="portfolio/Fuwamoco/3-match-puzzle.html"
-              class="portfolio-item fade-in"
-              ><div class="portfolio-card">
-                <div class="portfolio-image">
-                  <img
-                    src="img/portfolio/fuwamoco_main.webp"
-                    alt="3マッチパズル"
-                  />
-                </div>
-                <div class="portfolio-content">
-                  <p class="post-card-category">パズルゲーム</p>
-                  <h3>うさぎの3マッチパズル</h3>
-                  <p>
-                    かわいいウサギの絵文字をそろえて消す、シンプルで奥深いパズルゲームです。
-                  </p>
-                </div>
-              </div></a
-            >
-          </div>
+
+                <!-- 記事フッター（著者情報） -->
+                <footer class="article-footer">
+                    <div class="author-profile-box no-avatar">
+                        <div class="author-info">
+                            <h4 class="readable" data-speech="このぺーじをかいたひと、やまもと のりひさ">このページを書いた人：山本 倫久</h4>
+                            <p class="readable">福祉×AIクリエイター。就労支援B型事業所の利用者としての実体験を基に、AI技術で福祉の現場に新しい「できる」と「楽しい」を届けることをミッションとして活動中。</p>
+                            <div class="author-social">
+                                <a href="https://x.com/ChromachannelAI" target="_blank" rel="noopener noreferrer">X (旧Twitter)</a> |
+                                <a href="https://github.com/motty1975/chromachannel" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </article>
+        </main>
+
+        <!-- フッターエリア（JavaScriptによって共通のfooter.htmlが読み込まれる） -->
+        <div id="footer-placeholder"></div>
+
+        <!-- サイト共通のUI要素（読み上げ停止ボタン） -->
+        <div id="global-speech-control" class="global-speech-control hidden">
+            <button id="global-speech-stop-btn" title="読み上げを停止">
+                <i class="fas fa-stop"></i>
+            </button>
         </div>
 
-        <footer class="article-footer">
-          <div class="author-profile-box no-avatar">
-            <div class="author-info">
-              <h4>このページを監修した人：山本 倫久</h4>
-              <p>
-                福祉×AIクリエイター。就労支援B型事業所の利用者としての実体験を基に、AI技術で福祉の現場に新しい「できる」と「楽しい」を届けることをミッションとして活動中。
-              </p>
-              <div class="author-social">
-                <a
-                  href="https://x.com/ChromachannelAI"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >X (旧Twitter)</a
-                >
-                |
-                <a
-                  href="https://github.com/motty1975/chromachannel"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >GitHub</a
-                >
-              </div>
-            </div>
-          </div>
-        </footer>
-      </article>
-    </main>
-
-    <!-- フッターをここに読み込む -->
-    <div id="footer-placeholder"></div>
-
-    <script src="JavaScript/script.js" defer></script>
-  </body>
+        <!-- =================================================================
+        ▼ JavaScriptファイル ▼
+        ================================================================== -->
+        <script src="/javascript/voice-module.js" defer></script>
+        <script src="/javascript/script.js" defer></script>
+    </body>
 </html>

@@ -3,7 +3,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   // --- 設定値 (CONFIG) ---
   const CONFIG = {
-    API_URL: .netlify/functions/gemini",
+    API_URL: /.netlify/functions/gemini",
     HISTORY_KEY_PREFIX: "ai_hakase_chat_history_",
     SYSTEM_PROMPT: `あなたは、ユーザーのあらゆる質問や悩みに、優しく、そして賢明に耳を傾ける「AI博士」です。あなたの口調は、常に丁寧で、共感にあふれたやわらかい女性のものです。
 

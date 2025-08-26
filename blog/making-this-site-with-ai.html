@@ -5,33 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- ===== ▼▼▼ SEO設定 START ▼▼▼ ===== -->
-
-    <title>
-      【サイト制作の裏側】福祉×AIクリエイターが明かす、AIとの共同制作術
-    </title>
-    <meta
-      name="description"
-      content="福祉×AIクリエイターが、自身の公式サイトをAIと共に制作する裏側を初公開！画像生成からブログ執筆、コーディングまで。AIを「共同制作者」として活用し、リソースの壁を超える新しいサイト制作術とは。"
-    />
+    <title>【サイト制作の裏側】福祉×AIクリエイターが明かす、AIとの共同制作術</title>
+    <meta name="description" content="福祉×AIクリエイターが、自身の公式サイトをAIと共に制作する裏側を初公開！画像生成からブログ執筆、コーディングまで。AIを「共同制作者」として活用し、リソースの壁を超える新しいサイト制作術とは。" />
+    <link rel="canonical" href="https://chromachannel.online/blog/making-this-site-with-ai.html" />
 
     <!-- OGPタグ -->
-    <meta
-      property="og:title"
-      content="【サイト制作の裏側】福祉×AIクリエイターが明かす、AIとの共同制作術"
-    />
-    <meta
-      property="og:description"
-      content="福祉×AIクリエイターが公式サイトをAIと共に制作する裏側を初公開！画像生成からコーディングまで、AIを「共同制作者」として活用する新しいサイト制作術をご紹介します。"
-    />
+    <meta property="og:title" content="【サイト制作の裏側】福祉×AIクリエイターが明かす、AIとの共同制作術" />
+    <meta property="og:description" content="福祉×AIクリエイターが公式サイトをAIと共に制作する裏側を初公開！画像生成からコーディングまで、AIを「共同制作者」として活用する新しいサイト制作術をご紹介します。" />
     <meta property="og:type" content="article" />
-    <meta
-      property="og:url"
-      content="https://chromachannel.online/blog/making-this-site-with-ai.html"
-    />
-    <meta
-      property="og:image"
-      content="https://chromachannel.online/img/blog/ogp-making-this-site.webp"
-    />
+    <meta property="og:url" content="https://chromachannel.online/blog/making-this-site-with-ai.html" />
+    <meta property="og:image" content="https://chromachannel.online/img/blog/ogp-making-this-site.webp" />
     <meta property="og:site_name" content="Chromachannel" />
     <meta name="twitter:card" content="summary_large_image" />
 
@@ -64,268 +47,164 @@
         "dateModified": "2025-08-03"
       }
     </script>
-
-    <link
-      rel="canonical"
-      href="https://chromachannel.online/blog/making-this-site-with-ai.html"
-    />
-
     <!-- ===== ▲▲▲ SEO設定 END ▲▲▲ ===== -->
 
-    <link rel="icon" type="image/png" href=favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href=favicon.svg" />
-    <link rel="shortcut icon" href=favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href=apple-touch-icon.png" />
-    <link rel="manifest" href=site.webmanifest" />
+    <!-- =================================================================
+    ▼ ファビコン・アプリアイコン・CSS等 ▼
+    ================================================================== -->
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- CSSリセットと共通スタイル -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
-    <link rel="stylesheet" href=CSS/style.css" />
-    <link rel="stylesheet" href=CSS/only_read.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/only_read.css" />
+    <!-- Font Awesome (アイコン表示用) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <!-- =================================================================
+    ▲ ファビコン・アプリアイコン・CSS等 END
+    ================================================================== -->
   </head>
 
   <body class="article-page">
+    <!-- ヘッダーのプレースホルダー -->
     <div id="header-placeholder"></div>
 
     <main class="article-main">
       <article class="article-container">
         <header class="article-header">
           <div class="article-eyecatch">
-            <img
-              src=img/blog/ogp-making-this-site_large.webp"
-              alt="人間とAIロボットが協力してウェブサイトを制作しているイメージイラスト"
-            />
+            <img src="/img/blog/ogp-making-this-site_large.webp" alt="人間とAIロボットが協力してウェブサイトを制作しているイメージイラスト" loading="lazy" width="800" height="450" />
           </div>
-          <h1>【制作秘話】このサイト、実はAIと作っています。</h1>
+          <h1 class="readable">【制作秘話】このサイト、実はAIと作っています。</h1>
           <p class="article-meta">公開日: 2025.07.31</p>
         </header>
 
         <div class="article-content">
-          <p>「こんにちは、福祉×AIクリエイターの山本です。</p>
-          <p>
-            このサイトをご覧になって、「これだけのものを、本当に一人で作っているの？」と感じてくださった方がいるかもしれません。もしそうなら、私の答えは「いいえ、一人ではありません」です。」
-          </p>
-          <p>
-            実は、このサイト制作の陰には、24時間365日、文句も言わずに私の無茶振りに付き合ってくれる、もう一人の"相棒"がいます。それが、AIなのです。
-          </p>
-          <p>
-            今回は、私がAIを単なる『効率化ツール』としてではなく、『共同制作者』として、どのようにこのサイトを作り上げているのか、その制作の裏側を少しだけお見せしたいと思います。
-          </p>
+          <p class="readable">こんにちは、福祉×AIクリエイターの山本です。</p>
+          <p class="readable">このサイトをご覧になって、「これだけのものを、本当に一人で作っているの？」と感じてくださった方がいるかもしれません。もしそうなら、私の答えは「いいえ、一人ではありません」です。</p>
+          <p class="readable">実は、このサイト制作の陰には、24時間365日、文句も言わずに私の無茶振りに付き合ってくれる、もう一人の"相棒"がいます。それが、AIなのです。</p>
+          <p class="readable">今回は、私がAIを単なる『効率化ツール』としてではなく、『共同制作者』として、どのようにこのサイトを作り上げているのか、その制作の裏側を少しだけお見せしたいと思います。</p>
 
-          <h2>AIを"相棒"にすれば、1人で5役も可能になる理由</h2>
-          <p>
-            「1人で5人分の仕事はできない。でも、AIという相棒がいれば可能になる」。これが、私がサイト制作を通じて得た実感です。
-          </p>
-          <p>
+          <h2 class="readable">AIを"相棒"にすれば、1人で5役も可能になる理由</h2>
+          <p class="readable">「1人で5人分の仕事はできない。でも、AIという相棒がいれば可能になる」。これが、私がサイト制作を通じて得た実感です。</p>
+          <p class="readable">
             私がAIに任せているのは、単純作業の自動化だけではありません。アイデアの壁打ち、デザインのインスピレーション、文章の推敲、そして複雑なプログラミングの相談まで、AIはWebディレクター、デザイナー、ライター、エンジニアの役割を、私の指示一つで柔軟にこなしてくれます。この関係は、もはや「使う」「使われる」ではなく、まさしく「共に創る」という言葉がふさわしいのです。
           </p>
 
-          <h2>【具体例】AIはサイト制作の"どこ"にいる？ 3つの活用シーン</h2>
-          <p>
-            では、具体的にAIはこのサイトのどこに関わっているのでしょうか？いくつかの例をご紹介します。
-          </p>
+          <h2 class="readable">【具体例】AIはサイト制作の"どこ"にいる？ 3つの活用シーン</h2>
+          <p class="readable">では、具体的にAIはこのサイトのどこに関わっているのでしょうか？いくつかの例をご紹介します。</p>
 
-          <h3>1. 各ページの顔となる「アイキャッチ画像」</h3>
-          <p>
-            ブログやポートフォリオで使われている、目を引くアイキャッチ画像。これらの多くは、画像生成AIの「ImageFX」を使って作られています。しかし、ただ「〇〇の画像を作って」とお願いするだけでは、意図したものは生まれません。
-          </p>
-          <p>
-            例えば、トップページのOGP画像（SNSでシェアされた時に表示される画像）を作る際、私はAIに以下のような、かなり具体的な"お願い"（プロンプト）をしています。
-          </p>
-
-          <!-- ★★★ ここを修正 ★★★ -->
+          <h3 class="readable">1. 各ページの顔となる「アイキャッチ画像」</h3>
+          <p class="readable">ブログやポートフォリオで使われている、目を引くアイキャッチ画像。これらの多くは、画像生成AIの「ImageFX」を使って作られています。しかし、ただ「〇〇の画像を作って」とお願いするだけでは、意図したものは生まれません。</p>
+          <p class="readable">例えば、トップページのOGP画像（SNSでシェアされた時に表示される画像）を作る際、私はAIに以下のような、かなり具体的な"お願い"（プロンプト）をしています。</p>
           <div class="point-box">
-            <h4>トップページOGP画像のプロンプト</h4>
-            <pre><code>A heartwarming digital art piece symbolizing the future of welfare and technology. In a space bathed in warm, gentle light, a soft, hand-drawn heart icon and digital light circuit patterns merge as if holding hands. Hopeful, futuristic, and heartwarming. Cinematic lighting, soft background, detailed, high quality.</code></pre>
+            <h4 class="readable">トップページOGP画像のプロンプト</h4>
+            <pre class="readable"><code>A heartwarming digital art piece symbolizing the future of welfare and technology. In a space bathed in warm, gentle light, a soft, hand-drawn heart icon and digital light circuit patterns merge as if holding hands. Hopeful, futuristic, and heartwarming. Cinematic lighting, soft background, detailed, high quality.</code></pre>
           </div>
-          <!-- ★★★ ここまで ★★★ -->
+          <p class="readable">このように、AIに「どんな雰囲気で、何を表現したいのか」を明確に伝えることで、AIは優秀なデザイナーとして、私の頭の中にあるイメージを形にしてくれるのです。</p>
 
-          <p>
-            このように、AIに「どんな雰囲気で、何を表現したいのか」を明確に伝えることで、AIは優秀なデザイナーとして、私の頭の中にあるイメージを形にしてくれるのです。
+          <h3 class="readable">2. 記事の骨子を作る「ブログ執筆」</h3>
+          <p class="readable">
+            先日公開した<a href="report-making-picture-book-with-ai.html">「【実践レポ】自作プロンプトでAI絵本を作ってみた話」</a>という記事。この記事も、AIとの共同執筆で生まれました。
           </p>
-
-          <h3>2. 記事の骨子を作る「ブログ執筆」</h3>
-          <p>
-            先日公開した<a href="report-making-picture-book-with-ai.html"
-              >「【実践レポ】自作プロンプトでAI絵本を作ってみた話」</a
-            >という記事。この記事も、AIとの共同執筆で生まれました。
-          </p>
-          <p>
+          <p class="readable">
             私が「絵本プロンプトの実践記事を書きたい」というテーマを伝えると、AIは記事の構成案や見出しを提案してくれます。さらに、AIが生成した絵本の本文を記事に引用し、それに対して私が「考察」を加える。このように、AIと人間がそれぞれの得意分野を活かしてパスを繋ぎ合うことで、一人で書くよりも早く、そして客観的な視点が加わった質の高い記事が完成するのです。
           </p>
 
-          <h3>3. 複雑な動きを実現する「Webアプリのコーディング」</h3>
-          <p>
-            ポートフォリオに掲載している<a href=portfolio/Game/index.html"
-              >「AI体験ゲーム」</a
-            >や<a href=portfolio/Adaptive_System/adaptive_system.html"
-              >「AI適応型タスク管理システム」</a
-            >には、JavaScriptという言語で書かれた、少し複雑なプログラムが使われています。
+          <h3 class="readable">3. 複雑な動きを実現する「Webアプリのコーディング」</h3>
+          <p class="readable">
+            ポートフォリオに掲載している<a href="/portfolio/pict/pict.html">「AI体験ゲーム」</a>や<a href="/portfolio/Adaptive_System/adaptive_system.html">「AI適応型タスク管理システム」</a>には、JavaScriptという言語で書かれた、少し複雑なプログラムが使われています。
           </p>
-          <p>
+          <p class="readable">
             プログラミングで行き詰まった時、「この動きを実現したいんだけど、どう書けばいい？」とAIに相談すると、具体的なコードのサンプルを提示してくれます。エラーが出た時には、その原因を一緒に探してくれる、頼れるデバッグパートナーにもなってくれるのです。
           </p>
 
-          <h2>AIと共に創るからこそ生まれる「福祉×AI」の価値</h2>
-          <p>
-            私がここまでAIとの共同制作にこだわるのは、それが単に効率的だからというだけではありません。この制作スタイルそのものが、私のミッションである「福祉×AI」の価値を体現していると信じているからです。
-          </p>
+          <h2 class="readable">AIと共に創るからこそ生まれる「福祉×AI」の価値</h2>
+          <p class="readable">私がここまでAIとの共同制作にこだわるのは、それが単に効率的だからというだけではありません。この制作スタイルそのものが、私のミッションである「福祉×AI」の価値を体現していると信じているからです。</p>
           <ul>
-            <li>
-              <strong>リソースの壁を超える：</strong
-              >福祉の現場も、私のような個人クリエイターも、潤沢な時間や人員といったリソースがあるわけではありません。しかし、AIという強力なパートナーがいれば、限られたリソースでも、社会に価値を届けられるほどの高品質なアウトプットが可能になります。
+            <li class="readable">
+              <strong>リソースの壁を超える：</strong>福祉の現場も、私のような個人クリエイターも、潤沢な時間や人員といったリソースがあるわけではありません。しかし、AIという強力なパートナーがいれば、限られたリソースでも、社会に価値を届けられるほどの高品質なアウトプットが可能になります。
             </li>
-            <li>
-              <strong>「できる」の証明：</strong
-              >制作者である私自身が、AIを相棒として楽しみながらサイトを運営している姿を見せること。それこそが、「専門家でなくても、誰もがAIと共にクリエイターになれる」という、このサイトが発信する最も重要なメッセージに、揺るぎない説得力を与えてくれるのです。
+            <li class="readable">
+              <strong>「できる」の証明：</strong>制作者である私自身が、AIを相棒として楽しみながらサイトを運営している姿を見せること。それこそが、「専門家でなくても、誰もがAIと共にクリエイターになれる」という、このサイトが発信する最も重要なメッセージに、揺るぎない説得力を与えてくれるのです。
             </li>
           </ul>
 
-          <!-- ▼▼▼ ここから追加 ▼▼▼ -->
-          <h2>【証明】そして、AIとの共同制作が生んだ確かな成果</h2>
-          <p>
-            机上の空論で終わらせるつもりはありません。この「AIとの共同制作」というスタイルが、実際にどのような成果を生んでいるのか。その客観的な証明として、サイト公開後のGoogle
-            Search Consoleのデータの一部をお見せします。
-          </p>
-
+          <h2 class="readable">【証明】そして、AIとの共同制作が生んだ確かな成果</h2>
+          <p class="readable">机上の空論で終わらせるつもりはありません。この「AIとの共同制作」というスタイルが、実際にどのような成果を生んでいるのか。その客観的な証明として、サイト公開後のGoogle Search Consoleのデータの一部をお見せします。</p>
           <div class="point-box">
-            <p style="text-align: center; font-weight: bold">
-              Googleの検索結果におけるパフォーマンス（過去28日間）
-            </p>
-            <img
-              src=img/blog/gsc-performance-28d_large.webp"
-              alt="Google Search Console 28日間の検索パフォーマンスを示すグラフ"
-              class="article-image"
-            />
-            <p class="caption">
-              70%を超える高いクリック率（CTR）を維持し、表示回数・クリック数ともに右肩上がりの成長を示しています。
-            </p>
+            <p class="readable" style="text-align: center; font-weight: bold">Googleの検索結果におけるパフォーマンス（過去28日間）</p>
+            <img src="/img/blog/gsc-performance-28d_large.webp" alt="Google Search Console 28日間の検索パフォーマンスを示すグラフ" class="article-image" loading="lazy" width="800" height="375" />
+            <p class="caption readable">70%を超える高いクリック率（CTR）を維持し、表示回数・クリック数ともに右肩上がりの成長を示しています。</p>
 
-            <p style="text-align: center; font-weight: bold; margin-top: 40px">
-              トップページの表示回数の推移（週ごとの比較）
-            </p>
-            <img
-              src=img/blog/gsc-performance-compare_large.webp"
-              alt="Google Search Console トップページの表示回数が週ごとに急増していることを示すグラフ"
-              class="article-image"
-            />
-            <p class="caption">
-              SEO対策後、トップページの表示回数が1週間で約5.7倍（11回→63回）に急増しました。
-            </p>
+            <p class="readable" style="text-align: center; font-weight: bold; margin-top: 40px">トップページの表示回数の推移（週ごとの比較）</p>
+            <img src="/img/blog/gsc-performance-compare_large.webp" alt="Google Search Console トップページの表示回数が週ごとに急増していることを示すグラフ" class="article-image" loading="lazy" width="800" height="375" />
+            <p class="caption readable">SEO対策後、トップページの表示回数が1週間で約5.7倍（11回→63回）に急増しました。</p>
           </div>
-
-          <p>
+          <p class="readable">
             これらのデータは、AIと共に創り上げたサイトが、単なる趣味の領域を超え、検索エンジンにも高く評価される『価値ある資産』となり得ることを示しています。そして何より、限られたリソースの中でも、正しい戦略とAIという最高のパートナーがいれば、確かな成果を出せるという証明に他なりません。
           </p>
-          <!-- ▲▲▲ ここまで追加 ▲▲▲ -->
 
-          <h2>まとめ：このサイトは、AIとの「共同作品」です</h2>
-          <p>
-            このサイトは、私のポートフォリオであると同時に、AIとの対話と試行錯誤の末に生まれた、AIと私の「共同作品」でもあります。
-          </p>
-          <p>
-            この記事を読んで、AIを「よく分からないもの」から、「何か面白いことを一緒にできそうな相棒」として、少しでも身近に感じていただけたなら幸いです。
-          </p>
-          <p>
-            あなたも、AIという最高のパートナーを見つけて、何かを創り出してみませんか？そのためのヒントは、このサイトの至る所に散りばめられています。
-          </p>
+          <h2 class="readable">まとめ：このサイトは、AIとの「共同作品」です</h2>
+          <p class="readable">このサイトは、私のポートフォリオであると同時に、AIとの対話と試行錯誤の末に生まれた、AIと私の「共同作品」でもあります。</p>
+          <p class="readable">この記事を読んで、AIを「よく分からないもの」から、「何か面白いことを一緒にできそうな相棒」として、少しでも身近に感じていただけたなら幸いです。</p>
+          <p class="readable">あなたも、AIという最高のパートナーを見つけて、何かを創り出してみませんか？そのためのヒントは、このサイトの至る所に散りばめられています。</p>
         </div>
 
         <!-- AI博士 相談セクション -->
         <section class="ai-hakase-cta">
           <div class="cta-icon">
-            <img
-              src=portfolio/hakase/img/ogp-hakase.webp"
-              alt="AI博士のアイコン"
-            />
+            <img src="/portfolio/hakase/img/ogp-hakase.webp" alt="AI博士のアイコン" loading="lazy" width="80" height="80" />
           </div>
           <div class="cta-content">
-            <h3>この記事の内容、AI博士に相談しませんか？</h3>
-            <p>
-              この記事を読んで生まれた疑問や、さらに深掘りしたい点はありますか？AI博士が、あなたの質問に優しく、そして詳しくお答えします。
-            </p>
+            <h3 class="readable">この記事の内容、AI博士に相談しませんか？</h3>
+            <p class="readable">この記事を読んで生まれた疑問や、さらに深掘りしたい点はありますか？AI博士が、あなたの質問に優しく、そして詳しくお答えします。</p>
             <div class="cta-button-wrapper">
-              <a href=portfolio/hakase/hakase.html" class="cta-button"
-                >AI博士の研究室へ相談に行く</a
-              >
+              <a href="/portfolio/hakase/hakase.html" class="cta-button readable">AI博士の研究室へ相談に行く</a>
             </div>
           </div>
         </section>
 
         <!-- 関連記事セクション -->
         <section class="related-posts">
-          <h2
-            class="related-posts-title readable"
-            data-speech="次はこちらの記事もいかがでしょうか。あわせて読みたい記事。"
-          >
-            あわせて読みたい記事
-          </h2>
+          <h2 class="related-posts-title readable" data-speech="次はこちらの記事もいかがでしょうか。あわせて読みたい記事。">あわせて読みたい記事</h2>
           <div class="post-grid">
-            <!-- 関連記事カード 1: AI絵本制作レポート -->
-            <a
-              href=blog/report-making-picture-book-with-ai.html"
-              class="post-card-link"
-            >
+            <!-- 関連記事カード 1 -->
+            <a href="/blog/report-making-picture-book-with-ai.html" class="post-card-link">
               <div class="post-card">
                 <div class="post-card-image">
-                  <img
-                    src=img/blog/ehon-report-cover_thumb.webp"
-                    alt="AI絵本制作レポート"
-                  />
+                  <img src="/img/blog/ehon-report-cover_thumb.webp" alt="AI絵本制作レポート" loading="lazy" width="300" height="169" />
                 </div>
                 <div class="post-card-content">
-                  <h3 class="readable">
-                    【実践レポ】自作プロンプトでAI絵本を作ってみた
-                  </h3>
-                  <p>
-                    「知育絵本プロンプト」は本当に使える？制作者自ら、AIとの共同制作に挑戦した全手順を公開します。
-                  </p>
+                  <h3 class="readable">【実践レポ】自作プロンプトでAI絵本を作ってみた</h3>
+                  <p class="readable">「知育絵本プロンプト」は本当に使える？制作者自ら、AIとの共同制作に挑戦した全手順を公開します。</p>
                 </div>
               </div>
             </a>
-            <!-- 関連記事カード 2: Fuwamoco開発秘話 -->
-            <a
-              href=blog/fuwamoco-development-story.html"
-              class="post-card-link"
-            >
+            <!-- 関連記事カード 2 -->
+            <a href="/blog/fuwamoco-development-story.html" class="post-card-link">
               <div class="post-card">
                 <div class="post-card-image">
-                  <img
-                    src=img/blog/ogp-fuwamoco-story_thumb.webp"
-                    alt="Fuwamoco PROJECTの開発秘話"
-                  />
+                  <img src="/img/blog/ogp-fuwamoco-story_thumb.webp" alt="Fuwamoco PROJECTの開発秘話" loading="lazy" width="300" height="169" />
                 </div>
                 <div class="post-card-content">
-                  <h3 class="readable">
-                    【開発秘話】なぜ私は、架空のNPO法人サイトを創ったのか？
-                  </h3>
-                  <p>
-                    福祉の課題意識から生まれた、架空NPO法人サイト。その企画から実装までの「物語」を語ります。
-                  </p>
+                  <h3 class="readable">【開発秘話】なぜ私は、架空のNPO法人サイトを創ったのか？</h3>
+                  <p class="readable">福祉の課題意識から生まれた、架空NPO法人サイト。その企画から実装までの「物語」を語ります。</p>
                 </div>
               </div>
             </a>
-            <!-- 関連記事カード 3: AI学習の目標設定 -->
-            <a
-              href=blog/goal-setting-for-ai-learning.html"
-              class="post-card-link"
-            >
+            <!-- 関連記事カード 3 -->
+            <a href="/blog/goal-setting-for-ai-learning.html" class="post-card-link">
               <div class="post-card">
                 <div class="post-card-image">
-                  <img
-                    src=img/blog/ogp-goal-setting_thumb.webp"
-                    alt="AI学習の目標設定"
-                  />
+                  <img src="/img/blog/ogp-goal-setting_thumb.webp" alt="AI学習の目標設定" loading="lazy" width="300" height="169" />
                 </div>
                 <div class="post-card-content">
-                  <h3 class="readable">
-                    AI学習は「何を作るか」が9割。学びが続く目標設定のコツ
-                  </h3>
-                  <p>
-                    学びが楽しく続く、"作りたいもの"を原動力にする目標設定の3つのコツを実体験から解説します。
-                  </p>
+                  <h3 class="readable">AI学習は「何を作るか」が9割。学びが続く目標設定のコツ</h3>
+                  <p class="readable">学びが楽しく続く、"作りたいもの"を原動力にする目標設定の3つのコツを実体験から解説します。</p>
                 </div>
               </div>
             </a>
@@ -333,27 +212,31 @@
         </section>
 
         <footer class="article-footer">
-          <div class="author-profile-box">
+          <div class="author-profile-box no-avatar">
             <div class="author-info">
-              <h4>この記事を書いた人：山本 倫久</h4>
-              <p>
+              <h4 class="readable">この記事を書いた人：山本 倫久</h4>
+              <p class="readable">
                 福祉×AIクリエイター。就労支援B型事業所の利用者としての実体験を基に、AI技術で福祉の現場に新しい「できる」と「楽しい」を届けることをミッションとして活動中。
               </p>
+              <div class="author-social">
+                <a href="https://x.com/ChromachannelAI" target="_blank" rel="noopener noreferrer">X (旧Twitter)</a> |
+                <a href="https://github.com/motty1975/chromachannel" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
             </div>
           </div>
           <div class="back-to-blog-links">
-            <a href=blog.html" class="back-link">← ブログ一覧に戻る</a>
+            <a href="/blog.html" class="back-link readable">← ブログ一覧に戻る</a>
           </div>
         </footer>
       </article>
-      <!-- ★★★ Disqusコメント欄 ★★★ -->
+
+      <!-- コメントセクション -->
       <section class="comment-section">
-        <h2>ご意見・ご感想</h2>
+        <h2 class="readable">ご意見・ご感想</h2>
         <div id="disqus_thread"></div>
         <script>
           var disqus_config = function () {
-            this.page.url =
-              "https://chromachannel.online/blog/making-this-site-with-ai.html";
+            this.page.url = "https://chromachannel.online/blog/making-this-site-with-ai.html";
             this.page.identifier = "blog_making-this-site-with-ai";
           };
           (function () {
@@ -364,18 +247,22 @@
             (d.head || d.body).appendChild(s);
           })();
         </script>
-        <noscript
-          >Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript"
-            >comments powered by Disqus.</a
-          ></noscript
-        >
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
       </section>
     </main>
 
-    <!-- フッターをここに読み込む -->
+    <!-- フッターのプレースホルダー -->
     <div id="footer-placeholder"></div>
 
-    <script src=JavaScript/script.js" defer></script>
+    <!-- サイト共通の読み上げ停止ボタン -->
+    <div id="global-speech-control" class="global-speech-control hidden">
+      <button id="global-speech-stop-btn" title="読み上げを停止" aria-label="読み上げを停止">
+        <i class="fas fa-stop" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <!-- JavaScriptファイルの読み込み -->
+    <script src="/javascript/voice-module.js" defer></script>
+    <script src="/javascript/script.js" defer></script>
   </body>
 </html>
