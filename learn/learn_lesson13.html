@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ===== ▼▼▼ SEO設定 START ▼▼▼ ===== -->
+    <title>
+      【ステップ3-①】音楽生成AI Suno入門｜5分でオリジナルソングを作る魔法
+    </title>
+    <meta
+      name="description"
+      content="無料の音楽生成AI「Suno」の初心者向け講座。歌詞とスタイルを指定するだけで、誰でも5分でオリジナルソングが作れます。生成された音楽の著作権や商用利用のルールも、世界一わかりやすく解説。"
+    />
+
+    <!-- OGPタグ -->
+    <meta
+      property="og:title"
+      content="【ステップ3-①】音楽生成AI Suno入門｜5分でオリジナルソングを作る魔法"
+    />
+    <meta
+      property="og:description"
+      content="無料の音楽生成AI「Suno」初心者講座。歌詞とスタイルを指定するだけで誰でも5分でオリジナルソングが作れます。著作権や商用利用ルールも徹底解説。"
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://chromachannel.online/learn1/learn_lesson13.html"
+    />
+    <meta
+      property="og:image"
+      content="https://chromachannel.online/Img/ogp-lesson13.webp"
+    />
+    <meta property="og:site_name" content="Chromachannel" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link
+      rel="canonical"
+      href="https://chromachannel.online/learn1/learn_lesson13.html"
+    />
+
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Course",
+            "name": "【ステップ3-①】音楽生成AI Suno入門｜5分でオリジナルソングを作る魔法",
+            "description": "無料の音楽生成AI「Suno」の初心者向け講座。歌詞とスタイルを指定するだけで、誰でも5分でオリジナルソングが作れます。生成された音楽の著作権や商用利用のルールも、世界一わかりやすく解説。",
+            "provider": {
+              "@type": "Person",
+              "name": "山本 倫久",
+              "url": "https://chromachannel.online/"
+            },
+            "timeRequired": "PT1H",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "JPY"
+            },
+            "category": "音楽生成AI",
+            "hasCourseInstance": {
+              "@type": "CourseInstance",
+              "courseMode": "online"
+            }
+          },
+          {
+            "@type": "Article",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://chromachannel.online/learn1/learn_lesson13.html"
+            },
+            "headline": "【ステップ3-①】音楽生成AI Suno入門｜5分でオリジナルソングを作る魔法",
+            "image": "https://chromachannel.online/Img/ogp-lesson13.webp",
+            "author": {
+              "@type": "Person",
+              "name": "山本 倫久",
+              "url": "https://chromachannel.online/"
+            },
+            "publisher": { "@type": "Organization", "name": "Chromachannel" },
+            "datePublished": "2025-08-19T00:00:00+09:00",
+            "dateModified": "2025-08-19T00:00:00+09:00"
+          }
+        ]
+      }
+    </script>
+    <!-- ===== ▲▲▲ SEO設定 END ▲▲▲ ===== -->
+
+    <!-- CSS / アイコン / Favicon -->
+    <link rel="stylesheet" href="/css/only_app.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="icon" href="/Img/favicon.ico" sizes="any" />
+    <link rel="icon" href="/Img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/Img/apple-touch-icon.png" />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+    <main style="padding-top: 70px">
+      <div class="container">
+        <div class="lesson-content">
+          <h1>ステップ3：AIで創る②（音声・動画編）</h1>
+          <h2>講座⑬：音楽生成AI「Suno」入門</h2>
+
+          <nav
+            class="lesson-nav"
+            style="text-align: center; margin-bottom: 40px"
+          >
+            <a href="/learn1/learn_lesson12.html" class="nav-link"
+              >前のレッスンへ</a
+            >
+            <a
+              href="/learning-summary.html"
+              class="nav-link"
+              style="margin: 0 20px"
+              >講座一覧へ</a
+            >
+            <a href="/learn1/learn_lesson14.html" class="nav-link"
+              >次のレッスンへ</a
+            >
+          </nav>
+
+          <div class="table-of-contents">
+            <div class="toc-title">
+              <i class="fas fa-list-alt"></i> この講座の目次
+            </div>
+            <ul>
+              <li>
+                <a href="#chapter1"
+                  >第1章：5分で完成！あなたの最初のオリジナルソング</a
+                >
+              </li>
+              <li>
+                <a href="#chapter2"
+                  >第2章：AIに「想い」を伝える - 歌詞とスタイルの作り込み方</a
+                >
+              </li>
+              <li>
+                <a href="#chapter3"
+                  >第3章：【最重要】生成された音楽の著作権と、商用利用のルール</a
+                >
+              </li>
+              <li>
+                <a href="#chapter4"
+                  >第4章：あなたの動画を彩る「BGM」と「主題歌」を作ってみよう</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <h2 id="chapter1">
+            第1章：5分で完成！あなたの最初のオリジナルソング
+          </h2>
+          <p>
+            ステップ2の全課程、完全クリア、本当におめでとうございます！あなたはもう、AIと共に、視覚表現の世界を自在に冒険できる、真のクリエイターです。
+          </p>
+          <p>
+            さあ、ステップ3では、新しい冒険の扉を開きましょう。あなたの世界に、「音」という、新しい命を吹き込むのです。
+          </p>
+          <p>
+            「音楽なんて、楽器が弾けないと無理」「作詞作曲なんて、特別な才能が必要でしょう？」<br>
+            そう、昨日までは。画像生成AIが「絵を描く才能」を不要にしたように、音楽生成AIは、「楽器を演奏し、メロディーを紡ぐ才能」を、過去のものにしました。
+          </p>
+          <p>
+            この講座で出会う「Suno（スノ）」は、あなたが紡いだ「言葉（歌詞）」と「イメージ（曲調）」を伝えるだけで、AIがプロ顔負けの歌声と伴奏を付けて、世界に一つだけのオリジナルソングを、わずか数分で生み出してくれる、魔法のジュークボックスです。楽器の経験も、音楽理論の知識も、一切必要ありません。必要なのは、あなたが「伝えたい想い」だけです。
+          </p>
+
+          <h4>【実践】最初の“鼻歌”を、AIに聴かせてみよう</h4>
+          <p>
+            百聞は一見に如かず。この魔法を、今すぐ、その手で体験してみましょう。
+          </p>
+          <ol>
+            <li>
+              <a
+                href="https://suno.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Sunoの公式サイト</a
+              >にアクセスし、Googleアカウントなどで無料登録をします。
+            </li>
+            <li>ログインしたら、「Create」ボタンを押します。</li>
+            <li>
+              「Song
+              Description」という入力欄に、まずは、あなたの今の気分を、鼻歌のように、一言だけ入力してみてください。例えば…
+            </li>
+          </ol>
+          <div class="prompt-block">
+            <button class="copy-button">コピー</button>
+            <pre>
+A happy, upbeat acoustic pop song about a sunny morning walk</pre
+            >
+          </div>
+          <p>
+            （意味：晴れた朝のお散歩についての、ハッピーでアップテンポなアコースティックポップソング）
+          </p>
+          <p>
+            入力したら、「Create」ボタンを押して、少しだけ待ってみましょう。どうですか？AIが、あなたのための、世界に一つだけの朝のテーマソングを、２パターンも歌ってくれたはずです！これが、あなたが初めて生み出した「音楽」です！
+          </p>
+
+          <hr class="section-divider" />
+          <h2 id="chapter2">
+            第2章：AIに「想い」を伝える - 歌詞とスタイルの作り込み方
+          </h2>
+          <p>
+            AIが自動で歌詞まで作ってくれる手軽さもSunoの魅力ですが、このツールの真の力は、あなた自身の「言葉」に、メロディーという翼を授けてくれるところにあります。さあ、AIという最高の作曲家に、あなたの「想い」を伝えましょう。
+          </p>
+
+          <h4>ステップ①：「Custom Mode」という名の、プロの作曲部屋へ</h4>
+          <p>
+            Sunoの作成画面にある「Custom
+            Mode」のスイッチをONにしてみてください。すると、入力欄が３つに増えたはずです。ここが、あなたの想いを、より深く、より正確に音楽へと昇華させるための、プロの作曲部屋です。
+          </p>
+          <ul>
+            <li>
+              <strong>Lyrics（歌詞）：</strong
+              >あなたの「詩」を書き込む場所です。
+            </li>
+            <li>
+              <strong>Style of Music（音楽のスタイル）：</strong
+              >あなたの詩に、どんな「服」を着せたいかを伝える場所です。
+            </li>
+            <li>
+              <strong>Title（タイトル）：</strong>あなたの曲の「名前」です。
+            </li>
+          </ul>
+
+          <h4>ステップ②：あなたの「詩」を、AIに預ける</h4>
+          <p>
+            Lyrics（歌詞）の入力欄に、あなた自身の言葉を書き込んでみましょう。短い詩でも、物語の一節でも構いません。もちろん、ChatGPTに「AIと一緒に冒険する、ワクワクする歌の歌詞を考えて」とお願いして、共作するのも素晴らしいアイデアです！
+          </p>
+
+          <div class="point-解説">
+            <h4>【豆知識】AIに“曲の設計図”を教えてあげよう</h4>
+            <p>
+              歌詞の中に、以下のような構成を示す“目印”（タグ）を書き加えることで、あなたはAIという名の作曲家に、より詳細な「曲の設計図」を渡すことができます。AIはこれを読み解き、さらにドラマチックで、プロが作ったようなメリハリのある曲を仕上げてくれます。
+            </p>
+            <p>よく使われる設計図の“目印”には、こんなものがあります。</p>
+            <ul>
+              <li>
+                <strong>[Intro]</strong
+                ><br>イントロ。曲の始まりを告げる導入部分です。歌詞を入れずにこのタグだけを指定すると、楽器だけの演奏（インストゥルメンタル）になることが多いです。
+              </li>
+              <li>
+                <strong>[Verse]</strong
+                ><br>ヴァース（Aメロ・Bメロ）。物語の情景やストーリーを、落ち着いて説明する部分です。
+              </li>
+              <li>
+                <strong>[Pre-Chorus]</strong
+                ><br>プレコーラス（サビ前）。サビに向けて、曲の盛り上がりを高めるための“助走”のような部分です。
+              </li>
+              <li>
+                <strong>[Chorus]</strong
+                ><br>コーラス（サビ）。曲の中で最も印象的で、何度も繰り返される一番の盛り上がりどころです。AIも、ここのメロディーが一番キャッチーになるように作曲してくれます。
+              </li>
+              <li>
+                <strong>[Bridge]</strong
+                ><br>ブリッジ（Cメロ）。曲の雰囲気を一度ガラリと変える、特別なセクションです。物語で言えば、少し場面転換するような部分で、曲に深みとドラマを与えます。
+              </li>
+              <li>
+                <strong>[Outro]</strong
+                ><br>アウトロ。曲の終わりを告げる部分です。静かにフェードアウトさせたり、最後のサビを繰り返したり、バシッと終わらせたりします。
+              </li>
+            </ul>
+            <p>
+              これらを全て使う必要は全くありません！最初は[Verse]と[Chorus]だけでも十分すぎるほどです。慣れてきたら、あなたの物語に合わせて、色々な設計図を試してみてくださいね。
+            </p>
+          </div>
+
+          <h4>ステップ③：音楽の「スタイル」で、世界観を決定づける</h4>
+          <p>
+            Style of
+            Music（音楽のスタイル）の入力欄は、あなたの歌詞に、どんな服を着せるかを決める、最も重要な場所です。ここでの言葉の選び方一つで、同じ歌詞が、全く違う表情を見せます。
+          </p>
+          <div class="point-解説">
+            <h4>【スタイル指定のサンプル集】</h4>
+            <ul>
+              <li>
+                <strong>元気を出したい時：</strong>
+                <code>J-POP, upbeat, happy, female vocal</code
+                >（J-POP、アップテンポ、ハッピー、女性ボーカル）
+              </li>
+              <li>
+                <strong>感動的な雰囲気：</strong>
+                <code>Orchestral, cinematic, emotional, ballad</code
+                >（オーケストラ、映画音楽風、エモーショナル、バラード）
+              </li>
+              <li>
+                <strong>おしゃれなBGMに：</strong>
+                <code>Lo-fi chillhop, instrumental, relaxing</code
+                >（ローファイ・チルホップ、インスト（歌なし）、リラックス）
+              </li>
+              <li>
+                <strong>ロックな気分：</strong>
+                <code>Hard rock, driving guitar riff, male vocal</code
+                >（ハードロック、ドライブ感のあるギターリフ、男性ボーカル）
+              </li>
+            </ul>
+            <p>
+              このように、「ジャンル」「雰囲気」「使ってほしい楽器」「ボーカルの性別」などを、カンマで区切って具体的に指示することで、AIはあなたの頭の中にあるサウンドを、驚くほど正確に再現してくれます。
+            </p>
+          </div>
+          <p>
+            さあ、すべての準備が整いました。「Create」ボタンを押して、あなたの言葉が、メロディーという翼を得て、大空へ羽ばたいていく、その感動の瞬間を体験してください！
+          </p>
+
+          <hr class="section-divider" />
+          <h2 id="chapter3">
+            第3章：【最重要】生成された音楽の著作権と、商用利用のルール
+          </h2>
+          <p>
+            あなたが生み出した素晴らしい音楽。これを、あなたのYouTube動画のBGMとして使ったり、もしかしたら、音楽配信サービスで販売したりすることも、夢ではないかもしれません。しかし、その前に。クリエイターとして、あなたの作品と、あなた自身を守るための、最も大切な「ルール」を、一緒に、じっくりと学んでいきましょう。
+          </p>
+
+          <div class="point-解説">
+            <h4>
+              【世界一わかる】Sunoのルール解説 -
+              あなたは、レストランのオーナーシェフです
+            </h4>
+            <p>
+              Sunoの利用規約は、少し複雑に見えるかもしれません。でも、大丈夫。あなたが「Sunoという厨房を借りて料理を作る、レストランのオーナーシェフ」だと考えれば、すべてが、驚くほどシンプルに理解できます。
+            </p>
+
+            <h4>ケース①：無料プランのあなた（厨房を“間借り”しているシェフ）</h4>
+            <p>
+              無料プランを使っているあなたは、例えるなら、大きなレストランの厨房の一角を、無料で「間借り」させてもらっているシェフです。
+            </p>
+            <ul>
+              <li>
+                <strong>できること：</strong
+                >Sunoで作った料理（音楽）を、友人や家族に振る舞ったり（個人的な利用）、SNSで「こんな料理ができました！」と自慢したり（非商用利用）することは、自由にできます。
+              </li>
+              <li>
+                <strong>できないこと：</strong
+                >しかし、その料理をお客様に出して、<strong>お金をもらうこと（商用利用）は、できません。</strong>なぜなら、その厨房の所有権は、あなたではなく、レストランのオーナー（Suno）にあるからです。
+              </li>
+              <li>
+                <strong>守るべきルール：</strong
+                >また、間借りさせてもらっている感謝の印として、あなたがSNSなどで料理を自慢する時には、必ず「この料理は、Sunoレストランの厨房で作りました」と、クレジット（帰属表示）を示す必要があります。
+              </li>
+            </ul>
+            <p>
+              <strong
+                >結論：無料プランで作った曲は、収益の発生するYouTube動画のBGMなどには、使えません。</strong
+              >
+            </p>
+
+            <h4>
+              ケース②：有料プランのあなた（厨房を“正式に契約”したオーナーシェフ）
+            </h4>
+            <p>
+              ProプランやPremierプランといった、有料プランに加入したあなたは、Sunoという厨房と、正式な「賃貸契約」を結んだ、正真正銘のオーナーシェフです。
+            </p>
+            <ul>
+              <li>
+                <strong>できること：</strong
+                >契約期間中に、あなたがその厨房で作った料理（音楽）の<strong>所有権は、完全にあなたのものになります。</strong>そのため、その料理をお客様に提供して、<strong
+                  >お金儲けをすること（商用利用）が、全面的に許可されます。</strong
+                >
+              </li>
+              <li>
+                <strong>守るべきルール：</strong
+                >あなたはもう、立派なオーナーシェフです。料理を自慢する時に、わざわざ「Suno厨房で作りました」とクレジットを示す義務は、ありません。（もちろん、感謝を込めて紹介するのは、素晴らしいことです！）
+              </li>
+            </ul>
+            <p>
+              <strong
+                >結論：有料プランに加入すれば、加入中に作った曲は、あなたのYouTube動画のBGM、音楽配信サービスでの販売、お店のBGMなど、あらゆる商用利用が、完全に可能になります。</strong
+              >
+            </p>
+
+            <h4>【超重要】契約終了後（有料プラン解約後）のルール</h4>
+            <p>
+              もし、あなたが厨房との賃貸契約を終了（有料プランを解約）したら、どうなるでしょう？
+            </p>
+            <p>
+              <strong>ご安心ください。</strong
+              >あなたがオーナーシェフだった契約期間中に作った、全ての料理（音楽）の所有権は、解約後も、永久にあなたのものです。ですから、解約した後に、過去の作品を商用利用し続けても、全く問題ありません。
+            </p>
+            <p>
+              この「いつ作った曲なのか」が、天国と地獄を分ける、最も重要なポイントなのです。
+            </p>
+          </div>
+
+          <hr class="section-divider" />
+          <h2 id="chapter4">
+            第4章：あなたの動画を彩る「BGM」と「主題歌」を作ってみよう
+          </h2>
+          <p>
+            著作権のルール、完璧ですね！あなたはもう、安心して音楽を創造できる、誠実な音楽クリエイターです。
+          </p>
+          <p>
+            さあ、これからのステップで制作していく「動画」という、新しいキャンバスを想像してみてください。あなたが創り出す物語に、あなた自身が生み出した音楽が流れる…。考えただけで、ワクワクしてきませんか？
+          </p>
+          <ul>
+            <li>
+              <strong>動画のBGMを創る：</strong>「Lo-fi chillhop, instrumental,
+              no
+              vocal」のように、歌のない、お洒落なインスト曲を生成すれば、どんな映像にも合う、最高のBGMが完成します。
+            </li>
+            <li>
+              <strong>チャンネルの主題歌を創る：</strong
+              >あなたのチャンネルのテーマや、あなたのキャラクターの性格を「歌詞」にして、AIに壮大な主題歌を歌わせることも可能です！
+            </li>
+          </ul>
+          <p>
+            Sunoは、あなたの創造の翼を、視覚の世界から、聴覚の世界へと、どこまでも高く、どこまでも遠くへ、羽ばたかせてくれる、最高のパートナーなのです。
+          </p>
+
+          <div class="next-lesson-section">
+            <h2>あなたの心、メロディーになりましたか？</h2>
+            <p>
+              Sunoという魔法のジュークボックスで、あなたの想いを音楽にする冒険、お疲れ様でした。<br>あなたはもう、楽器に触れることなく、オリジナルソングを生み出せる、新時代の作曲家です。
+            </p>
+            <p>
+              さあ、その素晴らしい音楽を、最高の「物語」に乗せてみませんか？<br>次のレッスンでは、視聴者の心を惹きつけて離さない、面白い動画の「設計図（企画・台本）」を、AIと共に創り出す技術を学びます。
+            </p>
+            <a href="/learn1/learn_lesson14.html" class="nav-button-next">
+              <span>ステップ3-② 動画制作【企画・台本編】へ進む</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <section class="comment-section">
+        <h2>ご意見・ご感想</h2>
+        <div id="disqus_thread"></div>
+        <script>
+          var disqus_config = function () {
+            this.page.url =
+              "https://chromachannel.online/learn1/learn_lesson13.html";
+            this.page.identifier = "learn_lesson13_suno-ai";
+          };
+          (function () {
+            var d = document,
+              s = d.createElement("script");
+            s.src = "https://chroma-ch.disqus.com/embed.js";
+            s.setAttribute("data-timestamp", +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>
+          コメント機能を表示するには、JavaScriptを有効にしてください。<a
+            href="https://disqus.com/?ref_noscript"
+            >Disqusによるコメント</a
+          >
+        </noscript>
+      </section>
+    </main>
+    <div id="footer-placeholder"></div>
+    <script src="/JavaScript/script.js" defer></script>
+  </body>
+</html>
