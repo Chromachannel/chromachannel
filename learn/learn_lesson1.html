@@ -12,10 +12,6 @@
       name="description"
       content="AIの仕組み（機械学習・ディープラーニング）を専門用語を使わずに優しく解説。AIがもたらす未来のメリットと、知っておくべきリスク（光と影）を学び、AI時代を賢く生き抜くための教養を身につける無料講座です。"
     />
-    <link
-      rel="canonical"
-      href="https://chromachannel.online/learn1/learn_lesson1.html"
-    />
 
     <!-- OGPタグ -->
     <meta
@@ -29,7 +25,7 @@
     <meta property="og:type" content="article" />
     <meta
       property="og:url"
-      content="https://chromachannel.online/learn1/learn_lesson1.html"
+      content="https://chromachannel.online/learn/learn_lesson1.html"
     />
     <meta
       property="og:image"
@@ -37,6 +33,10 @@
     />
     <meta property="og:site_name" content="Chromachannel" />
     <meta name="twitter:card" content="summary_large_image" />
+    <link
+      rel="canonical"
+      href="https://chromachannel.online/learn/learn_lesson1.html"
+    />
 
     <!-- 構造化データ -->
     <script type="application/ld+json">
@@ -45,19 +45,30 @@
         "@graph": [
           {
             "@type": "Course",
-            "name": "【ステップ1-①】AIとは？仕組み・歴史・未来を初心者向けに解説｜AI教養入門",
+            "name": "【ステップ1-①】AIの「なぜ？」と「なに？」がわかるテキスト｜AI教養入門",
             "description": "AIの仕組み（機械学習・ディープラーニング）を専門用語を使わずに優しく解説。AIがもたらす未来のメリットと、知っておくべきリスク（光と影）を学び、AI時代を賢く生き抜くための教養を身につける無料講座です。",
             "provider": {
               "@type": "Person",
               "name": "山本 倫久",
               "url": "https://chromachannel.online/"
+            },
+            "timeRequired": "PT1H",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "JPY"
+            },
+            "category": "AIリテラシー",
+            "hasCourseInstance": {
+              "@type": "CourseInstance",
+              "courseMode": "online"
             }
           },
           {
             "@type": "Article",
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://chromachannel.online/learn1/learn_lesson1.html"
+              "@id": "https://chromachannel.online/learn/learn_lesson1.html"
             },
             "headline": "【ステップ1-①】AIとは？仕組み・歴史・未来を初心者向けに解説｜AI教養入門",
             "image": "https://chromachannel.online/Img/ogp-lesson1.webp",
@@ -75,25 +86,22 @@
     </script>
     <!-- ===== ▲▲▲ SEO設定 END ▲▲▲ ===== -->
 
-    <!-- CSS / ライブラリ -->
+    <!-- CSS / アイコン / Favicon -->
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
-    <link rel="stylesheet" href="../CSS/style.css" />
-    <link rel="stylesheet" href="../CSS/only_read.css" />
-    <!-- only_read.css に prompt-card のスタイルが含まれている想定 -->
-    <link rel="stylesheet" href="CSS/only_app.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/only_read.css" />
+    <link rel="stylesheet" href="css/only_app.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
   </head>
-
   <body>
-    <!-- ヘッダーのプレースホルダー -->
     <div id="header-placeholder"></div>
 
     <main style="padding-top: 70px">
@@ -106,7 +114,7 @@
             class="lesson-nav"
             style="text-align: center; margin-bottom: 40px"
           >
-            <a href="/learn1/learn_lesson0.html" class="nav-link"
+            <a href="/learn/learn_lesson0.html" class="nav-link"
               >前のレッスンへ</a
             >
             <a
@@ -115,7 +123,7 @@
               style="margin: 0 20px"
               >講座一覧へ</a
             >
-            <a href="/learn1/learn_lesson2.html" class="nav-link"
+            <a href="/learn/learn_lesson2.html" class="nav-link"
               >次のレッスンへ</a
             >
           </nav>
@@ -126,7 +134,9 @@
             </div>
             <ul>
               <li>
-                <a href="#chapter1">第1章：AIは魔法？それともただの計算機？</a>
+                <a href="#chapter1"
+                  >第1章：AIは魔法？それともただの計算機？ - その正体に迫る</a
+                >
               </li>
               <li>
                 <a href="#chapter2"
@@ -153,39 +163,53 @@
           </div>
 
           <p>
-            ステップ0の冒険、本当にお疲れ様でした！パソコンという頼もしい相棒とすっかり”仲良く”なれたあなたは、もう立派な冒険者です。さぁ、いよいよこのステップ1から、あなたの創作活動を無限に広げてくれる、もう一人の新しい相棒…<strong>「AI（エーアイ）」</strong>との対話が始まります。
+            ステップ0の冒険、本当にお疲れ様でした！
+            パソコンという頼もしい相棒とすっかり”仲良く”なれたあなたは、もう立派な冒険者です。
+          </p>
+          <p>
+            さぁ、いよいよこのステップ1から、あなたの創作活動を無限に広げてくれる、もう一人の新しい相棒…
+            <strong>「AI（エーアイ）」</strong
+            >との対話が始まります。AIとは一体、何者なのでしょうか？
+            一緒に、その正体を探る旅に出発しましょう！
           </p>
 
           <h3 id="chapter1">
             第1章：AIは魔法？それともただの計算機？ - その正体に迫る
           </h3>
           <p>
-            「AI」と聞くと、あなたはどんなことをイメージしますか？まるで人間のように会話したり、人間には描けないような美しい絵を一瞬で生み出したり…その姿は、まるで未来からやってきた「魔法使い」のように見えるかもしれませんね。
+            「AI」と聞くと、あなたはどんなことをイメージしますか？
+            まるで人間のように会話したり、人間には描けないような美しい絵を一瞬で生み出したり…
+            その姿は、まるで未来からやってきた「魔法使い」のように見えるかもしれませんね。
           </p>
+
           <div class="point-解説">
             <h4>結論から言うと、AIは「魔法使い」ではありません。でも…</h4>
             <p>
-              AIの本当の正体は、<strong>「ものすごい量の情報を読んで、そこから『法則』や『パターン』を見つけ出すのが得意な、超優秀な生徒」</strong>なんです。AIが何かを生み出す時は、必ず元になる「教科書」や「お手本」が必要なのです。
+              AIの本当の正体は、<strong>「ものすごい量の情報を読んで、そこから『法則』や『パターン』を見つけ出すのが得意な、超優秀な生徒」</strong>なんです。
+            </p>
+            <p>
+              決して、何もないところから自分で考えて、新しい魔法を生み出す「魔法使い」ではないんですね。AIが何かを生み出す時は、必ず元になる「教科書」や「お手本」が必要なのです。
             </p>
           </div>
 
           <h4>例えるなら「レシピを完璧に覚えた、見習いシェフ」</h4>
           <p>
-            AIの正体を、お料理の世界に例えてみましょう。記憶力だけは誰にも負けない「AIシェフ」がいるとします。
+            AIの正体を、お料理の世界に例えてみましょう。ここに、料理は全くできないけれど、記憶力だけは誰にも負けない「AIシェフ」がいるとします。
           </p>
           <ol>
             <li>
               まず、私たちはこのAIシェフに、世界中にある何百万冊もの<strong>「レシピ本（＝データ）」</strong>を、すべて読ませて記憶させます。
             </li>
             <li>
-              AIシェフは、全てのレシピを読んだ結果、美味しい料理の法則、数え切れないほどの<strong>「共通点（＝パターン）」</strong>を自分なりに見つけ出します。これを<strong>「学習」</strong>と呼びます。
+              AIシェフは、全てのレシピを読んだ結果、美味しい料理の法則…
+              例えば「トマトとチーズは相性が良いな」といった、数え切れないほどの<strong>「共通点（＝パターン）」</strong>を自分なりに見つけ出します。これをAIの世界では<strong>「学習」</strong>と呼びます。
             </li>
             <li>
-              そして、私たちが<strong>「注文（＝指示）」</strong>をすると、AIシェフは学習した無数のパターンの中から、最適な組み合わせを瞬時に組み立てて、最高のレシピを提案してくれるのです。
+              そして、私たちが「ナスとひき肉を使った、子供が喜ぶ甘めの料理を作って！」と<strong>「注文（＝指示）」</strong>すると、AIシェフは学習した無数のパターンの中から、最適な組み合わせを瞬時に組み立てて、最高のレシピを提案してくれるのです。
             </li>
           </ol>
           <p>
-            AIシェフは、自分で味見をしたりはできません。でも、人間が一生かかっても読みきれないほどのレシピを知っているからこそ、人間が思いつきもしなかったような、素晴らしい料理のアイデアを生み出すことができるのですね。
+            これが、AIがやっていることの全てです。AIシェフは、自分で味見をしたり、新しいスパイスを発明したりはできません。でも、人間が一生かかっても読みきれないほどのレシピを知っているからこそ、人間が思いつきもしなかったような、素晴らしい料理のアイデアを生み出すことができるのですね。
           </p>
 
           <hr class="section-divider" />
@@ -194,6 +218,7 @@
           <p>
             AIくんの成長の歴史を、古いアルバムをめくるように一緒に見ていきましょう。この物語を知ると、今のAIがなぜこんなにすごいのかが、もっと深く理解できるようになりますよ。
           </p>
+
           <h4>第1期：ルールを教えられた「まじめな優等生」の時代</h4>
           <p>
             昔のAIは、<strong>「先生に教えられたことしかできない、言われた通りに動くロボット」</strong>のようなものでした。人間が全ての「ルール」を、一つ残らずプログラムしてあげる必要があったのです。
@@ -201,13 +226,20 @@
 
           <h4>第2期：お手本から自分で学ぶ「探求心おうせいな生徒」の時代</h4>
           <p>
-            ここで、革命が起こります。<strong>「全部のルールを教えるのが無理なら、お手本をたくさん見せて、AI自身にルールを見つけさせればいいじゃないか！」</strong>という、考え方の大転換です。これが<strong>「機械学習（マシンラーニング）」</strong>の時代の幕開けです。
+            ここで革命が起こります。<strong>「全部のルールを教えるのが無理なら、お手本をたくさん見せて、AI自身にルールを見つけさせればいいじゃないか！」</strong>という、考え方の大転換です。これが<strong>「機械学習（マシンラーニング）」</strong>の時代の幕開けです。
           </p>
 
           <h4>第3期：人間の脳をマネして"ひらめく"「天才アーティスト」の時代</h4>
           <p>
-            そして、今、私たちが生きているのがこの時代です。「機械学習」がさらに進化した、<strong>「深層学習（ディープラーニング）」</strong>の時代です。これは、人間の脳の神経細胞の繋がり方をマネして作られた仕組みで、<strong>「物事の、もっと深い『特徴』や『概念』を、自分で見つけ出せる」</strong>ようになったのです。
+            そして、今、私たちが生きているのがこの時代です。「機械学習」がさらに進化した、<strong>「深層学習（ディープラーニング）」</strong>の時代です。
           </p>
+
+          <div class="point-解説">
+            <h4>ディープラーニングは何がすごいのか？</h4>
+            <p>
+              一番すごいのは、<strong>「物事の、もっと深い『特徴』や『概念』を、自分で見つけ出せる」</strong>ようになったことです。この「ひらめき」を手に入れたことで、AIはただ写真を判断するだけでなく、<strong>人間の感情や雰囲気をくみ取った創作活動</strong>までできるようになったのです。
+            </p>
+          </div>
 
           <hr class="section-divider" />
 
@@ -217,10 +249,11 @@
           <p>
             AIの本当の価値は、人間と「競争」することではありません。人間を「サポート」し、人間の能力を何倍にも引き上げてくれる、<strong>史上最高のパートナー</strong>になることなのです。
           </p>
+
           <div class="point-解説">
             <h4>AIは、あなた専用の「超有能なアシスタントチーム」</h4>
             <p>
-              面倒な調べ物や、退屈な単純作業、大変なデータ分析…。今まで私たちが「面倒だな」と思っていた仕事のほとんどを、このアシスタントチームが一瞬で肩代わりしてくれます。その結果、私たちは、もっと<strong>「人間にしかできない、創造的な仕事」</strong>に時間とエネルギーを集中できるようになるのです。
+              AIの役割を例えるなら、<strong>「一人ひとりに、世界トップクラスのアシスタントチームが付いてくれる」</strong>ようなものです。面倒な調べ物や、退屈な単純作業をアシスタントチームが一瞬で肩代わりしてくれる結果、私たちは、もっと<strong>「人間にしかできない、創造的な仕事」</strong>に時間とエネルギーを集中できるようになるのです。
             </p>
           </div>
 
@@ -230,61 +263,131 @@
             第4章：【注意点】AIがもたらす未来 - わたしたちが向き合うべき「影」
           </h3>
           <p>
-            AIという新しい火と上手に付き合っていくために、私たちが知っておくべき注意点、つまりAIがもたらす「影」の側面について、誠実にお話しします。
+            どんなに便利な道具でも、使い方を間違えたり、その危険性を知らなかったりすると、思わぬトラブルにつながることがあります。AIという新しい火と上手に付き合っていくために、私たちが知っておくべき注意点…
+            つまり、AIがもたらす「影」の側面について、誠実にお話ししたいと思います。
           </p>
 
           <h4>影①：平気でウソをつくことがある（ハルシネーション）</h4>
           <p>
-            AIは、質問をすると、いつでも自信満々に答えてくれます。しかし、<strong>その答えが、全くのデタラメである</strong>ことが、時々あります。これを<strong>「ハルシネネーション」</strong>と呼びます。AIの答えは、<strong>絶対に鵜呑みにしてはいけません。</strong>必ず、他の情報源で<strong>「裏付けを取る（ファクトチェック）」</strong>という習慣をつけましょう。
+            AIは、質問をすると、いつでも自信満々に答えてくれます。しかし、<strong>その答えが、全くのデタラメである</strong>ことが時々あります。これを<strong>「ハルシネーション」</strong>と呼びます。AIの答えは、<strong>絶対に鵜呑みにしてはいけません。</strong>必ず、他の情報源で<strong>「裏付けを取る（ファクトチェック）」</strong>という習慣をつけましょう。
           </p>
 
-          <h4>影②：誰かの権利を、知らずに傷つけることがある</h4>
+          <h4>影②：学習した情報を、悪用されることがある</h4>
           <p>
-            AIが学習するデータの中には、<strong>「著作権」</strong>で保護されている作品も含まれています。そのため、AIが生成したイラストが、<strong>特定のアーティストの絵柄にそっくりになってしまう</strong>といった問題が起こることがあります。AIが生み出した作品だからといって、完全にオリジナルで、自由に使えるとは限りません。
+            AIとの会話は、<strong>インターネット上の、誰もが見られる掲示板に書き込んでいる</strong>くらいの気持ちでいましょう。個人情報や、公開されては困る情報は、絶対に入力しない。これが、あなた自身と、社会を守るための大切なルールです。
+          </p>
+
+          <h4>影③：誰かの権利を、知らずに傷つけることがある</h4>
+          <p>
+            AIが生成したイラストが、<strong>特定のアーティストの絵柄にそっくりになってしまったり、</strong>AIが書いた文章が、<strong>既存の小説の一節とほとんど同じになってしまったり</strong>、という問題が起こることがあります。AIが生み出した作品だからといって、完全にオリジナルで、自由に使えるとは限りません。
+          </p>
+
+          <h4>影④：情報の「偏り（バイアス）」を加速させることがある</h4>
+          <p>
+            AIの教科書は、私たち人間が作った、インターネット上の膨大なデータです。そして、悲しいことに、そのデータの中には、人間の「偏見（バイアス）」も含まれています。AIは、学習したデータの中にある偏見を、悪気なく、そのまま増幅させてしまうことがあります。
           </p>
 
           <hr class="section-divider" />
 
           <h3 id="chapter5">第5章：AIと共に歩む未来 - 私たちにできること</h3>
           <p>
-            AIの時代に、私たち人間にとって最も大切なこと。それは、<strong>「AIを、鵜呑みにしないこと」</strong>そして<strong>「AIに、丸投げしないこと」</strong>です。AIは、あなたの能力を何倍にも引き上げてくれる、<strong>史上最強の「道具」であり、「相棒」</strong>なのです。
+            AIの時代に、私たち人間にとって最も大切なこと。それは、<strong>「AIを、鵜呑みにしないこと」</strong>そして<strong>「AIに、丸投げしないこと」</strong>です。
           </p>
-
-          <h4>約束①：あなたが「運転手」で、AIは「最新のカーナビ」</h4>
           <p>
-            AIとの関係は、<strong>「運転手」と「カーナビ」</strong>の関係にとてもよく似ています。AIの提案を参考にしつつも、最後の判断と責任は、必ず私たち人間が持つ。この「主体性」こそが、AIを”使いこなす”ための、一番の秘訣です。
+            AIは、あなたの能力を何倍にも引き上げてくれる、<strong>史上最強の「道具」であり、「相棒」</strong>なのです。
           </p>
 
-          <h4>約束②：計算は「電卓」に、私たちは「考える」ことに集中する</h4>
+          <div class="point-解説">
+            <h4>AI時代に価値が上がる、人間の「２つの力」</h4>
+            <ul>
+              <li>
+                <strong>「問いを立てる力」</strong
+                ><br />AIは聞かれたことには答えられますが、自分から「どんな作品を創るべきか？」とは問いません。あなたの好奇心や課題発見能力こそが、すべての創造のスタート地点になります。
+              </li>
+              <li>
+                <strong>「想いを込める力」</strong
+                ><br />AIは美しい文章や絵を創れますが、そこにあなたの実体験からくる「感動」や、誰かを幸せにしたいという「愛情」を込めることはできません。最終的に人の心を動かすのは、作り手の「想い」なのです。
+              </li>
+            </ul>
+          </div>
+
+          <h4>約束③：AIと一緒に「遊んでみる」「試してみる」</h4>
           <p>
-            文章のアイデア出しや、画像の素材作りといった作業は、AIという超高性能な電卓に、どんどん任せてしまいましょう。そして私たちは、<strong>「何を創りたいのか？」「誰に、何を伝えたいのか？」</strong>という、人間にしかできない、最も面白くて、最も価値のある部分に、これからの時間を集中させていくのです。
+            新しい友達と仲良くなる一番の方法が、一緒におしゃべりしたり、遊んだりすることであるように、AIと最高の相棒になるための近道も、<strong>とにかく実際に使ってみること</strong>です。失敗なんてありません。すべてが、あなたとAIとの絆を深めるための、大切なコミュニケーションになります。
           </p>
 
-          <!-- 次のレッスンへの案内 -->
           <div class="next-lesson-section">
-            <h2>AIの正体、見えましたか？</h2>
+            <h2>知識の地図は、手に入りましたか？</h2>
             <p>
-              AIの仕組みとその可能性（光と影）について、本当にお疲れ様でした。<br />あなたはもう、AI時代を賢く生き抜くための、最も重要な「知識の地図」を手に入れました。
+              AIの全体像について、本当にお疲れ様でした。<br />いよいよ次は、そのAIと実際に「対話」する冒険が始まります。
             </p>
-            <p>
-              その地図を手に、いよいよ冒険の旅へ出発です。<br />次のレッスンでは、AIという最高の相棒と、実際に「対話」する方法を学びます。
-            </p>
-            <a href="/learn1/learn_lesson2.html" class="nav-button-next">
+            <p>最高の相棒に、最初の「こんにちは」を伝えてみましょう！</p>
+            <a href="/learn/learn_lesson2.html" class="nav-button-next">
               <span>ステップ1-② AIとの対話編へ進む</span>
               <i class="fas fa-arrow-right"></i>
             </a>
           </div>
         </div>
+        <!-- AI博士 相談セクション -->
+        <section class="ai-hakase-cta">
+          <div class="cta-icon">
+            <img
+              src="/portfolio/hakase/img/ogp-hakase.webp"
+              alt="AI博士のアイコン"
+              loading="lazy"
+              width="80"
+              height="80"
+            />
+          </div>
+          <div class="cta-content">
+            <h3 class="readable">この講座の内容、AI博士に相談しませんか？</h3>
+            <p class="readable">
+              この記事を読んで生まれた疑問や、さらに深掘りしたい点はありますか？AI博士が、あなたの質問に優しく、そして詳しくお答えします。
+            </p>
+            <div class="cta-button-wrapper">
+              <a
+                href="/portfolio/hakase/hakase.html"
+                class="cta-button readable"
+                >AI博士の談話室へ相談に行く</a
+              >
+            </div>
+          </div>
+        </section>
+
+        <footer class="article-footer">
+          <div class="author-profile-box no-avatar">
+            <div class="author-info">
+              <h4 class="readable">この記事を書いた人：山本 倫久</h4>
+              <p class="readable">
+                福祉×AIクリエイター。就労支援B型事業所の利用者としての実体験を基に、AI技術で福祉の現場に新しい「できる」と「楽しい」を届けることをミッションとして活動中。
+              </p>
+              <div class="author-social">
+                <a
+                  href="https://x.com/ChromachannelAI"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >X (旧Twitter)</a
+                >
+                |
+                <a
+                  href="https://github.com/motty1975/chromachannel"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+        </footer>
       </div>
 
-      <!-- コメントセクション -->
       <section class="comment-section">
         <h2>ご意見・ご感想</h2>
         <div id="disqus_thread"></div>
         <script>
           var disqus_config = function () {
             this.page.url =
-              "https://chromachannel.online/learn1/learn_lesson1.html";
+              "https://chromachannel.online/learn/learn_lesson1.html";
             this.page.identifier = "learn_lesson1_ai-literacy";
           };
           (function () {
@@ -295,6 +398,12 @@
             (d.head || d.body).appendChild(s);
           })();
         </script>
+        <noscript
+          >コメント機能を表示するには、JavaScriptを有効にしてください。<a
+            href="https://disqus.com/?ref_noscript"
+            >Disqusによるコメント</a
+          ></noscript
+        >
       </section>
     </main>
 
@@ -303,13 +412,20 @@
 
     <!-- サイト共通の読み上げ停止ボタン -->
     <div id="global-speech-control" class="global-speech-control hidden">
-      <button id="global-speech-stop-btn" title="読み上げを停止">
-        <i class="fas fa-stop"></i>
+      <!-- ボタンの役割をaria-labelで明確化 -->
+      <button
+        id="global-speech-stop-btn"
+        title="読み上げを停止"
+        aria-label="読み上げを停止"
+      >
+        <i class="fas fa-stop" aria-hidden="true"></i>
       </button>
     </div>
 
-    <!-- JavaScriptファイルの読み込み -->
-    <script src="/javascript/voice-module.js" defer></script>
-    <script src="/javascript/script.js" defer></script>
+    <!-- =================================================================
+    ▼ JavaScriptファイル ▼
+    ================================================================== -->
+    <script src="javascript/voice-module.js" defer></script>
+    <script src="javascript/script.js" defer></script>
   </body>
 </html>

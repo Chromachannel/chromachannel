@@ -7,7 +7,7 @@ from PIL import Image
 TARGET_WIDTH = 800  # ★★★ ここを 300 から 800 に変更 ★★★
 
 # ファイル名の末尾に追加する接尾辞
-SUFFIX = '_large'   # ★★★ ここを '_thumb' から '_large' などに変更 ★★★
+SUFFIX = '_large'   # ★★★ ここを '_large' から '_large' などに変更 ★★★
 
 # 処理対象の画像があるフォルダ（このスクリプトと同じ場所）
 SOURCE_DIRECTORY = '.'
@@ -31,8 +31,8 @@ def resize_and_rename_images():
 
     for filename in files:
         # WebP画像であり、かつ、まだリサイズされていない元画像のみを対象とする
-        # (例: _thumb.webp や _large.webp で終わるファイルは無視する)
-        if filename.lower().endswith('.webp') and '_thumb' not in filename.lower() and '_large' not in filename.lower():
+        # (例: _large.webp や _large.webp で終わるファイルは無視する)
+        if filename.lower().endswith('.webp') and '_large' not in filename.lower() and '_large' not in filename.lower():
             
             image_path = os.path.join(SOURCE_DIRECTORY, filename)
             

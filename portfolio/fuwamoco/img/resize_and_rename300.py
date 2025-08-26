@@ -7,7 +7,7 @@ from PIL import Image
 TARGET_WIDTH = 300
 
 # ファイル名の末尾に追加する接尾辞
-SUFFIX = '_thumb'
+SUFFIX = '_large'
 
 # 処理対象の画像があるフォルダ（このスクリプトと同じ場所）
 SOURCE_DIRECTORY = '.'

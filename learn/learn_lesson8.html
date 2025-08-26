@@ -25,7 +25,7 @@
     <meta property="og:type" content="article" />
     <meta
       property="og:url"
-      content="https://chromachannel.online/learn1/learn_lesson8.html"
+      content="https://chromachannel.online/learn/learn_lesson8.html"
     />
     <meta
       property="og:image"
@@ -35,7 +35,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <link
       rel="canonical"
-      href="https://chromachannel.online/learn1/learn_lesson8.html"
+      href="https://chromachannel.online/learn/learn_lesson8.html"
     />
 
     <!-- 構造化データ -->
@@ -68,7 +68,7 @@
             "@type": "Article",
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://chromachannel.online/learn1/learn_lesson8.html"
+              "@id": "https://chromachannel.online/learn/learn_lesson8.html"
             },
             "headline": "【ステップ2-⑥】Photopea入門｜AIイラストの「あと一歩」を埋めるプロの仕上げ術",
             "image": "https://chromachannel.online/Img/ogp-lesson8.webp",
@@ -87,14 +87,19 @@
     <!-- ===== ▲▲▲ SEO設定 END ▲▲▲ ===== -->
 
     <!-- CSS / アイコン / Favicon -->
-    <link rel="stylesheet" href="/css/only_app.css" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/only_read.css" />
+    <link rel="stylesheet" href="css/only_app.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
-    <link rel="icon" href="/Img/favicon.ico" sizes="any" />
-    <link rel="icon" href="/Img/favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/Img/apple-touch-icon.png" />
   </head>
   <body>
     <div id="header-placeholder"></div>
@@ -108,7 +113,7 @@
             class="lesson-nav"
             style="text-align: center; margin-bottom: 40px"
           >
-            <a href="/learn1/learn_lesson7.html" class="nav-link"
+            <a href="/learn/learn_lesson7.html" class="nav-link"
               >前のレッスンへ</a
             >
             <a
@@ -117,7 +122,7 @@
               style="margin: 0 20px"
               >講座一覧へ</a
             >
-            <a href="/learn1/learn_lesson9.html" class="nav-link"
+            <a href="/learn/learn_lesson9.html" class="nav-link"
               >次のレッスンへ</a
             >
           </nav>
@@ -153,9 +158,9 @@
             </ul>
           </div>
 
-          <h2 id="chapter1">
+          <h3 id="chapter1">
             第1章：なぜ、AI生成の「あと一歩」を埋める作業が重要なのか？
-          </h2>
+          </h3>
           <p>
             Canvaでのデザイン修行、お疲れ様でした！あなたはもう、AIが生み出した素晴らしいイラストを、魅力的なデザインに昇華させる「伝える力」を手にしています。
           </p>
@@ -165,14 +170,12 @@
           <p>
             その、AIが残した「あと一歩」の隙間。それを、あなた自身の「手」で埋めてあげることこそが、あなたの作品を、ただの「AIが作った絵」から、「あなたが作った、魂のこもった作品」へと進化させる、最後の魔法なのです。
           </p>
-          <p>
-            この講座で使う「Photopea（フォトピー）」は、その魔法を使うための、最高の「プロの研磨工房」です。AIが生み出したダイヤモンドの原石を、あなたの手でカットし、磨き上げ、世界で一つだけの、完璧な輝きを持つ宝石に仕上げていきましょう！
-          </p>
 
           <hr class="section-divider" />
-          <h2 id="chapter2">
+
+          <h3 id="chapter2">
             第2章：【超図解】Photopea工房の歩き方と「5つの神ツール」
-          </h2>
+          </h3>
           <p>
             <a
               href="https://www.photopea.com/"
@@ -182,38 +185,19 @@
             >を開くと、たくさんのボタンが並んでいて、最初は少しだけ、宇宙船のコックピットのように見えるかもしれません。でも、ご安心ください。私たちが使うのは、その中のほんの数個だけ。工房の歩き方を、一緒に見ていきましょう。
           </p>
 
-          <h4>Photopea工房の三大エリア</h4>
-          <ol>
-            <li>
-              <strong>キャンバス（中央）：</strong
-              >あなたの作品が置かれる、メインの作業台です。
-            </li>
-            <li>
-              <strong>ツールバー（左側）：</strong
-              >これから使う、様々な研磨道具が並んでいます。
-            </li>
-            <li>
-              <strong>レイヤーパネル（右側）：</strong
-              >これがPhotopeaの心臓部！「透明なシート」が重なっている場所です。
-            </li>
-          </ol>
-
           <div class="point-解説">
             <h4>【最重要】「レイヤー」とは、”透明なフィルム”である</h4>
             <p>
               Photopeaを理解する上で、一番大切なのがこの「レイヤー」という考え方です。これは、<strong>何枚も重ねられる”透明なフィルム”</strong>をイメージしてください。
             </p>
             <p>
-              例えば、１枚目のフィルムに「キャラクターの絵」を描き、その上に重ねた２枚目のフィルムに「文字」を書く。こうすることで、もし文字の位置を失敗しても、２枚目のフィルム（文字レイヤー）だけを動かせば、下のキャラクターの絵には一切影響が出ません。
-            </p>
-            <p>
-              このように、<strong>作業をパーツごとに別のフィルムに分けて行う</strong>ことで、修正が驚くほど簡単になるのです。これが、プロの現場では当たり前の「非破壊編集」という考え方です。
+              例えば、１枚目のフィルムに「キャラクターの絵」を描き、その上に重ねた２枚目のフィルムに「文字」を書く。こうすることで、もし文字の位置を失敗しても、２枚目のフィルム（文字レイヤー）だけを動かせば、下のキャラクターの絵には一切影響が出ません。<strong>作業をパーツごとに別のフィルムに分けて行う</strong>ことで、修正が驚くほど簡単になるのです。
             </p>
           </div>
 
           <h4>あなたが最初に覚えるべき「5つの神ツール」</h4>
           <p>
-            無数にある道具の中から、AIイラストの仕上げに本当に必要な「神ツール」を5つだけ、厳選しました。まずは、この5人の職人さんとだけ、仲良くなりましょう。
+            無数にある道具の中から、AIイラストの仕上げに本当に必要な「神ツール」を5つだけ、厳選しました。
           </p>
           <table>
             <thead>
@@ -235,7 +219,7 @@
                 <td><strong>魔法の杖ツール</strong></td>
                 <td><strong>自動選択ハサミ</strong></td>
                 <td>
-                  背景など、同じ色の部分を一瞬で選択（切り抜き準備）してくれます。LINEスタンプ作りで、もうお友達になりましたね！
+                  背景など、同じ色の部分を一瞬で選択（切り抜き準備）してくれます。
                 </td>
               </tr>
               <tr>
@@ -263,166 +247,67 @@
           </table>
 
           <hr class="section-divider" />
-          <h2 id="chapter3">
+
+          <h3 id="chapter3">
             第3章：【実践】プロのレタッチ術で、作品を宝石に磨き上げる
-          </h2>
+          </h3>
           <p>
             さあ、工房の歩き方と道具の使い方がわかったところで、いよいよ実践です！AIが生み出した一枚のイラストを、3つのステップでプロの輝きに仕上げていきましょう。
           </p>
 
-          <h4>ステップ①：不要な部分を消す（消しゴムツール）</h4>
-          <p>
-            「このキャラクターの頬に、小さな黒い点がある…」「指が一本多い！」そんな、AIの小さなミスを見つけたら、「消しゴムツール」の出番です。
-          </p>
-          <ol>
-            <li>左のツールバーから「消しゴムツール」を選びます。</li>
-            <li>
-              画面上部のメニューで、消しゴムの「サイズ」や「硬さ（輪郭のぼかし具合）」を調整できます。
-            </li>
-            <li>
-              消したい部分を、マウスで優しくなぞってあげましょう。あっという間に、気になる部分が綺麗に消えていきます。
-            </li>
-          </ol>
-
-          <h4>ステップ②：色を、もっと魅力的にする（色調補正）</h4>
-          <p>
-            「全体的にもう少し、明るくキラキラした感じにしたいな…」そんな時は、色の魔法をかけましょう。
-          </p>
-          <ol>
-            <li>
-              画面上部のメニューから「イメージ」→「調整」と進みます。たくさんの項目がありますが、初心者が使うのは、主に以下の2つです。
-              <ul>
-                <li>
-                  <strong>明るさ・コントラスト：</strong
-                  >写真全体の「照明の明るさ」と「メリハリ」を調整します。まずは、これを少し上げるだけで、絵がパッと華やかになりますよ。
-                </li>
-                <li>
-                  <strong>色相・彩度：</strong
-                  >「色相」で全体の色合いをガラッと変えたり、「彩度」で色を鮮やかにしたり、逆にあえてモノクロにしたりできます。
-                </li>
-              </ul>
-            </li>
-            <li>
-              スライダーを左右に動かしながら、あなたの心が「これだ！」と感じる、一番美しい色合いを探してみてください。
-            </li>
-          </ol>
-
-          <h4>ステップ③：文字で、作品に「意味」を与える（文字ツール）</h4>
-          <p>
-            最後に、あなたの作品に「メッセージ」を添えましょう。Canvaと同じくらい、Photopeaの文字入れも簡単です。
-          </p>
-          <ol>
-            <li>左のツールバーから「T」の形をした「文字ツール」を選びます。</li>
-            <li>
-              キャンバスの、文字を入れたい場所をクリックし、好きな言葉を入力します。
-            </li>
-            <li>
-              文字を入力すると、右側のレイヤーパネルに、自動で新しい「文字のフィルム（テキストレイヤー）」が作られます。これが、レイヤーの素晴らしいところですね！
-            </li>
-            <li>
-              文字レイヤーが選ばれた状態で、画面上部のメニューから、フォントやサイズ、色を自由に変更できます。
-            </li>
-            <li>
-              <strong>【プロの技】</strong
-              >文字レイヤーをダブルクリックすると、「レイヤースタイル」というウィンドウが開きます。ここで「境界線」にチェックを入れれば文字にフチがつき、「ドロップシャドウ」にチェックを入れれば文字に影がついて、一気にプロっぽい見た目になりますよ！
-            </li>
-          </ol>
+          <div class="point-解説">
+            <h4>プロの仕上げ術３ステップ</h4>
+            <ul>
+              <li>
+                <strong>ステップ①：不要な部分を消す（消しゴムツール）</strong
+                ><br />「このキャラクターの頬に、小さな黒い点がある…」「指が一本多い！」そんな、AIの小さなミスを見つけたら、「消しゴムツール」の出番です。消したい部分を、マウスで優しくなぞってあげましょう。
+              </li>
+              <li>
+                <strong>ステップ②：色を、もっと魅力的にする（色調補正）</strong
+                ><br />「全体的にもう少し、明るくキラキラした感じにしたいな…」そんな時は、色の魔法をかけましょう。画面上部のメニューから「イメージ」→「調整」→「明るさ・コントラスト」や「色相・彩度」を選び、スライダーを動かしながら、あなたの心が「これだ！」と感じる、一番美しい色合いを探してみてください。
+              </li>
+              <li>
+                <strong
+                  >ステップ③：文字で、作品に「意味」を与える（文字ツール）</strong
+                ><br />左のツールバーから「T」の形をした「文字ツール」を選び、キャンバスの好きな場所をクリックして文字を入力します。文字レイヤーをダブルクリックすると、「レイヤースタイル」が開き、「境界線」や「ドロップシャドウ」で文字を装飾できます。
+              </li>
+            </ul>
+          </div>
 
           <hr class="section-divider" />
-          <h2 id="chapter4">
+
+          <h3 id="chapter4">
             第4章：【重要知識】画像の「形式」と「解像度」を制する者は、世界を制する
-          </h2>
+          </h3>
           <p>
             作品が完成したら、いよいよ保存です。しかし、ここで適切な知識がないと、せっかく磨いた宝石が、くすんで見えてしまうことも…。クリエイターとして絶対に知っておきたい、２つの重要知識を学びましょう。
           </p>
 
-          <h3>4-1. 画像形式三兄弟の性格、覚えていますか？</h3>
-          <p>
-            LINEスタンプ作りでも学びましたが、もう一度、画像形式の三兄弟をおさらいしましょう。
-          </p>
-          <ul>
-            <li>
-              <strong>長男JPG：</strong
-              >写真が得意。でも、透明は苦手だし、保存のたびに少し痩せちゃう（画質が劣化する）。
-            </li>
-            <li>
-              <strong>次男PNG：</strong
-              >写真もイラストも得意で、背景を透明にできる万能選手。何度保存しても痩せない（画質が劣化しない）。
-            </li>
-            <li>
-              <strong>三男GIF：</strong
-              >パラパラ漫画（アニメ）が得意。でも、使える色が少ないのが弱点。
-            </li>
-          </ul>
-          <p>
-            Webサイトに載せるなら、ファイルサイズが軽めの「JPG」。ロゴや、背景を透明にしたいイラストなら「PNG」。目的に合わせて、最適な形式で保存してあげましょう。
-          </p>
-
-          <h3>4-2. 解像度とは、絵の「きめ細やかさ」である</h3>
-          <p>
-            もう一つ、プロが必ず意識するのが「解像度」です。これは、画像をどれだけ小さな点の集まりで表現しているか、という「きめ細やかさ」の度合いです。
-          </p>
-          <p>
-            例えるなら、レゴブロックで作品を作るようなもの。少ないブロック（低解像度）で作った作品はカクカクして見えますが、たくさんの細かいブロック（高解-像度）で作った作品は、滑らかで美しく見えますよね。
-          </p>
-
           <div class="point-解説">
-            <h4>【プロの物差し】「dpi」って、いったい何？</h4>
+            <h4>【プロの物差し】「解像度」と「dpi」って、いったい何？</h4>
             <p>
-              解像度を表す単位として、<strong>「dpi（ディーピーアイ）」</strong>という言葉を、あなたも一度は目にしたことがあるかもしれません。これは「dots
-              per
-              inch（ドット・パー・インチ）」の略で、直訳する「1インチ（約2.54cm）あたりに、いくつの点（ドット）を配置しますか？」という意味です。
+              解像度とは、画像をどれだけ小さな点の集まりで表現しているか、という「きめ細やかさ」の度合いです。そして、その密度を表す単位が「dpi（ドット・パー・インチ）」です。
             </p>
-            <p>
-              「ピクセル（画像の点の総数）」と何が違うの？と混乱してしまいますよね。大丈夫、こう考えてください。
-            </p>
-            <p>ここに、長さ1インチの「魔法の定規」があるとします。</p>
             <ul>
               <li>
-                <strong>72dpi：</strong
-                >この1インチの定規の中に、点を「72個」並べます。点と点の間隔は、少し広くなりますね。これが、パソコンの画面で見るのに最適な「Web用の解像度」です。
+                <strong>Web用（ブログやSNS）：</strong
+                >画面で見るだけなので、<strong>72dpi</strong>あれば十分綺麗です。
               </li>
               <li>
-                <strong>300dpi：</strong
-                >今度は、同じ1インチの定規の中に、点をぎゅうぎゅうに「300個」も並べます。点と点の間隔は非常に狭くなり、とても滑らかに見えます。これが、紙に美しく印刷するための「印刷用の解-像度」です。
+                <strong>印刷用（ポスターや名刺）：</strong
+                >紙に印刷する場合は、きめ細やかさが重要です。必ず<strong>300dpi</strong>以上で作成しましょう。
               </li>
             </ul>
             <p>
-              つまり、dpiとは、画像の総ピクセル数とは別の、<strong>「点の密度」</strong>を表す物差しなのです。同じ1000ピクセルの画像でも、72dpiで印刷すれば大きく（約35cm）、300dpiで印刷すれば小さく（約8.4cm）なりますが、その代わり、300dpiの方が圧倒的にきめ細かく、美しく印刷される、というわけです。
-            </p>
-          </div>
-
-          <ul>
-            <li>
-              <strong>Web用（ブログやSNS）：</strong
-              >画面で見るだけなので、<strong>72dpi</strong>あれば十分綺麗です。
-            </li>
-            <li>
-              <strong>印刷用（ポスターや名刺）：</strong
-              >紙に印刷する場合は、きめ細やかさが重要です。必ず<strong>300dpi</strong>以上で作成しましょう。
-            </li>
-          </ul>
-
-          <div class="point-解説">
-            <h4>【悲劇】なぜ、AIの絵を無理に引き伸ばしてはいけないのか？</h4>
-            <p>
-              AIは、あなたが指定しない限り、Web用の解像度（72dpiなど）で画像を生成することが多いです。この、レゴブロックの数が少ない画像を、無理やり大きく引き伸ばして印刷すると、どうなるでしょう？そう、ブロックの一つ一つが見えてしまい、ぼやけた、カクカクの悲しい絵になってしまいます。
-            </p>
-            <p>
-              最初から大きなサイズで印刷したい場合は、画像生成AIの設定で、できるだけ大きなサイズ（ピクセル数）で画像を生成するか、印刷に耐えうる高解像度化ツールを使う必要があります。この「解像度」の知識は、あなたの作品を守るための、大切な鎧なのです。
+              AIはWeb用の解像度で画像を生成することが多いです。この画像を無理やり大きく引き伸ばして印刷すると、ぼやけたカクカクの悲しい絵になってしまいます。この「解像度」の知識は、あなたの作品を守るための、大切な鎧なのです。
             </p>
           </div>
 
           <hr class="section-divider" />
-          <h3>4-3. あなたの作品を、”本物”の輝きへ</h3>
+
+          <h3 id="chapter5">第5章：あなたの作品を、”本物”の輝きへ</h3>
           <p>
-            この工房での冒険、本当にお疲れ様でした！あなたはもう、AIが生み出した原石を、ただ眺めるだけの人ではありません。
-          </p>
-          <p>
-            不要な部分を削り取り、色に深みを与え、言葉で意味を吹き込む。その一つ一つの工程は、AIには決してできない、あなただけの「感性」と「こだわり」の表現です。AIとあなた、二人のアーティストの魂が融合して初めて、作品は”本物”の輝きを放つのです。
-          </p>
-          <p>
-            しかし、中にはこう思う人もいるかもしれません。「もっと、本格的に絵を合成したり、プロのイラストレーターのような、複雑な加工をしてみたい！」と。その、尽きることのない探究心こそ、あなたがさらに上のステージに進む準備ができた、最高の合図です。
+            この工房での冒険、本当にお疲れ様でした！AIが生み出した原石の不要な部分を削り取り、色に深みを与え、言葉で意味を吹き込む。その一つ一つの工程は、AIには決してできない、あなただけの「感性」と「こだわり」の表現です。AIとあなた、二人のアーティストの魂が融合して初めて、作品は”本物”の輝きを放つのです。
           </p>
 
           <div class="next-lesson-section">
@@ -433,12 +318,63 @@
             <p>
               さあ、その素晴らしい技術を、さらに上のステージへと引き上げてみませんか？<br />次のレッスンでは、よりパワフルで、より本格的な加工ができる、完全無料のプロユースソフト「GIMP」の世界を探検します。
             </p>
-            <a href="/learn1/learn_lesson9.html" class="nav-button-next">
+            <a href="/learn/learn_lesson9.html" class="nav-button-next">
               <span>ステップ2-⑦ GIMP入門へ進む</span>
               <i class="fas fa-arrow-right"></i>
             </a>
           </div>
         </div>
+        <!-- AI博士 相談セクション -->
+        <section class="ai-hakase-cta">
+          <div class="cta-icon">
+            <img
+              src="/portfolio/hakase/img/ogp-hakase.webp"
+              alt="AI博士のアイコン"
+              loading="lazy"
+              width="80"
+              height="80"
+            />
+          </div>
+          <div class="cta-content">
+            <h3 class="readable">この講座の内容、AI博士に相談しませんか？</h3>
+            <p class="readable">
+              この記事を読んで生まれた疑問や、さらに深掘りしたい点はありますか？AI博士が、あなたの質問に優しく、そして詳しくお答えします。
+            </p>
+            <div class="cta-button-wrapper">
+              <a
+                href="/portfolio/hakase/hakase.html"
+                class="cta-button readable"
+                >AI博士の談話室へ相談に行く</a
+              >
+            </div>
+          </div>
+        </section>
+
+        <footer class="article-footer">
+          <div class="author-profile-box no-avatar">
+            <div class="author-info">
+              <h4 class="readable">この記事を書いた人：山本 倫久</h4>
+              <p class="readable">
+                福祉×AIクリエイター。就労支援B型事業所の利用者としての実体験を基に、AI技術で福祉の現場に新しい「できる」と「楽しい」を届けることをミッションとして活動中。
+              </p>
+              <div class="author-social">
+                <a
+                  href="https://x.com/ChromachannelAI"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >X (旧Twitter)</a
+                >
+                |
+                <a
+                  href="https://github.com/motty1975/chromachannel"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+        </footer>
       </div>
 
       <section class="comment-section">
@@ -447,7 +383,7 @@
         <script>
           var disqus_config = function () {
             this.page.url =
-              "https://chromachannel.online/learn1/learn_lesson8.html";
+              "https://chromachannel.online/learn/learn_lesson8.html";
             this.page.identifier = "learn_lesson8_photopea";
           };
           (function () {
@@ -458,15 +394,33 @@
             (d.head || d.body).appendChild(s);
           })();
         </script>
-        <noscript>
-          コメント機能を表示するには、JavaScriptを有効にしてください。<a
+        <noscript
+          >コメント機能を表示するには、JavaScriptを有効にしてください。<a
             href="https://disqus.com/?ref_noscript"
             >Disqusによるコメント</a
-          >
-        </noscript>
+          ></noscript
+        >
       </section>
     </main>
+    <!-- フッターのプレースホルダー -->
     <div id="footer-placeholder"></div>
-    <script src="/JavaScript/script.js" defer></script>
+
+    <!-- サイト共通の読み上げ停止ボタン -->
+    <div id="global-speech-control" class="global-speech-control hidden">
+      <!-- ボタンの役割をaria-labelで明確化 -->
+      <button
+        id="global-speech-stop-btn"
+        title="読み上げを停止"
+        aria-label="読み上げを停止"
+      >
+        <i class="fas fa-stop" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <!-- =================================================================
+    ▼ JavaScriptファイル ▼
+    ================================================================== -->
+    <script src="javascript/voice-module.js" defer></script>
+    <script src="javascript/script.js" defer></script>
   </body>
 </html>

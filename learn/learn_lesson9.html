@@ -25,17 +25,17 @@
     <meta property="og:type" content="article" />
     <meta
       property="og:url"
-      content="https://chromachannel.online/learn1/learn_lesson9.html"
+      content="https://chromachannel.online/learn/learn_lesson9.html"
     />
     <meta
       property="og:image"
-      content="https://chromachannel.online/Img/ogp-lesson9.html.webp"
+      content="https://chromachannel.online/Img/ogp-lesson9.webp"
     />
     <meta property="og:site_name" content="Chromachannel" />
     <meta name="twitter:card" content="summary_large_image" />
     <link
       rel="canonical"
-      href="https://chromachannel.online/learn1/learn_lesson9.html"
+      href="https://chromachannel.online/learn/learn_lesson9.html"
     />
 
     <!-- 構造化データ -->
@@ -68,10 +68,10 @@
             "@type": "Article",
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://chromachannel.online/learn1/learn_lesson9.html"
+              "@id": "https://chromachannel.online/learn/learn_lesson9.html"
             },
             "headline": "【ステップ2-⑦】GIMP入門｜AIイラストを合成する本格レタッチ・加工講座",
-            "image": "https://chromachannel.online/Img/ogp-lesson9.html.webp",
+            "image": "https://chromachannel.online/Img/ogp-lesson9.webp",
             "author": {
               "@type": "Person",
               "name": "山本 倫久",
@@ -87,14 +87,19 @@
     <!-- ===== ▲▲▲ SEO設定 END ▲▲▲ ===== -->
 
     <!-- CSS / アイコン / Favicon -->
-    <link rel="stylesheet" href="/css/only_app.css" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/only_read.css" />
+    <link rel="stylesheet" href="css/only_app.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
-    <link rel="icon" href="/Img/favicon.ico" sizes="any" />
-    <link rel="icon" href="/Img/favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/Img/apple-touch-icon.png" />
   </head>
   <body>
     <div id="header-placeholder"></div>
@@ -108,7 +113,7 @@
             class="lesson-nav"
             style="text-align: center; margin-bottom: 40px"
           >
-            <a href="/learn1/learn_lesson8.html" class="nav-link"
+            <a href="/learn/learn_lesson8.html" class="nav-link"
               >前のレッスンへ</a
             >
             <a
@@ -117,7 +122,7 @@
               style="margin: 0 20px"
               >講座一覧へ</a
             >
-            <a href="/learn1/learn_lesson10.html" class="nav-link"
+            <a href="/learn/learn_lesson10.html" class="nav-link"
               >次のレッスンへ</a
             >
           </nav>
@@ -156,112 +161,53 @@
             </ul>
           </div>
 
-          <h2 id="chapter1">
+          <h3 id="chapter1">
             第1章：GIMPとは何か？ - Photopeaとの使い分けとインストールの手順
-          </h2>
+          </h3>
           <p>
             Photopeaでの仕上げ術、お見事でした！あなたはもう、AIが生み出した作品に、自らの手で魂を吹き込む術を知っています。
           </p>
           <p>
-            しかし、中にはこう感じた方もいるかもしれません。「AIで生成した、このキャラクターを、別のAIが生成した、この美しい背景と、自然に合成できないだろうか？」と。
-          </p>
-          <p>
-            その、尽きることのない探究心に応えるための、最強の「プロの工房」が、この講座で学ぶ「GIMP（ギンプ）」です。
+            しかし、中にはこう感じた方もいるかもしれません。「AIで生成した、このキャラクターを、別のAIが生成した、この美しい背景と、自然に合成できないだろうか？」その、尽きることのない探究心に応えるための、最強の「プロの工房」が、この講座で学ぶ「GIMP（ギンプ）」です。
           </p>
 
-          <h4>Photopea工房と、GIMP工房の決定的な違い</h4>
-          <p>
-            Photopeaが「AIイラストの原石を磨き上げる、最高の研磨工房」だとしたら、GIMPは「複数の宝石を組み合わせて、全く新しい、世界で一つのジュエリーを創り出す、超本格的な彫金工房」です。
-          </p>
-          <p>
-            GIMPは、あなたのパソコンにインストールして使う、完全無料のソフトウェア。ブラウザで手軽に使えるPhotopeaよりも、少しだけ準備が必要ですが、その分、あなたのパソコンの性能を最大限に引き出し、より複雑で、より高度な作業を、サクサクと快適に行うことができます。
-          </p>
-
-          <h4>GIMP工房を、あなたのパソコンに建てる手順</h4>
-          <p>
-            GIMPは、あなたのパソコンの中に、自分だけの本格的な工房を建てるようなものです。少しだけ準備が必要ですが、一度建ててしまえば、いつでも最高の環境で創作活動ができますよ。一つ一つの工程を、一緒に、ゆっくり確認しながら進めていきましょう。
-          </p>
-          <ol>
-            <li>
-              <strong>ステップ①：本物の「公式サイト」という土地を探す</strong
-              ><br />
-              まず、<a
-                href="https://www.gimp.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >GIMPの公式サイト</a
-              >にアクセスします。インターネットの海には、公式サイトにそっくりな偽物のサイトも存在しますので、必ずこのリンクから飛ぶか、「gimp.org」という住所（URL）を確認してくださいね。本物の土地を手に入れることが、安全な工房作りの第一歩です。
-            </li>
-            <li>
-              <strong>ステップ②：工房の「設計図」をダウンロードする</strong
-              ><br />
-              公式サイトにアクセスすると、GIMPのマスコットキャラクター、ウィルバー君が出迎えてくれます。その近くにある、オレンジ色（または赤色）の大きな「DOWNLOAD」ボタンをクリックしましょう。これが、あなたのパソコンに工房を建てるための「設計図（インストーラー）」を手に入れるためのボタンです。
-            </li>
-            <li>
-              <strong>ステップ③：あなたのパソコンに合った「資材」を選ぶ</strong
-              ><br />
-              DOWNLOADボタンを押すと、いくつかの選択肢が表示されます。GIMPは、Windows、macOS、Linuxなど、色々な種類のパソコンに対応してくれているのです。
-              <ul>
-                <li>
-                  お使いのパソコンがWindowsなら、「Download GIMP
-                  directly」と書かれたオレンジ色のボタンが、最も簡単でおすすめです。
-                </li>
-                <li>
-                  Macをお使いなら、「macOS」の項目にある、同様の「directly」と書かれたリンクをクリックしましょう。
-                </li>
-              </ul>
-              クリックすると、設計図のダウンロードが始まります。ファイルのサイズが少し大きいので、完了まで数分かかることもあります。美味しいコーヒーでも淹れて、リラックスしてお待ちくださいね。
-            </li>
-            <li>
-              <strong>ステップ④：設計図と「対話」して、工房を組み立てる</strong
-              ><br />
-              ダウンロードが完了したら、そのファイル（gimp-2.xx.xx-setup.exe
-              のような名前です）をダブルクリックして、いよいよ組み立て作業の開始です！
-              <p>
-                ここからは、インストーラーという名の「棟梁」が、あなたにいくつか質問をしてきますが、全く難しくありません。
-              </p>
-              <ul>
-                <li>
-                  <strong
-                    >「このアプリがデバイスに変更を加えることを許可しますか？」→「はい」</strong
-                  >：棟梁が、あなたのパソコンという土地に、工房を建てる許可を求めています。
-                </li>
-                <li>
-                  <strong
-                    >「Select Install Mode」→「Install for all users
-                    (recommended)」</strong
-                  >：このパソコンを使う人みんなが使えるようにしますか？と聞かれています。通常はこちらでOKです。
-                </li>
-                <li>
-                  <strong>「言語の選択」→「日本語」</strong>：「OK」を押します。
-                </li>
-                <li>
-                  <strong
-                    >「GIMP
-                    セットアップウィザードへようこそ」→「インストール」</strong
-                  >：いよいよ、本格的な組み立てが始まります。あとは、棟梁が頑張ってくれるのを、応援しながら待つだけです。
-                </li>
-              </ul>
-            </li>
-            <li>
-              <strong>ステップ⑤：祝・GIMP工房、完成！</strong><br />
-              「GIMP
-              セットアップウィザードは完了しました。」というメッセージが表示されたら、「完了」ボタンを押します。これで、あなたのパソコンのデスクトップやスタートメニューに、GIMPのアイコンが追加されたはずです。
-            </li>
-          </ol>
-          <p>
-            おめでとうございます！あなたのパソコンの中に、世界中のプロクリエイターが愛用する、最強の工房が無事に完成しました！さあ、工房の扉を開けて、新しい創造の世界へ旅立ちましょう！
-          </p>
+          <div class="point-解説">
+            <h4>GIMP工房を、あなたのパソコンに建てる手順</h4>
+            <p>
+              Photopeaが「AIイラストの原石を磨き上げる、最高の研磨工房」だとしたら、GIMPは「複数の宝石を組み合わせて、全く新しい、世界で一つのジュエリーを創り出す、超本格的な彫金工房」です。GIMPは、あなたのパソコンにインストールして使う、完全無料のソフトウェア。ブラウザで手軽に使えるPhotopeaよりも、少しだけ準備が必要ですが、その分、より複雑で、より高度な作業を、サクサクと快適に行うことができます。
+            </p>
+            <ol>
+              <li>
+                まず、<a
+                  href="https://www.gimp.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GIMPの公式サイト</a
+                >にアクセスします。
+              </li>
+              <li>
+                オレンジ色（または赤色）の大きな「DOWNLOAD」ボタンをクリックします。
+              </li>
+              <li>
+                お使いのパソコン（WindowsやmacOS）に合った「Download GIMP
+                directly」と書かれたボタンをクリックし、インストーラーをダウンロードします。
+              </li>
+              <li>
+                ダウンロードしたファイルをダブルクリックし、画面の指示に従ってインストールを完了させます。「言語の選択」→「インストール」と進むだけなので、ご安心ください。
+              </li>
+            </ol>
+            <p>
+              これで、あなたのパソコンの中に、世界中のプロクリエイターが愛用する、最強の工房が無事に完成しました！
+            </p>
+          </div>
 
           <hr class="section-divider" />
-          <h2 id="chapter2">
+
+          <h3 id="chapter2">
             第2章：プロの現場で使う、レイヤー機能と「レイヤーマスク」の基本
-          </h2>
+          </h3>
           <p>
-            GIMP工房の心臓部も、Photopeaと同じく「レイヤーパネル」です。しかし、GIMPでは、このレイヤーをさらに自在に操るための、最強の魔法が使えます。それが、「レイヤーマスク」です。
-          </p>
-          <p>
-            この概念を理解できれば、あなたはもう、画像加工の初心者ではありません。プロの仲間入りです。世界一わかりやすく解説しますので、じっくりと、ついてきてくださいね。
+            GIMP工房の心臓部も、Photopeaと同じく「レイヤーパネル」です。しかし、GIMPでは、このレイヤーをさらに自在に操るための、最強の魔法が使えます。それが、「レイヤーマスク」です。この概念を理解できれば、あなたはもう、画像加工の初心者ではありません。プロの仲間入りです。
           </p>
 
           <div class="point-解説">
@@ -269,10 +215,8 @@
               【世界一わかる】「レイヤーマスク」とは、“半分だけ透明になれる魔法のすりガラス”である
             </h4>
             <p>
-              「レイヤー」が透明なフィルムだったのを、覚えていますか？<br />
-              「レイヤーマスク」とは、そのフィルムの上に貼り付ける、<strong>“半分だけ透明になれる、特殊なすりガラス”</strong>をイメージしてください。
+              「レイヤー」が透明なフィルムだったのを、覚えていますか？「レイヤーマスク」とは、そのフィルムの上に貼り付ける、<strong>“半分だけ透明になれる、特殊なすりガラス”</strong>をイメージしてください。
             </p>
-            <p>このすりガラスは、とても不思議な性質を持っています。</p>
             <ul>
               <li>
                 このすりガラスに<strong>「黒い絵の具」</strong>を塗った部分は、<strong>完全に曇って、下のフィルムが見えなくなります（非表示）</strong>。
@@ -281,120 +225,64 @@
                 このすりガラスに<strong>「白い絵の具」</strong>を塗った部分は、<strong>完全に透明になって、下のフィルムがくっきり見えます（表示）</strong>。
               </li>
               <li>
-                そして、一番の魔法がこれです。このすりガラスに<strong>「灰色の絵の具」</strong>を塗った部分は、<strong>塗った灰色の濃さに応じて、半透明になり、下のフィルムがうっすらと透けて見えます</strong>。
+                このすりガラスに<strong>「灰色の絵の具」</strong>を塗った部分は、<strong>塗った灰色の濃さに応じて、半透明になり、下のフィルムがうっすらと透けて見えます</strong>。
               </li>
             </ul>
             <p>
-              「消しゴムツール」が、フィルムに描かれた絵そのものを“削ってしまう”のに対し、レイヤーマスクは、<strong>元の絵は一切傷つけずに、「どこを見せて、どこを隠すか」だけを、後から何度でもやり直せる形でコントロールできる</strong>のです。これが、プロが愛用する、究極の「非破壊編集」の真髄です。
+              「消しゴムツール」が、フィルムに描かれた絵そのものを“削ってしまう”のに対し、レイヤーマスクは、<strong>元の絵は一切傷つけずに、「どこを見せて、どこを隠すか」だけを、後から何度でもやり直せる形でコントロールできる</strong>のです。
             </p>
           </div>
 
           <hr class="section-divider" />
-          <h2 id="chapter3">
+
+          <h3 id="chapter3">
             第3章：実践！複数のAI画像を違和感なく合成するテクニック
-          </h2>
+          </h3>
           <p>
             さあ、レイヤーマスクという最強の魔法を使って、奇跡の合成写真を作り上げましょう！
           </p>
-          <p>
-            <strong
-              >【お題】AIで生成した「猫のキャラクター」と、別のAIが生成した「幻想的な森の背景」を、まるで最初から一枚の絵だったかのように、自然に合成する。</strong
-            >
-          </p>
-
-          <h4>ステップ①：素材を工房に運び込む</h4>
-          <ol>
-            <li>
-              GIMPを起動し、「ファイル」→「開く/インポート」で、まず「幻想的な森の背景」の画像を読み込みます。これが、一番下の土台となるレイヤーです。
-            </li>
-            <li>
-              次に、「ファイル」→「レイヤーとして開く」で、「猫のキャラクター」の画像を読み込みます。すると、森のレイヤーの上に、新しい猫のレイヤーが重なった状態で表示されるはずです。
-            </li>
-          </ol>
-
-          <h4>ステップ②：キャラクターに「魔法のすりガラス」を装着する</h4>
-          <ol>
-            <li>
-              右下のレイヤーパネルで、「猫のキャラクター」のレイヤーが選ばれていることを確認します。
-            </li>
-            <li>
-              レイヤーパネルの下にある、白い四角に黒い丸が描かれた「レイヤーマスクを追加」ボタンを押します。
-            </li>
-            <li>
-              出てきたウィンドウで「完全白（不透明）」を選んで「追加」を押すと、猫のレイヤーの隣に、真っ白な四角（レイヤーマスク）が現れます。今はまだ、何も隠していない状態ですね。
-            </li>
-          </ol>
-
-          <h4>ステップ③：黒い絵の具で、不要な部分を隠していく</h4>
-          <p>ここからが、レイヤーマスクの真骨頂です。</p>
-          <ol>
-            <li>
-              左のツールバーから「ブラシツール」を選び、描画色を「黒」にします。
-            </li>
-            <li>
-              <strong>【超重要】</strong
-              >レイヤーパネルで、必ず、先ほど追加した「真っ白なレイヤーマスク」の方をクリックして、選択状態（白い枠で囲まれた状態）にしてください。
-            </li>
-            <li>
-              この状態で、画像の「猫の周りの不要な背景」を、黒いブラシで塗りつぶしていきます。どうでしょう？ブラシで塗った部分だけが、まるで消しゴムで消したかのように透明になり、下の森の背景が見えてきたはずです！でも、元の猫の絵は一切傷ついていません。
-            </li>
-            <li>
-              もし、間違えて猫の本体まで消してしまったら？慌てずに、ブラシの色を「白」に変えて、その部分を塗り直してみてください。すると、消えたはずの猫が、元通りに復活するはずです。これが、レイヤーマスクのすごいところ！
-            </li>
-          </ol>
-
-          <h4>ステップ④：灰色の絵の具で、境界線をなじませる</h4>
-          <p>
-            キャラクターの切り抜きが終わったら、最後の仕上げです。このままでは、キャラクターと背景が、まるでシールを貼ったように、くっきりと分かれて見えてしまいます。
-          </p>
-          <ol>
-            <li>ブラシの色を、白と黒の中間である「灰色」にします。</li>
-            <li>
-              ブラシの「硬さ」を柔らかくし、「不透明度」を下げて、半透明のブラシを作ります。
-            </li>
-            <li>
-              この半透明の灰色ブラシで、キャラクターの輪郭、特に地面と接している足元などを、そっとなぞってあげましょう。
-            </li>
-            <li>
-              すると、キャラクターの輪郭が、ほんの少しだけ透けて、背景の森の色と自然に溶け込んでいきます。この一手間が、作品に圧倒的な「なじみ感」と「空気感」を生み出す、プロの技なのです。
-            </li>
-          </ol>
+          <div class="point-解説">
+            <h4>【実践】AIで生成した「猫」と「森」を自然に合成する</h4>
+            <ol>
+              <li>
+                <strong>ステップ①：素材を工房に運び込む</strong
+                ><br />GIMPを起動し、「ファイル」→「開く/インポート」で「森の背景」を読み込み、次に「ファイル」→「レイヤーとして開く」で「猫のキャラクター」を読み込みます。
+              </li>
+              <li>
+                <strong
+                  >ステップ②：キャラクターに「魔法のすりガラス」を装着する</strong
+                ><br />レイヤーパネルで「猫のレイヤー」を選び、パネル下部の「レイヤーマスクを追加」ボタンを押します。「完全白（不透明）」を選んで「追加」します。
+              </li>
+              <li>
+                <strong>ステップ③：黒い絵の具で、不要な部分を隠していく</strong
+                ><br />左のツールバーから「ブラシツール」を選び、描画色を「黒」にします。レイヤーパネルで「レイヤーマスク」が選ばれていることを確認し、画像の「猫の周りの不要な背景」を黒いブラシで塗りつぶします。下の森の背景が見えてきたら成功です！間違えたら、ブラシの色を「白」にして塗り直せば元に戻ります。
+              </li>
+              <li>
+                <strong>ステップ④：灰色の絵の具で、境界線をなじませる</strong
+                ><br />ブラシの色を「灰色」にし、「不透明度」を下げて半透明のブラシを作ります。このブラシで、キャラクターの輪郭や足元をそっとなぞると、背景と自然に溶け込み、「なじみ感」と「空気感」が生まれます。
+              </li>
+            </ol>
+          </div>
           <p>
             これで、まるで最初から、猫がその森にいたかのような、奇跡の一枚が完成しました！
           </p>
 
           <hr class="section-divider" />
-          <h2 id="chapter4">
-            第4章：【重要】多機能ゆえの挫折を防ぐ学習法と、PCへの負荷
-          </h2>
-          <h3>4-1. GIMPという「魔境」に迷わないために</h3>
-          <p>
-            GIMPは、あまりにも多機能なため、全ての機能を一度に使いこなそうとすると、情報量の多さに圧倒され、挫折してしまいます。大切なのは、「今の自分に必要な機能だけを、一つずつ覚えていく」という姿勢です。
-          </p>
-          <p>
-            今回の講座で覚えるべきは、ただ一つ、「レイヤーマスクを使って、画像を自然に合成する方法」だけ。まずは、この技術を完璧にマスターすることに集中しましょう。それができれば、あなたはもう、GIMPという工房の、立派な一人前の職人です。
-          </p>
 
-          <h3>4-2. パソコンへの「思いやり」を忘れずに</h3>
+          <h3 id="chapter4">
+            第4章：【重要】多機能ゆえの挫折を防ぐ学習法と、PCへの負荷
+          </h3>
           <p>
-            GIMPは、Photopeaと違い、あなたのパソコンの力（メモリやCPU）を直接使って動作します。特に、たくさんのレイヤーを重ねたり、非常に大きな画像を扱ったりすると、パソコンが一生懸命になりすぎて、動きが遅くなってしまうこともあります。
-          </p>
-          <p>
-            作業中は、他の不要なソフトは閉じておく。こまめに「ファイル」→「保存」で作業内容を保存する。そんな、あなたの相棒であるパソコンへの、ちょっとした「思いやり」が、快適な創作活動に繋がりますよ。
+            GIMPは、あまりにも多機能なため、全ての機能を一度に使いこなそうとすると、情報量の多さに圧倒され、挫折してしまいます。大切なのは、「今の自分に必要な機能だけを、一つずつ覚えていく」という姿勢です。今回の講座で覚えるべきは、ただ一つ、「レイヤーマスクを使って、画像を自然に合成する方法」だけ。まずは、この技術を完璧にマスターすることに集中しましょう。
           </p>
 
           <hr class="section-divider" />
-          <h2 id="chapter5">
+
+          <h3 id="chapter5">
             第5章：あなたの画像加工スキルをプロレベルに引き上げるために
-          </h2>
+          </h3>
           <p>
-            この工房での冒険、本当にお疲れ様でした！あなたはもう、AIが生み出した複数の世界を、自らの手で融合させ、全く新しい物語を紡ぎ出す、高度な技術を手に入れました。
-          </p>
-          <p>
-            レイヤーマスクは、最初は少しだけ難しく感じたかもしれません。しかし、一度その便利さを知ってしまえば、もうこれなしでの画像編集は考えられなくなるはずです。それほどまでに、強力で、創造的で、そして「やり直し」に優しい、最高の魔法なのです。
-          </p>
-          <p>
-            あなたが今日手に入れた技術は、AIイラストの合成だけでなく、写真のレタッチ、デザインパーツの作成など、あらゆるクリエイティブ活動の、強力な土台となります。あなたの創造の翼は、もう、どこまでも高く、どこまでも自由に、羽ばたいていくことができるのです。
+            この工房での冒険、本当にお疲れ様でした！あなたが今日手に入れた技術は、AIイラストの合成だけでなく、写真のレタッチ、デザインパーツの作成など、あらゆるクリエイティブ活動の、強力な土台となります。あなたの創造の翼は、もう、どこまでも高く、どこまでも自由に、羽ばたいていくことができるのです。
           </p>
 
           <div class="next-lesson-section">
@@ -405,12 +293,63 @@
             <p>
               さあ、その素晴らしいイラストを使って、あなただけの「ロゴマーク」を創ってみませんか？<br />次のレッスンでは、どこまでも拡大しても荒れない、プロ品質のデータ「ベクター」を扱える、もう一つの工房を探検します。
             </p>
-            <a href="/learn1/learn_lesson10.html" class="nav-button-next">
+            <a href="/learn/learn_lesson10.html" class="nav-button-next">
               <span>ステップ2-⑧ Inkscape入門へ進む</span>
               <i class="fas fa-arrow-right"></i>
             </a>
           </div>
         </div>
+        <!-- AI博士 相談セクション -->
+        <section class="ai-hakase-cta">
+          <div class="cta-icon">
+            <img
+              src="/portfolio/hakase/img/ogp-hakase.webp"
+              alt="AI博士のアイコン"
+              loading="lazy"
+              width="80"
+              height="80"
+            />
+          </div>
+          <div class="cta-content">
+            <h3 class="readable">この講座の内容、AI博士に相談しませんか？</h3>
+            <p class="readable">
+              この記事を読んで生まれた疑問や、さらに深掘りしたい点はありますか？AI博士が、あなたの質問に優しく、そして詳しくお答えします。
+            </p>
+            <div class="cta-button-wrapper">
+              <a
+                href="/portfolio/hakase/hakase.html"
+                class="cta-button readable"
+                >AI博士の談話室へ相談に行く</a
+              >
+            </div>
+          </div>
+        </section>
+
+        <footer class="article-footer">
+          <div class="author-profile-box no-avatar">
+            <div class="author-info">
+              <h4 class="readable">この記事を書いた人：山本 倫久</h4>
+              <p class="readable">
+                福祉×AIクリエイター。就労支援B型事業所の利用者としての実体験を基に、AI技術で福祉の現場に新しい「できる」と「楽しい」を届けることをミッションとして活動中。
+              </p>
+              <div class="author-social">
+                <a
+                  href="https://x.com/ChromachannelAI"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >X (旧Twitter)</a
+                >
+                |
+                <a
+                  href="https://github.com/motty1975/chromachannel"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+        </footer>
       </div>
 
       <section class="comment-section">
@@ -419,7 +358,7 @@
         <script>
           var disqus_config = function () {
             this.page.url =
-              "https://chromachannel.online/learn1/learn_lesson9.html";
+              "https://chromachannel.online/learn/learn_lesson9.html";
             this.page.identifier = "learn_lesson9_gimp";
           };
           (function () {
@@ -430,15 +369,33 @@
             (d.head || d.body).appendChild(s);
           })();
         </script>
-        <noscript>
-          コメント機能を表示するには、JavaScriptを有効にしてください。<a
+        <noscript
+          >コメント機能を表示するには、JavaScriptを有効にしてください。<a
             href="https://disqus.com/?ref_noscript"
             >Disqusによるコメント</a
-          >
-        </noscript>
+          ></noscript
+        >
       </section>
     </main>
+    <!-- フッターのプレースホルダー -->
     <div id="footer-placeholder"></div>
-    <script src="/JavaScript/script.js" defer></script>
+
+    <!-- サイト共通の読み上げ停止ボタン -->
+    <div id="global-speech-control" class="global-speech-control hidden">
+      <!-- ボタンの役割をaria-labelで明確化 -->
+      <button
+        id="global-speech-stop-btn"
+        title="読み上げを停止"
+        aria-label="読み上げを停止"
+      >
+        <i class="fas fa-stop" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <!-- =================================================================
+    ▼ JavaScriptファイル ▼
+    ================================================================== -->
+    <script src="javascript/voice-module.js" defer></script>
+    <script src="javascript/script.js" defer></script>
   </body>
 </html>

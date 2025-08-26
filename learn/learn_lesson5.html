@@ -25,7 +25,7 @@
     <meta property="og:type" content="article" />
     <meta
       property="og:url"
-      content="https://chromachannel.online/learn1/learn_lesson5.html"
+      content="https://chromachannel.online/learn/learn_lesson5.html"
     />
     <meta
       property="og:image"
@@ -35,7 +35,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <link
       rel="canonical"
-      href="https://chromachannel.online/learn1/learn_lesson5.html"
+      href="https://chromachannel.online/learn/learn_lesson5.html"
     />
 
     <!-- 構造化データ -->
@@ -68,7 +68,7 @@
             "@type": "Article",
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://chromachannel.online/learn1/learn_lesson5.html"
+              "@id": "https://chromachannel.online/learn/learn_lesson5.html"
             },
             "headline": "【ステップ2-③】Stable Diffusion入門｜あなただけの画風を創る魔法",
             "image": "https://chromachannel.online/Img/ogp-lesson5.webp",
@@ -87,14 +87,19 @@
     <!-- ===== ▲▲▲ SEO設定 END ▲▲▲ ===== -->
 
     <!-- CSS / アイコン / Favicon -->
-    <link rel="stylesheet" href="/css/only_app.css" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/only_read.css" />
+    <link rel="stylesheet" href="css/only_app.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
-    <link rel="icon" href="/Img/favicon.ico" sizes="any" />
-    <link rel="icon" href="/Img/favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/Img/apple-touch-icon.png" />
   </head>
   <body>
     <div id="header-placeholder"></div>
@@ -108,7 +113,7 @@
             class="lesson-nav"
             style="text-align: center; margin-bottom: 40px"
           >
-            <a href="/learn1/learn_lesson4.html" class="nav-link"
+            <a href="/learn/learn_lesson4.html" class="nav-link"
               >前のレッスンへ</a
             >
             <a
@@ -117,7 +122,7 @@
               style="margin: 0 20px"
               >講座一覧へ</a
             >
-            <a href="/learn1/learn_lesson6.html" class="nav-link"
+            <a href="/learn/learn_lesson6.html" class="nav-link"
               >次のレッスンへ</a
             >
           </nav>
@@ -314,7 +319,188 @@ bad hands, extra fingers, mutated hands, fused fingers, malformed limbs, (worst 
             Diffusionの最大の魅力です。
           </p>
 
-          <h3>3-3. あなたの「好き」が見つかる、モデルの探し方と注意点</h3>
+          <h3>3-3. 【プロンプト集】可能性は無限大！プロのレシピたち</h3>
+          <p>
+            さあ、プロの厨房を覗いてみましょう。Stable
+            Diffusionのプロンプト（レシピ）は、基本的に以下の3点セットで構成されます。<br />
+            <b
+              >「どの絵師（モデル）に」「何を描かせ（プロンプト）」「何を描かせないか（ネガティブプロンプト）」</b
+            ><br />
+            ここでは、全く異なる画風のレシピを5つご紹介します。その奥深さと表現の幅を、ぜひ感じ取ってください。
+          </p>
+          <p>
+            ※これらのプロンプトは、Stable
+            Diffusionを使えるウェブサービス（SeaArt,
+            Mage.spaceなど）や、ご自身のPC環境で試すことができます。
+          </p>
+
+          <h4>プロのレシピ①：リアルなポートレート写真風</h4>
+          <div class="prompt-list">
+            <section class="prompt-card">
+              <div class="prompt-box">
+                <div class="prompt-header">
+                  <h3
+                    class="prompt-title"
+                    style="font-size: 1.1em; color: #e2e8f0"
+                  >
+                    リアルなポートレート写真風
+                  </h3>
+                  <button class="copy-btn">
+                    <i class="far fa-copy"></i> コピー
+                  </button>
+                </div>
+                <pre class="prompt-text">
+【モデルの指定】
+リアルなアジア人女性の生成が得意なモデル
+
+【プロンプト】
+傑作, 最高品質, 超高解像度, 1人の美しい日本人女性, 20代, 優しい笑顔, カメラ目線, 白いブラウス, 夏の日差しが差し込むカフェのテラス席, 背景のボケ感が美しい
+
+【ネガティブプロンプト】
+低品質, 簡単な絵, イラスト, アニメ, 3D, 変形した手, 指が多い, 複数の顔, 醜い, 老人</pre
+                >
+              </div>
+            </section>
+          </div>
+          <p>
+            <b>【レシピのポイント】</b><br />
+            プロンプトで「傑作,
+            最高品質」といった品質を高める言葉を多用しつつ、ネガティブプロンプトで「イラスト」や「アニメ」といった写真以外の要素を徹底的に排除することで、AIに「とにかくリアルな写真を追求しろ」と強く命令しています。
+          </p>
+
+          <h4>プロのレシピ②：日本の伝統的な水墨画</h4>
+          <div class="prompt-list">
+            <section class="prompt-card">
+              <div class="prompt-box">
+                <div class="prompt-header">
+                  <h3
+                    class="prompt-title"
+                    style="font-size: 1.1em; color: #e2e8f0"
+                  >
+                    水墨画風の武士
+                  </h3>
+                  <button class="copy-btn">
+                    <i class="far fa-copy"></i> コピー
+                  </button>
+                </div>
+                <pre class="prompt-text">
+【モデルの指定】
+アニメやイラスト全般が得意な、汎用性の高いモデル
+
+【プロンプト】
+傑作, 最高品質, 日本の水墨画, 霧深い竹林に静かに佇む一人の侍, 鋭い眼光, 力強い筆致, 余白の美
+
+【ネガティブプロンプト】
+写真, リアル, カラフル, 西洋風, 下手な絵, 崩れた構図, 人物が多すぎる</pre
+                >
+              </div>
+            </section>
+          </div>
+          <p>
+            <b>【レシピのポイント】</b><br />
+            「水墨画」「力強い筆致」「余白の美」といった専門的なキーワードで画風を強く指定し、ネガティブプロンプトで「カラフル」や「西洋風」を禁止することで、AIの創作の方向性を日本古来の美意識へと誘導しています。
+          </p>
+
+          <h4>プロのレシピ③：温かい子供向け絵本</h4>
+          <div class="prompt-list">
+            <section class="prompt-card">
+              <div class="prompt-box">
+                <div class="prompt-header">
+                  <h3
+                    class="prompt-title"
+                    style="font-size: 1.1em; color: #e2e8f0"
+                  >
+                    子供向け絵本風の動物たち
+                  </h3>
+                  <button class="copy-btn">
+                    <i class="far fa-copy"></i> コピー
+                  </button>
+                </div>
+                <pre class="prompt-text">
+【モデルの指定】
+可愛いキャラクターやデフォルメされたイラストが得意なモデル
+
+【プロンプト】
+最高品質, 可愛い子供向け絵本イラスト, 優しい熊と賢いキツネと陽気なウサギが、日当たりの良い森の中でお茶会をしている, 温かい色使い, ほのぼのとした雰囲気
+
+【ネガティブプロンプト】
+リアル, 写真, 怖い, 暗い, ホラー, 鋭い線, 影が強い</pre
+                >
+              </div>
+            </section>
+          </div>
+          <p>
+            <b>【レシピのポイント】</b><br />
+            ネガティブプロンプトで「怖い」「ホラー」「鋭い線」などを禁止することで、AIが誤ってリアルで攻撃的な動物を描いてしまうのを防ぎ、絵本ならではの「優しさ」と「温かみ」のある世界観を守っています。
+          </p>
+
+          <h4>プロのレシピ④：SF・メカニックデザイン</h4>
+          <div class="prompt-list">
+            <section class="prompt-card">
+              <div class="prompt-box">
+                <div class="prompt-header">
+                  <h3
+                    class="prompt-title"
+                    style="font-size: 1.1em; color: #e2e8f0"
+                  >
+                    巨大ロボットの格納庫
+                  </h3>
+                  <button class="copy-btn">
+                    <i class="far fa-copy"></i> コピー
+                  </button>
+                </div>
+                <pre class="prompt-text">
+【モデルの指定】
+メカやSF的なデザインの生成が得意なモデル
+
+【プロンプト】
+傑作, SF, 巨大な戦闘用ロボットが整備されている未来的な格納庫, 無数の配線とパイプ, スチームが立ち上る, メカニカルなディテール, 映画的なライティング
+
+【ネガティブプロンプト】
+キャラクター, 人物, 屋外, 自然, 明るすぎる, シンプル, おもちゃっぽい</pre
+                >
+              </div>
+            </section>
+          </div>
+          <p>
+            <b>【レシピのポイント】</b><br />
+            「メカニカルなディテール」「映画的なライティング」といったプロンプトでクオリティを上げつつ、ネガティブプロンプトで「人物」や「自然」といった無関係な要素を排除し、AIの思考を「機械と格納庫」というテーマに完全に集中させています。
+          </p>
+
+          <h4>プロのレシピ⑤：幻想的なファンタジー風景</h4>
+          <div class="prompt-list">
+            <section class="prompt-card">
+              <div class="prompt-box">
+                <div class="prompt-header">
+                  <h3
+                    class="prompt-title"
+                    style="font-size: 1.1em; color: #e2e8f0"
+                  >
+                    森のエルフの村
+                  </h3>
+                  <button class="copy-btn">
+                    <i class="far fa-copy"></i> コピー
+                  </button>
+                </div>
+                <pre class="prompt-text">
+【モデルの指定】
+幻想的な風景やアニメ背景の描画が得意なモデル
+
+【プロンプト】
+傑作, 最高品質, 壮大なファンタジーアート, 巨大な樹の上に築かれたエルフの村, 繊細な建築, 橋, 滝, 神秘的な光が差し込む森の奥深く, ジブリ風
+
+【ネガティブプロンプト】
+写真, リアル, 人物, 現代的, 建物が少ない, 暗い, 殺風景</pre
+                >
+              </div>
+            </section>
+          </div>
+          <p>
+            <b>【レシピのポイント】</b><br />
+            「ジブリ風」という、多くの人が共通のイメージを持つキーワードを入れることで、AIに画風の大きな方向性を伝えています。ネガティブプロンプトで「現代的」を禁止し、ファンタジー世界にそぐわない要素が紛れ込むのを防いでいるのも重要です。
+          </p>
+
+          <h3>3-4. あなたの「好き」が見つかる、モデルの探し方と注意点</h3>
           <p>
             世界中のクリエイターが、自分の「好き」を詰め込んだオリジナルモデルを、「Civitai（シヴィットエーアイ）」のようなサイトで共有しています。こうしたサイトを眺めているだけでも、新しい創造のインスピレーションが湧いてきますよ。
           </p>
@@ -353,7 +539,7 @@ bad hands, extra fingers, mutated hands, fused fingers, malformed limbs, (worst 
               次に、「LoRAを追加」から、「<strong>Cyberpunk</strong>」や「<strong>Sci-fi</strong>」といったキーワードでLoRAを検索し、一つ選んで追加します。
             </li>
             <li>
-              LoRAを追加すると、プロンプトの中に
+              AV LoRAを追加すると、プロンプトの中に
               <code>&lt;lora:LoRAの名前:1&gt;</code>
               のような、特別な呪文が自動で書き込まれます。
             </li>
@@ -456,12 +642,63 @@ bad hands, extra fingers, mutated hands, fused fingers, malformed limbs, (worst 
             <p>
               その子に命を吹き込み、世界中の人が日常で使う『LINEスタンプ』として、デビューさせてみませんか？<br />次のレッスンでは、あなたが創ったキャラクターを元に、企画から制作、そして販売までの全手順を学びます。
             </p>
-            <a href="/learn1/learn_lesson6.html" class="nav-button-next">
+            <a href="/learn/learn_lesson6.html" class="nav-button-next">
               <span>ステップ2-④ AIでLINEスタンプ制作入門へ進む</span>
               <i class="fas fa-arrow-right"></i>
             </a>
           </div>
         </div>
+        <!-- AI博士 相談セクション -->
+        <section class="ai-hakase-cta">
+          <div class="cta-icon">
+            <img
+              src="/portfolio/hakase/img/ogp-hakase.webp"
+              alt="AI博士のアイコン"
+              loading="lazy"
+              width="80"
+              height="80"
+            />
+          </div>
+          <div class="cta-content">
+            <h3 class="readable">この講座の内容、AI博士に相談しませんか？</h3>
+            <p class="readable">
+              この記事を読んで生まれた疑問や、さらに深掘りしたい点はありますか？AI博士が、あなたの質問に優しく、そして詳しくお答えします。
+            </p>
+            <div class="cta-button-wrapper">
+              <a
+                href="/portfolio/hakase/hakase.html"
+                class="cta-button readable"
+                >AI博士の談話室へ相談に行く</a
+              >
+            </div>
+          </div>
+        </section>
+
+        <footer class="article-footer">
+          <div class="author-profile-box no-avatar">
+            <div class="author-info">
+              <h4 class="readable">この記事を書いた人：山本 倫久</h4>
+              <p class="readable">
+                福祉×AIクリエイター。就労支援B型事業所の利用者としての実体験を基に、AI技術で福祉の現場に新しい「できる」と「楽しい」を届けることをミッションとして活動中。
+              </p>
+              <div class="author-social">
+                <a
+                  href="https://x.com/ChromachannelAI"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >X (旧Twitter)</a
+                >
+                |
+                <a
+                  href="https://github.com/motty1975/chromachannel"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+        </footer>
       </div>
 
       <section class="comment-section">
@@ -470,7 +707,7 @@ bad hands, extra fingers, mutated hands, fused fingers, malformed limbs, (worst 
         <script>
           var disqus_config = function () {
             this.page.url =
-              "https://chromachannel.online/learn1/learn_lesson5.html";
+              "https://chromachannel.online/learn/learn_lesson5.html";
             this.page.identifier = "learn_lesson5_stable-diffusion";
           };
           (function () {
@@ -489,7 +726,25 @@ bad hands, extra fingers, mutated hands, fused fingers, malformed limbs, (worst 
         </noscript>
       </section>
     </main>
+    <!-- フッターのプレースホルダー -->
     <div id="footer-placeholder"></div>
-    <script src="/JavaScript/script.js" defer></script>
+
+    <!-- サイト共通の読み上げ停止ボタン -->
+    <div id="global-speech-control" class="global-speech-control hidden">
+      <!-- ボタンの役割をaria-labelで明確化 -->
+      <button
+        id="global-speech-stop-btn"
+        title="読み上げを停止"
+        aria-label="読み上げを停止"
+      >
+        <i class="fas fa-stop" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <!-- =================================================================
+    ▼ JavaScriptファイル ▼
+    ================================================================== -->
+    <script src="javascript/voice-module.js" defer></script>
+    <script src="javascript/script.js" defer></script>
   </body>
 </html>

@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap");
+
+/* --- 講座テキスト専用スタイル --- */
+.lesson-content {
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.8;
+  color: #333;
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin: 40px 0;
+}
+.lesson-content h1,
+.lesson-content h2,
+.lesson-content h3 {
+  font-weight: 700;
+  color: #1a237e;
+  border-bottom: 2px solid #c5cae9;
+  padding-bottom: 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.lesson-content h1 {
+  font-size: 2em;
+  text-align: center;
+  border-bottom-width: 3px;
+  border-color: #3f51b5;
+}
+.lesson-content h2 {
+  font-size: 1.8em;
+  margin-top: 60px;
+}
+.lesson-content h3 {
+  font-size: 1.5em;
+  border-bottom-style: dotted;
+  margin-top: 20px;
+}
+.lesson-content blockquote h4 {
+  font-size: 1.1em;
+  color: #303f9f;
+  border-bottom: 1px dotted #7986cb;
+  padding-bottom: 5px;
+  margin-top: 1.5em;
+}
+.lesson-content p {
+  margin-bottom: 1.2em;
+}
+.lesson-content ol,
+.lesson-content ul {
+  padding-left: 20px;
+  margin: 1.5em 0;
+}
+.lesson-content ol {
+  list-style-type: decimal;
+}
+.lesson-content li {
+  margin-bottom: 0.8em;
+}
+.lesson-content strong,
+.lesson-content b {
+  color: #d81b60;
+}
+.lesson-content blockquote {
+  background-color: #f5f5f5;
+  border-left: 5px solid #ccc;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+.lesson-content .point-解説 {
+  background: #e3f2fd;
+  border: 1px solid #90caf9;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+.lesson-content .point-解説::before {
+  content: "【ポイント解説】";
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+  color: #1565c0;
+}
+.lesson-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+}
+.lesson-content th,
+.lesson-content td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+.lesson-content th {
+  background-color: #3f51b5;
+  color: white;
+  font-weight: bold;
+}
+.lesson-content tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.lesson-content .prompt-block {
+  position: relative;
+  background-color: #263238;
+  color: #eceff1;
+  border-radius: 8px;
+  font-family: "Courier New", Courier, monospace;
+  padding: 50px 20px 20px 20px;
+}
+.lesson-content .prompt-block pre {
+  margin: 0;
+  padding: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.lesson-content .copy-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #455a64;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+.lesson-content .copy-button:hover {
+  background-color: #607d8b;
+}
+.lesson-content .section-divider {
+  border: 0;
+  height: 1px;
+  background: #ddd;
+  margin: 60px auto;
+}
+.feedback-section h3 {
+  border-bottom-color: #e0e0e0;
+}
+.next-lesson-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f5f7fa;
+  margin: 60px -40px -30px -40px; /* lesson-contentのpaddingを相殺 */
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.next-lesson-section h2 {
+  color: #3f51b5;
+  border-color: #7986cb;
+}
+.nav-button-next {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 40px;
+  background-color: #3f51b5;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+.nav-button-next:hover {
+  background-color: #303f9f;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+}
+.nav-button-next i {
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+.nav-button-next:hover i {
+  transform: translateX(5px);
+}
+.lesson-content .prompt-list {
+  margin-bottom: 25px;
+}
+/* Stable Diffusionの例で最後のプロンプトの余白を調整 */
+.lesson-content .prompt-list:last-of-type {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  .lesson-content {
+    padding: 20px 15px;
+    margin: 20px 0;
+  }
+  .lesson-content h1 {
+    font-size: 1.8em;
+  }
+  .lesson-content h2 {
+    font-size: 1.5em;
+    margin-top: 50px;
+  }
+  .lesson-content h3 {
+    font-size: 1.3em;
+  }
+  .lesson-content table,
+  .lesson-content .prompt-block {
+    font-size: 0.8em;
+  }
+  .next-lesson-section {
+    margin: 40px -15px -20px -15px;
+    padding: 30px 15px;
+  }
+}
+/* ===== ▼▼▼ 画像のはみ出し防止と装飾のためのスタイル ▼▼▼ ===== */
+.lesson-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 35px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+/* ===== ▼▼▼ AI博士 相談セクションのスタイル ▼▼▼ ===== */
+.ai-hakase-cta {
+  display: flex;
+  align-items: center;
+  background-color: #f5f7fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 25px 30px;
+  margin-top: 60px;
+  gap: 25px; /* アイコンとテキストの間隔 */
+}
+.ai-hakase-cta img {
+  max-width: 100px;
+  height: auto;
+  display: block;
+  margin: 35px auto;
+  border-radius: 50%;
+}
+.ai-hakase-cta .cta-icon {
+  font-size: 50px;
+  color: #3f51b5;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* コンテンツが縮んでもアイコンサイズを維持 */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+.ai-hakase-cta .cta-content h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 1.3em;
+  color: #1a237e;
+  border: none; /* h3のデフォルト下線を解除 */
+  padding-bottom: 0;
+}
+.ai-hakase-cta .cta-content p {
+  margin-bottom: 15px;
+  font-size: 0.95em;
+  line-height: 1.7;
+}
+.ai-hakase-cta .category-btn {
+  display: inline-block;
+  padding: 10px 25px;
+  border: 2px solid var(--primary-color-start);
+  background: transparent;
+  color: var(--primary-color-start);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+.ai-hakase-cta .category-btn:hover {
+  background: var(--primary-color-start);
+  color: white;
+  border-color: var(--primary-color-start);
+}
+.button-wrapper {
+  text-align: center;
+}
+
+/* ===== ▼▼▼ コメントセクションのスタイル ▼▼▼ ===== */
+.comment-section {
+  max-width: 900px; /* .containerの最大幅に合わせる */
+  margin: 40px auto; /* 上下の余白と中央配置 */
+  padding: 30px 40px;
+  background-color: #f5f7fa;
+  border-radius: 8px;
+}
+.comment-section h2 {
+  font-size: 1.8em;
+  text-align: center;
+  color: #3f51b5;
+  border-bottom: 2px solid #c5cae9;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 768px) {
+  .ai-hakase-cta {
+    flex-direction: column; /* スマホでは縦並びに */
+    text-align: center;
+    padding: 20px;
+    gap: 15px;
+  }
+  .comment-section {
+    padding: 20px 15px;
+  }
+}
