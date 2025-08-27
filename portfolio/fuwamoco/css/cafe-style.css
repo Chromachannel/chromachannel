@@ -511,7 +511,7 @@ main {
 } 
 
 
-/* **** ここから下部の左右レイアウトに関するCSS **** */
+/*  ここから下部の左右レイアウトに関するCSS  */
 .bottom-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
