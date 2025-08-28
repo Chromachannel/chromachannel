@@ -38,7 +38,7 @@
     color: #7f8c8d;
 }
 
-/* (以下、元のstyle.cssの内容をそのまま移動) */
+/* (以下、元のbundle.min.cssの内容をそのまま移動) */
 .task-input-section h2 { font-size: 1.2em; color: #34495e; margin-bottom: 15px; }
 #task-form { display: flex; gap: 10px; }
 #task-input { flex-grow: 1; padding: 10px 15px; border: 1px solid #ccc; border-radius: 6px; font-size: 1em; }

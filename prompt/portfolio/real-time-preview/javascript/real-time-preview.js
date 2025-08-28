@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cssEditor.value = content;
         updatePreview();
     }));
-    cssSaveBtn.addEventListener('click', () => saveFile(cssEditor.value, 'style.css'));
+    cssSaveBtn.addEventListener('click', () => saveFile(cssEditor.value, 'bundle.min.css'));
 
     // --- 初期化処理 ---
     initColorPicker(htmlEditor, htmlColorPickerBtn, 'html-color-picker');
