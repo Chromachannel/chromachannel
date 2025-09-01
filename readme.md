@@ -51,10 +51,10 @@ AI技術で福祉の現場に新しい「できる」と「楽しい」を届け
 ├── readme.md
 ├── learning-summary.html (各テーマまとめページ x7)
 │
-├── blog/ (全22記事)
-│ ├── ai-line-stamp-rejection-guide.html # ★★★ 追加 ★★★
-│ ├── 15min-ai-habit.html
-│ └── ... (他20記事)
+├── blog/ (全23記事)
+│ ├── announcing-chromapadou.html # ★★★ 追加 ★★★
+│ ├── ai-line-stamp-rejection-guide.html
+│ └── ... (他21記事)
 │
 ├── learn/ (全26講座)
 │   ├── learn_lesson0.html (PC操作入門)

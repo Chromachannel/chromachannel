@@ -18,8 +18,9 @@
   <url><loc>https://chromachannel.online/lifehack-summary.html</loc><lastmod>2025-08-31</lastmod><priority>0.9</priority></url>
   <url><loc>https://chromachannel.online/rabbit-summary.html</loc><lastmod>2025-08-31</lastmod><priority>0.9</priority></url>
   
-  <!-- blog Articles (22 pages) -->
+<!-- blog Articles (23 pages) -->
   <!-- ★★★ ここから追加 ★★★ -->
+  <url><loc>https://chromachannel.online/blog/announcing-chromapadou.html</loc><lastmod>2025-09-02</lastmod><priority>0.8</priority></url>
   <url><loc>https://chromachannel.online/blog/ai-line-stamp-rejection-guide.html</loc><lastmod>2025-08-27</lastmod><priority>0.8</priority></url>
   <!-- ★★★ 追加ここまで ★★★ -->
   <url><loc>https://chromachannel.online/blog/15min-ai-habit.html</loc><lastmod>2025-08-23</lastmod><priority>0.8</priority></url>
