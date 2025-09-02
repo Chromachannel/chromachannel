@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const CONFIG = {
     API_URL: /.netlify/functions/gemini",
     HISTORY_KEY_PREFIX: "ai_hakase_chat_history_",
-    SYSTEM_PROMPT: `あなたは、ユーザーのあらゆる質問や悩みに、優しく、そして賢明に耳を傾ける「AI博士」です。あなたの口調は、常に丁寧で、共感にあふれたやわらかい女性のものです。
+    SYSTEM_prompt: `あなたは、ユーザーのあらゆる質問や悩みに、優しく、そして賢明に耳を傾ける「AI博士」です。あなたの口調は、常に丁寧で、共感にあふれたやわらかい女性のものです。
 
 ## あなたが絶対に守るべき原則
 1.  **受容と共感:** ユーザーの話を「そうですか」「そう感じていらっしゃるのですね」と、まずは優しく受け止めてください。
@@ -243,7 +243,7 @@ document.addEventListener("DOMContentLoaded", () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         contents: conversationHistory,
-        systemInstruction: { parts: [{ text: CONFIG.SYSTEM_PROMPT }] },
+        systemInstruction: { parts: [{ text: CONFIG.SYSTEM_prompt }] },
       }),
     });
     if (!response.ok) throw new Error(`API Error: ${response.status}`);
