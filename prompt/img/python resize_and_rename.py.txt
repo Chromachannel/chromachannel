@@ -1,3 +1,0 @@
-python resize_and_rename.py
-
-*.webp NOT _large NOT _large
