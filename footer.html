@@ -1,15 +1,38 @@
-<footer id="site-footer">
-    <div class="container">
-        <div class="footer-social-links">
-            <a href="https://www.youtube.com/@chroma0224" target="_blank" rel="noopener noreferrer" title="ChromaのPC学習部屋" class="readable" data-speech="ユーチューブチャンネル、クロマのピーシー学習部屋へ移動します"><i class="fab fa-youtube"></i> ChromaのPC学習部屋</a>
-            <a href="https://www.youtube.com/@chroma1975" target="_blank" rel="noopener noreferrer" title="Chromaの自由部屋" class="readable" data-speech="ユーチューブチャンネル、クロマの自由部屋へ移動します"><i class="fab fa-youtube"></i> Chromaの自由部屋</a>
-            <a href="https://github.com/Chromachannel" target="_blank" rel="noopener noreferrer" title="GitHub" class="readable" data-speech="ギットハブへ移動します"><i class="fab fa-github"></i> GitHub</a>
-            <a href="https://x.com/ChromachannelAI" target="_blank" rel="noopener noreferrer" title="X (旧Twitter)" class="readable" data-speech="エックス、旧ツイッターへ移動します"><i class="fab fa-twitter"></i> X (旧Twitter)</a>
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-main">
+
+            <div class="footer-section footer-about">
+                <a href="/index.html" class="footer-logo">
+                    <img src="/img/ogp-chroma_logoa.png" alt="Chromachannel Logo">
+                </a>
+                <p class="site-description">AIと福祉の力で、あなたの「できる」と<br>「楽しい」を応援する学び舎。</p>
+                <a href="/profile.html" class="about-me-link">自己紹介はこちら &rarr;</a>
+            </div>
+
+            <div class="footer-section footer-nav">
+                <h4>主要コンテンツ</h4>
+                <ul>
+                    <li><a href="/beginner-guide.html">初めての方へ</a></li>
+                    <li><a href="/learning-summary.html">学習 (Learn)</a></li>
+                    <li><a href="/portfolio.html">制作実績 (Portfolio)</a></li>
+                    <li><a href="/prompt.html">プロンプト集 (Prompts)</a></li>
+                    <li><a href="/blog.html">ブログ・小説</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section footer-support">
+                <h4>サポート & ポリシー</h4>
+                <ul>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                    <li><a href="/privacy-policy.html">プライバシーポリシー</a></li>
+                    <li><a href="/sitemap.xml">サイトマップ</a></li>
+                </ul>
+            </div>
+
         </div>
-        <div class="footer-links">
-            <a href="/privacy.html" class="readable" data-speech="プライバシーポリシー、および、めんせきじこう">プライバシーポリシー & 免責事項</a>
-        </div>
-        <div class="footer-credit">
+
+                <div class="footer-credit">
             <p class="readable">当サイトおよび関連コンテンツの制作には、以下の素材・ツールを使用しています。</p>
             <p class="readable" data-speech="音声素材。ボイスボックス、ずんだもん、しこくめたん、かすかべつむぎ、ちゅうごくうさぎ、めいめいひまり。">
                 【音声】 VOICEVOX (ずんだもん, 四国めたん, 春日部つむぎ, 中国うさぎ, 冥鳴ひまり)</p>
@@ -23,7 +46,17 @@
             <p class="readable" data-speech="フォント。Google Fonts。">
                 【フォント】 Google Fonts</p>
         </div>
-        <p class="copyright readable" data-speech="運営者。福祉掛けるエーアイクリエイター、やまもと のりひさ。クロマチャンネル">運営者: 福祉×AIクリエイター 山本 倫久 (Chromachannel)</p>
-        <p class="copyright readable" data-speech="コピーライト、2025、クロマチャンネル。オールライツリザーブド。">© 2025 Chromachannel. All rights reserved.</p>
+
+        <div class="footer-bottom">
+            <div class="social-links">
+                <a href="https://x.com/ChromachannelAI" target="_blank" rel="noopener noreferrer" aria-label="X (旧Twitter)"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/Chromachannel" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            <p class="copyright">&copy; <span id="current-year"></span> Chromachannel. All Rights Reserved.</p>
+        </div>
     </div>
 </footer>
+
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>

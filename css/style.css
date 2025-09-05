@@ -1,0 +1,705 @@
+/* Google Fontsから日本語用のサンセリフ体フォント「Noto Sans JP」を読み込む */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap");
+
+/* =================================== */
+/* ===== 基本設定 & CSS変数 ===== */
+/* =================================== */
+:root {
+  /* :root疑似クラスで、ドキュメント全体で利用できるCSSカスタムプロパティ（変数）を定義 */
+  --primary-color-start: #6a11cb; /* グラデーションの開始色 */
+  --primary-color-end: #2575fc; /* グラデーションの終了色 */
+  --text-dark: #333; /* 主要なテキスト色 */
+  --text-light: #666; /* やや薄い補助的なテキスト色 */
+  --bg-white: #ffffff; /* 白色の背景 */
+  --bg-light: #f8f9fa; /* ややグレーがかった背景色 */
+  --shadow-light: rgba(0, 0, 0, 0.05); /* 薄い影 */
+  --shadow-dark: rgba(0, 0, 0, 0.1); /* 濃い影 */
+}
+body {
+  /* 各OSの標準フォントを優先的に使用し、読みやすさを確保 */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  color: var(--text-dark); /* body全体の基本文字色を変数で指定 */
+  margin: 0; /* ブラウザデフォルトのマージンをリセット */
+}
+/* 中央揃えのコンテンツ用の共通コンテナ */
+.container {
+  max-width: 1200px; /* コンテンツの最大幅を指定 */
+  margin: 0 auto; /* 中央揃え */
+  padding: 0 20px; /* 左右に余白を確保 */
+}
+
+/* =================================== */
+/* ===== 共通アニメーション ===== */
+/* =================================== */
+/* 下からフェードインするアニメーションの初期状態 */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+/* JavaScriptで付与され、アニメーションを発火させるクラス */
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =================================== */
+/* ===== サイト共通ヘッダー ===== */
+/* =================================== */
+.site-header {
+  background: rgba(255, 255, 255, 0.9); /* 半透明の背景 */
+  backdrop-filter: blur(10px); /* 背景をぼかす「すりガラス」効果 */
+  -webkit-backdrop-filter: blur(10px); /* Safari用のベンダープレフィックス */
+  padding: 15px 0;
+  position: fixed; /* 画面上部に固定 */
+  width: 100%;
+  top: 0;
+  z-index: 999; /* 他の要素より手前に表示 */
+  box-shadow: 0 2px 20px var(--shadow-light);
+  transition: all 0.3s ease;
+}
+/* スクロール時にJavaScriptで付与されるクラス */
+.site-header.scrolled {
+  box-shadow: 0 5px 25px var(--shadow-dark); /* 影を濃くする */
+}
+.site-header nav {
+  display: flex;
+  justify-content: space-between; /* ロゴとナビリンクを両端に配置 */
+  align-items: center;
+}
+.logo img {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+/* ナビゲーションリンクのリスト */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px; /* リンク間の余白 */
+  margin: 0;
+  padding: 0;
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative; /* 下線の擬似要素の基準点にする */
+  padding-bottom: 5px;
+}
+/* ホバー時とアクティブ時の文字色 */
+.nav-links a:hover,
+.nav-links a.nav-active {
+  color: var(--primary-color-start);
+}
+/* リンクの下線の擬似要素（初期状態） */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0; /* 初期状態では幅0 */
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    45deg,
+    var(--primary-color-start),
+    var(--primary-color-end)
+  );
+  transition: width 0.3s ease;
+}
+/* ホバー時とアクティブ時に下線を表示 */
+.nav-links a:hover::after,
+.nav-links a.nav-active::after {
+  width: 100%;
+}
+
+/* =================================== */
+/* ===== ハンバーガーメニュー (モバイル用) ===== */
+/* =================================== */
+.mobile-nav-toggle {
+  display: none; /* デフォルト（PC）では非表示 */
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10002; /* メニュー本体より手前に表示 */
+}
+.mobile-nav-toggle .fa-bars,
+.mobile-nav-toggle .fa-times {
+  font-size: 28px;
+  color: var(--text-dark);
+}
+.mobile-nav-toggle .fa-times {
+  display: none; /* 閉じるボタンは初期状態では非表示 */
+}
+
+/* =================================== */
+/* ===== サイトの歩き方セクション ===== */
+/* =================================== */
+.step-guide-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* レスポンシブなグリッド */
+  gap: 60px 30px;
+  margin-top: 80px;
+}
+.step-card {
+  background-color: var(--bg-white);
+  border-radius: 15px;
+  padding: 50px 30px 30px;
+  text-align: center;
+  position: relative; /* ステップ番号の配置の基準 */
+  box-shadow: 0 15px 35px var(--shadow-light);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.step-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px var(--shadow-dark);
+}
+/* ステップ番号のスタイル */
+.step-number {
+  position: absolute;
+  top: -25px; /* カードの上にはみ出すように配置 */
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    135deg,
+    var(--primary-color-start),
+    var(--primary-color-end)
+  );
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* =================================== */
+/* ===== テーマ別まとめセクション ===== */
+/* =================================== */
+.theme-tags {
+  background-color: #f8f9fa;
+}
+.tag-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+.tag-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #e9ecef;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.tag-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+}
+.tag-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  line-height: 1;
+}
+/* Font Awesomeアイコン用のスタイル */
+.tag-icon .fas {
+  font-size: 2.8rem;
+  color: var(--primary-color-start);
+}
+
+/* =================================== */
+/* ===== ブログ・ポートフォリオ等カードスタイル ===== */
+/* =================================== */
+.latest-posts {
+  background-color: var(--bg-light);
+}
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+.post-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.post-card {
+  background: var(--bg-white);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px var(--shadow-light);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* 弾むようなアニメーション */
+  height: 100%;
+}
+.post-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px var(--shadow-dark);
+}
+/* 画像のアスペクト比を16:9に保つためのコンテナ */
+.post-card-image {
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 (9 / 16 * 100%) */
+  position: relative;
+  overflow: hidden;
+}
+.post-card-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 画像をコンテナに合わせてトリミング */
+  transition: transform 0.4s ease;
+}
+/* ホバー時に画像を拡大 */
+.post-card:hover .post-card-image img {
+  transform: scale(1.08);
+}
+.post-card-content {
+  padding: 20px 25px;
+}
+.post-card-date,
+.post-card-category {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-bottom: 8px;
+}
+.post-card-content h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.6;
+  margin: 0;
+  color: var(--text-dark);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+/* リンク全体をホバーした時にタイトルスタイルを変更 */
+.post-card-link:hover .post-card-content h3 {
+  color: var(--primary-color-start);
+  text-decoration: underline;
+}
+/* 「もっと見る」ボタンのラッパー */
+.view-more-button-wrapper {
+  text-align: center;
+  margin-top: 60px;
+}
+/* 「もっと見る」ボタン本体 */
+.view-more-button {
+  display: inline-block;
+  padding: 12px 30px;
+  border: 2px solid var(--primary-color-start);
+  color: var(--primary-color-start);
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.view-more-button:hover {
+  background-color: var(--primary-color-start);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* =================================== */
+/* ===== サイト共通フッター ===== */
+/* =================================== */
+/* ===== フッタースタイル ===== */
+.site-footer {
+    background-color: #343a40; /* 濃いグレーの背景 */
+    color: #adb5bd; /* 少し明るいグレーの文字色 */
+    padding: 60px 0 20px 0;
+    font-size: 0.9rem;
+}
+
+.footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+/* --- フッターメイン (3カラム) --- */
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #495057; /* セクションの区切り線 */
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-section h4 {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* 1. サイトについて */
+.footer-about {
+    text-align: center; /* これで中のテキストやインライン要素が中央に寄る */
+    display: flex; /* flexboxを使うことで、img要素も中央に寄せやすくする */
+    flex-direction: column; /* 要素を縦方向に並べる */
+    align-items: center; /* これでflexアイテム（imgなど）が中央に寄る */
+}
+
+.footer-about .footer-logo img {
+    width: 100px; /* ロゴのサイズ調整 */
+    margin-bottom: 15px;
+    /* display: block; を追加すると、より安定して中央寄せできる場合がある */
+}
+.footer-about .site-description {
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+.footer-about .about-me-link {
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer-about .about-me-link:hover {
+    color: #87CEEB; /* ホバー時の色 */
+}
+
+/* 2,3. ナビゲーションリスト */
+.footer-nav ul,
+.footer-support ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-nav li,
+.footer-support li {
+    margin-bottom: 12px;
+}
+.footer-nav a,
+.footer-support a {
+    color: #adb5bd;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer-nav a:hover,
+.footer-support a:hover {
+    color: #ffffff;
+}
+
+/* --- フッターボトム --- */
+.footer-bottom {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* スマホ表示で改行させるため */
+    gap: 20px;
+}
+
+.social-links a {
+    color: #adb5bd;
+    font-size: 1.5rem;
+    margin-right: 20px;
+    transition: color 0.3s, transform 0.3s;
+}
+.social-links a:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+.social-links a:last-child {
+    margin-right: 0;
+}
+
+.copyright {
+    font-size: 0.8rem;
+}
+
+/* --- レスポンシブ対応 --- */
+@media (max-width: 768px) {
+    .footer-main {
+        flex-direction: column; /* スマホではカラムを縦積みに */
+    }
+    .footer-bottom {
+        flex-direction: column; /* SNSとコピーライトも縦積みに */
+        align-items: center;
+        text-align: center;
+    }
+    .social-links {
+        margin-bottom: 20px;
+    }
+}
+.footer-credit {
+    text-align: center; /* これでテキストが中央に寄るよ */
+    margin: 40px 0; /* 上下の余白を調整して、見やすくするの */
+    color: #adb5bd; /* 文字色を少し調整 */
+    font-size: 0.85rem; /* 少しだけ文字を小さくして、すっきりと */
+    line-height: 1.8; /* 行間を少し広げる */
+}
+
+/* =================================== */
+/* ===== レスポンシブ対応 (768px以下) ===== */
+/* =================================== */
+@media (max-width: 768px) {
+  .site-header nav {
+    padding: 0 20px;
+  }
+  /* ハンバーガーメニューボタンを表示 */
+  .mobile-nav-toggle {
+    display: block;
+  }
+  /* モバイル用ナビゲーションメニューのスタイル */
+  .nav-links {
+    position: fixed;
+    top: 70px; /* ヘッダーの高さ分下から開始 */
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: rgba(255, 255, 255, 0.98);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    transform: translateX(100%); /* 初期状態では画面外に配置 */
+    transition: transform 0.3s ease-in-out;
+    z-index: 9998;
+  }
+  /* メニュー表示時のスタイル */
+  .nav-links.active {
+    transform: translateX(0); /* 画面内にスライドイン */
+  }
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+  .nav-links a {
+    font-size: 1.5rem;
+    padding: 15px 0;
+    display: block;
+    width: 100%;
+  }
+  /* アイコンの切り替え */
+  .mobile-nav-toggle.active .fa-bars {
+    display: none;
+  }
+  .mobile-nav-toggle.active .fa-times {
+    display: block;
+  }
+}
+
+/* =================================== */
+/* ===== お問い合わせセクション ===== */
+/* =================================== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2カラムレイアウト */
+  gap: 2rem;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+}
+.contact-button {
+  display: block;
+  max-width: 280px;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.contact-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.contact-button.email {
+  background-color: #ba59fb;
+}
+.contact-button.line {
+  background-color: #06c755; /* LINEのブランドカラー */
+}
+.contact-qr img {
+  max-width: 180px;
+  width: 100%;
+  border: 5px solid #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+/* モバイルでは1カラムに */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.contact-email-text {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #555;
+  word-break: break-all; /* 長いアドレスがはみ出ないように改行 */
+  background-color: #f0f0f0;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+/* =================================== */
+/* ===== サイト共通の音声読み上げ機能 ===== */
+/* =================================== */
+/* 読み上げボタン */
+.speech-button {
+  background: none;
+  border: 1px solid #ddd;
+  color: var(--text-light);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 8px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle; /* テキストとの縦位置を揃える */
+  transition: all 0.2s ease;
+}
+.speech-button:hover {
+  background-color: var(--primary-color-start);
+  color: white;
+  border-color: var(--primary-color-start);
+}
+/* 読み上げ中のテキストハイライト（蛍光マーカー風） */
+.speaking {
+  background-color: transparent;
+  background-image: linear-gradient(
+    to top,
+    rgba(255, 255, 0, 0.4) 50%,
+    transparent 50%
+  );
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  transition: background-position 0.5s ease-out;
+  background-position: 0 100%;
+}
+/* ヒーローセクションではマーカー色を変更 */
+.hero .speaking {
+  background-image: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 50%
+  );
+}
+
+/* =================================== */
+/* ===== グローバル音声停止コントロール ===== */
+/* =================================== */
+/* 読み上げ中に右下に表示される停止ボタンのパネル */
+.global-speech-control {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: rgba(44, 62, 80, 0.9);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 50px;
+  padding: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0; /* 初期状態は非表示 */
+  transform: translateY(20px);
+}
+/* 表示/非表示を切り替えるクラス */
+.global-speech-control.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.global-speech-control.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none; /* 非表示中はクリックできないようにする */
+}
+/* 停止ボタン */
+#global-speech-stop-btn {
+  background-color: #e74c3c; /* 赤系の色で停止を表現 */
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+#global-speech-stop-btn:hover {
+  background-color: #c0392b;
+}
+
+/* =================================== */
+/* ===== AI博士 フローティングボタン ===== */
+/* =================================== */
+/* サイト右下に常に表示される円形のボタン */
+.floating-ai-button {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 90px;
+  height: 90px;
+  background-image: url("/portfolio/hakase/img/ogp-hakase.webp");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  border: 2px solid white;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+.floating-ai-button:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+/* 音声コントロールパネル表示時に位置を調整 */
+.floating-ai-button {
+  bottom: 95px; /* コントロールパネルの高さ分、上にずらす */
+}
+/* モバイルでは非表示にする */
+@media (max-width: 768px) {
+  .floating-ai-button {
+    display: none;
+  }
+}
+
+/* =================================== */
+/* ===== モバイルナビ内 AI博士リンク ===== */
+/* =================================== */
+@media (max-width: 768px) {
+  /* ハンバーガーメニュー内のAI博士リンクに特別なスタイルを適用 */
+  .nav-hakase-link {
+    color: var(--primary-color-start);
+    font-weight: bold;
+    background-color: rgba(106, 17, 203, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(106, 17, 203, 0.1);
+  }
+}
