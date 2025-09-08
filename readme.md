@@ -13,7 +13,11 @@ AI技術で福祉の現場に新しい「できる」と「楽しい」を届け
 
 ## ✨ 主な機能と特徴
 
-- **体系的な学習ロードマップ:** 全26の講座を通じて、PCの基本操作から、画像・音声・動画生成、さらにはビジネス応用までをステップ・バイ・ステップで学べます。
+- **🔰 初心者向けガイド:** サイトの歩き方や、初心者におすすめのコンテンツをまとめた案内ページを設置。
+- **🤖 対話型AIチャットボット「AI博士」:** ユーザーの質問や悩みに優しく寄り添うAIと自由に会話できる機能を搭載。
+- **🔊 全面的な音声読み上げ対応:** 記事や講座の主要なテキストに再生ボタンを設置し、アクセシビリティを確保。
+- **🎮 体験型学習アプリ:** AIの仕組みをゲーム感覚で学べる、インタラクティブなWebアプリケーションを複数開発。
+- **📚 体系的な学習ロードマップ:** ステップ0からステップ4まで、知識ゼロからでも挫折しない学習フローを設計。
 - **実践的なプロンプト集:** コピペで使える30種類以上の高品質プロンプトを提供。AIに特定の役割を与え、対話形式で成果物を生み出す独自のノウハウが詰まっています。
 - **多様な制作実績:** 静的なウェブサイト制作から、JavaScriptを用いたインタラクティブなゲームやWebアプリケーションまで、幅広い開発スキルを証明しています。
 - **高度なインタラクティブUI:** JavaScriptによるコンポーネントの動的読み込み、スクロールに応じたフェードインアニメーション、カテゴリ別フィルター機能などを実装。
@@ -23,12 +27,11 @@ AI技術で福祉の現場に新しい「できる」と「楽しい」を届け
 
 ## 💻 使用技術・ツール
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+- **フロントエンド:**![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Google Gemini API](https://img.shields.io/badge/Gemini%20API-4285F4?style=for-the-badge&logo=google&logoColor=white)
-![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
-
+- **バックエンド:**![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
+- **AI API:** ![Google Gemini API](https://img.shields.io/badge/Gemini%20API-4285F4?style=for-the-badge&logo=google&logoColor=white)
 - **AIアシスタント:** ChatGPT, Google Gemini, Microsoft Copilot, Claude
 - **画像生成:** Stable Diffusion, ImageFX, Leonardo.Ai, SeaArt.ai
 - **音声・音楽生成:** VOICEVOX, Suno AI
