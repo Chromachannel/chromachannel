@@ -54,14 +54,20 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <link rel="stylesheet" href="/css/bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/only_read.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body class="article-page">
     <div id="header-placeholder"></div>
 
-    <main class="article-main">
+    <main>
+      <section class="page-header">
+        <div class="container">
+          <h1 class="readable">自己紹介</h1>
+        </div>
+      </section>
         <article class="article-container">
             <header class="article-header">
                 <h1>
@@ -89,44 +95,59 @@
               <p class="readable">
                 まずはAIを知り、何ができるのか、そして使う上での注意点まで。このサイトが、誰かの「AIとの第一歩」になれば、これほど嬉しいことはありません。
               </p>
+            </div>
 
                 <hr class="section-divider">
 
-                <h2 id="skills" class="readable">できること (スキルセット)</h2>
-                <p class="readable">コンテンツの企画から制作、そしてそれを届けるためのWebサイト構築まで、全工程をAIと共にワンストップで手掛けます。</p>
-                
-                <div class="skills-grid" style="margin-top: 30px;">
-                    <div class="skill-card fade-in">
-                        <div class="skill-icon"><i class="fas fa-lightbulb" aria-hidden="true"></i></div>
-                        <h3 class="readable">総合プロデュース</h3>
-                        <p class="readable">アイデアの壁打ちから完成まで、コンテンツ制作の全工程を伴走支援します。</p>
-                    </div>
-                    <div class="skill-card fade-in">
-                        <div class="skill-icon"><i class="fas fa-palette" aria-hidden="true"></i></div>
-                        <h3 class="readable">AIコンテンツ制作</h3>
-                        <p class="readable">Stable Diffusion(イラスト), Suno(音楽), VOICEVOX(音声), YMM4(動画)等を駆使します。</p>
-                    </div>
-                    <div class="skill-card fade-in">
-                        <div class="skill-icon"><i class="fas fa-code" aria-hidden="true"></i></div>
-                        <h3 class="readable">Webサイト・アプリ開発</h3>
-                        <p class="readable">HTML/CSS/JavaScriptを駆使し、インタラクティブなWebアプリケーションを開発します。</p>
-                    </div>
-                    <div class="skill-card fade-in">
-                        <div class="skill-icon"><i class="fas fa-book-open-reader" aria-hidden="true"></i></div>
-                        <h3 class="readable">教材コンテンツ設計</h3>
-                        <p class="readable">複雑なITスキルを、初心者でも楽しみながら学べるストーリー仕立ての教材を開発します。</p>
-                    </div>
-                     <div class="skill-card fade-in">
-                        <div class="skill-icon"><i class="fas fa-hands-helping" aria-hidden="true"></i></div>
-                        <h3 class="readable">福祉×ITコンサルティング</h3>
-                        <p class="readable">当事者目線で、福祉現場が抱える課題をAIやITの力で解決するための企画・提案を行います。</p>
-                    </div>
-                    <div class="skill-card fade-in">
-                        <div class="skill-icon"><i class="fas fa-brain" aria-hidden="true"></i></div>
-                        <h3 class="readable">プロンプトエンジニアリング</h3>
-                        <p class="readable">対話型AIの能力を最大限に引き出す、高品質なプロンプトの設計・開発を行います。</p>
+            <section id="skills" class="section skills">
+                <div class="container">
+                    <h2 class="section-title fade-in readable">スキル & サービス</h2>
+                    <div class="skills-grid">
+                        <div class="skill-card fade-in">
+                          <div class="skill-icon">
+                            <i class="fas fa-palette" aria-hidden="true"></i>
+                          </div>
+                          <h3 class="readable">AIイラスト制作</h3>
+                          <p class="readable">Stable Diffusion等を活用したキャラクター・背景制作、および操作指導。</p>
+                        </div>
+                        <div class="skill-card fade-in">
+                          <div class="skill-icon">
+                            <i class="fas fa-video" aria-hidden="true"></i>
+                          </div>
+                          <h3 class="readable">動画・音楽制作</h3>
+                          <p class="readable">企画、台本(GPTs)、音声(VOICEVOX)、楽曲(Suno)、編集(YMM4)まで一貫対応。</p>
+                        </div>
+                        <div class="skill-card fade-in">
+                          <div class="skill-icon">
+                            <i class="fas fa-book-open-reader" aria-hidden="true"></i>
+                          </div>
+                          <h3 class="readable">教材コンテンツ設計</h3>
+                          <p class="readable">複雑なITスキルを、初心者でも楽しく学べるインタラクティブな教材を開発。</p>
+                        </div>
+                        <div class="skill-card fade-in">
+                          <div class="skill-icon">
+                            <i class="fas fa-code" aria-hidden="true"></i>
+                          </div>
+                          <h3 class="readable">Webアプリ開発</h3>
+                          <p class="readable">HTML/CSS/JSを用いた、体験型学習アプリやツールのプロトタイプ開発。</p>
+                        </div>
+                        <div class="skill-card fade-in">
+                          <div class="skill-icon">
+                            <i class="fas fa-hands-helping" aria-hidden="true"></i>
+                          </div>
+                          <h3 class="readable">福祉×ITコンサル</h3>
+                          <p class="readable">当事者目線で、福祉現場の課題を解決するIT活用の企画・提案。</p>
+                        </div>
+                        <div class="skill-card fade-in">
+                          <div class="skill-icon">
+                            <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                          </div>
+                          <h3 class="readable">総合プロデュース</h3>
+                          <p class="readable">アイデアの壁打ちから完成まで、コンテンツ制作の全工程を伴走支援。</p>
+                        </div>
                     </div>
                 </div>
+            </section>
 
                 <hr class="section-divider">
                 

@@ -1,3 +1,11 @@
+h2 {
+    margin: 24px 0 8px;
+    text-align: center;
+}
+h3 {
+    margin: 24px 0 8px;
+    text-align: center;
+}
 .page-header {
     padding: 80px 20px;
     text-align: center;
@@ -127,11 +135,13 @@
 .portfolio-links,
 .course-links {
     margin-top: auto;
+    text-align: center;
 }
 .portfolio-action-btn,
 .gallery-toggle-btn,
 .course-action-btn {
     display: inline-flex;
+    text-align: center;
     align-items: center;
     gap: 8px;
     padding: 12px 24px;

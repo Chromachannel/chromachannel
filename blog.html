@@ -65,7 +65,8 @@
     <link rel="manifest" href="/site.webmanifest" />
     <!-- CSSリセットと共通スタイル -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
-    <link rel="stylesheet" href="/css/bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/only_read.css">
     <!-- Font Awesome (アイコン表示用) -->
     <link
       rel="stylesheet"
@@ -81,345 +82,318 @@
 
     <!-- メインコンテンツ -->
     <main>
-      <!-- ページヘッダー -->
       <section class="page-header">
-        <div class="container">
-          <h1 class="readable">blog</h1>
-          <p class="readable">日々の活動や想いを綴ります</p>
-        </div>
+          <div class="container">
+              <h1 class="readable">Blog</h1>
+              <p class="readable">福祉×AIクリエイターの思考の記録</p>
+          </div>
       </section>
 
-      <!-- ブログ記事一覧セクション -->
       <section class="section">
         <div class="container">
           <p class="portfolio-intro fade-in readable">
-            AIや福祉、日々の制作活動について、私の想いやノウハウを発信しています。
-          </p>
-
-          <!-- 記事を並べるグリッドコンテナ -->
+            AI学習のコツ、ツールの活用法、日々の気づきなど、AIと共に新しい価値を創造するための思考の過程を記録しています。</p>
+          <h2 class="section-title fade-in readable">🔰 初心者におすすめの記事</h2>
+          <p class="portfolio-intro fade-in readable" style="margin-bottom: 40px;">
+            AIの冒険を始めるための、最初の勇気とコンパスをくれる記事たちです。</p>
+          <h3 class="course-step-title">グループ①：「冒険の地図」を手に入れる記事</h3>
           <div class="portfolio-grid">
-            <!-- ★★★ ここから追加 ★★★ -->
-            <a href="/blog/announcing-chromapadou" class="post-card-link fade-in">
-              <div class="post-card">
-                <div class="post-card-image">
-                  <img src="/img/blog/ogp-chromapadou.webp" alt="「くろまぱ堂」始動の告知イメージ" loading="lazy" width="300" height="169" />
-                </div>
-                <div class="post-card-content">
-                  <p class="post-card-date">2025.09.02</p>
-                  <h3 class="readable">【重大発表】Chromachannelとあいこぱ堂の共同運営「くろまぱ堂」、始動します！</h3>
-                  <p class="readable">福祉×AIクリエイター「Chromachannel」と「あいこぱ堂」が、新しいYouTubeチャンネル「くろまぱ堂」を共同で運営開始！私たちの新しい活動の拠点です。</p>
-                </div>
-              </div>
-            </a>
-        <!-- ★★★ 追加ここまで ★★★ -->
-            <a href="/blog/ai-line-stamp-rejection-guide.html" class="post-card-link fade-in">
-              <div class="post-card">
-                <div class="post-card-image">
-                  <img src="/img/ogp-lesson6_large.webp" alt="AIでLINEスタンプを制作するイメージイラスト" loading="lazy" width="300" height="169" />
-                </div>
-                <div class="post-card-content">
-                  <p class="post-card-date">2025.08.27</p>
-                  <h3 class="readable">AIでLINEスタンプを作りたいあなたへ：審査でリジェクトされないための4つの鉄則</h3>
-                  <p class="readable">AIで作ったスタンプが審査落ち…そんな悲劇を防ぐ4つの鉄則を解説。著作権やリジェクト理由、加工のコツまで、安心して販売するためのヒントが満載です。</p>
-                </div>
-              </div>
-            </a>
-            <!-- 記事カード 1 -->
-            <a href="/blog/15min-ai-habit.html" class="post-card-link fade-in">
-              <div class="post-card">
-                <div class="post-card-image">
-                  <img src="/img/blog/ogp-15min-ai-habit_large.webp" alt="15分の砂時計とAIロボットが植物に水をやるイラスト" loading="lazy" width="300" height="169" />
-                </div>
-                <div class="post-card-content">
-                  <p class="post-card-date">2025.08.23</p>
-                  <h3 class="readable">1日15分から始めるAI習慣。無理なく、楽しく、あなたの「できる」を増やす方法</h3>
-                  <p class="readable">AI学習、時間がない、難しいと感じていませんか？1日15分、遊び感覚でAIと友達になれる新しい習慣の始め方をご紹介します。</p>
-                </div>
-              </div>
-            </a>
-            <a href="/blog/ai-illustration-overcoming-perfectionism.html" class="post-card-link fade-in">
-              <div class="post-card">
-                <div class="post-card-image">
-                  <img src="/img/blog/ogp-ai-illustration-perfectionism_large.webp" alt="AIイラストで挫折しないためのヒントを示すイラスト" loading="lazy" width="300" height="169" />
-                </div>
-                <div class="post-card-content">
-                  <p class="post-card-date">2025.08.16</p>
-                  <h3 class="readable">AIイラストで挫折する人の共通点とは？「完璧」を目指さない、ゆるふわ継続術</h3>
-                  <p class="readable">AIイラスト、楽しいけど続かない…。その原因は「完璧主義」かも。挫折しないための思考法と、ゆるふわ継続術を解説します。</p>
-                </div>
-              </div>
-            </a>
-
-            <!-- 記事カード 2 -->
-            <a href="/blog/ai-learning-complete-guide.html" class="post-card-link fade-in">
-              <div class="post-card">
-                <div class="post-card-image">
-                  <img src="/img/blog/ogp-ai-learning-guide_large.webp" alt="AI学習の完全ロードマップを示すイメージイラスト" loading="lazy" width="300" height="169" />
-                </div>
-                <div class="post-card-content">
-                  <p class="post-card-date">2025.08.12</p>
-                  <h3 class="readable">【完全ガイド】AI学習の始め方、この1ページで全てが分かる</h3>
-                  <p class="readable">AI学習に挫折しないための完全ロードマップ。「AIとは何か？」から、具体的な作品作り、そして仕事への応用まで、知識ゼロからAIクリエイターになるための全ステップを、当サイトの無料講座で体系的に学べます。</p>
-                </div>
-              </div>
-            </a>
-
-            <!-- 記事カード 3 -->
-            <a href="/blog/fuwamoco-development-story.html" class="post-card-link fade-in">
-              <div class="post-card">
-                <div class="post-card-image">
-                  <img src="/img/blog/ogp-fuwamoco-story_large.webp" alt="Fuwamoco PROJECTの開発背景を象徴するイメージイラスト" loading="lazy" width="300" height="169" />
-                </div>
-                <div class="post-card-content">
-                  <p class="post-card-date">2025.08.12</p>
-                  <h3 class="readable">【開発秘話】なぜ私は、架空のNPO法人サイト「Fuwamoco PROJECT」を創ったのか？</h3>
-                  <p class="readable">福祉×AIクリエイターの原点。就労支援の課題として生まれたポートフォリオサイト「Fuwamoco PROJECT」に込めた、うさぎと福祉への想い、そしてAIとの共同制作の舞台裏を、制作者自らが語ります。</p>
-                </div>
-              </div>
-            </a>
-
-            <!-- 記事カード 4 -->
-            <a href="/blog/announcing-full-ai-curriculum.html" class="post-card-link fade-in">
-              <div class="post-card">
-                <div class="post-card-image">
-                  <img src="/img/blog/ogp-full-curriculum_large.webp" alt="完成した壮大なAI学習カリキュラムを象徴するイメージイラスト" loading="lazy" width="300" height="169" />
-                </div>
-                <div class="post-card-content">
-                  <p class="post-card-date">2025.08.09</p>
-                  <h3 class="readable">【講座完成】AI実践講座、全24講座+付録が遂に完成しました！</h3>
-                  <p class="readable">入門からビジネス実践まで、AIスキルを体系的に学べる全24講座+付録が遂に完成！この講座は、皆様の声と共に進化し続ける「生きている教材」です。AIと共に、あなたの「できる」を、もっと遠くまで広げませんか？</p>
-                </div>
-              </div>
-            </a>
-
-            <!-- 記事カード 5 -->
-            <a href="/blog/announcing-new-ai-courses.html" class="post-card-link fade-in">
-              <div class="post-card">
-                <div class="post-card-image">
-                  <img src="/img/blog/ogp-new-courses_large.webp" alt="新しいAI講座の開設をお知らせするイメージイラスト" loading="lazy" width="300" height="169" />
-                </div>
-                <div class="post-card-content">
-                  <p class="post-card-date">2025.08.08</p>
-                  <h3 class="readable">【講座リリース】「AI教養編」と「画像生成AI編」を新規開講しました！</h3>
-                  <p class="readable">無料AI学習講座に、待望の2コースが新登場！AIの仕組みを学ぶ「教養編」と、言葉で絵を描く「画像生成AI編」。あなたの知的好奇心と創造性を刺激する、新しい学びの旅を始めませんか？</p>
-                </div>
-              </div>
-            </a>
-
-            <!-- 記事カード 6 -->
-            <a href="/blog/ai-meal-planning-report.html" class="post-card-link fade-in">
-              <div class="post-card">
-                <div class="post-card-image">
-                  <img src="/img/blog/ogp-ai-meal-planning_large.webp" alt="AIが献立プランを提案しているイメージイラスト" loading="lazy" width="300" height="169" />
-                </div>
-                <div class="post-card-content">
-                  <p class="post-card-date">2025.08.07</p>
-                  <h3 class="readable">【時短レシピ】AI献立プロンプトを使ったら、1週間の夕食の悩みが5分で解決した話</h3>
-                  <p class="readable">毎日の献立作成に疲れていませんか？福祉×AIクリエイターが、自作の「AI献立作成プロンプト」を徹底検証！AIとのリアルな対話ログ付きで、パーソナライズされた1週間分の献立と買い物リストが完成するまでを全公開します。</p>
-                </div>
-              </div>
-            </a>
-
-            <!-- 記事カード 7 -->
-            <a href="/blog/hakase-development-story.html" class="post-card-link fade-in">
-              <div class="post-card">
-                <div class="post-card-image">
-                  <img src="/img/blog/ogp-hakase-story_large.webp" alt="AI博士の開発背景を象徴するイメージイラスト" loading="lazy" width="300" height="169" />
-                </div>
-                <div class="post-card-content">
-                  <p class="post-card-date">2025.08.06</p>
-                  <h3 class="readable">【開発秘話】なぜ私は、福祉の現場で「AI博士」を創ったのか？</h3>
-                  <p class="readable">福祉×AIクリエイターが「AI博士の談話室」に込めた想いとは。就労支援の現場で見た「言葉にならない壁」を、テクノロジーでどう乗り越えようとしたのか。その開発背景と、こだわりの安全設計の全てを語ります。</p>
-                </div>
-              </div>
-            </a>
-
-            <!-- 記事カード 8 -->
-            <a href="/blog/rabbit-behavior-guide.html" class="post-card-link fade-in">
-              <div class="post-card">
-                <div class="post-card-image">
-                  <img src="/img/blog/ogp-rabbit-behavior_large.webp" alt="うさぎがリラックスして寝転がっている様子を、人が優しく見守っているイメージイラスト" loading="lazy" width="300" height="169" />
-                </div>
-                <div class="post-card-content">
-                  <p class="post-card-date">2025.08.05</p>
-                  <h3 class="readable">うさぎの気持ち、わかってる？【うさぎの習性まるわかりガイド】</h3>
-                  <p class="readable">うさぎの「足ダン」や「鼻ツン」、突然ゴロンと寝転がるのはなぜ？福祉×AIクリエイターが、うさぎの気持ちが手に取るようにわかる代表的な習性を徹底解説。静かなパートナーとの絆を深めるヒントがここにあります。</p>
-                </div>
-              </div>
-            </a>
-
-            <!-- 記事カード 9 -->
-            <a href="/blog/ai-recreation-welfare.html" class="post-card-link fade-in">
-              <div class="post-card">
-                <div class="post-card-image">
-                  <img src="/img/blog/ogp-ai-recreation_large.webp" alt="福祉施設でAIレクリエーションを楽しむ様子のイメージイラスト" loading="lazy" width="300" height="169" />
-                </div>
-                <div class="post-card-content">
-                  <p class="post-card-date">2025.08.05</p>
-                  <h3 class="readable">【コストゼロで実現】福祉施設のレクリエーションが変わる！AIお絵かき＆音楽セッション導入法</h3>
-                  <p class="readable">予算やアイデア不足に悩む福祉施設のレク担当者様へ。PC一台で【コストゼロ】から始められる「AIお絵かき」と「AI作曲」の具体的なやり方を解説。利用者の創造性を引き出し、マンネリを打破する新しいレクリエーションの形をご提案します。</p>
-                </div>
-              </div>
-            </a>
-
-            <!-- 記事カード 10 -->
-            <a href="/blog/goal-setting-for-ai-learning.html" class="post-card-link fade-in">
-              <div class="post-card">
-                <div class="post-card-image">
-                  <img src="/img/blog/ogp-goal-setting_large.webp" alt="AI学習の目標設定を示すイメージイラスト" loading="lazy" width="300" height="169" />
-                </div>
-                <div class="post-card-content">
-                  <p class="post-card-date">2025.08.04</p>
-                  <h3 class="readable">AI学習は「何を作るか」が9割。福祉の現場で見つけた、学びが続く目標設定のコツ</h3>
-                  <p class="readable">AI学習に挫折する原因は「目的の欠如」です。福祉×AIクリエイターが、就労支援の現場で見つけた、'作りたいもの'を原動力にする、学びが楽しく続く目標設定の3つのコツを実体験から解説します。</p>
-                </div>
-              </div>
-            </a>
-
-            <!-- 記事カード 11 -->
-            <a href="/blog/ai-tool-diagnostic-chart.html" class="post-card-link fade-in">
-              <div class="post-card">
-                <div class="post-card-image">
-                  <img src="/img/blog/ogp-ai-tool-chart_large.webp" alt="AIツール診断チャートのイメージイラスト" loading="lazy" width="300" height="169" />
-                </div>
-                <div class="post-card-content">
-                  <p class="post-card-date">2025.08.03</p>
-                  <h3 class="readable">もう迷わない！あなたにピッタリのAIツールが見つかる、目的別診断チャート</h3>
-                  <p class="readable">【AI初心者向け】ChatGPT, Gemini, Claude...結局どれがいいの？福祉×AIクリエイターが、あなたの目的に合った最適なAIツールを診断チャートで簡単にご紹介。ツールの選び方から、具体的な活用シーンまで、この記事一本で全てわかります。</p>
-                </div>
-              </div>
-            </a>
-
-            <!-- 記事カード 12 -->
-            <a href="/blog/report-making-travel-plan-with-ai.html" class="post-card-link fade-in">
-              <div class="post-card">
-                <div class="post-card-image">
-                  <img src="/img/blog/ogp-report-travel-plan_large.webp" alt="AIが旅行プランを提案しているイメージイラスト" loading="lazy" width="300" height="169" />
-                </div>
-                <div class="post-card-content">
-                  <p class="post-card-date">2025.08.02</p>
-                  <h3 class="readable">【実践レポ】AI旅行コンシェルジュに「夏の家族旅行」を丸投げしてみた</h3>
-                  <p class="readable">福祉×AIクリエイターが自作の「AI旅行計画プロンプト」を徹底検証！AIとの対話だけで、予算3万円の「夏の家族旅行プラン」は作れるのか？AIの驚くべき提案能力を、実際の対話ログ付きで全公開します。</p>
-                </div>
-              </div>
-            </a>
-
-            <!-- 記事カード 13 -->
-            <a href="/blog/announcing-ai-hakase.html" class="post-card-link fade-in">
-              <div class="post-card">
-                <div class="post-card-image">
-                  <img src="/img/prompt/ogp-hakase_large.webp" alt="研究室のドアを開けて優しく迎え入れるAI博士のイラスト" loading="lazy" width="300" height="169" />
-                </div>
-                <div class="post-card-content">
-                  <p class="post-card-date">2025.08.01</p>
-                  <h3 class="readable">【新機能】あなたの悩みに寄り添う「AI博士の談話室」を公開しました</h3>
-                  <p class="readable">福祉×AIの専門家が作った、悩み相談できる対話AI「AI博士」。思考の整理から心のモヤモヤまで、博士が優しく寄り添います。プライバシーが守られた安全な環境で、誰にも言えない悩みも安心して話せるチャットボットです。</p>
-                </div>
-              </div>
-            </a>
-
-            <!-- 記事カード 14 -->
-            <a href="/blog/making-this-site-with-ai.html" class="post-card-link fade-in">
-              <div class="post-card">
-                <div class="post-card-image">
-                  <img src="/img/blog/ogp-making-this-site_large.webp" alt="人間とAIロボットが協力してウェブサイトを制作しているイメージイラスト" loading="lazy" width="300" height="169" />
-                </div>
-                <div class="post-card-content">
-                  <p class="post-card-date">2025.07.31</p>
-                  <h3 class="readable">【制作秘話】このサイト、実はAIと作っています。</h3>
-                  <p class="readable">福祉×AIクリエイターが、自身の公式サイトをAIと共に制作する裏側を初公開！画像生成からブログ執筆、コーディングまで。AIを「共同制作者」として活用し、リソースの壁を超える新しいサイト制作術とは。</p>
-                </div>
-              </div>
-            </a>
-
-            <!-- 記事カード 15 -->
-            <a href="/blog/report-making-picture-book-with-ai.html" class="post-card-link fade-in">
-              <div class="post-card">
-                <div class="post-card-image">
-                  <img src="/img/blog/ehon-report-cover_large.webp" alt="大きな葉っぱの後ろから顔を出す、恥ずかしがり屋のキノコ「リリー」の絵本イラスト" loading="lazy" width="300" height="169" />
-                </div>
-                <div class="post-card-content">
-                  <p class="post-card-date">2025.07.30</p>
-                  <h3 class="readable">【実践レポ】自作プロンプトでAIに「友達」がテーマの絵本を作らせたら、感動の物語が生まれた話</h3>
-                  <p class="readable">福祉×AIクリエイターが自作の「知育絵本プロンプト」を徹底検証！AIとの対話で「友達」をテーマにした物語とイラストを共同制作した結果、心温まる一作が…。その全手順とAIの提案を公開します。</p>
-                </div>
-              </div>
-            </a>
-
-            <!-- 記事カード 16 -->
-            <a href="/blog/release-chatgpt-course.html" class="post-card-link fade-in">
-              <div class="post-card">
-                <div class="post-card-image">
-                  <img src="/img/blog/release-chatgpt-course_large.webp" alt="開かれた本からAIの世界へ道が続いているイメージイラスト" loading="lazy" width="300" height="169" />
-                </div>
-                <div class="post-card-content">
-                  <p class="post-card-date">2025.07.28</p>
-                  <h3 class="readable">AI学習、どこから始める？その答え、作りました。「ChatGPT & Gemini & Claude入門」講座、テキスト公開！</h3>
-                  <p class="readable">福祉×AIクリエイターが、初心者向けの無料AI入門講座を全文公開。「AI学習の始め方がわからない」を解決し、ChatGPT・Gemini・Claudeの使い方を学び、日常や仕事を効率化するプロンプト術を解説します。</p>
-                </div>
-              </div>
-            </a>
-
-            <!-- 記事カード 17 -->
-            <a href="/blog/how-to-customize-prompt.html" class="post-card-link fade-in">
-              <div class="post-card">
-                <div class="post-card-image">
-                  <img src="/img/blog/how-to-customize-prompt_large.webp" alt="プロンプトを改造して個性的な絵本を創り出すイメージイラスト" loading="lazy" width="300" height="169" />
-                </div>
-                <div class="post-card-content">
-                  <p class="post-card-date">2025.07.27</p>
-                  <h3 class="readable">【中級編】プロンプトを改造して、もっと個性的な絵本を作る方法</h3>
-                  <p class="readable">AIでの絵本作りを次のレベルへ。福祉×AIクリエイターが、プロンプトの設計図を理解し、主人公や絵のタッチを自由自在に改造する4つのテクニックを解説。あなただけの「魔法の呪文」で個性的なAIイラストを生み出せます。</p>
-                </div>
-              </div>
-            </a>
-
-            <!-- 記事カード 18 -->
-            <a href="/blog/how-to-prompt.html" class="post-card-link fade-in">
-              <div class="post-card">
-                <div class="post-card-image">
-                  <img src="/img/blog/how-to-prompt_large.webp" alt="AIを使って絵本を作っているイメージのイラスト" loading="lazy" width="300" height="169" />
-                </div>
-                <div class="post-card-content">
-                  <p class="post-card-date">2025.07.24</p>
-                  <h3 class="readable">【AI初心者向け】コピペで簡単！「自分だけの絵本」の作り方</h3>
-                  <p class="readable">AI初心者でも大丈夫！福祉×AIクリエイターが、プロンプトのコピペだけで作れる「自分だけの絵本」の作り方を4ステップで優しく解説。AIイラストの基本から物語作りまで、具体的にガイドします。</p>
-                </div>
-              </div>
-            </a>
-
-            <!-- 記事カード 19 -->
-            <a href="/blog/how-to-create-a-4-step-learning-roadmap-with-ai.html" class="post-card-link fade-in">
-              <div class="post-card">
-                <div class="post-card-image">
-                  <img src="/img/blog/how-to-create-a-4-step-learning-roadmap-with-ai_large.webp" alt="照明から光の粒が地図に降り注ぐイラスト" loading="lazy" width="300" height="169" />
-                </div>
-                <div class="post-card-content">
-                  <p class="post-card-date">2025.07.22</p>
-                  <h3 class="readable">【福祉×AI実体験】AI学習ロードマップの作り方｜「何から始める？」を解決</h3>
-                  <p class="readable">福祉現場の実体験から生まれた、初心者向けのAI学習ロードマップ。福祉×AIクリエイターが、専門知識ゼロから自分だけの学習計画を立てる4ステップを解説。「何から始めれば…」と悩むあなたの独学を応援します。</p>
-                </div>
-              </div>
-            </a>
-
-            <!-- 記事カード 20 -->
-            <a href="/blog/a-magic-wand-called-ai.html" class="post-card-link fade-in">
-              <div class="post-card">
-                <div class="post-card-image">
-                  <img src="/img/blog/a-magic-wand-called-ai_large.webp" alt="AIという魔法の杖を握る手のイラスト" loading="lazy" width="300" height="169" />
-                </div>
-                <div class="post-card-content">
-                  <p class="post-card-date">2025.07.20</p>
-                  <h3 class="readable">福祉の現場で見つけた、AIという名の「魔法の杖」。私の実体験をお話しします</h3>
-                  <p class="readable">福祉×AIクリエイターの原点。就労支援B型事業所での実体験から、AIという「魔法の杖」が「できる」を生み出し、創造の喜びに繋がった物語。この記事が、福祉の現場で新しい一歩を踏み出したいあなたを応援します。</p>
-                </div>
-              </div>
-            </a>
+            <a href="/blog/ai-learning-complete-guide.html" class="post-card-link fade-in"><div class="post-card"><div class="post-card-image"><img src="/img/blog/ogp-ai-learning-guide_large.webp" alt="AI学習の完全ガイド"></div><div class="post-card-content"><h3>🔰 【完全ガイド】AI学習の始め方</h3><p>AI学習に挫折しないための完全ロードマップ。知識ゼロからAIクリエイターになるための全ステップを案内します。</p></div></div></a>
+            <a href="/blog/how-to-create-a-4-step-learning-roadmap-with-ai.html" class="post-card-link fade-in"><div class="post-card"><div class="post-card-image"><img src="/img/blog/how-to-create-a-4-step-learning-roadmap-with-ai_large.webp" alt="AI学習ロードマップの作り方"></div><div class="post-card-content"><h3>🔰 【福祉×AI実体験】AI学習ロードマップの作り方</h3><p>専門知識ゼロから自分だけの学習計画を立てる4ステップを解説。「何から始める？」と悩むあなたの独学を応援します。</p></div></div></a>
+            <a href="/blog/goal-setting-for-ai-learning.html" class="post-card-link fade-in"><div class="post-card"><div class="post-card-image"><img src="/img/blog/ogp-goal-setting_large.webp" alt="AI学習の目標設定"></div><div class="post-card-content"><h3>🔰 AI学習は「何を作るか」が9割。学びが続く目標設定のコツ</h3><p>学びが楽しく続く、"作りたいもの"を原動力にする目標設定の3つのコツを実体験から解説します。</p></div></div></a>
           </div>
+          <h3 class="course-step-title">グループ②：「冒険の不安」を「ワクワク」に変える記事</h3>
+          <div class="portfolio-grid">
+            <a href="/blog/15min-ai-habit.html" class="post-card-link fade-in"><div class="post-card"><div class="post-card-image"><img src="/img/blog/ogp-15min-ai-habit_large.webp" alt="15分のAI習慣"></div><div class="post-card-content"><h3>🔰 1日15分から始めるAI習慣。無理なく、楽しく、あなたの「できる」を増やす方法</h3><p>AI学習、時間がない、難しいと感じていませんか？1日15分、遊び感覚でAIと友達になれる新しい習慣の始め方をご紹介します。</p></div></div></a>
+            <a href="/blog/ai-illustration-overcoming-perfectionism.html" class="post-card-link fade-in"><div class="post-card"><div class="post-card-image"><img src="/img/blog/ogp-ai-illustration-perfectionism_large.webp" alt="AIイラストと完璧主義"></div><div class="post-card-content"><h3>🔰 AIイラストで挫折する人の共通点とは？「完璧」を目指さない、ゆるふわ継続術</h3><p>AIイラスト、楽しいけど続かない…。その原因は「完璧主義」かも。挫折しないための思考法と、ゆるふわ継続術を解説します。</p></div></div></a>
+          </div>
+          <h3 class="course-step-title">グループ③：「冒険の始まり」を告げる物語</h3>
+          <div class="portfolio-grid">
+            <a href="/blog/hakase-development-story.html" class="post-card-link fade-in"><div class="post-card"><div class="post-card-image"><img src="/img/blog/ogp-hakase-story_large.webp" alt="AI博士の開発秘話"></div><div class="post-card-content"><h3>🔰 【開発秘話】なぜ私は、福祉の現場で「AI博士」を創ったのか？</h3><p>就労支援の現場で見た「言葉にならない壁」を、テクノロジーでどう乗り越えようとしたのか。その開発背景を語ります。</p></div></div></a>
+            <a href="/blog/making-this-site-with-ai.html" class="post-card-link fade-in"><div class="post-card"><div class="post-card-image"><img src="/img/blog/ogp-making-this-site_large.webp" alt="AIとのサイト制作"></div><div class="post-card-content"><h3>🔰 このサイト、実はAIと一緒に創りました。</h3><p>企画からデザイン、コーディング、文章まで。AIを相棒に、このWebサイトが生まれるまでの全制作工程と思考のログを公開します。</p></div></div></a>
+          </div>
+            <h2 class="section-title fade-in readable" style="margin-top: 80px;">すべての記事一覧</h2>
+            <div class="portfolio-grid">
+              <a href="/blog/announcing-chromapadou" class="post-card-link fade-in">
+                <div class="post-card">
+                  <div class="post-card-image">
+                    <img src="/img/blog/ogp-chromapadou.webp" alt="「くろまぱ堂」始動の告知イメージ" loading="lazy" width="300" height="169" />
+                  </div>
+                  <div class="post-card-content">
+                    <p class="post-card-date">2025.09.02</p>
+                    <h3 class="readable">【重大発表】Chromachannelとあいこぱ堂の共同運営「くろまぱ堂」、始動します！</h3>
+                    <p class="readable">福祉×AIクリエイター「Chromachannel」と「あいこぱ堂」が、新しいYouTubeチャンネル「くろまぱ堂」を共同で運営開始！私たちの新しい活動の拠点です。</p>
+                  </div>
+                </div>
+              </a>
+              <a href="/blog/ai-line-stamp-rejection-guide.html" class="post-card-link fade-in">
+                <div class="post-card">
+                  <div class="post-card-image">
+                    <img src="/img/ogp-lesson6_large.webp" alt="AIでLINEスタンプを制作するイメージイラスト" loading="lazy" width="300" height="169" />
+                  </div>
+                  <div class="post-card-content">
+                    <p class="post-card-date">2025.08.27</p>
+                    <h3 class="readable">AIでLINEスタンプを作りたいあなたへ：審査でリジェクトされないための4つの鉄則</h3>
+                    <p class="readable">AIで作ったスタンプが審査落ち…そんな悲劇を防ぐ4つの鉄則を解説。著作権やリジェクト理由、加工のコツまで、安心して販売するためのヒントが満載です。</p>
+                  </div>
+                </div>
+              </a>
+              <a href="/blog/15min-ai-habit.html" class="post-card-link fade-in">
+                <div class="post-card">
+                  <div class="post-card-image">
+                    <img src="/img/blog/ogp-15min-ai-habit_large.webp" alt="15分の砂時計とAIロボットが植物に水をやるイラスト" loading="lazy" width="300" height="169" />
+                  </div>
+                  <div class="post-card-content">
+                    <p class="post-card-date">2025.08.23</p>
+                    <h3 class="readable">1日15分から始めるAI習慣。無理なく、楽しく、あなたの「できる」を増やす方法</h3>
+                    <p class="readable">AI学習、時間がない、難しいと感じていませんか？1日15分、遊び感覚でAIと友達になれる新しい習慣の始め方をご紹介します。</p>
+                  </div>
+                </div>
+              </a>
+              <a href="/blog/ai-illustration-overcoming-perfectionism.html" class="post-card-link fade-in">
+                <div class="post-card">
+                  <div class="post-card-image">
+                    <img src="/img/blog/ogp-ai-illustration-perfectionism_large.webp" alt="AIイラストで挫折しないためのヒントを示すイラスト" loading="lazy" width="300" height="169" />
+                  </div>
+                  <div class="post-card-content">
+                    <p class="post-card-date">2025.08.16</p>
+                    <h3 class="readable">AIイラストで挫折する人の共通点とは？「完璧」を目指さない、ゆるふわ継続術</h3>
+                    <p class="readable">AIイラスト、楽しいけど続かない…。その原因は「完璧主義」かも。挫折しないための思考法と、ゆるふわ継続術を解説します。</p>
+                  </div>
+                </div>
+              </a>
+              <a href="/blog/ai-learning-complete-guide.html" class="post-card-link fade-in">
+                <div class="post-card">
+                  <div class="post-card-image">
+                    <img src="/img/blog/ogp-ai-learning-guide_large.webp" alt="AI学習の完全ロードマップを示すイメージイラスト" loading="lazy" width="300" height="169" />
+                  </div>
+                  <div class="post-card-content">
+                    <p class="post-card-date">2025.08.12</p>
+                    <h3 class="readable">【完全ガイド】AI学習の始め方、この1ページで全てが分かる</h3>
+                    <p class="readable">AI学習に挫折しないための完全ロードマップ。「AIとは何か？」から、具体的な作品作り、そして仕事への応用まで、知識ゼロからAIクリエイターになるための全ステップを、当サイトの無料講座で体系的に学べます。</p>
+                  </div>
+                </div>
+              </a>
+              <a href="/blog/fuwamoco-development-story.html" class="post-card-link fade-in">
+                <div class="post-card">
+                  <div class="post-card-image">
+                    <img src="/img/blog/ogp-fuwamoco-story_large.webp" alt="Fuwamoco PROJECTの開発背景を象徴するイメージイラスト" loading="lazy" width="300" height="169" />
+                  </div>
+                  <div class="post-card-content">
+                    <p class="post-card-date">2025.08.12</p>
+                    <h3 class="readable">【開発秘話】なぜ私は、架空のNPO法人サイト「Fuwamoco PROJECT」を創ったのか？</h3>
+                    <p class="readable">福祉×AIクリエイターの原点。就労支援の課題として生まれたポートフォリオサイト「Fuwamoco PROJECT」に込めた、うさぎと福祉への想い、そしてAIとの共同制作の舞台裏を、制作者自らが語ります。</p>
+                  </div>
+                </div>
+              </a>
+              <a href="/blog/announcing-full-ai-curriculum.html" class="post-card-link fade-in">
+                <div class="post-card">
+                  <div class="post-card-image">
+                    <img src="/img/blog/ogp-full-curriculum_large.webp" alt="完成した壮大なAI学習カリキュラムを象徴するイメージイラスト" loading="lazy" width="300" height="169" />
+                  </div>
+                  <div class="post-card-content">
+                    <p class="post-card-date">2025.08.09</p>
+                    <h3 class="readable">【講座完成】AI実践講座、全24講座+付録が遂に完成しました！</h3>
+                    <p class="readable">入門からビジネス実践まで、AIスキルを体系的に学べる全24講座+付録が遂に完成！この講座は、皆様の声と共に進化し続ける「生きている教材」です。AIと共に、あなたの「できる」を、もっと遠くまで広げませんか？</p>
+                  </div>
+                </div>
+              </a>
+              <a href="/blog/announcing-new-ai-courses.html" class="post-card-link fade-in">
+                <div class="post-card">
+                  <div class="post-card-image">
+                    <img src="/img/blog/ogp-new-courses_large.webp" alt="新しいAI講座の開設をお知らせするイメージイラスト" loading="lazy" width="300" height="169" />
+                  </div>
+                  <div class="post-card-content">
+                    <p class="post-card-date">2025.08.08</p>
+                    <h3 class="readable">【講座リリース】「AI教養編」と「画像生成AI編」を新規開講しました！</h3>
+                    <p class="readable">無料AI学習講座に、待望の2コースが新登場！AIの仕組みを学ぶ「教養編」と、言葉で絵を描く「画像生成AI編」。あなたの知的好奇心と創造性を刺激する、新しい学びの旅を始めませんか？</p>
+                  </div>
+                </div>
+              </a>
+              <a href="/blog/ai-meal-planning-report.html" class="post-card-link fade-in">
+                <div class="post-card">
+                  <div class="post-card-image">
+                    <img src="/img/blog/ogp-ai-meal-planning_large.webp" alt="AIが献立プランを提案しているイメージイラスト" loading="lazy" width="300" height="169" />
+                  </div>
+                  <div class="post-card-content">
+                    <p class="post-card-date">2025.08.07</p>
+                    <h3 class="readable">【時短レシピ】AI献立プロンプトを使ったら、1週間の夕食の悩みが5分で解決した話</h3>
+                    <p class="readable">毎日の献立作成に疲れていませんか？福祉×AIクリエイターが、自作の「AI献立作成プロンプト」を徹底検証！AIとのリアルな対話ログ付きで、パーソナライズされた1週間分の献立と買い物リストが完成するまでを全公開します。</p>
+                  </div>
+                </div>
+              </a>
+              <a href="/blog/hakase-development-story.html" class="post-card-link fade-in">
+                <div class="post-card">
+                  <div class="post-card-image">
+                    <img src="/img/blog/ogp-hakase-story_large.webp" alt="AI博士の開発背景を象徴するイメージイラスト" loading="lazy" width="300" height="169" />
+                  </div>
+                  <div class="post-card-content">
+                    <p class="post-card-date">2025.08.06</p>
+                    <h3 class="readable">【開発秘話】なぜ私は、福祉の現場で「AI博士」を創ったのか？</h3>
+                    <p class="readable">福祉×AIクリエイターが「AI博士の談話室」に込めた想いとは。就労支援の現場で見た「言葉にならない壁」を、テクノロジーでどう乗り越えようとしたのか。その開発背景と、こだわりの安全設計の全てを語ります。</p>
+                  </div>
+                </div>
+              </a>
+              <a href="/blog/rabbit-behavior-guide.html" class="post-card-link fade-in">
+                <div class="post-card">
+                  <div class="post-card-image">
+                    <img src="/img/blog/ogp-rabbit-behavior_large.webp" alt="うさぎがリラックスして寝転がっている様子を、人が優しく見守っているイメージイラスト" loading="lazy" width="300" height="169" />
+                  </div>
+                  <div class="post-card-content">
+                    <p class="post-card-date">2025.08.05</p>
+                    <h3 class="readable">うさぎの気持ち、わかってる？【うさぎの習性まるわかりガイド】</h3>
+                    <p class="readable">うさぎの「足ダン」や「鼻ツン」、突然ゴロンと寝転がるのはなぜ？福祉×AIクリエイターが、うさぎの気持ちが手に取るようにわかる代表的な習性を徹底解説。静かなパートナーとの絆を深めるヒントがここにあります。</p>
+                  </div>
+                </div>
+              </a>
+              <a href="/blog/ai-recreation-welfare.html" class="post-card-link fade-in">
+                <div class="post-card">
+                  <div class="post-card-image">
+                    <img src="/img/blog/ogp-ai-recreation_large.webp" alt="福祉施設でAIレクリエーションを楽しむ様子のイメージイラスト" loading="lazy" width="300" height="169" />
+                  </div>
+                  <div class="post-card-content">
+                    <p class="post-card-date">2025.08.05</p>
+                    <h3 class="readable">【コストゼロで実現】福祉施設のレクリエーションが変わる！AIお絵かき＆音楽セッション導入法</h3>
+                    <p class="readable">予算やアイデア不足に悩む福祉施設のレク担当者様へ。PC一台で【コストゼロ】から始められる「AIお絵かき」と「AI作曲」の具体的なやり方を解説。利用者の創造性を引き出し、マンネリを打破する新しいレクリエーションの形をご提案します。</p>
+                  </div>
+                </div>
+              </a>
+              <a href="/blog/goal-setting-for-ai-learning.html" class="post-card-link fade-in">
+                <div class="post-card">
+                  <div class="post-card-image">
+                    <img src="/img/blog/ogp-goal-setting_large.webp" alt="AI学習の目標設定を示すイメージイラスト" loading="lazy" width="300" height="169" />
+                  </div>
+                  <div class="post-card-content">
+                    <p class="post-card-date">2025.08.04</p>
+                    <h3 class="readable">AI学習は「何を作るか」が9割。福祉の現場で見つけた、学びが続く目標設定のコツ</h3>
+                    <p class="readable">AI学習に挫折する原因は「目的の欠如」です。福祉×AIクリエイターが、就労支援の現場で見つけた、'作りたいもの'を原動力にする、学びが楽しく続く目標設定の3つのコツを実体験から解説します。</p>
+                  </div>
+                </div>
+              </a>
+              <a href="/blog/ai-tool-diagnostic-chart.html" class="post-card-link fade-in">
+                <div class="post-card">
+                  <div class="post-card-image">
+                    <img src="/img/blog/ogp-ai-tool-chart_large.webp" alt="AIツール診断チャートのイメージイラスト" loading="lazy" width="300" height="169" />
+                  </div>
+                  <div class="post-card-content">
+                    <p class="post-card-date">2025.08.03</p>
+                    <h3 class="readable">もう迷わない！あなたにピッタリのAIツールが見つかる、目的別診断チャート</h3>
+                    <p class="readable">【AI初心者向け】ChatGPT, Gemini, Claude...結局どれがいいの？福祉×AIクリエイターが、あなたの目的に合った最適なAIツールを診断チャートで簡単にご紹介。ツールの選び方から、具体的な活用シーンまで、この記事一本で全てわかります。</p>
+                  </div>
+                </div>
+              </a>
+              <a href="/blog/report-making-travel-plan-with-ai.html" class="post-card-link fade-in">
+                <div class="post-card">
+                  <div class="post-card-image">
+                    <img src="/img/blog/ogp-report-travel-plan_large.webp" alt="AIが旅行プランを提案しているイメージイラスト" loading="lazy" width="300" height="169" />
+                  </div>
+                  <div class="post-card-content">
+                    <p class="post-card-date">2025.08.02</p>
+                    <h3 class="readable">【実践レポ】AI旅行コンシェルジュに「夏の家族旅行」を丸投げしてみた</h3>
+                    <p class="readable">福祉×AIクリエイターが自作の「AI旅行計画プロンプト」を徹底検証！AIとの対話だけで、予算3万円の「夏の家族旅行プラン」は作れるのか？AIの驚くべき提案能力を、実際の対話ログ付きで全公開します。</p>
+                  </div>
+                </div>
+              </a>
+              <a href="/blog/announcing-ai-hakase.html" class="post-card-link fade-in">
+                <div class="post-card">
+                  <div class="post-card-image">
+                    <img src="/img/prompt/ogp-hakase_large.webp" alt="研究室のドアを開けて優しく迎え入れるAI博士のイラスト" loading="lazy" width="300" height="169" />
+                  </div>
+                  <div class="post-card-content">
+                    <p class="post-card-date">2025.08.01</p>
+                    <h3 class="readable">【新機能】あなたの悩みに寄り添う「AI博士の談話室」を公開しました</h3>
+                    <p class="readable">福祉×AIの専門家が作った、悩み相談できる対話AI「AI博士」。思考の整理から心のモヤモヤまで、博士が優しく寄り添います。プライバシーが守られた安全な環境で、誰にも言えない悩みも安心して話せるチャットボットです。</p>
+                  </div>
+                </div>
+              </a>
+              <a href="/blog/making-this-site-with-ai.html" class="post-card-link fade-in">
+                <div class="post-card">
+                  <div class="post-card-image">
+                    <img src="/img/blog/ogp-making-this-site_large.webp" alt="人間とAIロボットが協力してウェブサイトを制作しているイメージイラスト" loading="lazy" width="300" height="169" />
+                  </div>
+                  <div class="post-card-content">
+                    <p class="post-card-date">2025.07.31</p>
+                    <h3 class="readable">【制作秘話】このサイト、実はAIと作っています。</h3>
+                    <p class="readable">福祉×AIクリエイターが、自身の公式サイトをAIと共に制作する裏側を初公開！画像生成からブログ執筆、コーディングまで。AIを「共同制作者」として活用し、リソースの壁を超える新しいサイト制作術とは。</p>
+                  </div>
+                </div>
+              </a>
+              <a href="/blog/report-making-picture-book-with-ai.html" class="post-card-link fade-in">
+                <div class="post-card">
+                  <div class="post-card-image">
+                    <img src="/img/blog/ehon-report-cover_large.webp" alt="大きな葉っぱの後ろから顔を出す、恥ずかしがり屋のキノコ「リリー」の絵本イラスト" loading="lazy" width="300" height="169" />
+                  </div>
+                  <div class="post-card-content">
+                    <p class="post-card-date">2025.07.30</p>
+                    <h3 class="readable">【実践レポ】自作プロンプトでAIに「友達」がテーマの絵本を作らせたら、感動の物語が生まれた話</h3>
+                    <p class="readable">福祉×AIクリエイターが自作の「知育絵本プロンプト」を徹底検証！AIとの対話で「友達」をテーマにした物語とイラストを共同制作した結果、心温まる一作が…。その全手順とAIの提案を公開します。</p>
+                  </div>
+                </div>
+              </a>
+              <a href="/blog/release-chatgpt-course.html" class="post-card-link fade-in">
+                <div class="post-card">
+                  <div class="post-card-image">
+                    <img src="/img/blog/release-chatgpt-course_large.webp" alt="開かれた本からAIの世界へ道が続いているイメージイラスト" loading="lazy" width="300" height="169" />
+                  </div>
+                  <div class="post-card-content">
+                    <p class="post-card-date">2025.07.28</p>
+                    <h3 class="readable">AI学習、どこから始める？その答え、作りました。「ChatGPT & Gemini & Claude入門」講座、テキスト公開！</h3>
+                    <p class="readable">福祉×AIクリエイターが、初心者向けの無料AI入門講座を全文公開。「AI学習の始め方がわからない」を解決し、ChatGPT・Gemini・Claudeの使い方を学び、日常や仕事を効率化するプロンプト術を解説します。</p>
+                  </div>
+                </div>
+              </a>
+              <a href="/blog/how-to-customize-prompt.html" class="post-card-link fade-in">
+                <div class="post-card">
+                  <div class="post-card-image">
+                    <img src="/img/blog/how-to-customize-prompt_large.webp" alt="プロンプトを改造して個性的な絵本を創り出すイメージイラスト" loading="lazy" width="300" height="169" />
+                  </div>
+                  <div class="post-card-content">
+                    <p class="post-card-date">2025.07.27</p>
+                    <h3 class="readable">【中級編】プロンプトを改造して、もっと個性的な絵本を作る方法</h3>
+                    <p class="readable">AIでの絵本作りを次のレベルへ。福祉×AIクリエイターが、プロンプトの設計図を理解し、主人公や絵のタッチを自由自在に改造する4つのテクニックを解説。あなただけの「魔法の呪文」で個性的なAIイラストを生み出せます。</p>
+                  </div>
+                </div>
+              </a>
+              <a href="/blog/how-to-prompt.html" class="post-card-link fade-in">
+                <div class="post-card">
+                  <div class="post-card-image">
+                    <img src="/img/blog/how-to-prompt_large.webp" alt="AIを使って絵本を作っているイメージのイラスト" loading="lazy" width="300" height="169" />
+                  </div>
+                  <div class="post-card-content">
+                    <p class="post-card-date">2025.07.24</p>
+                    <h3 class="readable">【AI初心者向け】コピペで簡単！「自分だけの絵本」の作り方</h3>
+                    <p class="readable">AI初心者でも大丈夫！福祉×AIクリエイターが、プロンプトのコピペだけで作れる「自分だけの絵本」の作り方を4ステップで優しく解説。AIイラストの基本から物語作りまで、具体的にガイドします。</p>
+                  </div>
+                </div>
+              </a>
+              <a href="/blog/how-to-create-a-4-step-learning-roadmap-with-ai.html" class="post-card-link fade-in">
+                <div class="post-card">
+                  <div class="post-card-image">
+                    <img src="/img/blog/how-to-create-a-4-step-learning-roadmap-with-ai_large.webp" alt="照明から光の粒が地図に降り注ぐイラスト" loading="lazy" width="300" height="169" />
+                  </div>
+                  <div class="post-card-content">
+                    <p class="post-card-date">2025.07.22</p>
+                    <h3 class="readable">【福祉×AI実体験】AI学習ロードマップの作り方｜「何から始める？」を解決</h3>
+                    <p class="readable">福祉現場の実体験から生まれた、初心者向けのAI学習ロードマップ。福祉×AIクリエイターが、専門知識ゼロから自分だけの学習計画を立てる4ステップを解説。「何から始めれば…」と悩むあなたの独学を応援します。</p>
+                  </div>
+                </div>
+              </a>
+              <a href="/blog/a-magic-wand-called-ai.html" class="post-card-link fade-in">
+                <div class="post-card">
+                  <div class="post-card-image">
+                    <img src="/img/blog/a-magic-wand-called-ai_large.webp" alt="AIという魔法の杖を握る手のイラスト" loading="lazy" width="300" height="169" />
+                  </div>
+                  <div class="post-card-content">
+                    <p class="post-card-date">2025.07.20</p>
+                    <h3 class="readable">福祉の現場で見つけた、AIという名の「魔法の杖」。私の実体験をお話しします</h3>
+                    <p class="readable">福祉×AIクリエイターの原点。就労支援B型事業所での実体験から、AIという「魔法の杖」が「できる」を生み出し、創造の喜びに繋がった物語。この記事が、福祉の現場で新しい一歩を踏み出したいあなたを応援します。</p>
+                  </div>
+                </div>
+              </a>
+            </div>
         </div>
       </section>
     </main>
-
     <!-- フッターのプレースホルダー -->
     <div id="footer-placeholder"></div>
 
