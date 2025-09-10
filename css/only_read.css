@@ -784,6 +784,25 @@ color: #333;
     transform: translateY(-2px);
 }
 
+.next-lesson-section .cta-button {
+    margin-top: 24px;
+    text-align: center;
+    display: inline-block;
+    padding: 10px 25px;
+    border: 2px solid var(--primary-color-start);
+    color: var(--primary-color-start);
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.next-lesson-section .cta-button:hover {
+    background-color: var(--primary-color-start);
+    color: white;
+    transform: translateY(-2px);
+}
+
 /* スマホ用の調整 */
 @media (max-width: 768px) {
     .ai-hakase-cta {

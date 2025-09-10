@@ -91,8 +91,6 @@
                 </p>
             </div>
             
-            <!-- ★★★ ここから追加 ★★★ -->
-            <!-- AI博士 相談セクション -->
             <section class="ai-hakase-cta">
                 <div class="cta-icon">
                     <img src="/portfolio/hakase/img/ogp-hakase.webp" alt="AI博士のアイコン">
@@ -106,11 +104,9 @@
                 </div>
             </section>
 
-            <!-- 関連記事セクション -->
             <section class="related-posts">
                 <h2 class="related-posts-title readable" data-speech="次はこちらの記事もいかがでしょうか。あわせて読みたい記事。">あわせて読みたい記事</h2>
                 <div class="post-grid">
-                    <!-- 関連記事カード 1: ChromaのYouTubeチャンネル -->
                     <a href="https://www.youtube.com/@chroma0224" target="_blank" rel="noopener noreferrer" class="post-card-link">
                         <div class="post-card">
                             <div class="post-card-image"><img src="/img/portfolio/pc_main_large.webp" alt="YouTubeチャンネル「ChromaのPC学習部屋」"></div>
@@ -120,17 +116,15 @@
                             </div>
                         </div>
                     </a>
-                    <!-- 関連記事カード 2: AI動画制作入門講座 -->
                     <a href="/learn/learn_lesson16.html" class="post-card-link">
                         <div class="post-card">
-                            <div class="post-card-image"><img src="/img/ogp-lesson16_large.webp" alt="動画制作入門講座"></div>
+                            <div class="post-card-image"><img src="/img/opg-lesson16_large.webp" alt="動画制作入門講座"></div>
                             <div class="post-card-content">
                                 <h3 class="readable">【無料講座】AI動画制作入門 (YMM4マスター編)</h3>
                                 <p>カット編集、テロップ、BGMの法則まで。無料ソフトを使い、あなたの創造力を一本の物語へと昇華させます。</p>
                             </div>
                         </div>
                     </a>
-                    <!-- 関連記事カード 3: YouTubeチャンネル立ち上げ講座 -->
                     <a href="/learn/learn_lesson18.html" class="post-card-link">
                         <div class="post-card">
                             <div class="post-card-image"><img src="/img/ogp-lesson18_large.webp" alt="YouTubeチャンネル立ち上げ講座"></div>
@@ -160,7 +154,6 @@
             </footer>
         </article>
 
-        <!-- Disqusコメント欄 -->
         <section class="comment-section">
             <h2>ご意見・ご感想</h2>
             <div id="disqus_thread"></div>
@@ -178,20 +171,19 @@
             </script>
             <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </section>
-        <!-- ★★★ 追加ここまで ★★★ -->
     </main>
 
-    <!-- フッターをここに読み込む -->
+    <!-- フッターのプレースホルダー -->
     <div id="footer-placeholder"></div>
 
     <!-- サイト共通の読み上げ停止ボタン -->
     <div id="global-speech-control" class="global-speech-control hidden">
-      <button id="global-speech-stop-btn" title="読み上げを停止">
-        <i class="fas fa-stop"></i>
+      <button id="global-speech-stop-btn" title="読み上げを停止" aria-label="読み上げを停止">
+        <i class="fas fa-stop" aria-hidden="true"></i>
       </button>
     </div>
 
     <!-- JavaScriptファイルの読み込み -->
     <script src="/javascript/bundle.min.js" defer></script>
-</body>
+  </body>
 </html>

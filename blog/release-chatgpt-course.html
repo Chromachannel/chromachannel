@@ -178,10 +178,10 @@
         </div>
 
         <!-- AI博士 相談セクション -->
-        <section class="ai-hakase-cta">
+<section class="ai-hakase-cta">
           <div class="cta-icon">
             <img
-              src=portfolio/hakase/img/ogp-hakase.webp"
+              src="/portfolio/hakase/img/ogp-hakase.webp"
               alt="AI博士のアイコン"
             />
           </div>
@@ -191,14 +191,13 @@
               この記事を読んで生まれた疑問や、さらに深掘りしたい点はありますか？AI博士が、あなたの質問に優しく、そして詳しくお答えします。
             </p>
             <div class="cta-button-wrapper">
-              <a href=portfolio/hakase/hakase.html" class="cta-button"
+              <a href="/portfolio/hakase/hakase.html" class="cta-button"
                 >AI博士の談話室へ相談に行く</a
               >
             </div>
           </div>
         </section>
 
-        <!-- 関連記事セクション -->
         <section class="related-posts">
           <h2
             class="related-posts-title readable"
@@ -207,15 +206,29 @@
             あわせて読みたい記事
           </h2>
           <div class="post-grid">
-            <!-- 関連記事カード 1: AIツール診断チャート -->
+            <a href="/learn/learn_lesson2.html" class="post-card-link">
+              <div class="post-card">
+                <div class="post-card-image">
+                  <img src="/img/ogp-lesson2_large.webp" alt="対話AI入門講座" />
+                </div>
+                <div class="post-card-content">
+                  <h3 class="readable">
+                    【無料講座】ChatGPT・Gemini・Claude入門
+                  </h3>
+                  <p>
+                    AIとの「付き合い方」を学び、日常や仕事をアップデートするための「思考法」をインストールします。
+                  </p>
+                </div>
+              </div>
+            </a>
             <a
-              href=blog/ai-tool-diagnostic-chart.html"
+              href="/blog/ai-tool-diagnostic-chart.html"
               class="post-card-link"
             >
               <div class="post-card">
                 <div class="post-card-image">
                   <img
-                    src=img/blog/ogp-ai-tool-chart_large.webp"
+                    src="/img/blog/ogp-ai-tool-chart_large.webp"
                     alt="AIツール診断チャート"
                   />
                 </div>
@@ -224,21 +237,19 @@
                     もう迷わない！あなたにピッタリのAIツールが見つかる、目的別診断チャート
                   </h3>
                   <p>
-                    ChatGPT, Gemini,
-                    Claude...結局どれがいいの？あなたの目的に合った最適なAIツールを診断チャートで簡単にご紹介。
+                    あなたの目的に合った最適なAIツールを診断チャートで簡単にご紹介。ツールの選び方から解説します。
                   </p>
                 </div>
               </div>
             </a>
-            <!-- 関連記事カード 2: AI学習の目標設定 -->
             <a
-              href=blog/goal-setting-for-ai-learning.html"
+              href="/blog/goal-setting-for-ai-learning.html"
               class="post-card-link"
             >
               <div class="post-card">
                 <div class="post-card-image">
                   <img
-                    src=img/blog/ogp-goal-setting_large.webp"
+                    src="/img/blog/ogp-goal-setting_large.webp"
                     alt="AI学習の目標設定"
                   />
                 </div>
@@ -252,42 +263,35 @@
                 </div>
               </div>
             </a>
-            <!-- 関連記事カード 3: AI学習完全ガイド -->
-            <a
-              href=blog/ai-learning-complete-guide.html"
-              class="post-card-link"
-            >
-              <div class="post-card">
-                <div class="post-card-image">
-                  <img
-                    src=img/blog/ogp-ai-learning-guide_large.webp"
-                    alt="AI学習の完全ガイド"
-                  />
-                </div>
-                <div class="post-card-content">
-                  <h3 class="readable">
-                    【完全ガイド】AI学習の始め方、この1ページで全てが分かる
-                  </h3>
-                  <p>
-                    AI学習に挫折しないための完全ロードマップ。知識ゼロからAIクリエイターになるための全ステップを案内します。
-                  </p>
-                </div>
-              </div>
-            </a>
           </div>
         </section>
 
         <footer class="article-footer">
-          <div class="author-profile-box">
+          <div class="author-profile-box no-avatar">
             <div class="author-info">
               <h4>この記事を書いた人：福祉×AIクリエイター 山本 倫久</h4>
               <p>
                 就労支援B型事業所の利用者としての実体験を基に、AI技術で福祉の現場に新しい「できる」と「楽しい」を届けることをミッションとして活動中。
               </p>
+              <div class="author-social">
+                <a
+                  href="https://x.com/ChromachannelAI"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >X (旧Twitter)</a
+                >
+                |
+                <a
+                  href="https://github.com/Chromachannel"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+              </div>
             </div>
           </div>
           <div class="back-to-blog-links">
-            <a href=blog.html" class="back-link">← ブログ一覧に戻る</a>
+            <a href="/blog.html" class="back-link">← ブログ一覧に戻る</a>
           </div>
         </footer>
       </article>
@@ -318,15 +322,17 @@
       </section>
     </main>
 
-    <!-- フッターをここに読み込む -->
+    <!-- フッターのプレースホルダー -->
     <div id="footer-placeholder"></div>
 
+    <!-- サイト共通の読み上げ停止ボタン -->
     <div id="global-speech-control" class="global-speech-control hidden">
-      <button id="global-speech-stop-btn" title="読み上げを停止">
-        <i class="fas fa-stop"></i>
+      <button id="global-speech-stop-btn" title="読み上げを停止" aria-label="読み上げを停止">
+        <i class="fas fa-stop" aria-hidden="true"></i>
       </button>
     </div>
 
-    <script src="javascript/bundle.min.js" defer></script>
+    <!-- JavaScriptファイルの読み込み -->
+    <script src="/javascript/bundle.min.js" defer></script>
   </body>
 </html>

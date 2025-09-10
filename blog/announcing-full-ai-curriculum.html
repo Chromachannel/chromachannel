@@ -167,8 +167,7 @@
           </p>
         </div>
 
-        <!-- AI博士 相談セクション -->
-        <section class="ai-hakase-cta">
+<section class="ai-hakase-cta">
           <div class="cta-icon">
             <img
               src="/portfolio/hakase/img/ogp-hakase.webp"
@@ -182,13 +181,12 @@
             </p>
             <div class="cta-button-wrapper">
               <a href="/portfolio/hakase/hakase.html" class="cta-button"
-                >AI博士の研究室へ相談に行く</a
+                >AI博士の談話室へ相談に行く</a
               >
             </div>
           </div>
         </section>
 
-        <!-- 関連記事セクション -->
         <section class="related-posts">
           <h2
             class="related-posts-title readable"
@@ -197,29 +195,19 @@
             あわせて読みたい記事
           </h2>
           <div class="post-grid">
-            <!-- 関連記事カード 1: AI学習まとめページ（完全ガイド） -->
-            <a
-              href="/blog/ai-learning-complete-guide.html"
-              class="post-card-link"
-            >
+            <a href="/learning-summary.html" class="post-card-link">
               <div class="post-card">
                 <div class="post-card-image">
-                  <img
-                    src="/img/blog/ogp-ai-learning-guide_large.webp"
-                    alt="AI学習の完全ガイド"
-                  />
+                  <img src="/Img/ogp-learning-summary_large.webp" alt="AI学習 全講座まとめ" />
                 </div>
                 <div class="post-card-content">
-                  <h3 class="readable">
-                    【完全ガイド】AI学習の始め方、この1ページで全てが分かる
-                  </h3>
+                  <h3 class="readable">【AI学習ロードマップ】全講座まとめ</h3>
                   <p>
-                    AI学習に挫折しないための完全ロードマップ。知識ゼロからAIクリエイターになるための全ステップを案内します。
+                    知識ゼロからAIクリエイターになるための完全ロードマップ。PC基礎から作品作り、仕事術まで全講座をここに集約。
                   </p>
                 </div>
               </div>
             </a>
-            <!-- 関連記事カード 2: AI学習の目標設定 -->
             <a
               href="/blog/goal-setting-for-ai-learning.html"
               class="post-card-link"
@@ -241,24 +229,21 @@
                 </div>
               </div>
             </a>
-            <!-- 関連記事カード 3: AIツール診断チャート -->
             <a
-              href="/blog/ai-tool-diagnostic-chart.html"
+              href="/blog/announcing-new-ai-courses.html"
               class="post-card-link"
             >
               <div class="post-card">
                 <div class="post-card-image">
                   <img
-                    src="/img/blog/ogp-ai-tool-chart_large.webp"
-                    alt="AIツール診断チャート"
+                    src="/img/blog/ogp-new-courses_large.webp"
+                    alt="新しいAI講座の開設"
                   />
                 </div>
                 <div class="post-card-content">
-                  <h3 class="readable">
-                    もう迷わない！あなたにピッタリのAIツールが見つかる、目的別診断チャート
-                  </h3>
+                  <h3 class="readable">【講座リリース】「AI教養編」と「画像生成AI編」を新規開講！</h3>
                   <p>
-                    あなたの目的に合った最適なAIツールを診断チャートで簡単にご紹介。ツールの選び方から解説します。
+                    無料AI学習講座に、待望の2コースが新登場！AIの仕組みを学ぶ「教養編」と、言葉で絵を描く「画像生成AI編」。
                   </p>
                 </div>
               </div>
@@ -296,7 +281,6 @@
         </footer>
       </article>
 
-      <!-- ★★★ Disqusコメント欄 ★★★ -->
       <section class="comment-section">
         <h2>ご意見・ご感想</h2>
         <div id="disqus_thread"></div>
@@ -323,9 +307,17 @@
       </section>
     </main>
 
-    <!-- フッターをここに読み込む -->
+    <!-- フッターのプレースホルダー -->
     <div id="footer-placeholder"></div>
 
+    <!-- サイト共通の読み上げ停止ボタン -->
+    <div id="global-speech-control" class="global-speech-control hidden">
+      <button id="global-speech-stop-btn" title="読み上げを停止" aria-label="読み上げを停止">
+        <i class="fas fa-stop" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <!-- JavaScriptファイルの読み込み -->
     <script src="/javascript/bundle.min.js" defer></script>
   </body>
 </html>

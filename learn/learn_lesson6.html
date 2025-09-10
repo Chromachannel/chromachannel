@@ -475,24 +475,18 @@ LINEスタンプ用のイラスト、かわいいハムスター、擬人化、�
         >
       </section>
     </main>
+
     <!-- フッターのプレースホルダー -->
     <div id="footer-placeholder"></div>
 
     <!-- サイト共通の読み上げ停止ボタン -->
     <div id="global-speech-control" class="global-speech-control hidden">
-      <!-- ボタンの役割をaria-labelで明確化 -->
-      <button
-        id="global-speech-stop-btn"
-        title="読み上げを停止"
-        aria-label="読み上げを停止"
-      >
+      <button id="global-speech-stop-btn" title="読み上げを停止" aria-label="読み上げを停止">
         <i class="fas fa-stop" aria-hidden="true"></i>
       </button>
     </div>
 
-    <!-- =================================================================
-    ▼ JavaScriptファイル ▼
-    ================================================================== -->
-    <script src="javascript/bundle.min.js" defer></script>
+    <!-- JavaScriptファイルの読み込み -->
+    <script src="/javascript/bundle.min.js" defer></script>
   </body>
 </html>

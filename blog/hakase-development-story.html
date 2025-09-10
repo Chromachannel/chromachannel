@@ -206,7 +206,6 @@
           </div>
         </section>
 
-        <!-- 関連記事セクション -->
         <section class="related-posts">
           <h2
             class="related-posts-title readable"
@@ -215,8 +214,23 @@
             あわせて読みたい記事
           </h2>
           <div class="post-grid">
-            <!-- 関連記事カード 1: AI博士のプロンプト -->
-            <a href="/prompt/prompt-hakase.html" class="post-card-link">
+            <a href="/portfolio/hakase/hakase.html" class="post-card-link">
+              <div class="post-card">
+                <div class="post-card-image">
+                  <img src="/img/prompt/ogp-hakase_large.webp" alt="AI博士の談話室" />
+                </div>
+                <div class="post-card-content">
+                  <h3 class="readable">【AIチャットボット】AI博士の談話室</h3>
+                  <p>
+                    あなたの質問や悩みに優しく寄り添う対話AI。思考の整理から心のモヤモヤまで、博士があなたの対話パートナーになります。
+                  </p>
+                </div>
+              </div>
+            </a>
+            <a
+              href="/prompt/prompt-hakase.html"
+              class="post-card-link"
+            >
               <div class="post-card">
                 <div class="post-card-image">
                   <img
@@ -225,50 +239,32 @@
                   />
                 </div>
                 <div class="post-card-content">
-                  <h3 class="readable">【コピペOK】AI博士プロンプト指示書</h3>
+                  <h3 class="readable">
+                    【コピペOK】AI博士プロンプト指示書
+                  </h3>
                   <p>
                     AIを「優しくて物知りな女性博士」に変身させます。あなたの質問や悩みに、AIが共感を持って寄り添います。
                   </p>
                 </div>
               </div>
             </a>
-            <!-- 関連記事カード 2: Fuwamoco開発秘話 -->
             <a
-              href="/blog/fuwamoco-development-story.html"
+              href="/blog/a-magic-wand-called-ai.html"
               class="post-card-link"
             >
               <div class="post-card">
                 <div class="post-card-image">
                   <img
-                    src="/img/blog/ogp-fuwamoco-story_large.webp"
-                    alt="Fuwamoco PROJECTの開発秘話"
+                    src="/img/blog/a-magic-wand-called-ai_large.webp"
+                    alt="AIという魔法の杖を握る手のイラスト"
                   />
                 </div>
                 <div class="post-card-content">
                   <h3 class="readable">
-                    【開発秘話】なぜ私は、架空のNPO法人サイトを創ったのか？
+                    福祉の現場で見つけた、AIという名の「魔法の杖」
                   </h3>
                   <p>
-                    福祉の課題意識から生まれた、架空NPO法人サイト。その企画から実装までの「物語」を語ります。
-                  </p>
-                </div>
-              </div>
-            </a>
-            <!-- 関連記事カード 3: 福祉施設のAIレクリエーション活用法 -->
-            <a href="/blog/ai-recreation-welfare.html" class="post-card-link">
-              <div class="post-card">
-                <div class="post-card-image">
-                  <img
-                    src="/img/blog/ogp-ai-recreation_large.webp"
-                    alt="福祉施設のAIレクリエーション"
-                  />
-                </div>
-                <div class="post-card-content">
-                  <h3 class="readable">
-                    【コストゼロで実現】福祉施設のレクリエーションが変わる！AI導入法
-                  </h3>
-                  <p>
-                    予算やアイデア不足に悩むレク担当者様へ。PC一台で始められる「AIお絵かき」「AI作曲」の具体的なやり方を解説します。
+                    福祉×AIクリエイターの原点。就労支援での実体験から、AIが「できる」を生み出し、創造の喜びに繋がった物語。
                   </p>
                 </div>
               </div>
@@ -306,7 +302,6 @@
         </footer>
       </article>
 
-      <!-- ★★★ Disqusコメント欄 ★★★ -->
       <section class="comment-section">
         <h2>ご意見・ご感想</h2>
         <div id="disqus_thread"></div>
@@ -333,9 +328,17 @@
       </section>
     </main>
 
-    <!-- フッターをここに読み込む -->
+    <!-- フッターのプレースホルダー -->
     <div id="footer-placeholder"></div>
 
+    <!-- サイト共通の読み上げ停止ボタン -->
+    <div id="global-speech-control" class="global-speech-control hidden">
+      <button id="global-speech-stop-btn" title="読み上げを停止" aria-label="読み上げを停止">
+        <i class="fas fa-stop" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <!-- JavaScriptファイルの読み込み -->
     <script src="/javascript/bundle.min.js" defer></script>
   </body>
 </html>

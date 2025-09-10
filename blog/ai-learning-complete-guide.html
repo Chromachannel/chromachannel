@@ -190,7 +190,6 @@
             あわせて読みたい記事
           </h2>
           <div class="post-grid">
-            <!-- 関連記事カード 1: AI学習の目標設定 -->
             <a
               href="/blog/goal-setting-for-ai-learning.html"
               class="post-card-link"
@@ -212,7 +211,6 @@
                 </div>
               </div>
             </a>
-            <!-- 関連記事カード 2: AIツール診断チャート -->
             <a
               href="/blog/ai-tool-diagnostic-chart.html"
               class="post-card-link"
@@ -234,7 +232,6 @@
                 </div>
               </div>
             </a>
-            <!-- 関連記事カード 3: AI教養入門講座 -->
             <a href="/learn/learn_lesson1.html" class="post-card-link">
               <div class="post-card">
                 <div class="post-card-image">
@@ -256,34 +253,22 @@
         <footer class="article-footer">
           <div class="author-profile-box no-avatar">
             <div class="author-info">
-              <h4>この記事を書いた人：福祉×AIクリエイター 山本 倫久</h4>
-              <p>
+              <h4 class="readable">この記事を書いた人：福祉×AIクリエイター 山本 倫久</h4>
+              <p class="readable">
                 就労支援B型事業所の利用者としての実体験を基に、AI技術で福祉の現場に新しい「できる」と「楽しい」を届けることをミッションとして活動中。
               </p>
               <div class="author-social">
-                <a
-                  href="https://x.com/ChromachannelAI"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >X (旧Twitter)</a
-                >
-                |
-                <a
-                  href="https://github.com/Chromachannel"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >GitHub</a
-                >
+                <a href="https://x.com/ChromachannelAI" target="_blank" rel="noopener noreferrer">X (旧Twitter)</a> |
+                <a href="https://github.com/Chromachannel" target="_blank" rel="noopener noreferrer">GitHub</a>
               </div>
             </div>
           </div>
           <div class="back-to-blog-links">
-            <a href="/blog.html" class="back-link">← ブログ一覧に戻る</a>
+            <a href="/blog.html" class="back-link readable">← ブログ一覧に戻る</a>
           </div>
         </footer>
       </article>
 
-      <!-- ★★★ Disqusコメント欄 ★★★ -->
       <section class="comment-section">
         <h2>ご意見・ご感想</h2>
         <div id="disqus_thread"></div>
@@ -301,24 +286,23 @@
             (d.head || d.body).appendChild(s);
           })();
         </script>
-        <noscript
-          >Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript"
-            >comments powered by Disqus.</a
-          ></noscript
-        >
+        <noscript>Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
       </section>
     </main>
 
-    <!-- フッターをここに読み込む -->
+    <!-- フッターのプレースホルダー -->
     <div id="footer-placeholder"></div>
 
+    <!-- サイト共通の読み上げ停止ボタン -->
     <div id="global-speech-control" class="global-speech-control hidden">
-      <button id="global-speech-stop-btn" title="読み上げを停止">
-        <i class="fas fa-stop"></i>
+      <button id="global-speech-stop-btn" title="読み上げを停止" aria-label="読み上げを停止">
+        <i class="fas fa-stop" aria-hidden="true"></i>
       </button>
     </div>
 
+    <!-- JavaScriptファイルの読み込み -->
     <script src="/javascript/bundle.min.js" defer></script>
   </body>
 </html>

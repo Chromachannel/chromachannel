@@ -230,7 +230,6 @@
             あわせて読みたい記事
           </h2>
           <div class="post-grid">
-            <!-- 関連記事カード 1: この記事で使ったプロンプト -->
             <a href="/prompt/prompt-kondate.html" class="post-card-link">
               <div class="post-card">
                 <div class="post-card-image">
@@ -247,7 +246,6 @@
                 </div>
               </div>
             </a>
-            <!-- 関連記事カード 2: 暮らし・生活改善のまとめページ -->
             <a href="/lifehack-summary.html" class="post-card-link">
               <div class="post-card">
                 <div class="post-card-image">
@@ -264,7 +262,6 @@
                 </div>
               </div>
             </a>
-            <!-- 関連記事カード 3: 旅行計画の実践レポート -->
             <a
               href="/blog/report-making-travel-plan-with-ai.html"
               class="post-card-link"
@@ -319,7 +316,6 @@
         </footer>
       </article>
 
-      <!-- ★★★ Disqusコメント欄 ★★★ -->
       <section class="comment-section">
         <h2>ご意見・ご感想</h2>
         <div id="disqus_thread"></div>
@@ -346,17 +342,17 @@
       </section>
     </main>
 
-    <!-- フッターをここに読み込む -->
+    <!-- フッターのプレースホルダー -->
     <div id="footer-placeholder"></div>
 
-    <!-- ▼▼▼ ここから追加 ▼▼▼ -->
+    <!-- サイト共通の読み上げ停止ボタン -->
     <div id="global-speech-control" class="global-speech-control hidden">
-      <button id="global-speech-stop-btn" title="読み上げを停止">
-        <i class="fas fa-stop"></i>
+      <button id="global-speech-stop-btn" title="読み上げを停止" aria-label="読み上げを停止">
+        <i class="fas fa-stop" aria-hidden="true"></i>
       </button>
     </div>
-    <!-- ▲▲▲ ここまで追加 ▲▲▲ -->
 
+    <!-- JavaScriptファイルの読み込み -->
     <script src="/javascript/bundle.min.js" defer></script>
   </body>
 </html>

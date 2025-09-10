@@ -256,19 +256,17 @@
             </article>
         </main>
 
-        <!-- フッターエリア（JavaScriptによって共通のfooter.htmlが読み込まれる） -->
-        <div id="footer-placeholder"></div>
+    <!-- フッターのプレースホルダー -->
+    <div id="footer-placeholder"></div>
 
-        <!-- サイト共通のUI要素（読み上げ停止ボタン） -->
-        <div id="global-speech-control" class="global-speech-control hidden">
-            <button id="global-speech-stop-btn" title="読み上げを停止">
-                <i class="fas fa-stop"></i>
-            </button>
-        </div>
+    <!-- サイト共通の読み上げ停止ボタン -->
+    <div id="global-speech-control" class="global-speech-control hidden">
+      <button id="global-speech-stop-btn" title="読み上げを停止" aria-label="読み上げを停止">
+        <i class="fas fa-stop" aria-hidden="true"></i>
+      </button>
+    </div>
 
-        <!-- =================================================================
-        ▼ JavaScriptファイル ▼
-        ================================================================== -->
-        <script src="/javascript/bundle.min.js" defer></script>
-    </body>
+    <!-- JavaScriptファイルの読み込み -->
+    <script src="/javascript/bundle.min.js" defer></script>
+  </body>
 </html>

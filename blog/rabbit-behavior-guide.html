@@ -184,7 +184,7 @@
         </div>
 
         <!-- AI博士 相談セクション -->
-        <section class="ai-hakase-cta">
+<section class="ai-hakase-cta">
           <div class="cta-icon">
             <img
               src="/portfolio/hakase/img/ogp-hakase.webp"
@@ -204,7 +204,6 @@
           </div>
         </section>
 
-        <!-- 関連記事セクション -->
         <section class="related-posts">
           <h2
             class="related-posts-title readable"
@@ -213,25 +212,19 @@
             あわせて読みたい記事
           </h2>
           <div class="post-grid">
-            <!-- 関連記事カード 1: うさぎまとめページ -->
             <a href="/rabbit-summary.html" class="post-card-link">
               <div class="post-card">
                 <div class="post-card-image">
-                  <img
-                    src="/img/ogp-rabbit-summary_large.webp"
-                    alt="うさぎまとめページのイメージ"
-                  />
+                  <img src="/img/ogp-rabbit-summary.webp" alt="うさぎ まとめ" />
                 </div>
                 <div class="post-card-content">
-                  <h3 class="readable">【うさぎ】まとめページ</h3>
+                  <h3 class="readable">【福祉×うさぎ】まとめページ</h3>
                   <p>
-                    Fuwamoco
-                    PROJECTの全貌と、うさぎとの暮らしがもっと豊かになるお役立ち情報をまとめてご紹介します。
+                    うさぎとの暮らしがもっと豊かになるお役立ち情報と、Webサイト制作実績「Fuwamoco PROJECT」の全貌をまとめてご紹介します。
                   </p>
                 </div>
               </div>
             </a>
-            <!-- 関連記事カード 2: Fuwamoco開発秘話 -->
             <a
               href="/blog/fuwamoco-development-story.html"
               class="post-card-link"
@@ -253,21 +246,23 @@
                 </div>
               </div>
             </a>
-            <!-- 関連記事カード 3: Fuwamoco PROJECT ポートフォリオ詳細 -->
-            <a href="/portfolio/fuwamoco-detail.html" class="post-card-link">
+            <a
+              href="/lifehack-summary.html"
+              class="post-card-link"
+            >
               <div class="post-card">
                 <div class="post-card-image">
                   <img
-                    src="/img/portfolio/fuwamoco_main_large.webp"
-                    alt="Fuwamoco PROJECT"
+                    src="/img/ogp-lifehack-summary_large.webp"
+                    alt="暮らし・生活改善まとめ"
                   />
                 </div>
                 <div class="post-card-content">
                   <h3 class="readable">
-                    【制作実績】NPO法人「Fuwamoco PROJECT」公式サイト
+                    【暮らし・生活改善】まとめページ
                   </h3>
                   <p>
-                    企画・デザイン・実装まで一貫して担当した、架空のうさぎ保護NPO法人サイト。このプロジェクトに込めた想いと技術の全てをご覧ください。
+                    献立作成から旅行計画、人間関係や子育ての悩みまで、AIを活用してあなたの日常をより豊かにするヒントを集めました。
                   </p>
                 </div>
               </div>
@@ -305,7 +300,6 @@
         </footer>
       </article>
 
-      <!-- ★★★ Disqusコメント欄 ★★★ -->
       <section class="comment-section">
         <h2>ご意見・ご感想</h2>
         <div id="disqus_thread"></div>
@@ -332,15 +326,17 @@
       </section>
     </main>
 
-    <!-- フッターをここに読み込む -->
+    <!-- フッターのプレースホルダー -->
     <div id="footer-placeholder"></div>
 
+    <!-- サイト共通の読み上げ停止ボタン -->
     <div id="global-speech-control" class="global-speech-control hidden">
-      <button id="global-speech-stop-btn" title="読み上げを停止">
-        <i class="fas fa-stop"></i>
+      <button id="global-speech-stop-btn" title="読み上げを停止" aria-label="読み上げを停止">
+        <i class="fas fa-stop" aria-hidden="true"></i>
       </button>
     </div>
 
+    <!-- JavaScriptファイルの読み込み -->
     <script src="/javascript/bundle.min.js" defer></script>
   </body>
 </html>
