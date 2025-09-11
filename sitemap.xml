@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url><loc>https://chromachannel.online/index.html</loc><lastmod>2025-09-03</lastmod><priority>1.00</priority></url>
-    <url><loc>https://chromachannel.online/beginner-guide.html</loc><lastmod>2025-09-03</lastmod><priority>0.90</priority></url>
+    <url><loc>https://chromachannel.online/apps-summary.html</loc><lastmod>2025-09-03</lastmod><priority>0.90</priority></url>
+    <url><loc>https://chromachannel.online/business-summary.html</loc><lastmod>2025-09-03</lastmod><priority>0.90</priority></url>
+    <url><loc>https://chromachannel.online/creative-summary.html</loc><lastmod>2025-09-03</lastmod><priority>0.90</priority></url>
+    <url><loc>https://chromachannel.online/entertainment-summary.html</loc><lastmod>2025-09-03</lastmod><priority>0.90</priority></url>
     <url><loc>https://chromachannel.online/learning-summary.html</loc><lastmod>2025-09-03</lastmod><priority>0.90</priority></url>
-    <url><loc>https://chromachannel.online/portfolio.html</loc><lastmod>2025-09-03</lastmod><priority>0.90</priority></url>
-    <url><loc>https://chromachannel.online/prompt.html</loc><lastmod>2025-09-03</lastmod><priority>0.90</priority></url>
+    <url><loc>https://chromachannel.online/lifehack-summary.html</loc><lastmod>2025-09-03</lastmod><priority>0.90</priority></url>
+    <url><loc>https://chromachannel.online/rabbit-summary.html</loc><lastmod>2025-09-03</lastmod><priority>0.90</priority></url>
+    <url><loc>https://chromachannel.online/beginner-guide.html</loc><lastmod>2025-09-03</lastmod><priority>0.90</priority></url>
     <url><loc>https://chromachannel.online/blog.html</loc><lastmod>2025-09-03</lastmod><priority>0.90</priority></url>
     <url><loc>https://chromachannel.online/novels.html</loc><lastmod>2025-09-03</lastmod><priority>0.90</priority></url>
+    <url><loc>https://chromachannel.online/portfolio.html</loc><lastmod>2025-09-03</lastmod><priority>0.90</priority></url>
+    <url><loc>https://chromachannel.online/prompt.html</loc><lastmod>2025-09-03</lastmod><priority>0.90</priority></url>
     <url><loc>https://chromachannel.online/profile.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
-    <url><loc>https://chromachannel.online/contact.html</loc><lastmod>2025-09-03</lastmod><priority>0.70</priority></url>
     <url><loc>https://chromachannel.online/privacy-policy.html</loc><lastmod>2025-09-03</lastmod><priority>0.50</priority></url>
-    
+
     <url><loc>https://chromachannel.online/learn/learn_lesson0.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
     <url><loc>https://chromachannel.online/learn/learn_lesson1.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
     <url><loc>https://chromachannel.online/learn/learn_lesson2.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
@@ -62,33 +67,34 @@
     <url><loc>https://chromachannel.online/blog/how-to-prompt.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
     <url><loc>https://chromachannel.online/blog/a-magic-wand-called-ai.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
 
-    <url><loc>https://chromachannel.online/prompt/prompt-hakase.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
-    <url><loc>https://chromachannel.online/prompt/prompt-personality-test.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
-    <url><loc>https://chromachannel.online/prompt/prompt-science-teacher.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
-    <url><loc>https://chromachannel.online/prompt/prompt-vegetable-hero.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
-    <url><loc>https://chromachannel.online/prompt/prompt-book-report-wizard.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
-    <url><loc>https://chromachannel.online/prompt/prompt-kondate.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
-    <url><loc>https://chromachannel.online/prompt/prompt-travel-planner.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
-    <url><loc>https://chromachannel.online/prompt/prompt-decline-coach.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
-    <url><loc>https://chromachannel.online/prompt/prompt-roadmap-lv1.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
-    <url><loc>https://chromachannel.online/prompt/prompt-reminder-coach.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
-    <url><loc>https://chromachannel.online/prompt/prompt-business-email.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
-    <url><loc>https://chromachannel.online/prompt/prompt-minutes-assistant.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
+    <url><loc>https://chromachannel.online/prompt/prompt-architect.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
     <url><loc>https://chromachannel.online/prompt/prompt-article-editor.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
+    <url><loc>https://chromachannel.online/prompt/prompt-book-report-wizard.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
+    <url><loc>https://chromachannel.online/prompt/prompt-business-email.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
     <url><loc>https://chromachannel.online/prompt/prompt-catchphrase-strategist.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
-    <url><loc>https://chromachannel.online/prompt/prompt-presentation-strategist.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
-    <url><loc>https://chromachannel.online/prompt/prompt-youtube-shorts.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
+    <url><loc>https://chromachannel.online/prompt/prompt-consultant.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
+    <url><loc>https://chromachannel.online/prompt/prompt-decline-coach.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
+    <url><loc>https://chromachannel.online/prompt/prompt-excel-spreadsheet-tutor.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
+    <url><loc>https://chromachannel.online/prompt/prompt-hakase.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
     <url><loc>https://chromachannel.online/prompt/prompt-imagefx.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
+    <url><loc>https://chromachannel.online/prompt/prompt-kondate.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
+    <url><loc>https://chromachannel.online/prompt/prompt-minutes-assistant.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
+    <url><loc>https://chromachannel.online/prompt/prompt-novel-writing.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
+    <url><loc>https://chromachannel.online/prompt/prompt-personality-test.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
+    <url><loc>https://chromachannel.online/prompt/prompt-picture-book-writing.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
+    <url><loc>https://chromachannel.online/prompt/prompt-presentation-strategist.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
+    <url><loc>https://chromachannel.online/prompt/prompt-recipe-creator.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
+    <url><loc>https://chromachannel.online/prompt/prompt-reminder-coach.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
+    <url><loc>https://chromachannel.online/prompt/prompt-roadmap-lv1.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
+    <url><loc>https://chromachannel.online/prompt/prompt-roadmap-lv2.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
+    <url><loc>https://chromachannel.online/prompt/prompt-roadmap-lv3.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
+    <url><loc>https://chromachannel.online/prompt/prompt-science-teacher.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
     <url><loc>https://chromachannel.online/prompt/prompt-stable-diffusion.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
     <url><loc>https://chromachannel.online/prompt/prompt-suno-ai.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
     <url><loc>https://chromachannel.online/prompt/prompt-suno-ai-v2.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
-    <url><loc>https://chromachannel.online/prompt/prompt-picture-book-writing.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
-    <url><loc>https://chromachannel.online/prompt/prompt-novel-writing.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
-    <url><loc>https://chromachannel.online/prompt/prompt-roadmap-lv2.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
-    <url><loc>https://chromachannel.online/prompt/prompt-excel-spreadsheet-tutor.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
-    <url><loc>https://chromachannel.online/prompt/prompt-roadmap-lv3.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
-    <url><loc>https://chromachannel.online/prompt/prompt-consultant.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
-    <url><loc>https://chromachannel.online/prompt/prompt-architect.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
+    <url><loc>https://chromachannel.online/prompt/prompt-travel-planner.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
+    <url><loc>https://chromachannel.online/prompt/prompt-vegetable-hero.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
+    <url><loc>https://chromachannel.online/prompt/prompt-youtube-shorts.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
         
     <url><loc>https://chromachannel.online/novels/hoshizora-no-melody.html</loc><lastmod>2025-09-03</lastmod><priority>0.70</priority></url>
     <url><loc>https://chromachannel.online/novels/isekai-no-ou.html</loc><lastmod>2025-09-03</lastmod><priority>0.70</priority></url>
@@ -99,23 +105,24 @@
     <url><loc>https://chromachannel.online/novels/yoru-no-koe.html</loc><lastmod>2025-09-03</lastmod><priority>0.70</priority></url>
     
     <url><loc>https://chromachannel.online/portfolio-detail-fuwamoco.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
-    <url><loc>https://chromachannel.online/portfolio/Fuwamoco/index.html</loc><lastmod>2025-09-03</lastmod><priority>0.70</priority></url>
-    <url><loc>https://chromachannel.online/portfolio/Fuwamoco/cafe.html</loc><lastmod>2025-09-03</lastmod><priority>0.70</priority></url>
-    <url><loc>https://chromachannel.online/portfolio/Fuwamoco/3-match-puzzle.html</loc><lastmod>2025-09-03</lastmod><priority>0.70</priority></url>
-    <url><loc>https://chromachannel.online/portfolio/Fuwamoco/company-info.html</loc><lastmod>2025-09-03</lastmod><priority>0.70</priority></url>
-    <url><loc>https://chromachannel.online/portfolio/Fuwamoco/company.html</loc><lastmod>2025-09-03</lastmod><priority>0.70</priority></url>
-    <url><loc>https://chromachannel.online/portfolio/Fuwamoco/contact.html</loc><lastmod>2025-09-03</lastmod><priority>0.70</priority></url>
-    <url><loc>https://chromachannel.online/portfolio/Fuwamoco/questionnaire.html</loc><lastmod>2025-09-03</lastmod><priority>0.70</priority></url>
-    <url><loc>https://chromachannel.online/portfolio/Fuwamoco/rabbit.html</loc><lastmod>2025-09-03</lastmod><priority>0.70</priority></url>
-    <url><loc>https://chromachannel.online/portfolio/Fuwamoco/privacy-policy.html</loc><lastmod>2025-09-03</lastmod><priority>0.70</priority></url>
-    <url><loc>https://chromachannel.online/portfolio/Adaptive_System/adaptive_system.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
-    <url><loc>https://chromachannel.online/portfolio/Ai-Slide-App/ai-slide-app.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
+    <url><loc>https://chromachannel.online/portfolio/adaptive_system/adaptive_system.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
+    <url><loc>https://chromachannel.online/portfolio/ai-slide-app/ai-slide-app.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
     <url><loc>https://chromachannel.online/portfolio/chirashi/chirashi.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
-    <url><loc>https://chromachannel.online/portfolio/Components/components.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
-    <url><loc>https://chromachannel.online/portfolio/Demo/demo.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
+    <url><loc>https://chromachannel.online/portfolio/components/components.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
+    <url><loc>https://chromachannel.online/portfolio/demo/demo.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
+    <url><loc>https://chromachannel.online/portfolio/fuwamoco/index.html</loc><lastmod>2025-09-03</lastmod><priority>0.70</priority></url>
+    <url><loc>https://chromachannel.online/portfolio/fuwamoco/cafe.html</loc><lastmod>2025-09-03</lastmod><priority>0.70</priority></url>
+    <url><loc>https://chromachannel.online/portfolio/fuwamoco/3-match-puzzle.html</loc><lastmod>2025-09-03</lastmod><priority>0.70</priority></url>
+    <url><loc>https://chromachannel.online/portfolio/fuwamoco/company-info.html</loc><lastmod>2025-09-03</lastmod><priority>0.70</priority></url>
+    <url><loc>https://chromachannel.online/portfolio/fuwamoco/company.html</loc><lastmod>2025-09-03</lastmod><priority>0.70</priority></url>
+    <url><loc>https://chromachannel.online/portfolio/fuwamoco/contact.html</loc><lastmod>2025-09-03</lastmod><priority>0.70</priority></url>
+    <url><loc>https://chromachannel.online/portfolio/fuwamoco/questionnaire.html</loc><lastmod>2025-09-03</lastmod><priority>0.70</priority></url>
+    <url><loc>https://chromachannel.online/portfolio/fuwamoco/rabbit.html</loc><lastmod>2025-09-03</lastmod><priority>0.70</priority></url>
+    <url><loc>https://chromachannel.online/portfolio/fuwamoco/privacy-policy.html</loc><lastmod>2025-09-03</lastmod><priority>0.70</priority></url>
     <url><loc>https://chromachannel.online/portfolio/hakase/hakase.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
-    <url><loc>https://chromachannel.online/portfolio/Game/pict.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
-    <url><loc>https://chromachannel.online/portfolio/Household_Account_Book/household-account-book.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
-    <url><loc>https://chromachannel.online/portfolio/Real-time-preview/real-time-preview.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
-    <url><loc>https://chromachannel.online/portfolio/Task-Tool/task-tool.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
+    <url><loc>https://chromachannel.online/portfolio/household-account-book/household-account-book.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
+    <url><loc>https://chromachannel.online/portfolio/pict/pict.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
+    <url><loc>https://chromachannel.online/portfolio/real-time-preview/real-time-preview.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
+    <url><loc>https://chromachannel.online/portfolio/task-tool/task-tool.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
+    <url><loc>https://chromachannel.online/portfolio/timer/timer.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
 </urlset>

@@ -18,12 +18,12 @@ AI技術で福祉の現場に新しい「できる」と「楽しい」を届け
 - **🔊 全面的な音声読み上げ対応:** 記事や講座の主要なテキストに再生ボタンを設置し、アクセシビリティを確保。
 - **🎮 体験型学習アプリ:** AIの仕組みをゲーム感覚で学べる、インタラクティブなWebアプリケーションを複数開発。
 - **📚 体系的な学習ロードマップ:** ステップ0からステップ4まで、知識ゼロからでも挫折しない学習フローを設計。
-- **実践的なプロンプト集:** コピペで使える30種類以上の高品質プロンプトを提供。AIに特定の役割を与え、対話形式で成果物を生み出す独自のノウハウが詰まっています。
-- **多様な制作実績:** 静的なウェブサイト制作から、JavaScriptを用いたインタラクティブなゲームやWebアプリケーションまで、幅広い開発スキルを証明しています。
-- **高度なインタラクティブUI:** JavaScriptによるコンポーネントの動的読み込み、スクロールに応じたフェードインアニメーション、カテゴリ別フィルター機能などを実装。
-- **アクセシビリティへの配慮:** サイトワイドの音声読み上げ機能を`voice-module.js`で独自に実装。`data-speech`属性による読み替えなど、誰にとっても使いやすいサイトを目指しています。
-- **高機能AIチャットボット:** Gemini APIと連携した「AI博士の談話室」を設置。会話履歴の`localStorage`への自動保存・復元・削除機能を備えた、プライバシー配慮型の実用的なアプリケーションです。
-- **徹底したSEO対策:** 各ページに最適化された`meta`タグ, `canonical`, `OGP`タグ、そして網羅的な`sitemap.xml`と構造化データ（JSON-LD）を活用し、検索エンジンからの評価を最大化しています。
+- **🪄 実践的なプロンプト集:** コピペで使える30種類以上の高品質プロンプトを提供。AIに特定の役割を与え、対話形式で成果物を生み出す独自のノウハウが詰まっています。
+- **🎨 多様な制作実績:** 静的なウェブサイト制作から、JavaScriptを用いたインタラクティブなゲームやWebアプリケーションまで、幅広い開発スキルを証明しています。
+- **✨ 高度なインタラクティブUI:** JavaScriptによるコンポーネントの動的読み込み、スクロールに応じたフェードインアニメーション、カテゴリ別フィルター機能などを実装。
+- **🗣️ アクセシビリティへの配慮:** サイトワイドの音声読み上げ機能を`voice-module.js`で独自に実装。`data-speech`属性による読み替えなど、誰にとっても使いやすいサイトを目指しています。
+- **💬 高機能AIチャットボット:** Gemini APIと連携した「AI博士の談話室」を設置。会話履歴の`localStorage`への自動保存・復元・削除機能を備えた、プライバシー配慮型の実用的なアプリケーションです。
+- **📈 徹底したSEO対策:** 各ページに最適化された`meta`タグ, `canonical`, `OGP`タグ、そして網羅的な`sitemap.xml`と構造化データ（JSON-LD）を活用し、検索エンジンからの評価を最大化しています。
 
 ## 💻 使用技術・ツール
 
@@ -42,57 +42,66 @@ AI技術で福祉の現場に新しい「できる」と「楽しい」を届け
 ## 📂 サイト構造 (主要ファイル)
 
 ```
-/ (ルート)
-├── index.html (トップページ)
-├── portfolio.html (制作実績一覧)
-├── learn.html (学習トップ - 講座一覧)
-├── blog.html (ブログ一覧)
-├── prompt.html (プロンプト一覧)
-├── novels.html (小説一覧)
-├── privacy.html
-├── sitemap.xml
-├── readme.md
-├── learning-summary.html (各テーマまとめページ x7)
-│
-├── blog/ (全22記事)
-│ ├── announcing-chromapadou.html # ★★★ 追加 ★★★
-│ ├── ai-line-stamp-rejection-guide.html
-│ └── ... (他20記事)
-│
-├── learn/ (全26講座)
-│   ├── learn_lesson0.html (PC操作入門)
-│   ├── ... (lesson1～24)
-│   └── learn_lesson25.html (講座付録)
-│
-├── novels/ (全7小説)
+/ (ルートディレクトリ)
+├── 📂 blog/               # ブログ記事 (全22記事)
+│   ├── announcing-ai-hakase.html
+│   └── ... (他21記事)
+├── 📂 CSS/                 # スタイルシート (全15ファイル)
+│   ├── style.css             # サイト共通スタイル
+│   ├── only_read.css         # 記事・ポートフォリオカード共通スタイル
+│   ├── only_app.css          # 講座ページ共通スタイル
+│   └── ... (各アプリ・ページ専用CSS x12)
+├── 📂 img/                 # 画像素材 (OGP画像、アイキャッチ、ロゴ等)
+├── 📂 JavaScript/          # JavaScriptファイル (全11ファイル)
+│   ├── bundle.min.js         # サイト共通スクリプト(動的読込、UI制御、音声機能)
+│   └── ... (各アプリ専用JS x10)
+├── 📂 learn/               # 学習コンテンツ (全27ページ)
+│   ├── learn_lesson0.html    # ステップ0
+│   ├── ...                 # ステップ1～4 (計24講座)
+│   ├── learn_lesson25.html   # 講座付録
+│   └── glossary.html       # 用語集
+├── 📂 novels/              # 小説 (全7作品)
 │   ├── hoshizora-no-melody.html
 │   └── ... (他6作品)
-│
-├── portfolio/ (Webアプリ/サイト制作実績)
-│   ├── fuwamoco-detail.html
-│   ├── hakase/hakase.html (AI博士)
-│   ├── Adaptive_System/adaptive_system.html (AIタスク管理)
-│   ├── Game/pict.html (AI体験ゲーム)
-│   ├── Fuwamoco/ (架空NPOサイト 全9ページ)
-│   │   ├── index.html
-│   │   └── ... (他8ページ)
-│   └── ... (他多数のWebアプリ/ツール)
-│
-├── prompt/ (全28プロンプト)
-│   ├── prompt-architect.html (プロンプト自動設計)
+├── 📂 portfolio/           # 制作実績 (Webアプリ/サイト)
+│   ├── 📂 Adaptive_System/   # AI適応型タスク管理システム
+│   ├── 📂 Ai-Slide-App/     # AI体験スライドアプリ
+│   ├── 📂 chirashi/          # AI活用チラシ
+│   ├── 📂 Components/        # AIの赤ちゃん 育成アプリ
+│   ├── 📂 Demo/              # AIってなんだろう？デモ
+│   ├── 📂 Fuwamoco/          # 架空NPO法人サイト (全9ページ)
+│   ├── 📂 hakase/            # AI博士の談話室
+│   ├── 📂 Household_Account_Book/ # かわいい家計簿アプリ
+│   ├── 📂 pict/              # AI体験ゲーム
+│   ├── 📂 Real-time-preview/ # リアルタイムプレビューエディタ
+│   ├── 📂 Task-Tool/         # 利用者向けタスク管理ツール
+│   └── 📂 Timer/             # 多機能オンライン時計
+├── 📂 prompt/              # プロンプト指示書 (全28ページ)
+│   ├── prompt-architect.html
 │   └── ... (他27プロンプト)
+├── 📂 Sounds/              # 音声素材 (インタラクティブデモ用)
 │
-├── CSS/
-│   ├── bundle.min.css (共通)
-│   └── ... (ページ/アプリ専用CSS x10以上)
+├── index.html              # サイトの玄関 (トップページ)
+├── beginner-guide.html     # 初心者向けガイド
+├── portfolio.html          # 制作実績トップ
+├── prompt.html             # プロンプト集トップ
+├── blog.html               # ブログトップ
+├── novels.html             # 小説トップ
+├── profile.html            # 運営者プロフィール
+├── contact.html            # お問い合わせ (未作成)
+├── privacy.html            # プライバシーポリシー
 │
-├── JavaScript/
-│   ├── script.js (共通)
-│   ├── voice-module.js (音声読み上げ機能)
-│   └── ... (各アプリ専用JS x8)
+├── 📄 **まとめページ群 (全7ページ)**
+├── learning-summary.html   # AI学習 全講座まとめ
+├── apps-summary.html       # アプリ・ツール まとめ
+├── lifehack-summary.html   # 暮らし・生活改善 まとめ
+├── business-summary.html   # ビジネス・仕事術 まとめ
+├── entertainment-summary.html # エンタメ まとめ
+├── creative-summary.html   # 創作・クリエイティブ まとめ
+└── rabbit-summary.html     # うさぎ まとめ
 │
-├── img/ (画像素材)
-└── Sounds/ (音声素材)
+├── sitemap.xml             # サイトマップ
+└── readme.md               # プロジェクト概要
 ```
 
 ## 👤 制作者
