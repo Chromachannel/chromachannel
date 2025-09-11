@@ -127,6 +127,7 @@
     color: #343a40;
 }
 .roadmap-button {
+    text-align: center;
     display: inline-block;
     background-color: #764ba2;
     color: white;

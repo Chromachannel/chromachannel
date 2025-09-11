@@ -89,3 +89,19 @@ h1 {
 .plan-desc { font-size: 10px; color: #374151; }
 .campaign-title { font-size: 12px; font-weight: 600; color: #1e3a8a; margin-bottom: 4px; }
 .campaign-desc { font-size: 10px; color: #374151; }
+.nav-button {
+  display: inline-block;
+  padding: 12px 30px;
+  border: 2px solid var(--primary-color-start);
+  color: var(--primary-color-start);
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.nav-button:hover {
+  background-color: var(--primary-color-start);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
