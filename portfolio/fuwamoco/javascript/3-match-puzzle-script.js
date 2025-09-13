@@ -270,7 +270,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ゲーム中断
-    function stopGame() {
+    function stogpame() {
         if (!gameActive) return;
         gameActive = false;
         if (timer) clearInterval(timer);
@@ -629,7 +629,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // イベントリスナーの設定
     startButton.addEventListener('click', startGame);
-    stopButton.addEventListener('click', stopGame);
+    stopButton.addEventListener('click', stogpame);
     resetButton.addEventListener('click', resetGame);
     playAgainButton.addEventListener('click', resetGame);
 
