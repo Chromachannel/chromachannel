@@ -710,3 +710,104 @@ body {
     border: 1px solid rgba(106, 17, 203, 0.1);
   }
 }
+/* モーダルウィンドウ用のスタイル */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.modal-content {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+.modal-overlay.visible {
+    opacity: 1;
+}
+.modal-overlay.visible .modal-content {
+    transform: scale(1);
+}
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: #555;
+    cursor: pointer;
+}
+#modal-image {
+    width: 100%;
+    height: auto;
+    max-height: 70vh; /* 高さが画面の70%を超えないように制限 */
+    object-fit: contain;
+    border-radius: 5px;
+    margin-bottom: 15px; /* キャプションとの間に余白を追加 */
+}
+.modal-caption {
+    margin-top: 15px;
+    text-align: left;
+}
+.modal-caption h3 { color: var(--text-dark); }
+.modal-caption h4 { color: var(--primary-color-start); margin-top: 10px; }
+.modal-caption p { color: var(--text-light); line-height: 1.6; }
+#modal-setting {
+    background-color: #f5f7fa; /* 背景色を追加 */
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 15px;
+    font-family: 'Courier New', Courier, monospace; /* 等幅フォントを指定 */
+    font-size: 0.85em; /* 少し文字を小さくして情報量を増やす */
+    line-height: 1.6;
+    white-space: pre-wrap; /* ★★★ 重要：自動的に折り返す設定 ★★★ */
+    word-wrap: break-word; /* 長い単語も強制的に改行 */
+    max-height: 200px; /* ★★★ 高さを制限 ★★★ */
+    overflow-y: auto; /* ★★★ 高さを超えたらスクロールバーを表示 ★★★ */
+}
+/* =================================================== */
+/* ===== サムネイル表示位置 調整用ユーティリティ ===== */
+/* =================================================== */
+
+/* デフォルト（中央表示）はクラス指定なしでOK */
+
+/* 画像の上部を中心に表示 */
+.object-position-top {
+    object-position: 50% 20%; 
+}
+
+/* 画像の下部を中心に表示 */
+.object-position-bottom {
+    object-position: 50% 80%;
+}
+
+/* 画像の左側を中心に表示 */
+.object-position-left {
+    object-position: 20% 50%;
+}
+
+/* 画像の右側を中心に表示 */
+.object-position-right {
+    object-position: 80% 50%;
+}
+
+/* さらに細かい調整が必要な場合 (例) */
+.object-position-top-10 {
+    object-position: 50% 10%; /* もっと上 */
+}
+.object-position-bottom-90 {
+    object-position: 50% 90%; /* もっと下 */
+}

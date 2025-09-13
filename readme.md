@@ -20,7 +20,7 @@ AI技術で福祉の現場に新しい「できる」と「楽しい」を届け
 - **📚 体系的な学習ロードマップ:** ステップ0からステップ4まで、知識ゼロからでも挫折しない学習フローを設計。
 - **🪄 実践的なプロンプト集:** コピペで使える30種類以上の高品質プロンプトを提供。AIに特定の役割を与え、対話形式で成果物を生み出す独自のノウハウが詰まっています。
 - **🎨 多様な制作実績:** 静的なウェブサイト制作から、JavaScriptを用いたインタラクティブなゲームやWebアプリケーションまで、幅広い開発スキルを証明しています。
-- **✨ 高度なインタラクティブUI:** JavaScriptによるコンポーネントの動的読み込み、スクロールに応じたフェードインアニメーション、カテゴリ別フィルター機能などを実装。
+- **✨ 高度なインタラクティブUI:** JavaScriptによるコンポーネントの動的読み込み、スクロールに応じたフェードインアニメーション、カテゴリ別フィルター機能、そして**作品をクリックで拡大表示するモーダルウィンドウ**などを実装。
 - **🗣️ アクセシビリティへの配慮:** サイトワイドの音声読み上げ機能を`voice-module.js`で独自に実装。`data-speech`属性による読み替えなど、誰にとっても使いやすいサイトを目指しています。
 - **💬 高機能AIチャットボット:** Gemini APIと連携した「AI博士の談話室」を設置。会話履歴の`localStorage`への自動保存・復元・削除機能を備えた、プライバシー配慮型の実用的なアプリケーションです。
 - **📈 徹底したSEO対策:** 各ページに最適化された`meta`タグ, `canonical`, `OGP`タグ、そして網羅的な`sitemap.xml`と構造化データ（JSON-LD）を活用し、検索エンジンからの評価を最大化しています。
@@ -64,22 +64,23 @@ AI技術で福祉の現場に新しい「できる」と「楽しい」を届け
 │   ├── hoshizora-no-melody.html
 │   └── ... (他6作品)
 ├── 📂 portfolio/           # 制作実績 (Webアプリ/サイト)
-│   ├── 📂 Adaptive_System/   # AI適応型タスク管理システム
-│   ├── 📂 Ai-Slide-App/     # AI体験スライドアプリ
+│   ├── gallery-ai-character.html   # ★★★ 更新 ★★★
+│   ├── fuwamoco-detail.html
+│   ├── 📂 adaptive_system/   # AI適応型タスク管理システム
+│   ├── 📂 ai-slide-app/     # AI体験スライドアプリ
 │   ├── 📂 chirashi/          # AI活用チラシ
-│   ├── 📂 Components/        # AIの赤ちゃん 育成アプリ
-│   ├── 📂 Demo/              # AIってなんだろう？デモ
-│   ├── 📂 Fuwamoco/          # 架空NPO法人サイト (全9ページ)
+│   ├── 📂 components/        # AIの赤ちゃん 育成アプリ
+│   ├── 📂 demo/              # AIってなんだろう？デモ
+│   ├── 📂 fuwamoco/          # 架空NPO法人サイト (全9ページ)
 │   ├── 📂 hakase/            # AI博士の談話室
-│   ├── 📂 Household_Account_Book/ # かわいい家計簿アプリ
+│   ├── 📂 household_Account_Book/ # かわいい家計簿アプリ
 │   ├── 📂 pict/              # AI体験ゲーム
-│   ├── 📂 Real-time-preview/ # リアルタイムプレビューエディタ
-│   ├── 📂 Task-Tool/         # 利用者向けタスク管理ツール
-│   └── 📂 Timer/             # 多機能オンライン時計
+│   ├── 📂 real-time-preview/ # リアルタイムプレビューエディタ
+│   ├── 📂 task-tool/         # 利用者向けタスク管理ツール
+│   └── 📂 timer/             # 多機能オンライン時計
 ├── 📂 prompt/              # プロンプト指示書 (全28ページ)
 │   ├── prompt-architect.html
 │   └── ... (他27プロンプト)
-├── 📂 Sounds/              # 音声素材 (インタラクティブデモ用)
 │
 ├── index.html              # サイトの玄関 (トップページ)
 ├── beginner-guide.html     # 初心者向けガイド
@@ -114,4 +115,4 @@ AI技術で福祉の現場に新しい「できる」と「楽しい」を届け
 - **GitHub:** [Chromachannel](https://github.com/Chromachannel)
 
 ---
-© 2025 chromachannel. All rights reserved.
+© 2025 Chromachannel. All rights reserved.

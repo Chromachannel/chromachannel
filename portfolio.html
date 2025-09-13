@@ -85,20 +85,23 @@
                 </div>
               </div>
             </div>
+
             <!-- AIキャラクターデザイン集 -->
             <div class="portfolio-item fade-in" data-category="illustration">
-              <div class="portfolio-card">
-                <div class="portfolio-image">
-                  <img src="/img/portfolio/image_main.webp" alt="AIキャラクター" loading="lazy" />
-                </div>
-                <div class="portfolio-content">
-                  <h3 class="readable">AIキャラクターデザイン集</h3>
-                  <p class="readable">Stable Diffusionを使用し、様々なテーマのオリジナルキャラクターを制作しました。</p>
-                  <div class="portfolio-tags">
-                    <span class="tag">AIイラスト</span><span class="tag">キャラクター</span>
+              <a href="portfolio/gallery-ai-character.html" class="portfolio-card-link">
+                <div class="portfolio-card">
+                  <div class="portfolio-image">
+                    <img src="/img/portfolio/image_main.webp" alt="AIキャラクター" loading="lazy" />
+                  </div>
+                  <div class="portfolio-content">
+                    <h3 class="readable">AIキャラクターデザイン集</h3>
+                    <p class="readable">ImageFXやStable Diffusionを使用し、様々なテーマのオリジナルキャラクターを制作しました。クリックしてギャラリーをご覧ください。</p>
+                    <div class="portfolio-tags">
+                      <span class="tag">AIイラスト</span><span class="tag">キャラクター</span>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
             <!-- AIチラシ -->
             <div class="portfolio-item fade-in" data-category="welfare illustration">
@@ -292,6 +295,21 @@
       <button id="global-speech-stop-btn" title="読み上げを停止" aria-label="読み上げを停止">
         <i class="fas fa-stop" aria-hidden="true"></i>
       </button>
+    </div>
+
+    <!-- 画像表示モーダル -->
+    <div id="image-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img id="modal-image" src="" alt="拡大画像">
+            <div id="modal-caption" class="modal-caption">
+                <h3 id="modal-title"></h3>
+                <h4>▼ コンセプト</h4>
+                <p id="modal-concept"></p>
+                <h4>▼ 大事にしたこと</h4>
+                <p id="modal-focus"></p>
+            </div>
+        </div>
     </div>
 
     <!-- JavaScriptファイルの読み込み -->

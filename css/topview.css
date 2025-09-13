@@ -45,13 +45,15 @@
 
 /* メインキャッチコピー */
 .hero h1 {
-    font-size: clamp(2.5rem, 5vw, 3.5rem); /* 画面幅に応じてフォントサイズを可変 */
+    font-size: clamp(2.5rem, 5vw, 3.5rem); 
     margin-bottom: 20px;
     font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* 文字に影をつけて視認性を向上 */
-    animation: slideInUp 1s ease-out; /* アニメーションを適用 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+    animation: slideInUp 1s ease-out; 
     position: relative;
     z-index: 2;
+    line-height: 1.5; /* ★★★ 追加 ★★★ 行の高さを調整 */
+    white-space: nowrap; /* ★★★ 追加 ★★★ 自動的な改行を禁止 */
 }
 
 /* サブタイトル */

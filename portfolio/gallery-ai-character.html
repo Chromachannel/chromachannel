@@ -1,0 +1,392 @@
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- =================================================================
+    ▼ SEO関連の重要なメタタグ ▼
+    ================================================================== -->
+    <!-- ページのタイトル（検索結果に表示される最も重要な要素の一つ） -->
+    <title>【制作実績】AIキャラクターデザイン集｜福祉×AIクリエイター 山本 倫久</title>
+    <meta name="description" content="福祉×AIクリエイター 山本 倫久がImageFXやStable Diffusionで制作した、オリジナルキャラクターデザインのギャラリーです。リアル風からアニメ風まで、AIアートの多様な表現をご覧ください。">
+    
+    <!-- 重複コンテンツを避け、正規のURLを検索エンジンに伝える -->
+    <link rel="canonical" href="https://chromachannel.online/portfolio/gallery-ai-character.html" />
+
+    <!-- =================================================================
+    ▼ OGP (Open Graph Protocol) タグ / SNSでシェアされた際の表示を設定 ▼
+    ================================================================== -->
+    <meta property="og:title" content="【制作実績】AIキャラクターデザイン集｜福祉×AIクリエイター 山本 倫久">
+    <meta property="og:description" content="福祉×AIクリエイターがImageFXやStable Diffusionで制作した、オリジナルキャラクターデザインのギャラリーです。">
+    <meta property="og:type" content="article"> <!-- 個別の作品集なので website より article が適切 -->
+    <meta property="og:url" content="https://chromachannel.online/portfolio/gallery-ai-character.html">
+    <meta property="og:image" content="https://chromachannel.online/img/ogp_gallery_ai_character.wepb"> <!-- ★★★ このギャラリー専用のOGP画像を別途作成・設定してください ★★★ -->
+    <meta property="og:site_name" content="Chromachannel">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- =================================================================
+    ▼ 構造化データ（JSON-LD）/ 検索エンジンにページ情報をより深く伝える ▼
+    ================================================================== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage", // 個々の作品を集めた「コレクションページ」として定義
+      "name": "【制作実績】AIキャラクターデザイン集",
+      "description": "福祉×AIクリエイター 山本 倫久がImageFXやStable Diffusionで制作した、オリジナルキャラクターデザインのギャラリーです。リアル風からアニメ風まで、AIアートの多様な表現をご覧ください。",
+      "url": "https://chromachannel.online/portfolio/gallery-ai-character.html",
+      "author": {
+        "@type": "Person",
+        "name": "山本 倫久",
+        "url": "https://chromachannel.online/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Chromachannel"
+      },
+      "hasPart": [ // このコレクションページに含まれる作品をいくつか例示
+        {
+          "@type": "CreativeWork",
+          "name": "新宿サイバーパンク2049（リアル風）"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "新宿サイバーパンク2049（アニメ風）"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "雲海の歯車竜"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- =================================================================
+    ▼ ファビコン・CSS等 ▼
+    ================================================================== -->
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/only_read.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+      <!-- ページヘッダー -->
+      <section class="page-header">
+        <div class="container">
+          <h1 class="readable">AIキャラクターデザイン集</h1>
+          <p class="readable">ImageFXやStable Diffusionを使用し、様々なテーマで制作したオリジナルキャラクター、風景画などのギャラリーです。<br>画像をクリックすると詳細が表示されます。</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <!-- ポートフォリオ一覧 -->
+          <div class="portfolio-grid">
+
+            <!-- 画像表示モーダル -->
+            <div id="image-modal" class="modal-overlay" style="display: none;">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <img id="modal-image" src="/img/portfolio/warm-circuits.webp" alt="拡大画像">
+                    <div id="modal-caption" class="modal-caption">
+                        <h3 id="modal-title">温もりのある回路</h3>
+                        <h4>▼ コンセプト</h4>
+                        <p id="modal-concept">福祉が象徴する「人間の温かさ」と、AIが象徴する「テクノロジー」が、優しく触れ合う瞬間を切り取った、サイトの理念を象徴する一枚だと思ってもらえると嬉しいです。</p>
+                        
+                        <!-- ▼▼▼ ここから追加 ▼▼▼ -->
+                        <div id="focus-container">
+                            <h4>▼ 大事にしたこと</h4>
+                            <p id="modal-focus">人間の有機的な曲線（手）と、AIの無機的な直線（光の回路）の対比を、温かい光で包み込むことで、「冷たいテクノロジー」ではなく「人に寄り添うAI」というメッセージを表現してみました。
+                              <br>cinematic photoとsoft, warm lightで、写真のようなリアリティと感情的な光の演出を両立させています。</p>
+                        </div>
+                        <div id="setting-container">
+                            <h4>▼ プロンプト・設定</h4>
+                            <pre id="modal-setting">A cinematic photo, a close-up of a human hand gently touching a wall with glowing light circuits.<br>The light from the circuits softly illuminates the hand.<br>A hopeful and calm atmosphere, symbolizing the connection between humanity and technology.<br>soft, warm light, hyper-detailed, high quality.</pre> <!-- プロンプト表示用に<pre>タグを使用 -->
+                        </div>
+                        <!-- ▲▲▲ ここまで追加 ▲▲▲ -->
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- 作品1：温もりのある回路 -->
+            <a href="/img/portfolio/warm-circuits.webp" 
+              class="portfolio-item fade-in modal-trigger" 
+              data-category="illustration"
+              data-title="温もりのある回路" 
+              data-concept="福祉が象徴する「人間の温かさ」と、AIが象徴する「テクノロジー」が、優しく触れ合う瞬間を切り取った、サイトの理念を象徴する一枚になっていれば嬉しいです。"
+              data-setting="Prompt:A cinematic photo, a close-up of a human hand gently touching a wall with glowing light circuits. The light from the circuits softly illuminates the hand. A hopeful and calm atmosphere, symbolizing the connection between humanity and technology. soft, warm light, hyper-detailed, high quality.">
+                
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="/img/portfolio/warm-circuits-thumb.webp" alt="温もりのある回路" loading="lazy" />
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="readable">温もりのある回路</h3>
+                    </div>
+                </div>
+            </a>
+
+            <!-- 作品2：星空喫茶で待ち合わせ -->
+            <a href="/img/portfolio/starlight-cafe-rendezvous.webp" 
+               class="portfolio-item fade-in modal-trigger" 
+               data-category="illustration"
+               data-title="星空喫茶で待ち合わせ" 
+               data-concept="AIとの出会いが、日常を忘れさせるような、幻想的で心躍る体験であることを表現した一枚です。"
+               data-setting="Prompt:A cinematic photo, a close-up of a human hand gently touching a wall with glowing light circuits. The light from the circuits softly illuminates the hand. A hopeful and calm atmosphere, symbolizing the connection between humanity and technology. soft, warm light, hyper-detailed, high quality.">
+               <div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img src="/img/portfolio/starlight-cafe-rendezvous-thumb.webp" alt="星空喫茶で待ち合わせ" loading="lazy" class="object-position-bottom" />
+                </div>
+                <div class="portfolio-content">
+                  <h3 class="readable">星空喫茶で待ち合わせ</h3>
+                </div>
+              </div>
+            </a>
+            
+            <!-- 作品3：ネオン街の機械人形 -->
+            <a href="/img/portfolio/neon-city-cyborg.webp" 
+               class="portfolio-item fade-in modal-trigger" 
+               data-category="illustration"
+               data-title="ネオン街の機械人形" 
+               data-concept="サイバーパンクな世界観と、どこか儚げな美少女を融合させたキャラクターイラストです。"
+               data-setting="Positive prompt: (masterpiece, best quality, absurdres, detailed face), 1girl, solo, beautiful detailed eyes, expressionless, cyborg, looking at viewer, <lora:koreanDollLikeness_v20:0.7>, <lora:AMechaSSS:0.6>, mechanical parts, glowing circuits on skin, in a cyberpunk city alley with rain and neon signs, <lora:cinematic%20lighting:0.5>, <lora:goodhands_Beta_Gtonero:1.2>
+Negative prompt: (worst quality, low quality:1.4), (deformed, ugly, blurry:1.2), bad hands, extra fingers, mutated hands, missing fingers, jpeg artifacts, smile
+Steps: 25, Sampler: Euler a, CFG scale: 7, Size: 512x768, Model: AnythingXL_v50">
+              <div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img src="/img/portfolio/neon-city-cyborg-thumb.webp" alt="ネオン街の機械人形" loading="lazy" class="object-position-top" />
+                </div>
+                <div class="portfolio-content">
+                  <h3 class="readable">ネオン街の機械人形</h3>
+                </div>
+              </div>
+            </a>
+
+            <!-- 作品4：雲海の上の工房 -->
+            <a href="/img/portfolio/workshop-above-the-clouds.webp" 
+               class="portfolio-item fade-in modal-trigger" 
+               data-category="illustration"
+               data-title="雲海の上の工房" 
+               data-concept="自然の雄大さと、スチームパンクの機械文明が融合した、壮大なファンタジー風景画です。"
+               data-setting="Positive prompt: (masterpiece, best quality, absurdres),epic fantasy landscape painting,a steampunk workshop with brass pipes and rotating gears,floating on an island in a sea of clouds,beautiful detailed sky,volumetric lighting, <lora:edgSteampunk:0.5>,<lora:more_details:0.8>,
+Negative prompt: (worst quality, low quality:1.4), person, character, blurry, text, watermark, signature, ugly, deformed
+Steps: 28, Sampler: DPM++ 2M SDE, Schedule type: Exponential, CFG scale: 7.5, Size: 768x512, Model: v1-5-pruned-emaonly">
+              <div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img src="/img/portfolio/workshop-above-the-clouds-thumb.webp" alt="雲海の上の工房" loading="lazy" />
+                </div>
+                <div class="portfolio-content">
+                  <h3 class="readable">雲海の上の工房</h3>
+                </div>
+              </div>
+            </a>
+
+            <!-- 作品5：新宿サイバーパンク2049 -->
+            <a href="/img/portfolio/shinjuku-cyberpunk-real.webp" 
+               class="portfolio-item fade-in modal-trigger" 
+               data-category="illustration"
+               data-title="新宿サイバーパンク2049" 
+               data-concept="写真のようなリアルな質感を追求した、サイバーパンク世界のキャラクターポートレートです。"
+               data-setting="Positive prompt: (masterpiece, best quality, absurdres, photorealistic:1.2),RAW photo,a cinematic photo of a beautiful Japanese girl,20yo,detailed skin texture,in a futuristic cyberpunk city like Shinjuku,sitting at a ramen stall,neon lights reflected in her eyes,atmospheric,moody lighting,<lora:koreanDollLikeness_v20:0.5>,<lora:cinematic%20lighting:0.6>,<lora:more_details:0.8>,<lora:goodhands_Beta_Gtonero:1.2>,
+Negative prompt: (worst quality, low quality:1.4),(illustration, anime, painting, cartoon, 3d:1.3),(deformed, ugly, blurry:1.2),bad hands,extra fingers,mutated hands,jpeg artifacts,
+Steps: 25, Sampler: DPM++ 2M SDE, Schedule type: Exponential, CFG scale: 7, Size: 512x768, Model: yayoiMix_v25">
+              <div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img src="/img/portfolio/shinjuku-cyberpunk-real-thumb.webp" alt="新宿サイバーパンク2049" loading="lazy" />
+                </div>
+                <div class="portfolio-content">
+                  <h3 class="readable">新宿サイバーパンク2049</h3>
+                </div>
+              </div>
+            </a>
+
+            <!-- 作品6：アキバ・グリッド -->
+            <a href="/img/portfolio/shinjuku-cyberpunk-anime.webp" 
+               class="portfolio-item fade-in modal-trigger" 
+               data-category="illustration"
+               data-title="アキバ・グリッド" 
+               data-concept="雨のアキバを、アニメ風のレースクイーンコスの少女がお出迎え。"
+               data-setting="Positive prompt: (masterpiece, best quality, absurdres, anime style),1girl,solo,beautiful detailed eyes,in a futuristic cyberpunk city like Akihabara,neon signs,standing in the rain,holding a transparent umbrella,<lora:AMechaSSS:0.7>,<lora:goodhands_Beta_Gtonero:1.2>,
+Negative prompt: (worst quality, low quality:1.4),(photo, realistic, 3d, photorealistic:1.3),(deformed, ugly, blurry:1.2),bad hands,extra fingers,mutated hands,
+Steps: 20, Sampler: Euler a, Schedule type: Automatic, CFG scale: 7, Size: 512x768, Model: AnythingXL_v50">
+              <div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img src="/img/portfolio/shinjuku-cyberpunk-anime-thumb.webp" alt="アキバ・グリッド" loading="lazy" class="object-position-top" />
+                </div>
+                <div class="portfolio-content">
+                  <h3 class="readable">アキバ・グリッド</h3>
+                </div>
+              </div>
+            </a>
+            
+            <!-- 作品7：雲海の歯車竜（SD版） -->
+            <a href="/img/portfolio/gear-dragon-of-the-cloud-sea-sd.webp" 
+               class="portfolio-item fade-in modal-trigger" 
+               data-category="illustration"
+               data-title="雲海の歯車竜（SD版）" 
+               data-concept="複数のLoRAを組み合わせる、Stable Diffusionの醍醐味が詰まった作品。生物的な「竜」と、無機的な「機械」という相反する要素を、スチームパンクという世界観で融合させてみました。"
+               data-setting="Positive prompt: (masterpiece, best quality, absurdres),epic fantasy landscape,cinematic angle,a colossal mechanical dragon flying through a sea of clouds at sunrise,(intricate gears and brass pipes:1.2),wings made of ornate metal and stained glass,steam venting from joints,volumetric lighting,<lora:edgSteampunk:0.6>,<lora:more_details:0.8>,
+Negative prompt: (worst quality, low quality:1.4),(person, 1girl, character, human, face, eyes:1.5),blurry,text,watermark,signature,
+Steps: 30, Sampler: DPM++ 2M SDE, Schedule type: Exponential, CFG scale: 7.5, Size: 768x512, Model: AnythingXL_v50">
+              <div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img src="/img/portfolio/gear-dragon-of-the-cloud-sea-sd-thumb.webp" alt="雲海の歯車竜（SD版）" loading="lazy" />
+                </div>
+                <div class="portfolio-content">
+                  <h3 class="readable">雲海の歯車竜（SD版）</h3>
+                </div>
+              </div>
+            </a>
+
+
+            <!-- 作品8：雲海の歯車竜（ImageFX版） -->
+            <a href="/img/portfolio/gear-dragon-of-the-cloud-sea-ifx.webp" 
+               class="portfolio-item fade-in modal-trigger" 
+               data-category="illustration"
+               data-title="雲海の歯車竜（ImageFX版）" 
+               data-concept="雲海の歯車竜の（ImageFX版）です。違いを見比べて、好きな方を試してみるのも楽しいです。"
+               data-setting="Prompt: An epic and majestic fantasy oil painting. A colossal mechanical dragon, constructed from intricate brass gears and weathered steel plates, soars through a sea of clouds at sunrise. Its wings are a masterpiece of ornate metal frames and glowing stained glass. Volumetric light rays from the sun pierce through the clouds, illuminating the dragon's hyper-detailed body. A dramatic and awe-inspiring atmosphere.">
+              <div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img src="/img/portfolio/gear-dragon-of-the-cloud-sea-ifx-thumb.webp" alt="雲海の歯車竜（ImageFX版）" loading="lazy" />
+                </div>
+                <div class="portfolio-content">
+                  <h3 class="readable">雲海の歯車竜（ImageFX版）</h3>
+                </div>
+              </div>
+            </a>
+
+            <!-- 作品9：叡智の森 -->
+            <a href="/img/portfolio/forest-of-wisdom.webp" 
+               class="portfolio-item fade-in modal-trigger" 
+               data-category="illustration"
+               data-title="叡智の森" 
+               data-concept="自然と知識が融合した、静かで幻想的な空間で、物語性を感じさせる風景画です。"
+               data-setting="A cinematic photo of a vast, ancient library built inside a giant, hollowed-out tree in a fantasy forest. Sunlight streams through the canopy, creating beautiful volumetric lighting that illuminates floating dust particles. Ethereal, magical atmosphere, hyper-detailed, high quality.">
+              <div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img src="/img/portfolio/forest-of-wisdom-thumb.webp" alt="叡智の森" loading="lazy" class="object-position-bottom" />
+                </div>
+                <div class="portfolio-content">
+                  <h3 class="readable">叡智の森</h3>
+                </div>
+              </div>
+            </a>
+
+
+            <!-- 作品10：物語が生まれる場所 -->
+            <a href="/img/portfolio/where-stories-are-born.webp" 
+               class="portfolio-item fade-in modal-trigger" 
+               data-category="illustration"
+               data-title="物語が生まれる場所" 
+               data-concept="【叡智の森】と同じコンセプトを、今度は手描き感あふれる、優しい水彩画のタッチで表現してみました。"
+               data-setting="A beautiful watercolor painting of a vast, ancient library built inside a giant, hollowed-out tree in a fantasy forest. Sunlight streams through the canopy, creating beautiful light effects. Soft and gentle colors, dreamy atmosphere, in the style of a children's book illustration.">
+              <div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img src="/img/portfolio/where-stories-are-born-thumb.webp" alt="物語が生まれる場所" loading="lazy" class="object-position-bottom" />
+                </div>
+                <div class="portfolio-content">
+                  <h3 class="readable">物語が生まれる場所</h3>
+                </div>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- フッターのプレースホルダー -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- 画像表示モーダル -->
+    <div id="image-modal" class="modal-overlay" style="display: none;">
+      <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <img id="modal-image" src="" alt="拡大画像">
+          <div id="modal-caption" class="modal-caption">
+              <h3 id="modal-title"></h3>
+              <h4>▼ コンセプト</h4>
+              <p id="modal-concept"></p>
+              <h4>▼ 大事にしたこと</h4>
+              <p id="modal-focus"></p>
+          </div>
+      </div>
+    </div>
+
+    <!-- JavaScriptファイルの読み込み -->
+    <script src="/javascript/bundle.min.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modalOverlay = document.getElementById('image-modal');
+            if (!modalOverlay) return;
+
+            // モーダル内の各要素を取得
+            const modalImage = document.getElementById('modal-image');
+            const modalTitle = document.getElementById('modal-title');
+            const modalConcept = document.getElementById('modal-concept');
+            const modalFocus = document.getElementById('modal-focus');
+            const modalSetting = document.getElementById('modal-setting');
+            const focusContainer = document.getElementById('focus-container');
+            const settingContainer = document.getElementById('setting-container');
+            const closeModalBtn = modalOverlay.querySelector('.close-modal');
+            
+            document.body.addEventListener('click', (e) => {
+                const trigger = e.target.closest('.modal-trigger');
+                if (trigger) {
+                    e.preventDefault();
+                    
+                    // 画像パスをセット
+                    modalImage.src = trigger.href;
+                    
+                    // data-* 属性からテキストを取得
+                    const title = trigger.dataset.title || '';
+                    const concept = trigger.dataset.concept || '';
+                    const focus = trigger.dataset.focus || '';
+                    const setting = trigger.dataset.setting || '';
+
+                    // テキストをモーダル内の要素にセット
+                    modalTitle.textContent = title;
+                    modalConcept.textContent = concept;
+                    modalFocus.textContent = focus;
+                    modalSetting.textContent = setting;
+
+                    // データが存在する場合のみコンテナを表示、なければ非表示にする
+                    focusContainer.style.display = focus ? 'block' : 'none';
+                    settingContainer.style.display = setting ? 'block' : 'none';
+                    
+                    // モーダルを表示
+                    modalOverlay.style.display = 'flex';
+                    setTimeout(() => {
+                        modalOverlay.classList.add('visible');
+                    }, 10);
+                }
+            });
+
+            const closeModal = () => {
+                modalOverlay.classList.remove('visible');
+                setTimeout(() => {
+                    modalOverlay.style.display = 'none';
+                }, 300);
+            };
+
+            closeModalBtn.addEventListener('click', closeModal);
+
+            modalOverlay.addEventListener('click', (e) => {
+                if (e.target === modalOverlay) {
+                    closeModal();
+                }
+            });
+        });
+    </script>
+    <!-- ▲▲▲ ここまでが追加するコードです ▲▲▲ -->
+
+</body>
+</html>
