@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const sendBtn = document.getElementById("send-btn");
   const newChatBtn = document.getElementById("new-chat-btn");
   const historyList = document.getElementById("history-list");
+  const downloadChatBtn = document.getElementById("download-chat-btn"); // ★★★ 追加 ★★★
 
   // --- 状態管理 ---
   let conversationHistory = [];
@@ -332,6 +333,41 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
+    // ★★★ ここからが今回の追加機能 ★★★
+  const downloadChatHistory = () => {
+    if (conversationHistory.length < 3) {
+      alert("ダウンロードできる対話履歴がありません。");
+      return;
+    }
+
+    let chatText = `AI博士との対話履歴 (${new Date().toLocaleString('ja-JP')})\n\n`;
+    
+    conversationHistory.forEach(turn => {
+        // 最初のシステムへの指示は含めない
+        if (turn.parts[0].text.includes("あなたの役割定義に従って")) {
+            return;
+        }
+
+        const prefix = turn.role === 'model' ? 'AI博士：\n' : 'あなた：\n';
+        const content = turn.parts[0].text;
+        chatText += `${prefix}${content}\n\n--------------------------------\n\n`;
+    });
+
+    const blob = new Blob([chatText], { type: 'text/plain;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    
+    const date = new Date();
+    const formattedDate = `${date.getFullYear()}${(date.getMonth() + 1).toString().padStart(2, '0')}${date.getDate().toString().padStart(2, '0')}`;
+    a.download = `AI博士との対話_${formattedDate}.txt`;
+    a.href = url;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+  // ★★★ 追加機能ここまで ★★★
+
   const handleUserMessage = async () => {
     const userMessage = userInput.value.trim();
     if (!userMessage) return;
@@ -384,6 +420,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
     newChatBtn.addEventListener("click", startNewChat);
+    downloadChatBtn.addEventListener("click", downloadChatHistory); // ★★★ イベントリスナーを追加 ★★★
     window.addEventListener("beforeunload", saveCurrentChatToStorage);
   };
 
