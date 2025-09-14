@@ -67,7 +67,17 @@
     document.getElementById('current-year').textContent = new Date().getFullYear();
 </script>
 
-<!-- ▼▼▼ HubSpot Chat Widget Code ▼▼▼ -->
+<!-- ▼▼▼ サイト共通の読み上げ停止ボタン ▼▼▼ -->
+<div id="global-speech-control" class="global-speech-control hidden">
+  <button id="global-speech-stop-btn" title="読み上げを停止" aria-label="読み上げを停止">
+    <i class="fas fa-stop" aria-hidden="true"></i>
+  </button>
+</div>
+
+<!-- ▼▼▼ JavaScriptファイルの読み込み ▼▼▼ -->
+<script src="/javascript/bundle.min.js" defer></script>
+
+<!-- ▼▼▼ HubSpot Chat Widget Code (ここが移動先) ▼▼▼ -->
 <!-- Start of HubSpot Embed Code -->
   <script type="text/javascript" id="hs-script-loader" async defer src="//js-na2.hs-scripts.com/243859617.js"></script>
 <!-- End of HubSpot Embed Code -->
