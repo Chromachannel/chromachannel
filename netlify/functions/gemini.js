@@ -1,39 +1,49 @@
-const fetch = require('node-fetch');
+const { GoogleGenerativeAI } = require("@google/generative-ai");
 
-exports.handler = async function(event) {
-  const API_KEY = process.env.GEMINI_API_KEY;
-  const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${API_KEY}`;
+// Netlifyの環境変数からAPIキーを取得
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+
+exports.handler = async (event) => {
+  if (event.httpMethod !== "POST") {
+    return { statusCode: 405, body: "Method Not Allowed" };
+  }
 
   try {
-    const requestBody = JSON.parse(event.body); // データを一度取り出す
-
-    const response = await fetch(API_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        contents: requestBody.contents,
-        systemInstruction: requestBody.systemInstruction
-      }), // 正しい形式で再構築して送る
+    const { contents, systemInstruction } = JSON.parse(event.body);
+    const model = genAI.getGenerativeModel({
+      model: "gemini-1.5-flash",
+      systemInstruction,
     });
 
-    if (!response.ok) {
-        const errorData = await response.text();
-        return {
-            statusCode: response.status,
-            body: JSON.stringify({ error: `API Error: ${errorData}` }),
-        };
-    }
-    
-    const data = await response.json();
+    // ストリーミングでコンテンツを生成
+    const result = await model.generateContentStream(contents);
+
+    // Node.jsのストリームを作成し、Netlify Functionsのストリーミング応答に対応
+    const { PassThrough } = require("stream");
+    const stream = new PassThrough();
+
+    // 非同期でストリームを処理
+    (async () => {
+      for await (const chunk of result.stream) {
+        stream.write(JSON.stringify(chunk));
+      }
+      stream.end();
+    })();
 
     return {
       statusCode: 200,
-      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: stream,
+      isBase64Encoded: false,
     };
+
   } catch (error) {
+    console.error("Error in Gemini function:", error);
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: error.message }),
+      body: JSON.stringify({ error: "Internal Server Error", details: error.message }),
     };
   }
 };

@@ -60,8 +60,11 @@
     font-weight: 600;
     margin: 0;
 }
-
-#new-chat-btn {
+.history-controls {
+    display: flex;
+    gap: 10px;
+}
+#new-chat-btn, #download-chat-btn {
     background: none;
     border: none;
     cursor: pointer;
@@ -69,7 +72,7 @@
     color: var(--text-light);
     transition: color 0.2s;
 }
-#new-chat-btn:hover {
+#new-chat-btn:hover, #download-chat-btn:hover {
     color: var(--primary-color);
 }
 
@@ -158,6 +161,10 @@
 #send-btn:hover {
     background-color: #5a0fb1;
 }
+#send-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
 
 /* --- レスポンシブ対応 --- */
 @media (max-width: 800px) {
@@ -172,8 +179,8 @@
         height: 200px;
     }
 }
-/* ===== チャットログの吹き出しデザイン ===== */
 
+/* ===== チャットログの吹き出しデザイン ===== */
 .message {
     display: flex;
     align-items: flex-start;
@@ -198,6 +205,7 @@
     border-radius: 18px;
     line-height: 1.6;
     word-break: break-word;
+    position: relative;
 }
 .ai-message {
     justify-content: flex-start;
@@ -216,8 +224,6 @@
     border-top-right-radius: 4px;
     color: var(--text-dark);
 }
-
-/* ===== ▼▼▼ ここから修正・追加 ▼▼▼ ===== */
 .history-item {
     padding: 12px 15px;
     cursor: pointer;
@@ -227,11 +233,10 @@
     overflow: hidden;
     text-overflow: ellipsis;
     transition: background-color 0.2s;
-    /* Flexboxでタイトルとボタンを両端に配置 */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px; /* タイトルとボタンの間の余白 */
+    gap: 10px; 
 }
 .history-item:hover {
     background-color: #f0f4f8;
@@ -251,12 +256,13 @@
     line-height: 1;
     border-radius: 50%;
     transition: color 0.2s, background-color 0.2s;
-    flex-shrink: 0; /* ボタンが縮まないように */
+    flex-shrink: 0; 
 }
 .delete-btn:hover {
-    color: #dc3545; /* 赤色 */
+    color: #dc3545; 
     background-color: #fbebee;
 }
+
 /* ===== 音声再生ボタンのスタイル ===== */
 .voice-play-btn {
     background: none;
@@ -266,28 +272,48 @@
     height: 32px;
     border-radius: 50%;
     cursor: pointer;
-    margin-left: 10px; /* 吹き出しとの間隔 */
+    margin-left: 10px; 
     flex-shrink: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all 0.2s ease;
 }
-
 .voice-play-btn:hover {
     background-color: var(--ai-bubble-bg);
     color: var(--primary-color);
 }
-
 .message {
-    align-items: center; /* アイコン、吹き出し、再生ボタンを中央揃えに */
+    align-items: center; 
 }
-/* ===== ▼▼▼ 画像アイコン用の追加スタイル ▼▼▼ ===== */
+
+/* ===== 画像アイコン用の追加スタイル ===== */
 .message .icon img {
-    width: 40px;            /* 親要素(円)の幅いっぱいに広げる */
-    height: 40px;           /* 親要素(円)の高さっぱいに広げる */
-    object-fit: cover;      /* 縦横比を維持したまま、要素を完全に覆う */
-    border-radius: 50%;     /* 画像自体も円形にする */
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
 }
-/* ===== ▲▲▲ 追加ここまで ▲▲▲ ===== */
-/* ===== ▲▲▲ 修正・追加ここまで ▲▲▲ ===== */
+
+/* ===== ▼▼▼ ストリーミング用スタイル ▼▼▼ ===== */
+.typing-cursor {
+    display: inline-block;
+    width: 8px;
+    height: 1.2em;
+    background-color: var(--text-dark);
+    animation: blink 1s step-end infinite;
+    vertical-align: bottom;
+}
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+.bubble a {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: underline;
+}
+.bubble a:hover {
+    color: var(--primary-color-end);
+}
