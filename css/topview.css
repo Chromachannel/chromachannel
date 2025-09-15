@@ -1,280 +1,64 @@
 /* =================================== */
 /* ===== キーフレームアニメーション ===== */
 /* =================================== */
-
-/* 下から上へスライドしながら表示されるアニメーションを定義 */
-@keyframes slideInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+@keyframes slideInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 
 /* =================================== */
 /* ===== ヒーローセクション (トップページメインビジュアル) ===== */
 /* =================================== */
-
-.hero {
-    min-height: 100vh; /* 画面の高さいっぱいに表示 */
-    display: flex;
-    align-items: center; /* 垂直方向中央揃え */
-    justify-content: center; /* 水平方向中央揃え */
-    text-align: center;
-    color: white;
-    padding: 80px 20px;
-    position: relative; /* 背景要素の基準点 */
-    overflow: hidden; /* はみ出した背景要素を隠す */
-    background: linear-gradient(135deg, var(--primary-color-start) 0%, var(--primary-color-end) 100%);
-    z-index: 1;
-}
-
-/* ヒーローセクション内のコンテンツ（テキストやボタン）をまとめるコンテナ */
-.hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-    max-width: 800px;
-    z-index: 2; /* 背景より手前に表示 */
-    position: relative;
-}
-
-/* メインキャッチコピー */
-.hero h1 {
-    font-size: clamp(2.5rem, 5vw, 3.5rem); 
-    margin-bottom: 20px;
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
-    animation: slideInUp 1s ease-out; 
-    position: relative;
-    z-index: 2;
-    line-height: 1.5; /* ★★★ 追加 ★★★ 行の高さを調整 */
-    white-space: nowrap; /* ★★★ 追加 ★★★ 自動的な改行を禁止 */
-}
-
-/* サブタイトル */
-.hero-subtitle {
-    font-size: clamp(1.1rem, 3vw, 1.4rem);
-    margin-bottom: 40px;
-    opacity: 0.9;
-    /* `both`でアニメーション終了後もその状態を維持 */
-    animation: slideInUp 1s ease-out 0.3s both;
-}
-
-/* CTA（Call To Action）ボタンのコンテナ */
-.hero-cta-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-    animation: slideInUp 1s ease-out 0.6s both;
-}
-.secondary-cta-group {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-/* CTAボタンの共通スタイル */
-.cta-button {
-    margin: 0;
-    animation: none;
-    padding: 15px 40px;
-    font-size: 1rem;
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.2); /* 半透明の背景 */
-    color: white;
-    text-decoration: none;
-    border-radius: 50px; /* 角を丸めてカプセル型に */
-    font-weight: 600;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px); /* 背景をぼかす「すりガラス」効果 */
-}
-.cta-button:hover {
-    background: rgba(255, 255, 255, 0.3);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-/* サブのCTAボタンのスタイル */
-.cta-button.secondary-cta {
-    padding: 12px 28px;
-    font-size: 0.95rem;
-    background: transparent; /* 背景を透明に */
-    border: 2px solid rgba(255, 255, 255, 0.8);
-    color: rgba(255, 255, 255, 0.9);
-}
-.cta-button.secondary-cta:hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-}
+.hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 80px 20px; position: relative; overflow: hidden; background: linear-gradient(135deg, var(--primary-color-start) 0%, var(--primary-color-end) 100%); z-index: 1; }
+.hero-content { display: flex; flex-direction: column; align-items: center; gap: 25px; max-width: 800px; z-index: 2; position: relative; }
+.hero h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); margin-bottom: 20px; font-weight: 700; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); animation: slideInUp 1s ease-out; position: relative; z-index: 2; line-height: 1.5; white-space: nowrap; }
+.hero-subtitle { font-size: clamp(1.1rem, 3vw, 1.4rem); margin-bottom: 40px; opacity: 0.9; animation: slideInUp 1s ease-out 0.3s both; }
+.hero-cta-buttons { display: flex; flex-direction: column; align-items: center; gap: 20px; width: 100%; animation: slideInUp 1s ease-out 0.6s both; }
+.secondary-cta-group { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+.cta-button { margin: 0; animation: none; padding: 15px 40px; font-size: 1rem; display: inline-block; background: rgba(255, 255, 255, 0.2); color: white; text-decoration: none; border-radius: 50px; font-weight: 600; border: 2px solid rgba(255, 255, 255, 0.3); transition: all 0.3s ease; backdrop-filter: blur(10px); }
+.cta-button:hover { background: rgba(255, 255, 255, 0.3); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); }
+.cta-button.secondary-cta { padding: 12px 28px; font-size: 0.95rem; background: transparent; border: 2px solid rgba(255, 255, 255, 0.8); color: rgba(255, 255, 255, 0.9); }
+.cta-button.secondary-cta:hover { background: rgba(255, 255, 255, 0.1); color: white; }
 
 /* =================================== */
 /* ===== 共通セクションスタイル ===== */
 /* =================================== */
-
-/* 各コンテンツセクションの上下の余白 */
-.section {
-    padding: 100px 0;
-}
-
-/* 各セクションのタイトル */
-.section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 60px;
-    background: linear-gradient(45deg, var(--primary-color-start), var(--primary-color-end));
-    -webkit-background-clip: text; /* 背景をテキストの形で切り抜く */
-    -webkit-text-fill-color: transparent; /* テキストの色を透明にする */
-    background-clip: text;
-    font-weight: 700;
-}
-
-/* テキスト内の強調表示 */
-.highlight {
-    color: var(--primary-color-start);
-    font-weight: 600;
-}
+.section { padding: 100px 0; }
+.section-title { text-align: center; font-size: 2.5rem; margin-bottom: 60px; background: linear-gradient(45deg, var(--primary-color-start), var(--primary-color-end)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 700; }
+.highlight { color: var(--primary-color-start); font-weight: 600; }
 
 /* =================================== */
 /* ===== 自己紹介 (About Me) セクション ===== */
 /* =================================== */
-
-.about {
-    background: var(--bg-white);
-}
-.about-card {
-    display: grid;
-    grid-template-columns: 1fr; /* モバイルでは1カラム */
-    gap: 30px;
-    align-items: start;
-    background: var(--bg-white);
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-}
-
-/* PC（992px以上）では2カラムレイアウトに */
-@media (min-width: 992px) {
-    .about-card {
-        grid-template-columns: 1fr 1.5fr; /* 左(画像):右(テキスト) = 1:1.5 */
-        gap: 50px;
-        padding: 50px;
-    }
-}
-
-.about-card-left {
-    text-align: center;
-}
-.profile-image {
-    width: 100%;
-    max-width: 250px;
-    height: 250px;
-    border-radius: 50%; /* 画像を円形にする */
-    object-fit: cover; /* 画像の比率を保ったままトリミング */
-    margin: 0 auto 25px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-}
-
-/* 自己紹介文のテキストエリア */
-.about-card-right {
-    font-size: 1.1rem;
-    line-height: 1.8; /* 行間を広めにとり読みやすくする */
-}
+.about { background: var(--bg-white); }
+.about-card { display: grid; grid-template-columns: 1fr; gap: 30px; align-items: start; background: var(--bg-white); padding: 30px; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.1); }
+@media (min-width: 992px) { .about-card { grid-template-columns: 1fr 1.5fr; gap: 50px; padding: 50px; } }
+.about-card-left { text-align: center; }
+.profile-image { width: 100%; max-width: 250px; height: 250px; border-radius: 50%; object-fit: cover; margin: 0 auto 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
+.about-card-right { font-size: 1.1rem; line-height: 1.8; }
 
 /* =================================== */
 /* ===== スキルセクション ===== */
 /* =================================== */
-
-.skills {
-    background: var(--bg-light);
-}
-/* スキルカードを並べるレスポンシブなグリッド */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-.skill-card {
-    background: var(--bg-white);
-    padding: 40px 30px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 15px 35px var(--shadow-light);
-    transition: all 0.3s ease;
-}
-.skill-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px var(--shadow-dark);
-}
-/* スキルアイコンの円形背景 */
-.skill-icon {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, var(--primary-color-start), var(--primary-color-end));
-    border-radius: 50%;
-    margin: 0 auto 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 2.5rem;
-}
+.skills { background: var(--bg-light); }
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.skill-card { background: var(--bg-white); padding: 40px 30px; border-radius: 20px; text-align: center; box-shadow: 0 15px 35px var(--shadow-light); transition: all 0.3s ease; }
+.skill-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px var(--shadow-dark); }
+.skill-icon { width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary-color-start), var(--primary-color-end)); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; }
 
 /* =================================== */
 /* ===== お問い合わせセクション ===== */
 /* =================================== */
+.contact { background: linear-gradient(135deg, var(--primary-color-start) 0%, var(--primary-color-end) 100%); color: white; text-align: center; }
+.contact .section-title { color: white; background: none; -webkit-text-fill-color: white; }
+.contact .container { display: flex; flex-direction: column; align-items: center; }
+.contact-info p { font-size: 1.1rem; margin-bottom: 10px; opacity: 0.9; }
+.contact-email { display: inline-flex; align-items: center; gap: 10px; padding: 15px 30px; background: rgba(255, 255, 255, 0.2); color: white; text-decoration: none; border-radius: 50px; font-size: 1.2rem; font-weight: 500; border: 2px solid rgba(255, 255, 255, 0.3); transition: all 0.3s ease; backdrop-filter: blur(10px); }
+.contact-email:hover { background: rgba(255, 255, 255, 0.3); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); }
+.contact-grid strong { color: rgb(190, 127, 0); }
 
-.contact {
-    background: linear-gradient(135deg, var(--primary-color-start) 0%, var(--primary-color-end) 100%);
-    color: white;
-    text-align: center;
-}
-/* Contactセクションのタイトルは白文字にするため、グラデーションをリセット */
-.contact .section-title {
-    color: white;
-    background: none;
-    -webkit-text-fill-color: white;
-}
-.contact .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.contact-info p {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-    opacity: 0.9;
-}
-
-/* メールアドレスボタン */
-.contact-email {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 15px 30px;
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-    text-decoration: none;
-    border-radius: 50px;
-    font-size: 1.2rem;
-    font-weight: 500;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-}
-.contact-email:hover {
-    background: rgba(255, 255, 255, 0.3);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-.contact-grid strong {
-    color: rgb(190, 127, 0);
+/* =================================== */
+/* ===== モバイル表示用修正 ===== */
+/* =================================== */
+@media (max-width: 768px) {
+    .hero h1 {
+        white-space: normal; /* モバイルでは改行を許可する */
+    }
 }

@@ -20,31 +20,16 @@ exports.handler = async (event) => {
       systemInstruction,
     });
 
-    const result = await model.generateContentStream(contents);
-    
-    const encoder = new TextEncoder();
-    const stream = new ReadableStream({
-      async start(controller) {
-        for await (const chunk of result.stream) {
-          if (chunk && typeof chunk.text === 'function') {
-            const text = chunk.text();
-            if (text) {
-              controller.enqueue(encoder.encode(`data: ${JSON.stringify({ text })}\n\n`));
-            }
-          }
-        }
-        controller.close();
-      },
-    });
+    // ストリーミングではなく、通常の一括生成に変更
+    const result = await model.generateContent({ contents });
+    const response = result.response;
+    const text = response.text();
 
     return {
       statusCode: 200,
-      headers: {
-        "Content-Type": "text/event-stream",
-        "Cache-Control": "no-cache",
-        "Connection": "keep-alive",
-      },
-      body: stream,
+      headers: { "Content-Type": "application/json" },
+      // フロントエンドが期待する形式で、完成したテキストを一度に返す
+      body: JSON.stringify({ candidates: [{ content: { parts: [{ text }] } }] }),
     };
 
   } catch (error) {
