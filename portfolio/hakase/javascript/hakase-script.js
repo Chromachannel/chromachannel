@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
 以上の指示を理解し、最初の挨拶と問いかけから始めてください。`,
   };
 
-  // --- DOM要素の取得 ---
+  // --- (DOM要素取得、状態管理、音声合成クラスは前回から変更なし) ---
   const chatLog = document.getElementById("chat-log");
   const userInput = document.getElementById("user-input");
   const sendBtn = document.getElementById("send-btn");
@@ -49,128 +49,31 @@ document.addEventListener("DOMContentLoaded", () => {
   const historyList = document.getElementById("history-list");
   const downloadChatBtn = document.getElementById("download-chat-btn");
 
-  // --- 状態管理 ---
   let conversationHistory = [];
   let currentChatId = null;
 
-  // --- 音声合成クラス (変更なし) ---
   class VoiceChatBot {
-    constructor() {
-      this.voices = [];
-      this.isLoading = true;
-      this.loadVoices();
-    }
-
-    loadVoices() {
-      if (!("speechSynthesis" in window)) {
-        console.warn("このブラウザは音声合成に対応していません。");
-        this.isLoading = false;
-        return;
-      }
-      const setVoices = () => {
-        this.voices = window.speechSynthesis
-          .getVoices()
-          .filter((v) => v.lang === "ja-JP");
-        this.isLoading = false;
-      };
-      if (window.speechSynthesis.onvoiceschanged !== undefined) {
-        window.speechSynthesis.onvoiceschanged = setVoices;
-      }
-      setVoices();
-    }
-
-    speak(text, onEndCallback) {
-      if (this.isLoading || !("speechSynthesis" in window)) return;
-      window.speechSynthesis.cancel();
-      const utterance = new SpeechSynthesisUtterance(text);
-      const preferredVoice =
-        this.voices.find((v) => v.name === "Google 日本語") ||
-        this.voices.find((v) => v.name.includes("Microsoft Ayumi")) ||
-        this.voices.find((v) => v.name === "Kyoko");
-      utterance.voice = preferredVoice || this.voices[0];
-      utterance.lang = "ja-JP";
-      utterance.rate = 1.0;
-      utterance.pitch = 1.1;
-      utterance.onend = () => {
-        if (onEndCallback) onEndCallback();
-      };
-      window.speechSynthesis.speak(utterance);
-    }
-
-    stop() {
-      if ("speechSynthesis" in window) {
-        window.speechSynthesis.cancel();
-      }
-    }
+      constructor() { this.voices = []; this.isLoading = true; this.loadVoices(); }
+      loadVoices() { if (!("speechSynthesis" in window)) { this.isLoading = false; return; } const setVoices = () => { this.voices = window.speechSynthesis.getVoices().filter((v) => v.lang === "ja-JP"); this.isLoading = false; }; if (window.speechSynthesis.onvoiceschanged !== undefined) { window.speechSynthesis.onvoiceschanged = setVoices; } setVoices(); }
+      speak(text, onEndCallback) { if (this.isLoading || !("speechSynthesis" in window)) return; window.speechSynthesis.cancel(); const utterance = new SpeechSynthesisUtterance(text); const preferredVoice = this.voices.find((v) => v.name === "Google 日本語") || this.voices.find((v) => v.name.includes("Microsoft Ayumi")) || this.voices.find((v) => v.name === "Kyoko"); utterance.voice = preferredVoice || this.voices[0]; utterance.lang = "ja-JP"; utterance.rate = 1.0; utterance.pitch = 1.1; utterance.onend = () => { if (onEndCallback) onEndCallback(); }; window.speechSynthesis.speak(utterance); }
+      stop() { if ("speechSynthesis" in window) { window.speechSynthesis.cancel(); } }
   }
   const voiceBot = new VoiceChatBot();
 
-  // --- DOM操作関連の関数 (変更なし) ---
-  const toggleUI = (isDisabled) => {
-    userInput.disabled = isDisabled;
-    sendBtn.disabled = isDisabled;
-    if (!isDisabled) userInput.focus();
-  };
-
-  const createHistoryListItem = (chatId, title) => {
-    const listItem = document.createElement("li");
-    listItem.className = `history-item ${chatId === currentChatId ? "active" : ""}`;
-    listItem.dataset.chatId = chatId;
-    listItem.addEventListener("click", () => loadChat(chatId));
-    const titleSpan = document.createElement("span");
-    titleSpan.textContent = title;
-    const deleteBtn = document.createElement("button");
-    deleteBtn.className = "delete-btn";
-    deleteBtn.innerHTML = '<i class="fas fa-trash-alt"></i>';
-    deleteBtn.title = "この対話を削除";
-    deleteBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      deleteChat(chatId);
-    });
-    listItem.appendChild(titleSpan);
-    listItem.appendChild(deleteBtn);
-    return listItem;
-  };
-
-  const updateHistoryList = () => {
-    historyList.innerHTML = "";
-    const keys = Object.keys(localStorage)
-      .filter((key) => key.startsWith(CONFIG.HISTORY_KEY_PREFIX))
-      .sort((a, b) => b.localeCompare(a));
-    keys.forEach((key) => {
-      const chatId = key.replace(CONFIG.HISTORY_KEY_PREFIX, "");
-      const savedHistory = getChatHistoryFromStorage(chatId);
-      if (!savedHistory || savedHistory.length < 2) {
-        localStorage.removeItem(key);
-        return;
-      }
-      const firstUserMessage = savedHistory.find((turn) => turn.role === "user")?.parts[0].text;
-      const title = firstUserMessage ? `${firstUserMessage.substring(0, 20)}…` : "新しい対話";
-      const listItem = createHistoryListItem(chatId, title);
-      historyList.appendChild(listItem);
-    });
-  };
-
-  // --- ローカルストレージ関連の関数 (変更なし) ---
-  const getChatHistoryFromStorage = (chatId) => {
-    const savedHistory = localStorage.getItem(`${CONFIG.HISTORY_KEY_PREFIX}${chatId}`);
-    return savedHistory ? JSON.parse(savedHistory) : null;
-  };
-
-  const saveCurrentChatToStorage = () => {
-    if (currentChatId && conversationHistory.length > 0) {
-      localStorage.setItem(`${CONFIG.HISTORY_KEY_PREFIX}${currentChatId}`, JSON.stringify(conversationHistory));
-    }
-    updateHistoryList();
-  };
+  // --- DOM操作関連、ローカルストレージ関連の関数 (前回から変更なし) ---
+  const toggleUI = (isDisabled) => { userInput.disabled = isDisabled; sendBtn.disabled = isDisabled; if (!isDisabled) userInput.focus(); };
+  const createHistoryListItem = (chatId, title) => { const listItem = document.createElement("li"); listItem.className = `history-item ${chatId === currentChatId ? "active" : ""}`; listItem.dataset.chatId = chatId; listItem.addEventListener("click", () => loadChat(chatId)); const titleSpan = document.createElement("span"); titleSpan.textContent = title; const deleteBtn = document.createElement("button"); deleteBtn.className = "delete-btn"; deleteBtn.innerHTML = '<i class="fas fa-trash-alt"></i>'; deleteBtn.title = "この対話を削除"; deleteBtn.addEventListener("click", (e) => { e.stopPropagation(); deleteChat(chatId); }); listItem.appendChild(titleSpan); listItem.appendChild(deleteBtn); return listItem; };
+  const updateHistoryList = () => { historyList.innerHTML = ""; const keys = Object.keys(localStorage).filter((key) => key.startsWith(CONFIG.HISTORY_KEY_PREFIX)).sort((a, b) => b.localeCompare(a)); keys.forEach((key) => { const chatId = key.replace(CONFIG.HISTORY_KEY_PREFIX, ""); const savedHistory = getChatHistoryFromStorage(chatId); if (!savedHistory || savedHistory.length < 2) { localStorage.removeItem(key); return; } const firstUserMessage = savedHistory.find((turn) => turn.role === "user")?.parts[0].text; const title = firstUserMessage ? `${firstUserMessage.substring(0, 20)}…` : "新しい対話"; const listItem = createHistoryListItem(chatId, title); historyList.appendChild(listItem); }); };
+  const getChatHistoryFromStorage = (chatId) => { const savedHistory = localStorage.getItem(`${CONFIG.HISTORY_KEY_PREFIX}${chatId}`); return savedHistory ? JSON.parse(savedHistory) : null; };
+  const saveCurrentChatToStorage = () => { if (currentChatId && conversationHistory.length > 0) { localStorage.setItem(`${CONFIG.HISTORY_KEY_PREFIX}${currentChatId}`, JSON.stringify(conversationHistory)); } updateHistoryList(); };
   
-    // --- アプリケーションロジック (ストリーミング対応に全面改修) ---
+  // --- アプリケーションロジック (ストリーミング対応に全面改修) ---
 
   const addMessageToLog = (sender, message = "") => {
     const messageElement = document.createElement("div");
     messageElement.classList.add("message", `${sender}-message`);
     const iconHTML = sender === "ai"
-      ? `<div class="icon"><img src="img/hakase.webp" alt="AI博士のアイコン"></div>`
+      ? `<div class="icon"><img src="/portfolio/hakase/img/hakase.webp" alt="AI博士のアイコン"></div>`
       : `<div class="icon"><i class="fas fa-user"></i></div>`;
     
     const bubble = document.createElement("div");
@@ -192,38 +95,41 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const processStream = async (response, aiMessageElement) => {
-    const reader = response.body.getReader();
-    const decoder = new TextDecoder();
-    let fullResponse = "";
-    const bubble = aiMessageElement.querySelector(".bubble");
-    const cursor = bubble.querySelector(".typing-cursor");
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
+      let fullResponse = "";
+      const bubble = aiMessageElement.querySelector(".bubble");
 
-    while (true) {
-        const { value, done } = await reader.read();
-        if (done) break;
-        
-        const chunkText = decoder.decode(value, { stream: true });
-        
-        try {
-          const jsonChunks = chunkText.match(/{.*?}/g);
-          if (jsonChunks) {
-            jsonChunks.forEach(jsonChunk => {
-              const chunk = JSON.parse(jsonChunk);
-              const textPart = chunk.candidates?.[0]?.content?.parts?.[0]?.text || "";
-              fullResponse += textPart;
-            });
+      while (true) {
+          const { value, done } = await reader.read();
+          if (done) break;
+
+          const chunkText = decoder.decode(value);
+          const lines = chunkText.split('\n\n');
+
+          for (const line of lines) {
+              if (line.startsWith('data: ')) {
+                  try {
+                      const jsonStr = line.substring(6);
+                      const chunk = JSON.parse(jsonStr);
+                      const textPart = chunk.text || "";
+                      fullResponse += textPart;
+                  } catch (e) {
+                      console.warn("Stream JSON parsing error:", e, "Line:", line);
+                  }
+              }
           }
-        } catch (e) {
-            console.warn("JSON parsing error in stream chunk:", e, "Chunk:", chunkText);
-        }
 
-        bubble.innerHTML = fullResponse.replace(/\n/g, "<br>").replace(/(\/[a-zA-Z0-9/_-]+\.html)/g, '<a href="$1" target="_blank">$1</a>') + '<span class="typing-cursor"></span>';
-        chatLog.scrollTop = chatLog.scrollHeight;
-    }
-    
-    bubble.querySelector('.typing-cursor')?.remove();
-    return fullResponse;
+          bubble.innerHTML = fullResponse
+              .replace(/\n/g, "<br>")
+              .replace(/(\/[a-zA-Z0-9/_-]+\.html)/g, '<a href="$1" target="_blank">$1</a>') + '<span class="typing-cursor"></span>';
+          chatLog.scrollTop = chatLog.scrollHeight;
+      }
+      
+      bubble.querySelector('.typing-cursor')?.remove();
+      return fullResponse;
   };
+
 
   const handleUserMessage = async () => {
     const userMessage = userInput.value.trim();
@@ -264,9 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
             playBtn.innerHTML = '<i class="fas fa-play"></i>';
         };
         playBtn.addEventListener("click", () => {
-            if (isPlaying) {
-                voiceBot.stop();
-            } else {
+            if (isPlaying) { voiceBot.stop(); } else {
                 isPlaying = true;
                 playBtn.innerHTML = '<i class="fas fa-stop"></i>';
                 voiceBot.speak(aiMessage, onEnd);
@@ -282,7 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
   
-  const startNewChat = async () => {
+  const startNewChat = () => {
       voiceBot.stop();
       conversationHistory = [];
       chatLog.innerHTML = "";
@@ -303,7 +207,7 @@ document.addEventListener("DOMContentLoaded", () => {
               bubble.innerHTML = currentText.replace(/\n/g, '<br>') + '<span class="typing-cursor"></span>';
               chatLog.scrollTop = chatLog.scrollHeight;
               index++;
-              setTimeout(type, 30); // タイピング速度
+              setTimeout(type, 20); // タイピング速度
           } else {
               bubble.querySelector('.typing-cursor')?.remove();
               conversationHistory.push({ role: "model", parts: [{ text: firstMessage }] });
@@ -325,7 +229,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const sender = turn.role === "model" ? "ai" : "user";
         const message = turn.parts[0].text;
         const messageElement = addMessageToLog(sender, message);
-        messageElement.querySelector('.typing-cursor')?.remove(); // カーソルは不要
+        messageElement.querySelector('.typing-cursor')?.remove(); 
         if(sender === 'ai'){
             const playBtn = document.createElement("button");
             playBtn.className = "voice-play-btn";
