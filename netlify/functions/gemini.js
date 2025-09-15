@@ -1,16 +1,17 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
-// Netlifyの環境変数からAPIキーを取得
-const apiKey = process.env.GEMINI_API_KEY;
-if (!apiKey) {
-  throw new Error("GEMINI_API_KEY is not defined in environment variables.");
-}
-const genAI = new GoogleGenerativeAI(apiKey);
-
 exports.handler = async (event) => {
-  if (event.httpMethod !== "POST") {
-    return { statusCode: 405, body: "Method Not Allowed" };
+  if (event.httpMethod !== 'POST') {
+    return { statusCode: 405, body: 'Method Not Allowed' };
   }
+
+  const apiKey = process.env.GEMINI_API_KEY;
+  if (!apiKey) {
+    console.error("GEMINI_API_KEY is not defined in environment variables.");
+    return { statusCode: 500, body: JSON.stringify({ error: "API key is not configured." }) };
+  }
+
+  const genAI = new GoogleGenerativeAI(apiKey);
 
   try {
     const { contents, systemInstruction } = JSON.parse(event.body);
@@ -20,17 +21,15 @@ exports.handler = async (event) => {
     });
 
     const result = await model.generateContentStream(contents);
-
-    // Netlify Functions v2のストリーミング応答に対応
+    
+    const encoder = new TextEncoder();
     const stream = new ReadableStream({
       async start(controller) {
         for await (const chunk of result.stream) {
-          // text()メソッドが存在するか確認
           if (chunk && typeof chunk.text === 'function') {
             const text = chunk.text();
             if (text) {
-               // フロントエンドが処理しやすいように、JSON形式の文字列としてエンコード
-              controller.enqueue(`data: ${JSON.stringify({ text })}\n\n`);
+              controller.enqueue(encoder.encode(`data: ${JSON.stringify({ text })}\n\n`));
             }
           }
         }
