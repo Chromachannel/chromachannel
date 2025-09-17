@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const messageElement = document.createElement("div");
     messageElement.classList.add("message", `${sender}-message`);
     const iconHTML = sender === "ai"
-      ? `<div class="icon"><img src="/portfolio/personality-test/img/counselor.webp" alt="AIカウンセラーのアイコン"></div>`
+      ? `<div class="icon"><img src="/portfolio/personality-test/img/counselor.png" alt="AIカウンセラーのアイコン"></div>`
       : `<div class="icon"><i class="fas fa-user"></i></div>`;
     
     const bubble = document.createElement("div");
