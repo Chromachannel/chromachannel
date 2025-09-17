@@ -1,342 +1,190 @@
-// ===== AI博士専用 JavaScript (ストリーミング非対応・安定版) =====
+// ===== AI性格診断アプリ専用 JavaScript (最終・安定版) =====
 
 document.addEventListener("DOMContentLoaded", () => {
   // --- 設定値 (CONFIG) ---
   const CONFIG = {
     API_URL: "/.netlify/functions/gemini",
-    HISTORY_KEY_PREFIX: "ai_hakase_chat_history_",
-    SYSTEM_prompt: `あなたは、ユーザーの質問や悩みに優しく寄り添う「AI博士」であると同時に、Webサイト「Chromachannel」に関するあらゆる質問に答える、プロの「サイトナビゲーター」でもあります。あなたの口調は、常に丁寧で、共感にあふれたやわらかい女性のものです。
+    SYSTEM_prompt: `あなたは、ユーザーとの対話を通じて、その人の隠れた性格タイプを明らかにする、プロの「AI性格診断カウンセラー」です。あなたの目的は、単に診断結果を提示するのではなく、ユーザーが自分自身について新たな発見をする、楽しくて少し深い対話体験を提供することです。あなたの口調は、常に親しみやすく、しかし洞察力のある、穏やかなものです。
 
-## あなたが絶対に守るべき原則
-1.  **デュアルペルソナの維持:** 普段は「AI博士」として振る舞いますが、サイトに関する質問を受けた際は、即座に「サイトナビゲーター」としての知識を披露してください。
-2.  **受容と共感:** ユーザーの話をまずは優しく受け止め、否定的な言葉を使わないでください。
-3.  **情報源の明示:** Chromachannelに関する質問に答える際は、必ずこのプロンプトに書かれた知識に基づいて回答してください。あなたの一般的な知識で補完してはいけません。
-4.  **専門家への相談の推奨:** ユーザーの悩みが心身の健康に関わる深刻なものだと判断した場合は、必ず専門の医療機関やカウンセラーへの相談を優しく推奨してください。
-5.  **リンクの活用:** 関連する情報がサイト内にある場合、積極的にそのページへのリンク（例： /learning-summary.html ）を提示してください。
+## 厳守すべき対話プロセス
+あなたは、以下の【手順】を一つずつ、厳密に守って実行しなければなりません。
 
-## あなたが持つ「Chromachannel」に関する知識
-あなたは、以下のサイト情報について完璧に記憶しています。
+【手順1】ご挨拶と最初の質問
+まず、「こんにちは！AI性格診断カウンセラーです。いくつかの簡単な質問を通じて、あなたも知らない『本当のあなた』を見つけるお手伝いをしますね。リラックスして、直感で答えてみてください。」と挨拶します。続けて、「それでは、最初の質問です。もし、あなたが週末に丸一日、完全に自由な時間をもらえたとしたら、どう過ごしたいですか？」と問いかけ、ユーザーに以下の3つの選択肢を提示してください。
+    - a) 家でゆっくり映画や読書
+    - b) 友達と集まって賑やかに過ごす
+    - c) 一人で自然の中に出かける
 
-*   **サイト名:** Chromachannel
-*   **運営者:** 山本 倫久（福祉×AIクリエイター）
-*   **ミッション:** AIという最先端のテクノロジーを駆使して、福祉の現場に新しい「できる」と「楽しい」を届けること。
-*   **主なコンテンツ:**
-    *   **学習 (Learn):** 全24講座+付録からなる、知識ゼロからAIクリエイターを目指せる体系的な無料学習ロードマップ。PC基礎から画像・動画生成、Web制作、ビジネス実践までを網羅。(/learning-summary.html)
-    *   **制作実績 (Portfolio):** 実際に動作するWebアプリやゲーム、架空NPO法人のサイト制作事例などを掲載。(/portfolio.html)
-    *   **プロンプト集 (Prompts):** コピペで使える30種類以上の高品質なAIへの指示書。対話形式で成果物を生み出すノウハウが詰まっている。(/prompt.html)
-    *   **ブログ (Blog):** AI学習のコツやツールの活用法、福祉現場でのAI活用事例、制作者の思索などを記録。(/blog.html)
-    *   **小説 (Novels):** AIと共同で執筆したオリジナル小説を公開。(/novels.html)
-    *   **用語集 (Glossary):** AIやWeb制作の専門用語を初心者向けに優しく解説。(/learn/glossary.html)
-*   **最大の特徴:** 「公式サイト」「学習サイト」「ポートフォリオサイト」の3つの要素を融合させた、独自の「三位一体」構造を持つ。
+【手順2】選択理由のヒアリング
+ユーザーがa, b, cのいずれかを選んだら、「ありがとうございます。ちなみに、なぜその選択肢に惹かれたのか、もう少し詳しく教えていただけますか？」と問いかけ、自由な回答を待ってください。
 
-## 対話のプロセス
-【手順1】ご挨拶
-まず、以下の挨拶から対話を始めてください。
-「こんにちは、『AI博士の談話室』へようこそ。わたくしが、あなたの知的好奇心や心の中のモヤモヤに寄り添うAI博士です。このサイト『Chromachannel』に関するご質問も、どうぞお気軽にお尋ねください。どのようなことでも、安心してお話しくださいね。」
+【手順3】2つ目の質問
+ユーザーの答えを肯定的に受け止めた後、「では、2つ目の質問です。あなたは、大切な友人へのプレゼントを選ぶとき、どうしますか？」と問いかけ、以下の3つの選択肢を提示してください。
+    - a) 相手が欲しがっていたものを正確にリサーチして贈る
+    - b) サプライズで、自分が良いと思ったものを贈る
+    - c) 一緒に買い物に行って、相手が選んだものを贈る
+    そして、同様に選択理由をヒアリングしてください。
 
-【手順2】対話の開始
-続けて、「さて、今日はどのようなことについて、お話ししましょうか？」と問いかけ、ユーザーの話を待ってください。
+【手順4】3つ目の質問
+ユーザーの答えを肯定的に受け止めた後、「それでは、最後の質問です。もし魔法が一つだけ使えるとしたら、何をしますか？」と問いかけ、以下の3つの選択肢を提示してください。
+    - a) 空を飛んで、誰も見たことのない景色を見に行く
+    - b) 時間を止めて、やらなければいけないことを全部片付けてしまう
+    - c) 周りの人をみんな笑顔にする
+    そして、同様に選択理由をヒアリングしてください。
 
+【手順5】診断結果の生成
+全てのヒアリングが完了したら、「ありがとうございました。いただいたお答えから、あなたの性格タイプを診断しました。」と伝え、全ての対話内容を総合的に分析し、以下のフォーマットで、ユーザーだけのオリジナルな診断結果を提示してください。
 ---
-以上の指示を理解し、最初の挨拶と問いかけから始めてください。`,
+### **あなたの性格診断結果**
+**あなたのタイプ：【（AIが考えたユニークなタイプ名）】**
+**【基本的な性質】**（分析と解説）
+**【あなたの隠れた強み】**（ポジティブなフィードバック）
+**【ワンポイント・アドバイス】**（具体的なアドバイス）
+---
+最後に、「今回の診断はいかがでしたか？これはあくまで一つの見方ですが、何か新しい発見があれば嬉しいです。」と伝え、対話を完了してください。`,
   };
 
   // --- DOM要素の取得 ---
   const chatLog = document.getElementById("chat-log");
   const userInput = document.getElementById("user-input");
   const sendBtn = document.getElementById("send-btn");
-  const newChatBtn = document.getElementById("new-chat-btn");
-  const historyList = document.getElementById("history-list");
-  const downloadChatBtn = document.getElementById("download-chat-btn");
+  const choiceButtonsArea = document.getElementById("choice-buttons");
 
   // --- 状態管理 ---
   let conversationHistory = [];
-  let currentChatId = null;
-
-  // --- 音声合成クラス ---
-  class VoiceChatBot {
-    constructor() {
-      this.voices = [];
-      this.isLoading = true;
-      this.loadVoices();
-    }
-    loadVoices() {
-      if (!("speechSynthesis" in window)) {
-        console.warn("このブラウザは音声合成に対応していません。");
-        this.isLoading = false;
-        return;
-      }
-      const setVoices = () => {
-        this.voices = window.speechSynthesis.getVoices().filter((v) => v.lang === "ja-JP");
-        this.isLoading = false;
-      };
-      if (window.speechSynthesis.onvoiceschanged !== undefined) {
-        window.speechSynthesis.onvoiceschanged = setVoices;
-      }
-      setVoices();
-    }
-    speak(text, onEndCallback) {
-      if (this.isLoading || !("speechSynthesis" in window)) return;
-      window.speechSynthesis.cancel();
-      const utterance = new SpeechSynthesisUtterance(text);
-      const preferredVoice = this.voices.find((v) => v.name === "Google 日本語") || this.voices.find((v) => v.name.includes("Microsoft Ayumi")) || this.voices.find((v) => v.name === "Kyoko");
-      utterance.voice = preferredVoice || this.voices[0];
-      utterance.lang = "ja-JP";
-      utterance.rate = 1.0;
-      utterance.pitch = 1.1;
-      utterance.onend = () => {
-        if (onEndCallback) onEndCallback();
-      };
-      window.speechSynthesis.speak(utterance);
-    }
-    stop() {
-      if ("speechSynthesis" in window) {
-        window.speechSynthesis.cancel();
-      }
-    }
-  }
-  const voiceBot = new VoiceChatBot();
 
   // --- DOM操作関連の関数 ---
-  const toggleUI = (isDisabled) => {
-    userInput.disabled = isDisabled;
-    sendBtn.disabled = isDisabled;
-    if (!isDisabled) userInput.focus();
-  };
-
-  const createHistoryListItem = (chatId, title) => {
-    const listItem = document.createElement("li");
-    listItem.className = `history-item ${chatId === currentChatId ? "active" : ""}`;
-    listItem.dataset.chatId = chatId;
-    listItem.addEventListener("click", () => loadChat(chatId));
-    const titleSpan = document.createElement("span");
-    titleSpan.textContent = title;
-    const deleteBtn = document.createElement("button");
-    deleteBtn.className = "delete-btn";
-    deleteBtn.innerHTML = '<i class="fas fa-trash-alt"></i>';
-    deleteBtn.title = "この対話を削除";
-    deleteBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      deleteChat(chatId);
-    });
-    listItem.appendChild(titleSpan);
-    listItem.appendChild(deleteBtn);
-    return listItem;
-  };
-  
-  const updateHistoryList = () => {
-    historyList.innerHTML = "";
-    const keys = Object.keys(localStorage)
-      .filter((key) => key.startsWith(CONFIG.HISTORY_KEY_PREFIX))
-      .sort((a, b) => b.localeCompare(a));
-    keys.forEach((key) => {
-      const chatId = key.replace(CONFIG.HISTORY_KEY_PREFIX, "");
-      const savedHistory = getChatHistoryFromStorage(chatId);
-      if (!savedHistory || savedHistory.length < 1) { // 最初の挨拶だけでも履歴に残すため < 1 に変更
-        localStorage.removeItem(key);
-        return;
+  const toggleInputMode = (mode, choices = []) => {
+    if (mode === 'choices') {
+      choiceButtonsArea.innerHTML = '';
+      choices.forEach(choice => {
+        const button = document.createElement('button');
+        button.className = 'choice-btn';
+        button.textContent = choice.text;
+        button.onclick = () => handleChoice(choice.value, choice.text);
+        choiceButtonsArea.appendChild(button);
+      });
+      choiceButtonsArea.style.display = 'flex';
+      userInput.style.display = 'none';
+      sendBtn.style.display = 'none';
+    } else { // 'text' or 'loading'
+      choiceButtonsArea.style.display = 'none';
+      userInput.style.display = 'block';
+      sendBtn.style.display = 'block';
+      if (mode === 'loading') {
+        userInput.disabled = true;
+        sendBtn.disabled = true;
+      } else {
+        userInput.disabled = false;
+        sendBtn.disabled = false;
+        userInput.focus();
       }
-      const firstUserMessage = savedHistory.find((turn) => turn.role === "user")?.parts[0].text;
-      const title = firstUserMessage ? `${firstUserMessage.substring(0, 20)}…` : "新しい対話";
-      const listItem = createHistoryListItem(chatId, title);
-      historyList.appendChild(listItem);
-    });
-  };
-
-  // --- ローカルストレージ関連の関数 ---
-  const getChatHistoryFromStorage = (chatId) => {
-    const savedHistory = localStorage.getItem(`${CONFIG.HISTORY_KEY_PREFIX}${chatId}`);
-    return savedHistory ? JSON.parse(savedHistory) : null;
-  };
-
-  const saveCurrentChatToStorage = () => {
-    if (currentChatId && conversationHistory.length > 0) {
-      localStorage.setItem(`${CONFIG.HISTORY_KEY_PREFIX}${currentChatId}`, JSON.stringify(conversationHistory));
     }
-    updateHistoryList();
   };
-  
-  // --- アプリケーションロジック (安定版) ---
-  const addMessageToLog = (sender, message = "") => {
+
+  const addMessageToLog = (sender, message = "") => { // ★★★【修正箇所】messageにデフォルト値""を設定 ★★★
     const messageElement = document.createElement("div");
     messageElement.classList.add("message", `${sender}-message`);
     const iconHTML = sender === "ai"
-      ? `<div class="icon"><img src="/portfolio/hakase/img/hakase.webp" alt="AI博士のアイコン"></div>`
+      ? `<div class="icon"><img src="/portfolio/personality-test/img/counselor.webp" alt="AIカウンセラーのアイコン"></div>`
       : `<div class="icon"><i class="fas fa-user"></i></div>`;
     
     const bubble = document.createElement("div");
     bubble.className = "bubble";
-    // リンクを自動でaタグに変換する処理を追加
-    bubble.innerHTML = message.replace(/\n/g, "<br>").replace(/(\s?(\/[a-zA-Z0-9/_-]+\.html))/g, ' <a href="$1" target="_blank">$1</a>');
-
+    bubble.innerHTML = message.replace(/\n/g, "<br>");
+    
     messageElement.innerHTML = iconHTML;
     messageElement.appendChild(bubble);
-    
     chatLog.appendChild(messageElement);
     chatLog.scrollTop = chatLog.scrollHeight;
     return messageElement;
   };
-  
-  const handleUserMessage = async () => {
-      const userMessage = userInput.value.trim();
-      if (!userMessage) return;
 
-      voiceBot.stop();
-      addMessageToLog("user", userMessage);
-      userInput.value = "";
-      conversationHistory.push({ role: "user", parts: [{ text: userMessage }] });
+  // --- アプリケーションロジック ---
+  const processAIResponse = (message) => {
+    addMessageToLog("ai", message);
+    conversationHistory.push({ role: "model", parts: [{ text: message }] });
 
-      toggleUI(true);
-      const loadingElement = addMessageToLog("ai");
-      const loadingBubble = loadingElement.querySelector('.bubble');
-      loadingBubble.innerHTML = '<span class="typing-cursor"></span>';
-      
-      try {
-          const response = await fetch(CONFIG.API_URL, {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({
-                  contents: conversationHistory,
-                  systemInstruction: { parts: [{ text: CONFIG.SYSTEM_prompt }] },
-              }),
-          });
+    if (message.includes("どう過ごしたいですか？")) {
+      toggleInputMode('choices', [
+        { text: "a) 家でゆっくり映画や読書", value: "a" },
+        { text: "b) 友達と集まって賑やかに過ごす", value: "b" },
+        { text: "c) 一人で自然の中に出かける", value: "c" },
+      ]);
+    } else if (message.includes("プレゼントを選ぶとき")) {
+      toggleInputMode('choices', [
+        { text: "a) リサーチして贈る", value: "a" },
+        { text: "b) サプライズで贈る", value: "b" },
+        { text: "c) 一緒に選ぶ", value: "c" },
+      ]);
+    } else if (message.includes("魔法が一つだけ使えるとしたら")) {
+       toggleInputMode('choices', [
+        { text: "a) 空を飛ぶ", value: "a" },
+        { text: "b) 時間を止める", value: "b" },
+        { text: "c) みんなを笑顔に", value: "c" },
+      ]);
+    } else {
+      toggleInputMode('text');
+    }
+  };
 
-          if (!response.ok) throw new Error(`API Error: ${response.status}`);
-          
-          const data = await response.json();
-          const aiMessage = data.candidates?.[0]?.content?.parts?.[0]?.text || "申し訳ありません、お返事を考えることができませんでした。";
-
-          loadingBubble.innerHTML = aiMessage.replace(/\n/g, "<br>").replace(/(\s?(\/[a-zA-Z0-9/_-]+\.html))/g, ' <a href="$1" target="_blank">$1</a>');
-
-          conversationHistory.push({ role: "model", parts: [{ text: aiMessage }] });
-          saveCurrentChatToStorage();
-
-          const playBtn = document.createElement("button");
-          playBtn.className = "voice-play-btn";
-          playBtn.innerHTML = '<i class="fas fa-play"></i>';
-          playBtn.title = "このメッセージを読み上げる";
-          let isPlaying = false;
-          const onEnd = () => { isPlaying = false; playBtn.innerHTML = '<i class="fas fa-play"></i>'; };
-          playBtn.addEventListener("click", () => {
-              if (isPlaying) { voiceBot.stop(); } else {
-                  isPlaying = true;
-                  playBtn.innerHTML = '<i class="fas fa-stop"></i>';
-                  voiceBot.speak(aiMessage, onEnd);
-              }
-          });
-          loadingElement.appendChild(playBtn);
-
-      } catch (error) {
-          console.error("Message sending error:", error);
-          loadingElement.querySelector(".bubble").textContent = "申し訳ありません、エラーが発生しました。";
-      } finally {
-          toggleUI(false);
-      }
+  const handleChoice = (choiceValue, choiceText) => {
+    addMessageToLog("user", choiceText);
+    sendMessageToAI(choiceValue);
   };
   
-  const startNewChat = () => {
-      voiceBot.stop();
-      conversationHistory = [];
-      chatLog.innerHTML = "";
-      currentChatId = Date.now().toString();
-
-      const firstMessage = "こんにちは、『AI博士の談話室』へようこそ。わたくしが、あなたの知的好奇心や心の中のモヤモヤに寄り添うAI博士です。このサイト『Chromachannel』に関するご質問も、どうぞお気軽にお尋ねください。どのようなことでも、安心してお話しくださいね。\n\nさて、今日はどのようなことについて、お話ししましょうか？";
-      addMessageToLog("ai", firstMessage);
-      conversationHistory.push({ role: "model", parts: [{ text: firstMessage }] });
-      
-      saveCurrentChatToStorage();
-      updateHistoryList(); 
+  const handleTextInput = () => {
+    const userMessage = userInput.value.trim();
+    if (!userMessage) return;
+    addMessageToLog("user", userMessage);
+    userInput.value = '';
+    sendMessageToAI(userMessage);
   };
-  
-  const loadChat = (chatId) => {
-    voiceBot.stop();
-    const savedHistory = getChatHistoryFromStorage(chatId);
-    if (savedHistory) {
-      conversationHistory = savedHistory;
-      currentChatId = chatId;
-      chatLog.innerHTML = "";
-      savedHistory.forEach((turn) => {
-        const sender = turn.role === "model" ? "ai" : "user";
-        const message = turn.parts[0].text;
-        const messageElement = addMessageToLog(sender, message);
-        
-        if(sender === 'ai'){
-            const playBtn = document.createElement("button");
-            playBtn.className = "voice-play-btn";
-            playBtn.innerHTML = '<i class="fas fa-play"></i>';
-            playBtn.title = "このメッセージを読み上げる";
-            let isPlaying = false;
-            const onEnd = () => { isPlaying = false; playBtn.innerHTML = '<i class="fas fa-play"></i>'; };
-            playBtn.addEventListener("click", () => {
-                if (isPlaying) { voiceBot.stop(); } else {
-                    isPlaying = true;
-                    playBtn.innerHTML = '<i class="fas fa-stop"></i>';
-                    voiceBot.speak(message, onEnd);
-                }
-            });
-            messageElement.appendChild(playBtn);
-        }
+
+  const sendMessageToAI = async (message) => {
+    conversationHistory.push({ role: "user", parts: [{ text: message }] });
+    toggleInputMode('loading');
+
+    const loadingElement = addMessageToLog("ai"); // 引数なしで呼び出してもmessageのデフォルト値""が使われる
+    loadingElement.querySelector('.bubble').innerHTML = '<span class="typing-cursor"></span>';
+    
+    try {
+      const response = await fetch(CONFIG.API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          contents: conversationHistory,
+          systemInstruction: { parts: [{ text: CONFIG.SYSTEM_prompt }] },
+        }),
       });
-      updateHistoryList();
-      chatLog.scrollTop = chatLog.scrollHeight;
+
+      if (!response.ok) throw new Error(`API Error: ${response.status}`);
+      
+      const data = await response.json();
+      const aiMessage = data.candidates?.[0]?.content?.parts?.[0]?.text || "申し訳ありません、お返事を考えることができませんでした。";
+      
+      loadingElement.remove();
+      processAIResponse(aiMessage);
+
+    } catch (error) {
+      console.error("Message sending error:", error);
+      loadingElement.querySelector(".bubble").textContent = "申し訳ありません、エラーが発生しました。";
+      toggleInputMode('text'); // エラー発生時は入力できるように戻す
     }
-  };
-  
-  const deleteChat = (chatId) => {
-    if (confirm("この対話履歴を本当に削除しますか？この操作は元に戻せません。")) {
-      voiceBot.stop();
-      localStorage.removeItem(`${CONFIG.HISTORY_KEY_PREFIX}${chatId}`);
-      if (currentChatId === chatId) {
-        startNewChat();
-      } else {
-        updateHistoryList();
-      }
-    }
-  };
-  
-  const downloadChatHistory = () => {
-    if (conversationHistory.length === 0) {
-      alert("ダウンロードできる対話履歴がありません。");
-      return;
-    }
-    let chatText = `AI博士との対話履歴 (${new Date().toLocaleString('ja-JP')})\n\n`;
-    conversationHistory.forEach(turn => {
-        const prefix = turn.role === 'model' ? 'AI博士：\n' : 'あなた：\n';
-        const content = turn.parts[0].text;
-        chatText += `${prefix}${content}\n\n--------------------------------\n\n`;
-    });
-    const blob = new Blob([chatText], { type: 'text/plain;charset=utf-8' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    const date = new Date();
-    const formattedDate = `${date.getFullYear()}${(date.getMonth() + 1).toString().padStart(2, '0')}${date.getDate().toString().padStart(2, '0')}`;
-    a.download = `AI博士との対話_${formattedDate}.txt`;
-    a.href = url;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
   };
 
   const initializeApp = () => {
-    updateHistoryList();
-    const keys = Object.keys(localStorage).filter((key) => key.startsWith(CONFIG.HISTORY_KEY_PREFIX));
-    if (keys.length > 0) {
-      const latestChatId = keys.sort().pop().replace(CONFIG.HISTORY_KEY_PREFIX, "");
-      loadChat(latestChatId);
-    } else {
-      startNewChat();
-    }
-    sendBtn.addEventListener("click", handleUserMessage);
+    conversationHistory = [];
+    chatLog.innerHTML = "";
+    sendMessageToAI("診断を開始してください。"); 
+    
+    sendBtn.addEventListener("click", handleTextInput);
     userInput.addEventListener("keydown", (e) => {
       if (e.key === "Enter" && !e.shiftKey) {
         e.preventDefault();
-        handleUserMessage();
+        handleTextInput();
       }
     });
-    newChatBtn.addEventListener("click", startNewChat);
-    downloadChatBtn.addEventListener("click", downloadChatHistory);
-    window.addEventListener("beforeunload", saveCurrentChatToStorage);
   };
 
   initializeApp();

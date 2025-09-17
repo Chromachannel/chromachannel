@@ -818,3 +818,18 @@ body {
 .object-position-bottom-90 {
     object-position: 50% 90%; /* もっと下 */
 }
+/* article-containerのテキストはみ出し対策 */
+.readable {
+  word-wrap: break-word; /* 古いブラウザ向け */
+  overflow-wrap: break-word; /* 標準的なプロパティ */
+  word-break: break-all;
+}
+
+/* 画面幅が768px以下の場合に適用されるスタイル */
+@media screen and (max-width: 768px) {
+  .article.article-container {
+    /* 左右のパディングを40pxから20pxに減らす */
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

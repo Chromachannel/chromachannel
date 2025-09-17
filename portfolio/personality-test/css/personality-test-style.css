@@ -1,8 +1,10 @@
 :root {
     --counselor-bg: #f8f9fa; --panel-bg: rgba(255, 255, 255, 0.9); --window-bg: rgba(240, 244, 248, 0.95);
-    --ai-bubble-bg: #eef2ff; --user-bubble-bg: #ffffff; --border-color: rgba(226, 232, 240, 0.7);
+    --ai-bubble-bg: #e0f7fa; --user-bubble-bg: #ffffff; --border-color: rgba(226, 232, 240, 0.7);
     --text-dark: #333; --text-light: #666; --primary-color: #6a11cb;
-    --primary-color-start: #6a11cb; --primary-color-end: #2575fc;
+    --primary-color-start: #007991; /* ティール系 */
+    --primary-color-end: #78ffd6;   /* ミント系 */
+
 }
 .counselor-main { padding-top: 70px; height: 100vh; display: flex; background: linear-gradient(135deg, var(--primary-color-start) 0%, var(--primary-color-end) 100%); overflow: hidden; }
 .counselor-container { display: flex; width: 100%; height: calc(100vh - 70px); max-width: 1200px; margin: 0 auto; padding: 20px; gap: 20px; }
@@ -44,3 +46,6 @@
 @keyframes blink { 50% { opacity: 0; } }
 .bubble a { color: var(--primary-color); font-weight: 600; text-decoration: underline; }
 .bubble a:hover { color: var(--primary-color-end); }
+.choice-buttons-area { display: flex; justify-content: center; gap: 10px; width: 100%; }
+.choice-btn { padding: 10px 20px; border-radius: 20px; border: 2px solid var(--primary-color-start); background-color: white; color: var(--primary-color-start); font-weight: bold; cursor: pointer; transition: all 0.3s ease; }
+.choice-btn:hover { background-color: var(--primary-color-start); color: white; }
