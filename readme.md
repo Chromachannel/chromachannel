@@ -41,8 +41,9 @@ AI技術で福祉の現場に新しい「できる」と「楽しい」を届け
 
 ```
 / (ルートディレクトリ)
-├── 📂 blog/               # ブログ記事 (全23記事 ★★★ 更新 ★★★)
-│   ├── new-service-announcement.html (★★★ 追加 ★★★)
+├── 📂 blog/ # ブログ記事 (全24記事 ★★★ 更新 ★★★)
+│   ├── announcing-ai-course-video-vol1.html (★★★ 追加 ★★★)
+│   ├── new-service-announcement.html
 │   └── ... 
 ├── 📂 CSS/                 # スタイルシート
 ├── 📂 img/                 # 画像素材
