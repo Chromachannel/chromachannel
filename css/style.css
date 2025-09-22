@@ -833,3 +833,105 @@ body {
     padding-right: 20px;
   }
 }
+/* ===== キャラクター紹介セクション ===== */
+.character-card {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* 画像とテキストの比率 */
+    gap: 40px;
+    align-items: center;
+    background-color: var(--bg-white);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
+}
+
+/* 画像とテキストを反転させるスタイル */
+.character-card.reverse {
+    grid-template-columns: 2fr 1fr;
+}
+.character-card.reverse .character-image {
+    order: 2; /* 画像を2番目に配置 */
+}
+.character-card.reverse .character-profile {
+    order: 1; /* テキストを1番目に配置 */
+}
+
+.character-image {
+    text-align: center;
+}
+.character-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.character-profile h3 {
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+.character-profile .en-name {
+    font-size: 1rem;
+    color: var(--text-light);
+    font-weight: normal;
+}
+.character-profile .character-quote {
+    font-style: italic;
+    color: var(--text-light);
+    margin-bottom: 25px;
+    padding-left: 15px;
+    border-left: 3px solid var(--primary-color-start);
+}
+.character-profile h4 {
+    font-size: 1.1rem;
+    color: var(--primary-color-start);
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+.character-profile p,
+.character-profile ul {
+    line-height: 1.8;
+    color: var(--text-light);
+}
+.character-profile ul {
+    list-style: none;
+    padding: 0;
+}
+.character-profile li {
+    margin-bottom: 8px;
+}
+
+/* スキルや弱点を分かりやすくするタグ */
+.skill-tag, .weak-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-right: 8px;
+    color: white;
+}
+.skill-tag {
+    background-color: #3498db; /* 青系 */
+}
+.weak-tag {
+    background-color: #e74c3c; /* 赤系 */
+}
+
+/* レスポンシブ対応 (スマホ表示) */
+@media (max-width: 768px) {
+    .character-card,
+    .character-card.reverse {
+        grid-template-columns: 1fr; /* 1カラムに変更 */
+        padding: 30px;
+        gap: 25px;
+    }
+    .character-card.reverse .character-image,
+    .character-card.reverse .character-profile {
+        order: initial; /* 配置順をリセット */
+    }
+    .character-profile h3 {
+        font-size: 1.5rem;
+    }
+}
