@@ -935,3 +935,75 @@ body {
         font-size: 1.5rem;
     }
 }
+/* ===== Chromachannel紹介セクション ===== */
+.concept-card {
+    background-color: var(--bg-white);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    margin-top: 60px;
+}
+
+.concept-part
+.final-concept {
+    margin-bottom: 30px;
+}
+.concept-part:last-child 
+.final-concept {
+    margin-bottom: 0;
+}
+
+.concept-part
+.final-concept h3 {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color-start);
+    display: inline-block;
+}
+
+.concept-part .highlight {
+    font-weight: bold;
+    color: var(--primary-color-start);
+}
+
+.concept-divider {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+    margin: 40px 0;
+}
+
+.final-concept {
+    text-align: center;
+}
+
+.mission-statement {
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 2.2;
+    margin: 20px 0;
+    padding: 20px;
+    display: inline-block;
+    border-left: 3px solid var(--primary-color-start);
+    border-right: 3px solid var(--primary-color-end);
+}
+
+.conclusion {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* レスポンシブ対応 (スマホ表示) */
+@media (max-width: 768px) {
+    .concept-card {
+        padding: 30px;
+    }
+    .concept-part h3 {
+        font-size: 1.3rem;
+    }
+    .mission-statement {
+        font-size: 1.1rem;
+    }
+}
