@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url><loc>https://chromachannel.online/index.html</loc><lastmod>2025-09-03</lastmod><priority>1.00</priority></url>
+    <url><loc>https://chromachannel.online/index.html</loc><lastmod>2025-09-27</lastmod><priority>1.00</priority></url>
     <url><loc>https://chromachannel.online/apps-summary.html</loc><lastmod>2025-09-03</lastmod><priority>0.90</priority></url>
     <url><loc>https://chromachannel.online/business-summary.html</loc><lastmod>2025-09-03</lastmod><priority>0.90</priority></url>
     <url><loc>https://chromachannel.online/creative-summary.html</loc><lastmod>2025-09-03</lastmod><priority>0.90</priority></url>
@@ -9,7 +9,7 @@
     <url><loc>https://chromachannel.online/lifehack-summary.html</loc><lastmod>2025-09-03</lastmod><priority>0.90</priority></url>
     <url><loc>https://chromachannel.online/rabbit-summary.html</loc><lastmod>2025-09-03</lastmod><priority>0.90</priority></url>
     <url><loc>https://chromachannel.online/beginner-guide.html</loc><lastmod>2025-09-03</lastmod><priority>0.90</priority></url>
-    <url><loc>https://chromachannel.online/blog.html</loc><lastmod>2025-09-03</lastmod><priority>0.90</priority></url>
+    <url><loc>https://chromachannel.online/blog.html</loc><lastmod>2025-09-27</lastmod><priority>0.90</priority></url>
     <url><loc>https://chromachannel.online/novels.html</loc><lastmod>2025-09-03</lastmod><priority>0.90</priority></url>
     <url><loc>https://chromachannel.online/portfolio.html</loc><lastmod>2025-09-03</lastmod><priority>0.90</priority></url>
     <url><loc>https://chromachannel.online/prompt.html</loc><lastmod>2025-09-03</lastmod><priority>0.90</priority></url>
@@ -45,6 +45,9 @@
     <url><loc>https://chromachannel.online/learn/learn_lesson25.html</loc><lastmod>2025-09-03</lastmod><priority>0.80</priority></url>
     <url><loc>https://chromachannel.online/learn/glossary.html</loc><lastmod>2025-09-03</lastmod><priority>0.70</priority></url>
 
+    <url><loc>https://chromachannel.online/blog/column-nichijou-summary.html</loc><lastmod>2025-09-27</lastmod><priority>0.80</priority></url>
+    <url><loc>https://chromachannel.online/blog/column-nichijou-02.html</loc><lastmod>2025-09-27</lastmod><priority>0.70</priority></url>
+    <url><loc>https://chromachannel.online/blog/column-nichijou-01.html</loc><lastmod>2025-09-26</lastmod><priority>0.70</priority></url>
     <url><loc>https://chromachannel.online/blog/announcing-ai-course-video-vol4.html</loc><lastmod>2025-09-26</lastmod><priority>0.80</priority></url>
     <url><loc>https://chromachannel.online/blog/announcing-ai-course-video-vol3.html</loc><lastmod>2025-09-25</lastmod><priority>0.80</priority></url>
     <url><loc>https://chromachannel.online/blog/announcing-ai-course-video-vol2.html</loc><lastmod>2025-09-25</lastmod><priority>0.80</priority></url>
