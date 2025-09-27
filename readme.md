@@ -41,10 +41,9 @@ AI技術で福祉の現場に新しい「できる」と「楽しい」を届け
 
 ```
 / (ルートディレクトリ)
-├── 📂 blog/ # ブログ記事 (全31記事 ★★★ 更新 ★★★)
+├── 📂 blog/ # ブログ記事
+│ ├── announcing-ai-course-video-vol5.html
 │ ├── column-nichijou-summary.html
-│ ├── column-nichijou-02.html
-│ ├── column-nichijou-01.html
 │ └── ...
 ├── 📂 CSS/                 # スタイルシート
 ├── 📂 img/                 # 画像素材
