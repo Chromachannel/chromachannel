@@ -11,28 +11,34 @@ exports.handler = async (event) => {
     return { statusCode: 500, body: JSON.stringify({ error: "API key is not configured." }) };
   }
 
-  const genAI = new GoogleGenerativeAI(apiKey); // ★ apiKeyを直接渡すのがより安全です
+  const genAI = new GoogleGenerativeAI(apiKey);
 
   try {
     const { contents, systemInstruction } = JSON.parse(event.body);
     
-    // ▼▼▼ ここから全面的に修正 ▼▼▼
     const model = genAI.getGenerativeModel({ 
         model: "gemini-1.5-flash-latest",
-        systemInstruction: systemInstruction 
     }); 
 
-    // 正しいチャットセッションの開始方法
-    const chat = model.startChat({
-        history: contents.slice(0, -1), // 最後のユーザーメッセージを除いたものを履歴とする
-    });
+    // ▼▼▼ ここからが最終修正箇所 ▼▼▼
+    // systemInstructionを、会話履歴の最初の「モデル」の発言として組み込む
+    const historyWithSystemPrompt = [
+      {
+        role: "user",
+        parts: [{ text: systemInstruction.parts[0].text }],
+      },
+      {
+        role: "model",
+        parts: [{ text: "はい、承知いたしました。その役割として対話を開始します。" }],
+      },
+      ...contents
+    ];
 
-    // 最後のユーザーメッセージを送信
-    const lastUserMessage = contents[contents.length - 1].parts[0].text;
-    const result = await chat.sendMessage(lastUserMessage);
+    const result = await model.generateContent({ contents: historyWithSystemPrompt });
+    // ▲▲▲ ここまでが最終修正箇所 ▲▲▲
+    
     const response = result.response;
     const text = response.text();
-    // ▲▲▲ ここまで全面的に修正 ▲▲▲
 
     return {
       statusCode: 200,
