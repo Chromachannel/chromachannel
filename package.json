@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "node-fetch": "^2.7.0",
-    "@google/generative-ai": "latest" 
+    "@google/generative-ai": "^0.1.0",
+    "node-fetch": "^2.6.1"
   }
 }

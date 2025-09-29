@@ -1,4 +1,4 @@
-const { GoogleGenerativeAI } = require("@google/generative-ai");
+const fetch = require('node-fetch');
 
 exports.handler = async (event) => {
   if (event.httpMethod !== 'POST') {
@@ -11,39 +11,37 @@ exports.handler = async (event) => {
     return { statusCode: 500, body: JSON.stringify({ error: "API key is not configured." }) };
   }
 
-  const genAI = new GoogleGenerativeAI(apiKey);
-
   try {
     const { contents, systemInstruction } = JSON.parse(event.body);
-    
-    const model = genAI.getGenerativeModel({ 
-        model: "gemini-1.5-flash-latest",
-    }); 
 
-    // ▼▼▼ ここからが最終修正箇所 ▼▼▼
-    // systemInstructionを、会話履歴の最初の「モデル」の発言として組み込む
-    const historyWithSystemPrompt = [
-      {
-        role: "user",
-        parts: [{ text: systemInstruction.parts[0].text }],
-      },
-      {
-        role: "model",
-        parts: [{ text: "はい、承知いたしました。その役割として対話を開始します。" }],
-      },
-      ...contents
-    ];
+    const model = "gemini-1.5-flash-latest";
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
 
-    const result = await model.generateContent({ contents: historyWithSystemPrompt });
-    // ▲▲▲ ここまでが最終修正箇所 ▲▲▲
-    
-    const response = result.response;
-    const text = response.text();
+    const requestBody = {
+      contents: contents,
+      systemInstruction: systemInstruction,
+    };
+
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(requestBody),
+    });
+
+    if (!response.ok) {
+      const errorBody = await response.json();
+      console.error("Google API Error:", errorBody);
+      throw new Error(`Google API responded with status ${response.status}`);
+    }
+
+    const data = await response.json();
 
     return {
       statusCode: 200,
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ candidates: [{ content: { parts: [{ text }] } }] }),
+      body: JSON.stringify(data),
     };
 
   } catch (error) {
