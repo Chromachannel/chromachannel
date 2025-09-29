@@ -1,4 +1,5 @@
-const fetch = require('node-fetch');
+// node-fetchを使わず、Node.js標準のhttpsモジュールを使用
+const https = require('https');
 
 exports.handler = async (event) => {
   if (event.httpMethod !== 'POST') {
@@ -13,35 +14,52 @@ exports.handler = async (event) => {
 
   try {
     const { contents, systemInstruction } = JSON.parse(event.body);
-
     const model = "gemini-1.5-flash-latest";
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
 
-    const requestBody = {
+    const requestBody = JSON.stringify({
       contents: contents,
       systemInstruction: systemInstruction,
-    };
+    });
 
-    const response = await fetch(url, {
+    // https.requestを使った、確実なAPI呼び出し
+    const options = {
+      hostname: 'generativelanguage.googleapis.com',
+      path: `/v1beta/models/${model}:generateContent?key=${apiKey}`,
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Content-Length': Buffer.byteLength(requestBody),
       },
-      body: JSON.stringify(requestBody),
+    };
+
+    const response = await new Promise((resolve, reject) => {
+      const req = https.request(options, (res) => {
+        let data = '';
+        res.on('data', (chunk) => {
+          data += chunk;
+        });
+        res.on('end', () => {
+          if (res.statusCode >= 400) {
+            console.error("Google API Error:", data);
+            reject(new Error(`Google API responded with status ${res.statusCode}`));
+          } else {
+            resolve(JSON.parse(data));
+          }
+        });
+      });
+
+      req.on('error', (e) => {
+        reject(e);
+      });
+
+      req.write(requestBody);
+      req.end();
     });
-
-    if (!response.ok) {
-      const errorBody = await response.json();
-      console.error("Google API Error:", errorBody);
-      throw new Error(`Google API responded with status ${response.status}`);
-    }
-
-    const data = await response.json();
 
     return {
       statusCode: 200,
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
+      body: JSON.stringify(response),
     };
 
   } catch (error) {
