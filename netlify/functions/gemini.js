@@ -11,20 +11,28 @@ exports.handler = async (event) => {
     return { statusCode: 500, body: JSON.stringify({ error: "API key is not configured." }) };
   }
 
-  const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+  const genAI = new GoogleGenerativeAI(apiKey); // ★ apiKeyを直接渡すのがより安全です
 
   try {
     const { contents, systemInstruction } = JSON.parse(event.body);
+    
+    // ▼▼▼ ここから全面的に修正 ▼▼▼
     const model = genAI.getGenerativeModel({ 
         model: "gemini-1.5-flash-latest",
-        // ▼▼▼ ここから修正 ▼▼▼
         systemInstruction: systemInstruction 
-        // ▲▲▲ ここまで修正 ▲▲▲
     }); 
 
-    const result = await model.generateContent({ contents });
+    // 正しいチャットセッションの開始方法
+    const chat = model.startChat({
+        history: contents.slice(0, -1), // 最後のユーザーメッセージを除いたものを履歴とする
+    });
+
+    // 最後のユーザーメッセージを送信
+    const lastUserMessage = contents[contents.length - 1].parts[0].text;
+    const result = await chat.sendMessage(lastUserMessage);
     const response = result.response;
     const text = response.text();
+    // ▲▲▲ ここまで全面的に修正 ▲▲▲
 
     return {
       statusCode: 200,
