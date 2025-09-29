@@ -1,0 +1,198 @@
+/* ===== AIツール相性診断アプリ専用スタイル ===== */
+
+:root {
+    --app-bg-start: #6dd5ed;
+    --app-bg-end: #2193b0;
+    --card-bg: rgba(255, 255, 255, 0.95);
+    --primary-text: #2c3e50;
+    --secondary-text: #576574;
+    --accent-color: #ff6b6b;
+    --border-color: #e0e6ed;
+}
+
+.app-body {
+    background: linear-gradient(135deg, var(--app-bg-start), var(--app-bg-end));
+    padding-top: 70px; /* 固定ヘッダー分 */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.app-main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px; /* 上下の余白を24pxに設定 */
+}
+
+.diagnosis-container {
+    font-family: 'Noto Sans JP', sans-serif;
+    width: 100%;
+    max-width: 700px;
+    background-color: var(--card-bg);
+    border-radius: 24px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    padding: 40px;
+    text-align: center;
+    animation: fadeIn 0.8s ease-out;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px) scale(0.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.scene {
+    display: none;
+    animation: scene-change 0.5s ease-in-out;
+}
+.scene.active {
+    display: block;
+}
+@keyframes scene-change {
+    from { opacity: 0; transform: translateX(10px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* --- キャラクター & 会話 --- */
+.character-area {
+    margin-bottom: 20px;
+    position: relative;
+}
+.character-image {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+.dialogue-bubble {
+    background-color: #f1f2f6;
+    padding: 15px 20px;
+    border-radius: 20px 20px 20px 5px;
+    margin-top: -30px;
+    position: relative;
+    border: 1px solid var(--border-color);
+}
+.dialogue-bubble p {
+    color: var(--primary-text);
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* --- 質問と選択肢 --- */
+.question-text {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--primary-text);
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.choice-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.choice-btn {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    background-color: #fff;
+    color: var(--secondary-text);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.choice-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+/* --- 診断結果 --- */
+.result-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: 25px;
+}
+
+.result-card {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.result-card h3 {
+    font-size: 1.2rem;
+    color: var(--primary-text);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.result-card h3 i {
+    color: var(--accent-color);
+}
+
+.result-card p {
+    color: var(--secondary-text);
+    line-height: 1.8;
+}
+
+.result-card .prompt-example {
+    background-color: #f8f9fa;
+    border: 1px dashed #ced4da;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    font-family: monospace;
+}
+
+.result-nav {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.result-btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: white;
+    border: 2px solid var(--accent-color);
+}
+.btn-primary:hover {
+    background-color: #ff8787;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+}
+.btn-secondary:hover {
+    background-color: var(--accent-color);
+    color: white;
+    transform: translateY(-2px);
+}

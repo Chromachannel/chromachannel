@@ -11,14 +11,11 @@ exports.handler = async (event) => {
     return { statusCode: 500, body: JSON.stringify({ error: "API key is not configured." }) };
   }
 
-  const genAI = new GoogleGenerativeAI(apiKey);
+  const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
   try {
     const { contents, systemInstruction } = JSON.parse(event.body);
-    const model = genAI.getGenerativeModel({
-      model: "gemini-1.5-flash",
-      systemInstruction,
-    });
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" }); 
 
     // ストリーミングではなく、通常の一括生成に変更
     const result = await model.generateContent({ contents });
