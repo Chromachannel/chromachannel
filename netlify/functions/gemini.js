@@ -15,9 +15,13 @@ exports.handler = async (event) => {
 
   try {
     const { contents, systemInstruction } = JSON.parse(event.body);
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" }); 
+    const model = genAI.getGenerativeModel({ 
+        model: "gemini-1.5-flash-latest",
+        // ▼▼▼ ここから修正 ▼▼▼
+        systemInstruction: systemInstruction 
+        // ▲▲▲ ここまで修正 ▲▲▲
+    }); 
 
-    // ストリーミングではなく、通常の一括生成に変更
     const result = await model.generateContent({ contents });
     const response = result.response;
     const text = response.text();
@@ -25,7 +29,6 @@ exports.handler = async (event) => {
     return {
       statusCode: 200,
       headers: { "Content-Type": "application/json" },
-      // フロントエンドが期待する形式で、完成したテキストを一度に返す
       body: JSON.stringify({ candidates: [{ content: { parts: [{ text }] } }] }),
     };
 
